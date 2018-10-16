@@ -1,0 +1,76 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700&subset=cyrillic');
+@import '_variables';
+@import '_base+common';
+@import '_plugins';
+@import '_other';
+
+
+html {
+}
+body {	
+	
+}
+
+a {
+	color: $link-text;
+}
+.container {max-width: 1280px;}
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
+
+/* ==========================================================================
+   NAVIGATION
+   ========================================================================== */
+
+/* ==========================================================================
+   CONTENT
+   ========================================================================== */
+.row-new {
+	display: flex;
+	justify-content: space-between;
+	@media (max-width: $screen-sm-max) {
+		flex-wrap: wrap;
+		flex-direction: column;
+		.col-sidebar {order: 1}
+		.col-content {order: 2}
+	}
+	@media (min-width: $screen-md-min) {
+		.col-content {
+			padding: 0 16px 0 0;
+			flex-grow: 1;
+		}
+		.col-sidebar {
+		    flex-grow: 0;
+			flex-shrink: 0;
+			width: 280px;
+			justify-content: flex-start;
+		}
+	}
+	@media (min-width: $screen-lg-min) {
+		.col-content {padding: 0 32px 0 0;}	
+	}
+}
+
+
+
+
+/* ==========================================================================
+   - ARTICLE
+   ========================================================================== */
+
+
+/* ==========================================================================
+   SIDEBAR
+   ========================================================================== */
+
+
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+
+
+//@import 'css/plugins';
+//@import 'css/other';
