@@ -477,6 +477,12 @@ h1, h2, h3, h4 {line-height: 1.1; font-weight: 500}
   }
 }
 
+.row-mod {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
 .section-major {
   margin-bottom: 28px;
 }
@@ -546,7 +552,7 @@ h1, h2, h3, h4 {line-height: 1.1; font-weight: 500}
   .article-author {font-weight: 500; margin-top: 12px;display: block;}
   .article-date {color: rgba($base-text, .75)}
 }
-.h-sec {font-size: 1.5rem; margin: 0 0 24px 0;}
+
 .article-main {
   hr {background: $gray; height: 2px; border: none; margin-bottom: 24px;}
 }
@@ -770,7 +776,6 @@ h1, h2, h3, h4 {line-height: 1.1; font-weight: 500}
     img {width: 100%;}
   }
   .comments {
-    background: $ad-link-color;
     display: inline-block;
     color: #fff;
     padding: 2px 4px;
