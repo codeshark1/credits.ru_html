@@ -57,12 +57,12 @@ textarea {
 select {padding: 6px 4px 6px 4px;}
 textarea {margin-bottom: 8px;}
 input[type="number"] {padding-right: 0;}
-input.checkbox {margin-right: 8px;}
+input.checkbox {margin-right: 8px; vertical-align: middle}
 label.checkbox {margin-bottom: 8px; display: block;}
 input[type="radio"],
 input[type="checkbox"] {
   margin-right: 8px;
-  vertical-align: text-top; 
+  vertical-align: top; 
 }
 
 input[type=text]:focus,
@@ -131,23 +131,20 @@ fieldset {
   }
 }
 .form-search-header {
-  display: inline-block;
-  border: 1px solid #e3e3e3;
-  border-radius: 30px;
+  display: inline-block;  
 
   .search-field, .search-submit {
     &:focus {outline-width: 0;}
   }
   .search-field {
     margin: 0;
-    border-radius: 20px;
     background-color: transparent;
-    padding: 8px 12px;
+    padding: 8px 12px 8px 0;
     width: 35px;
     height: 35px;
     transition: all .15s;
     cursor: pointer;
-    border:none;
+    border:none !important;
     color: transparent;
     &::-moz-placeholder {opacity:  0;}
     &::-webkit-input-placeholder {opacity:  0;}
@@ -160,6 +157,8 @@ fieldset {
       cursor: auto;
       padding-right: 25px;
       color: $base-text;
+      box-shadow: none;
+      border-bottom: 1px solid $base-text !important;
       &::-moz-placeholder {opacity:  1;}
       &::-webkit-input-placeholder {opacity:  1;}
       &::-ms-input-placeholder {opacity:  1;}
@@ -209,11 +208,10 @@ fieldset {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-size: .875rem;
-  line-height: 2.25rem;
+  //line-height: 2.25rem;
   font-weight: 500;
   letter-spacing: .04em;
   text-decoration: none;
-  text-transform: uppercase;
   --mdc-ripple-fg-size: 0;
   --mdc-ripple-left: 0;
   --mdc-ripple-top: 0;
@@ -221,15 +219,12 @@ fieldset {
   --mdc-ripple-fg-translate-end: 0;
   --mdc-ripple-fg-translate-start: 0;
   -webkit-tap-highlight-color: transparent;
-  padding-right: 16px;
-  padding-left: 16px;
   display: inline-flex;
   position: relative;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
   min-width: 64px;
-  height: 36px;
   border: none;
   outline: none;
   user-select: none;
@@ -238,7 +233,8 @@ fieldset {
   vertical-align: middle;
   border-radius: 2px;
   background-color: transparent;
-  transition: all .15s;
+  transition: all .3s;
+  padding: 1rem 2rem;
   &:hover {
     cursor: pointer;
   }
@@ -255,7 +251,6 @@ fieldset {
     background: $gray;
   }
 }
-
 .btn--full {
   width: 100%;
   margin-bottom: 20px;
@@ -266,11 +261,21 @@ fieldset {
   }
 }
 
-.btn--action {background: $action; color: #fff;
+.btn-cta {
+  background: $action; 
+  color: #000;
+  border-radius: 25px;
+  box-shadow: 0 0 30px 1px rgba($color: #090305, $alpha: 0.16);
   &:hover {
     background: rgba($action, .85);
+    color: $base-text;
+    box-shadow: 0 0 30px 1px rgba($color: #090305, $alpha: 0.2);
+  }
+  &:active {
+    box-shadow: inset 0 0 30px 1px rgba($color: #090305, $alpha: 0.16)
   }
 }
+.btn-cta-2 {border-radius: 5px;}
 /* ==========================================================================
    MENUS
    ========================================================================== */
@@ -863,14 +868,3 @@ h1, h2, h3, h4 {line-height: 1.1; font-weight: 500}
 /* ==========================================================================
    FOOTER
    ========================================================================== */
-.h-footer {
-  font-size: 1.2rem;
-  margin: 14px 0 ;
-  &:first-child {margin-top: 0}
-}
-.footer-site {
-  padding: 28px 0;
-  .logo-main, .copyright, .info {
-    margin-bottom: 14px;
-  }
-}
