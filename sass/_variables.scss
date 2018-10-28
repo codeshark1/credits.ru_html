@@ -30,6 +30,11 @@ $screen-md-max:              ($screen-lg-min - 1);
 @mixin shadow() {
   box-shadow: 0 1px 2px rgba(0,0,0,.1);
 }
+@mixin row-mod() {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 
 $base-text: #252525;
 $link-text: $base-text;
