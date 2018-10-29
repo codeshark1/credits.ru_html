@@ -1,7 +1,6 @@
 $(window).load(function() {
 	$(".pulse").fadeOut();
 	$(".preloader").delay(400).fadeOut("slow");
-
 });
 
 jQuery(document).ready(function($){
@@ -10,17 +9,18 @@ jQuery(document).ready(function($){
         //$(menu).hide();
         $(button).click(function(){
             if ( $(menu).is(':visible')){
-                $(menu).slideUp();
+                $(menu).slideUp().removeClass('active');
                 $(this).removeClass('active');
             } else {
                 $(this).addClass('active');
-                $(menu).slideDown();
+                $(menu).slideDown().addClass('active');
             }
         });
     }
 
     navigation_show('#js-btn-menu','#js-menu-wrapper');
     navigation_show('#js-btn-cities','#js-cities-wrapper');
+    navigation_show('#js-cities-wrapper .close','#js-cities-wrapper');
 
     function menu_nested(menu_id) {
         $(menu_id).find('ul').hide();

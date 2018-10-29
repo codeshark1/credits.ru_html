@@ -1660,12 +1660,18 @@ NAVIGATION
   padding: 25px 15px;
   box-shadow: 0 10px 30px 1px rgba(9, 3, 5, 0.1);
   position: relative;
-  z-index: 11; }
+  z-index: 11;
+  display: none; }
   .cities .close {
     position: absolute;
     top: 40px;
-    right: 15px;
-    cursor: pointer; }
+    right: -15px;
+    cursor: pointer;
+    transition: all .5s; }
+  .cities.active {
+    max-height: 470px; }
+    .cities.active .close {
+      right: 15px !important; }
   .cities .search-cities {
     margin-bottom: 1.5rem; }
     .cities .search-cities input {
@@ -1674,64 +1680,69 @@ NAVIGATION
       font-size: 12px;
       border: 1px solid #dcdcdc;
       padding: 0 15px; }
-  .cities .list-cities {
-    column-count: 6; }
-    .cities .list-cities .menu-item {
+  .cities .menu-item {
+    display: block;
+    margin-bottom: 10px;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid-column; }
+    .cities .menu-item span {
+      display: block; }
+    .cities .menu-item .label {
       display: block;
-      margin-bottom: 10px;
-      -webkit-column-break-inside: avoid;
-      page-break-inside: avoid;
-      break-inside: avoid-column; }
-      .cities .list-cities .menu-item span {
-        display: block; }
-      .cities .list-cities .menu-item .label {
-        display: block;
-        font-size: 12px;
-        font-weight: 700;
-        line-height: 1;
-        margin: 0 0 7px; }
-      .cities .list-cities .menu-item a {
-        display: inline-block;
-        font-size: 0.9rem;
-        line-height: 1;
-        margin-bottom: 10px; }
-      .cities .list-cities .menu-item a:hover {
-        text-decoration-color: #000; }
-    .cities .list-cities .menu-item--important {
-      margin-bottom: 15px; }
-      .cities .list-cities .menu-item--important a {
-        font-size: 20px;
-        font-weight: 300;
-        color: #f41e2a;
-        text-decoration: none;
-        margin: 0; }
-  @media (max-width: 1200px) {
-    .cities.active {
-      max-height: 470px; }
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1;
+      margin: 0 0 7px; }
+    .cities .menu-item a {
+      display: inline-block;
+      font-size: 0.9rem;
+      line-height: 1;
+      margin-bottom: 10px; }
+    .cities .menu-item a:hover {
+      text-decoration-color: #000; }
+  .cities .menu-item--important {
+    margin-bottom: 15px; }
+    .cities .menu-item--important a {
+      font-size: 20px;
+      font-weight: 300;
+      color: #f41e2a;
+      text-decoration: none;
+      margin: 0; }
+  @media (max-width: 1199px) {
     .cities .list-cities--wrapper {
-      height: 341px;
+      height: 340px;
       overflow: auto; } }
   @media (min-width: 768px) {
     .cities {
       position: absolute;
       top: 65px;
       left: 0;
-      width: 100%; } }
+      width: 100%; }
+      .cities .list-cities {
+        column-count: 3; } }
   @media (max-width: 1199px) {
     .cities .search-cities {
       padding-right: 30px; } }
   @media (min-width: 992px) {
     .cities {
-      top: 70px; } }
+      top: 70px; }
+      .cities .list-cities {
+        column-count: 4; } }
   @media (min-width: 1200px) {
     .cities {
-      padding: 25px 38px 20px; } }
-  .cities.active {
-    max-height: 1000px; }
+      padding: 25px 38px 20px; }
+      .cities.active {
+        max-height: 1000px; }
+      .cities .list-cities {
+        column-count: 6; } }
 
 /* ==========================================================================
    CONTENT
    ========================================================================== */
+.main-content {
+  margin-top: 2rem; }
+
 .section {
   margin-bottom: 2rem; }
 
