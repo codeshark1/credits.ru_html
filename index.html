@@ -18,7 +18,7 @@
             
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>    
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
     <!--[if lt IE 9]>
@@ -37,7 +37,7 @@
 <!-- End Preloader -->
 
 <div class="wrapper-main">
-    <header class="header-site">
+    <header class="header header-site">
         <div class="header--lvl-1">
             <div class="container">
                 <div class="header--row">
@@ -328,11 +328,11 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-sm-8">
+                <div class="col-lg-8">
                     <section class="section">
                         <h2 class="h-section h-main">Специальные предложения</h2>
                         
-                        <div class="card  section-shift">
+                        <div class="card section-shift">
                             <ul class="nav-plans js-nav-tabs">
                                 <li class="nav-plans__item active"><a href="#tab-vkladi">ВКЛАДЫ</a></li>
                                 <li class="nav-plans__item"><a href="#tab-krediti">Кредиты</a></li>
@@ -342,353 +342,51 @@
 
                             <div class="tabcontent-wrapper js-tabcontent-wrapper">
                                 <div class="tabcontent" id="tab-vkladi">
-                                    <div class="plan-main">
-                                        <div class="plan-main__td bankname">
-                                            <p class="plan-main__ttl">Банк</p>
-                                            <img src="img/logo-rufinans-bank.png" alt="Русфинанс банк">
-                                        </div>
-                                        <div class="plan-main__td amount">
-                                            <p class="plan-main__ttl">Сумма</p>
-                                            <p class="plan-main__data">от 3 000 000 Р</p>
-                                        </div>
-                                        <div class="plan-main__td time">
-                                            <p class="plan-main__ttl">Срок (дней)</p>
-                                            <p class="plan-main__data">до 279</p>
-                                        </div>
-                                        <div class="plan-main__td rate">
-                                            <p class="plan-main__ttl">Ставка</p>
-                                            <p class="plan-main__data">8% годовых <br> + бонус 1%</p>
-                                        </div>                                                                                    
-                                        <div class="plan-main__td action">
-                                            <a href="#" class="btn btn-cta">Оформить</a>
-                                        </div>
+                                    <div class="plan plan-main">
+                                        <h3 class="h-plan-best"><i class="icon"></i>Лучшее предложение</h3>
+                                        <div class="plan-wrapper">
+                                            <div class="plan-content">
+                                                <div class="td bankname">
+                                                    <p class="ttl">Банк</p>
+                                                    <img src="img/logo-rufinans-bank.png" alt="Русфинанс банк">
+                                                </div>
+                                                <div class="td amount">
+                                                    <p class="ttl">Сумма</p>
+                                                    <p class="data">от 3 000 000 Р</p>
+                                                </div>
+                                                <div class="td time">
+                                                    <p class="ttl">Срок (дней)</p>
+                                                    <p class="data">до 279</p>
+                                                </div>
+                                                <div class="td rate">
+                                                    <p class="ttl">Ставка</p>
+                                                    <p class="data">8% годовых <br> + бонус 1%</p>
+                                                </div>                                                                                    
+                                                <div class="td action">
+                                                    <a href="#" class="btn btn-cta">Оформить</a>
+                                                </div>
+                                            </div><!-- /.plan-content -->
+                                            <div class="plan-actions">
+                                                <a href="#" class="plan-btn fav">
+                                                    <img class="svg" src="img/panel-fav.svg" alt="icon">
+                                                    <span>В избранное</span>
+                                                </a>
+                                                <a href="#" class="plan-btn compare">
+                                                    <img class="svg" src="img/panel-compare.svg" alt="icon">
+                                                    <span>Сравнить</span>
+                                                </a>                                                
+                                                <a href="#" class="plan-btn info">
+                                                    <img class="svg" src="img/panel-info.svg" alt="icon">
+                                                    <span>Подробнее</span>
+                                                </a>
+                                                <a href="#" class="plan-btn sign">
+                                                    <img class="svg" src="img/panel-sign.svg" alt="icon">
+                                                    <span>Оформить</span>
+                                                </a>                                                                                                
+                                            </div><!-- /.plan-actions -->
+                                        </div><!-- /.plan-wrapper -->
                                     </div><!-- /.plan-main -->
-                                    <div class="plan-main">
-                                        <div class="plan-main__td bankname">
-                                            <p class="plan-main__ttl">Банк</p>
-                                            <img src="img/logo-rufinans-bank.png" alt="Русфинанс банк">
-                                        </div>
-                                        <div class="plan-main__td amount">
-                                            <p class="plan-main__ttl">Сумма</p>
-                                            <p class="plan-main__data">от 3 000 000 Р</p>
-                                        </div>
-                                        <div class="plan-main__td time">
-                                            <p class="plan-main__ttl">Срок (дней)</p>
-                                            <p class="plan-main__data">до 279</p>
-                                        </div>
-                                        <div class="plan-main__td rate">
-                                            <p class="plan-main__ttl">Ставка</p>
-                                            <p class="plan-main__data">8% годовых <br> + бонус 1%</p>
-                                        </div>                                                                                    
-                                        <div class="plan-main__td action">
-                                            <a href="#" class="btn btn-cta">Оформить</a>
-                                        </div>
-                                    </div><!-- /.plan-main -->
-                                    <h3 class="plan-main__best"><i class="plan-main__best--icon"></i>Лучшее предложение</h3><!-- /.plan-main__best -->
-                                    <div class="plan-main">
-                                        <div class="plan-main__td bankname">
-                                            <p class="plan-main__ttl">Банк</p>
-                                            <img src="img/logo-rufinans-bank.png" alt="Русфинанс банк">
-                                        </div>
-                                        <div class="plan-main__td amount">
-                                            <p class="plan-main__ttl">Сумма</p>
-                                            <p class="plan-main__data">от 3 000 000 Р</p>
-                                        </div>
-                                        <div class="plan-main__td time">
-                                            <p class="plan-main__ttl">Срок (дней)</p>
-                                            <p class="plan-main__data">до 279</p>
-                                        </div>
-                                        <div class="plan-main__td rate">
-                                            <p class="plan-main__ttl">Ставка</p>
-                                            <p class="plan-main__data">8% годовых <br> + бонус 1%</p>
-                                        </div>                                                                                    
-                                        <div class="plan-main__td action">
-                                            <a href="#" class="btn btn-cta">Оформить</a>
-                                        </div>
-                                    </div><!-- /.plan-main -->                                                
-                                    <div class="plan-main">
-                                        <div class="plan-main__td bankname">
-                                            <p class="plan-main__ttl">Банк</p>
-                                            <img src="img/logo-rufinans-bank.png" alt="Русфинанс банк">
-                                        </div>
-                                        <div class="plan-main__td amount">
-                                            <p class="plan-main__ttl">Сумма</p>
-                                            <p class="plan-main__data">от 3 000 000 Р</p>
-                                        </div>
-                                        <div class="plan-main__td time">
-                                            <p class="plan-main__ttl">Срок (дней)</p>
-                                            <p class="plan-main__data">до 279</p>
-                                        </div>
-                                        <div class="plan-main__td rate">
-                                            <p class="plan-main__ttl">Ставка</p>
-                                            <p class="plan-main__data">8% годовых <br> + бонус 1%</p>
-                                        </div>                                                                                    
-                                        <div class="plan-main__td action">
-                                            <a href="#" class="btn btn-cta">Оформить</a>
-                                        </div>
-                                    </div><!-- /.plan-main -->                                                                        
-                                </div><!-- /.tabcontent -->
-                                <div class="tabcontent" id="tab-krediti">
-                                    <div class="plan-main">
-                                        <div class="plan-main__td bankname">
-                                            <p class="plan-main__ttl">Банк</p>
-                                            <img src="img/logo-rufinans-bank.png" alt="Русфинанс банк">
-                                        </div>
-                                        <div class="plan-main__td amount">
-                                            <p class="plan-main__ttl">Сумма</p>
-                                            <p class="plan-main__data">от 3 000 000 Р</p>
-                                        </div>
-                                        <div class="plan-main__td time">
-                                            <p class="plan-main__ttl">Срок (дней)</p>
-                                            <p class="plan-main__data">до 279</p>
-                                        </div>
-                                        <div class="plan-main__td rate">
-                                            <p class="plan-main__ttl">Ставка</p>
-                                            <p class="plan-main__data">8% годовых <br> + бонус 1%</p>
-                                        </div>                                                                                    
-                                        <div class="plan-main__td action">
-                                            <a href="#" class="btn btn-cta">Оформить</a>
-                                        </div>
-                                    </div><!-- /.plan-main -->
-                                    <h3 class="plan-main__best"><i class="plan-main__best--icon"></i>Лучшее предложение</h3><!-- /.plan-main__best -->                                
-                                    <div class="plan-main">
-                                        <div class="plan-main__td bankname">
-                                            <p class="plan-main__ttl">Банк</p>
-                                            <img src="img/logo-rufinans-bank.png" alt="Русфинанс банк">
-                                        </div>
-                                        <div class="plan-main__td amount">
-                                            <p class="plan-main__ttl">Сумма</p>
-                                            <p class="plan-main__data">от 3 000 000 Р</p>
-                                        </div>
-                                        <div class="plan-main__td time">
-                                            <p class="plan-main__ttl">Срок (дней)</p>
-                                            <p class="plan-main__data">до 279</p>
-                                        </div>
-                                        <div class="plan-main__td rate">
-                                            <p class="plan-main__ttl">Ставка</p>
-                                            <p class="plan-main__data">8% годовых <br> + бонус 1%</p>
-                                        </div>                                                                                    
-                                        <div class="plan-main__td action">
-                                            <a href="#" class="btn btn-cta">Оформить</a>
-                                        </div>
-                                    </div><!-- /.plan-main -->
-                                    <div class="plan-main">
-                                        <div class="plan-main__td bankname">
-                                            <p class="plan-main__ttl">Банк</p>
-                                            <img src="img/logo-rufinans-bank.png" alt="Русфинанс банк">
-                                        </div>
-                                        <div class="plan-main__td amount">
-                                            <p class="plan-main__ttl">Сумма</p>
-                                            <p class="plan-main__data">от 3 000 000 Р</p>
-                                        </div>
-                                        <div class="plan-main__td time">
-                                            <p class="plan-main__ttl">Срок (дней)</p>
-                                            <p class="plan-main__data">до 279</p>
-                                        </div>
-                                        <div class="plan-main__td rate">
-                                            <p class="plan-main__ttl">Ставка</p>
-                                            <p class="plan-main__data">8% годовых <br> + бонус 1%</p>
-                                        </div>                                                                                    
-                                        <div class="plan-main__td action">
-                                            <a href="#" class="btn btn-cta">Оформить</a>
-                                        </div>
-                                    </div><!-- /.plan-main -->                                                
-                                    <div class="plan-main">
-                                        <div class="plan-main__td bankname">
-                                            <p class="plan-main__ttl">Банк</p>
-                                            <img src="img/logo-rufinans-bank.png" alt="Русфинанс банк">
-                                        </div>
-                                        <div class="plan-main__td amount">
-                                            <p class="plan-main__ttl">Сумма</p>
-                                            <p class="plan-main__data">от 3 000 000 Р</p>
-                                        </div>
-                                        <div class="plan-main__td time">
-                                            <p class="plan-main__ttl">Срок (дней)</p>
-                                            <p class="plan-main__data">до 279</p>
-                                        </div>
-                                        <div class="plan-main__td rate">
-                                            <p class="plan-main__ttl">Ставка</p>
-                                            <p class="plan-main__data">8% годовых <br> + бонус 1%</p>
-                                        </div>                                                                                    
-                                        <div class="plan-main__td action">
-                                            <a href="#" class="btn btn-cta">Оформить</a>
-                                        </div>
-                                    </div><!-- /.plan-main -->                                                                        
-                                </div><!-- /.tabcontent -->
-                                <div class="tabcontent" id="tab-karti">
-                                    <h3 class="plan-main__best"><i class="plan-main__best--icon"></i>Лучшее предложение</h3><!-- /.plan-main__best -->                                
-                                    <div class="plan-main">
-                                        <div class="plan-main__td bankname">
-                                            <p class="plan-main__ttl">Банк</p>
-                                            <img src="img/logo-rufinans-bank.png" alt="Русфинанс банк">
-                                        </div>
-                                        <div class="plan-main__td amount">
-                                            <p class="plan-main__ttl">Сумма</p>
-                                            <p class="plan-main__data">от 3 000 000 Р</p>
-                                        </div>
-                                        <div class="plan-main__td time">
-                                            <p class="plan-main__ttl">Срок (дней)</p>
-                                            <p class="plan-main__data">до 279</p>
-                                        </div>
-                                        <div class="plan-main__td rate">
-                                            <p class="plan-main__ttl">Ставка</p>
-                                            <p class="plan-main__data">8% годовых <br> + бонус 1%</p>
-                                        </div>                                                                                    
-                                        <div class="plan-main__td action">
-                                            <a href="#" class="btn btn-cta">Оформить</a>
-                                        </div>
-                                    </div><!-- /.plan-main -->
-                                    <div class="plan-main">
-                                        <div class="plan-main__td bankname">
-                                            <p class="plan-main__ttl">Банк</p>
-                                            <img src="img/logo-rufinans-bank.png" alt="Русфинанс банк">
-                                        </div>
-                                        <div class="plan-main__td amount">
-                                            <p class="plan-main__ttl">Сумма</p>
-                                            <p class="plan-main__data">от 3 000 000 Р</p>
-                                        </div>
-                                        <div class="plan-main__td time">
-                                            <p class="plan-main__ttl">Срок (дней)</p>
-                                            <p class="plan-main__data">до 279</p>
-                                        </div>
-                                        <div class="plan-main__td rate">
-                                            <p class="plan-main__ttl">Ставка</p>
-                                            <p class="plan-main__data">8% годовых <br> + бонус 1%</p>
-                                        </div>                                                                                    
-                                        <div class="plan-main__td action">
-                                            <a href="#" class="btn btn-cta">Оформить</a>
-                                        </div>
-                                    </div><!-- /.plan-main -->
-                                    <div class="plan-main">
-                                        <div class="plan-main__td bankname">
-                                            <p class="plan-main__ttl">Банк</p>
-                                            <img src="img/logo-rufinans-bank.png" alt="Русфинанс банк">
-                                        </div>
-                                        <div class="plan-main__td amount">
-                                            <p class="plan-main__ttl">Сумма</p>
-                                            <p class="plan-main__data">от 3 000 000 Р</p>
-                                        </div>
-                                        <div class="plan-main__td time">
-                                            <p class="plan-main__ttl">Срок (дней)</p>
-                                            <p class="plan-main__data">до 279</p>
-                                        </div>
-                                        <div class="plan-main__td rate">
-                                            <p class="plan-main__ttl">Ставка</p>
-                                            <p class="plan-main__data">8% годовых <br> + бонус 1%</p>
-                                        </div>                                                                                    
-                                        <div class="plan-main__td action">
-                                            <a href="#" class="btn btn-cta">Оформить</a>
-                                        </div>
-                                    </div><!-- /.plan-main -->                                                
-                                    <div class="plan-main">
-                                        <div class="plan-main__td bankname">
-                                            <p class="plan-main__ttl">Банк</p>
-                                            <img src="img/logo-rufinans-bank.png" alt="Русфинанс банк">
-                                        </div>
-                                        <div class="plan-main__td amount">
-                                            <p class="plan-main__ttl">Сумма</p>
-                                            <p class="plan-main__data">от 3 000 000 Р</p>
-                                        </div>
-                                        <div class="plan-main__td time">
-                                            <p class="plan-main__ttl">Срок (дней)</p>
-                                            <p class="plan-main__data">до 279</p>
-                                        </div>
-                                        <div class="plan-main__td rate">
-                                            <p class="plan-main__ttl">Ставка</p>
-                                            <p class="plan-main__data">8% годовых <br> + бонус 1%</p>
-                                        </div>                                                                                    
-                                        <div class="plan-main__td action">
-                                            <a href="#" class="btn btn-cta">Оформить</a>
-                                        </div>
-                                    </div><!-- /.plan-main -->                                                                        
-                                </div><!-- /.tabcontent -->
-                                <div class="tabcontent" id="tab-zaymi">
-                                    <div class="plan-main">
-                                        <div class="plan-main__td bankname">
-                                            <p class="plan-main__ttl">Банк</p>
-                                            <img src="img/logo-rufinans-bank.png" alt="Русфинанс банк">
-                                        </div>
-                                        <div class="plan-main__td amount">
-                                            <p class="plan-main__ttl">Сумма</p>
-                                            <p class="plan-main__data">от 3 000 000 Р</p>
-                                        </div>
-                                        <div class="plan-main__td time">
-                                            <p class="plan-main__ttl">Срок (дней)</p>
-                                            <p class="plan-main__data">до 279</p>
-                                        </div>
-                                        <div class="plan-main__td rate">
-                                            <p class="plan-main__ttl">Ставка</p>
-                                            <p class="plan-main__data">8% годовых <br> + бонус 1%</p>
-                                        </div>                                                                                    
-                                        <div class="plan-main__td action">
-                                            <a href="#" class="btn btn-cta">Оформить</a>
-                                        </div>
-                                    </div><!-- /.plan-main -->
-                                    <div class="plan-main">
-                                        <div class="plan-main__td bankname">
-                                            <p class="plan-main__ttl">Банк</p>
-                                            <img src="img/logo-rufinans-bank.png" alt="Русфинанс банк">
-                                        </div>
-                                        <div class="plan-main__td amount">
-                                            <p class="plan-main__ttl">Сумма</p>
-                                            <p class="plan-main__data">от 3 000 000 Р</p>
-                                        </div>
-                                        <div class="plan-main__td time">
-                                            <p class="plan-main__ttl">Срок (дней)</p>
-                                            <p class="plan-main__data">до 279</p>
-                                        </div>
-                                        <div class="plan-main__td rate">
-                                            <p class="plan-main__ttl">Ставка</p>
-                                            <p class="plan-main__data">8% годовых <br> + бонус 1%</p>
-                                        </div>                                                                                    
-                                        <div class="plan-main__td action">
-                                            <a href="#" class="btn btn-cta">Оформить</a>
-                                        </div>
-                                    </div><!-- /.plan-main -->
-                                    <h3 class="plan-main__best"><i class="plan-main__best--icon"></i>Лучшее предложение</h3><!-- /.plan-main__best -->
-                                    <div class="plan-main">
-                                        <div class="plan-main__td bankname">
-                                            <p class="plan-main__ttl">Банк</p>
-                                            <img src="img/logo-rufinans-bank.png" alt="Русфинанс банк">
-                                        </div>
-                                        <div class="plan-main__td amount">
-                                            <p class="plan-main__ttl">Сумма</p>
-                                            <p class="plan-main__data">от 3 000 000 Р</p>
-                                        </div>
-                                        <div class="plan-main__td time">
-                                            <p class="plan-main__ttl">Срок (дней)</p>
-                                            <p class="plan-main__data">до 279</p>
-                                        </div>
-                                        <div class="plan-main__td rate">
-                                            <p class="plan-main__ttl">Ставка</p>
-                                            <p class="plan-main__data">8% годовых <br> + бонус 1%</p>
-                                        </div>                                                                                    
-                                        <div class="plan-main__td action">
-                                            <a href="#" class="btn btn-cta">Оформить</a>
-                                        </div>
-                                    </div><!-- /.plan-main -->                                                
-                                    <div class="plan-main">
-                                        <div class="plan-main__td bankname">
-                                            <p class="plan-main__ttl">Банк</p>
-                                            <img src="img/logo-rufinans-bank.png" alt="Русфинанс банк">
-                                        </div>
-                                        <div class="plan-main__td amount">
-                                            <p class="plan-main__ttl">Сумма</p>
-                                            <p class="plan-main__data">от 3 000 000 Р</p>
-                                        </div>
-                                        <div class="plan-main__td time">
-                                            <p class="plan-main__ttl">Срок (дней)</p>
-                                            <p class="plan-main__data">до 279</p>
-                                        </div>
-                                        <div class="plan-main__td rate">
-                                            <p class="plan-main__ttl">Ставка</p>
-                                            <p class="plan-main__data">8% годовых <br> + бонус 1%</p>
-                                        </div>                                                                                    
-                                        <div class="plan-main__td action">
-                                            <a href="#" class="btn btn-cta">Оформить</a>
-                                        </div>
-                                    </div><!-- /.plan-main -->                                                                        
-                                </div><!-- /.tabcontent -->     
+                                </div><!-- /.tabcontent -->  
                             </div><!-- /.tabcontent-wrapper -->                                                                   
                         </div><!-- /.card -->
                     </section>
@@ -768,7 +466,7 @@
                 </div><!-- /.col-sm-8 -->
 
                 <!-- sbar: -->
-                <div class="col-sm-4">
+                <div class="col-lg-4">
                     <h2 class="h-section">Лента новостей</h2>
                     <section class="card card-pad">
                         <article class="article-prev--sm">
