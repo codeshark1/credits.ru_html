@@ -324,7 +324,56 @@
                     <p class="action-main__comment">Более 1 000 предложений</p>
                 </a>
             </div><!-- /.header--row -->
-        </section><!-- /.container -->
+        </section><!-- /.actions-main container -->
+
+        <div class="container">
+            <div class="plan plan_insearch">
+                <div class="plan-wrapper">
+                    <div class="plan-content">
+                        <div class="td td_bankname">                                                    
+                            <img src="img/logo-rufinans-bank.png" alt="Русфинанс банк">
+                            <p class="licence">Лиц. № 4567</p>
+                        </div>
+                        <div class="td td_offer">                                                    
+                            <p class="data">«Первый почтовый с гарантированной ставкой»</p>
+                        </div>                                                
+                        <div class="td td_rate">
+                            <p class="ttl">Ставка</p>
+                            <p class="data">от 17,00%</p>
+                        </div>                                                                                    
+                        <div class="td td_amount">
+                            <p class="ttl">Сумма</p>
+                            <p class="data">
+                                <span class="min">от 300 000 Р</span>
+                                <span class="max">до 1 000 000 Р</span>
+                            </p>
+                        </div>
+                        <div class="td td_action">
+                            <a href="#" class="btn btn-cta">Оформить</a>
+                            <p class="link-info"><a href="#">Подробнее</a></p>                                                    
+                        </div>
+                    </div><!-- /.plan-content -->
+                    <div class="plan-actions">
+                        <a href="#" class="plan-btn fav">
+                            <img class="svg" src="img/panel-fav.svg" alt="icon">
+                            <span>В избранное</span>
+                        </a>
+                        <a href="#" class="plan-btn compare">
+                            <img class="svg" src="img/panel-compare.svg" alt="icon">
+                            <span>Сравнить</span>
+                        </a>                                                
+                        <a href="#" class="plan-btn info">
+                            <img class="svg" src="img/panel-info.svg" alt="icon">
+                            <span>Подробнее</span>
+                        </a>
+                        <a href="#" class="plan-btn sign">
+                            <img class="svg" src="img/panel-sign.svg" alt="icon">
+                            <span>Оформить</span>
+                        </a>                                                                                                
+                    </div><!-- /.plan-actions -->
+                </div><!-- /.plan-wrapper -->
+            </div><!-- /.plan -->                
+        </div><!-- /.container -->
 
         <div class="container">
             <div class="row">
@@ -333,36 +382,38 @@
                         <h2 class="h-section h-main">Специальные предложения</h2>
                         
                         <div class="card section-shift">
-                            <ul class="nav-plans js-nav-tabs">
-                                <li class="nav-plans__item active"><a href="#tab-vkladi">ВКЛАДЫ</a></li>
-                                <li class="nav-plans__item"><a href="#tab-krediti">Кредиты</a></li>
-                                <li class="nav-plans__item"><a href="#tab-karti">Кредитные карты</a></li>
-                                <li class="nav-plans__item"><a href="#tab-zaymi">Займы</a></li>
-                            </ul>
+                            <div class="nav-plans-wrapper">
+                                <ul class="nav-plans js-nav-tabs">
+                                    <li class="nav-plans__item active"><a href="#tab-vkladi">ВКЛАДЫ</a></li>
+                                    <li class="nav-plans__item"><a href="#tab-krediti">Кредиты</a></li>
+                                    <li class="nav-plans__item"><a href="#tab-karti">Кредитные карты</a></li>
+                                    <li class="nav-plans__item"><a href="#tab-zaymi">Займы</a></li>
+                                </ul>
+                            </div><!-- /.nav-plans-wrapper -->
 
                             <div class="tabcontent-wrapper js-tabcontent-wrapper">
                                 <div class="tabcontent" id="tab-vkladi">
-                                    <div class="plan plan-main">
+                                    <div class="plan plan_inmain plan-best">
                                         <h3 class="h-plan-best"><i class="icon"></i>Лучшее предложение</h3>
                                         <div class="plan-wrapper">
                                             <div class="plan-content">
-                                                <div class="td bankname">
+                                                <div class="td td_bankname">
                                                     <p class="ttl">Банк</p>
                                                     <img src="img/logo-rufinans-bank.png" alt="Русфинанс банк">
                                                 </div>
-                                                <div class="td amount">
+                                                <div class="td td_amount">
                                                     <p class="ttl">Сумма</p>
                                                     <p class="data">от 3 000 000 Р</p>
                                                 </div>
-                                                <div class="td time">
+                                                <div class="td td_time">
                                                     <p class="ttl">Срок (дней)</p>
                                                     <p class="data">до 279</p>
                                                 </div>
-                                                <div class="td rate">
+                                                <div class="td td_rate">
                                                     <p class="ttl">Ставка</p>
                                                     <p class="data">8% годовых <br> + бонус 1%</p>
                                                 </div>                                                                                    
-                                                <div class="td action">
+                                                <div class="td td_action">
                                                     <a href="#" class="btn btn-cta">Оформить</a>
                                                 </div>
                                             </div><!-- /.plan-content -->
@@ -385,7 +436,7 @@
                                                 </a>                                                                                                
                                             </div><!-- /.plan-actions -->
                                         </div><!-- /.plan-wrapper -->
-                                    </div><!-- /.plan-main -->
+                                    </div><!-- /.plan -->                                
                                 </div><!-- /.tabcontent -->  
                             </div><!-- /.tabcontent-wrapper -->                                                                   
                         </div><!-- /.card -->
@@ -683,7 +734,7 @@
 
         <hr class="hr-page">
 
-        <article class="container about-main section">
+        <article class="about-main section container">
             <div class="row section">
                 <div class="col-sm-6">
                     <h3 class="heading-lower">О Credits.ru</h3>
@@ -704,7 +755,7 @@
             </div><!-- /.row -->
 
             <img src="img/bnr-foot.jpg" alt="Возвращаем до 10% от суммы покупок">
-        </article><!-- /.container -->
+        </article><!-- /.about-main container -->
     </main><!-- /.main-content -->
 
     <footer class="footer-site"> 

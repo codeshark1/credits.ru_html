@@ -20,7 +20,7 @@ a {
 }
 .container {max-width: 1200px;}
 $sect-mg: 2rem;
-$sect-mg-neg: 2.45rem;
+$sect-mg-neg: 39px;
 
 .wrapper-main {
 	max-width: 1250px; margin: 0 auto;
@@ -459,12 +459,16 @@ NAVIGATION
 /* PLANS */
 $plans-pad-left: 40px;
 
-.nav-plans {
+.nav-plans-wrapper {
 	border-bottom: 1px solid #acacac;
-	padding-left: $plans-pad-left;
+	padding: 0 20px 0 $plans-pad-left;
+}
+.nav-plans {
+	max-width: 500px;
+	display: flex;
+	justify-content: space-between;
 	&__item {
-		display: inline-block;
-		margin-right: 4rem;
+		display: inline-block;		
 		&:last-child {margin-right: 0;}
 		a {
 			color: $gray;
@@ -499,52 +503,61 @@ $plans-pad-left: 40px;
 .tabcontent:first-child {display: block;}
 
 .plan {
+	border: 2px solid transparent;
+	&:after {
+		content: "";
+		display: block;
+		height: 1px;
+		background: #f5f5f5;
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: -1px;
+	}	
+
+	&:last-child:after {content: none}
+
+	&.plan-best {border-color: $blue;
+		&:after {content: none}
+	}		
 	.plan-content {
 		display: flex;	
 		padding: 20px 20px 20px $plans-pad-left;
-		border: 2px solid transparent;		
 		position: relative;
-		width: 100%;
-		flex-wrap: wrap;		
-
-		&:after {
-			content: "";
-			display: block;
-			height: 1px;
-			background: #f5f5f5;
-			position: absolute;
-			left: 0;
-			right: 0;
-			bottom: -1px;
-		}
-	}
-	&:last-child:after {content: none}
+		width: 100%;		
+		@media (max-width: $screen-xs-max) {flex-wrap: wrap;}
+	}	
 	.td {
-		//font-size: 0.9rem;
 		flex-grow: 1;
 		display: flex;
 		flex-direction: column;		
 		justify-content: space-between;
 		align-items: flex-start;		
-		&.bankname {}
-		&.amount {}
-		&.time {}
-		&.rate {}
-		&.action {
-			flex-grow: 0;
+		&_bankname {}
+		&_amount {}
+		&_time {}
+		&_rate {}
+		&_action {
 			align-items: flex-end;
 			flex-direction: column-reverse;
+			flex-grow: 0;
+		}
+		&_combined {
+			flex-basis: 100%;
+			order: 1;
+			flex-direction: row;
+		}
+		&_lic {}
+		&_link {
+			align-items: center;			
 		}
 		@media (max-width: $screen-xs-max) {
 			flex-grow: 1;
 			width: 50%;
 			margin-bottom: 20px;
-			&.action {display: none;}
+			&_action {display: none;}
 		}
-		@media (min-width: $screen-sm-min) {
-			min-height: 70px;
-		}
-	}
+	}	
 	.ttl {
 		color: $gray;
 		font-size: 0.9rem;
@@ -560,10 +573,9 @@ $plans-pad-left: 40px;
 		background: $blue;
 		color: #fff;
 		font-weight: 500;
-		padding: 20px 0;
+		padding: 16px 0;
 		padding-left: $plans-pad-left;
 		margin: 0;
-		margin-top: -1px;
 		.icon {
 			background: url('../img/i-best.png') no-repeat;
 			width: 23px;height: 19px;
@@ -571,12 +583,64 @@ $plans-pad-left: 40px;
 			vertical-align: top;
 			margin-right: 16px;
 		}
-		&+.plan-main {border-color: $blue;
-			&:after {content: none}
+	}
+	.licence {font-size: 0.75rem;}
+
+	@media (min-width: $screen-md-min) {
+		.plan-content {padding: 35px 35px 35px $plans-pad-left;}
+	}
+}
+.plan_inmain {
+	.td {
+		@media (min-width: $screen-sm-min) {
+			min-height: 70px;
 		}
 	}
+}
+.plan_insearch {
+ 	//.td {flex-grow: 0}
+	.td_bankname{min-width: 210px}
+	.td_offer 	{min-width: 320px}
+	.td_rate 	{min-width: 185px}
+	.td_amount 	{
+		min-width: 150px;
+		.data {display: block;
+			span {display: block;}
+			.min {margin-bottom: 10px;}
+		}
+	}
+	.td_action 	{min-width: 140px; text-align: center;} 
+	background: #fff;
+	.td_offer .date {font-size: 1.1rt;}
+	.td_rate .data {
+		color: $red; 
+		font-weight: 400;
+		font-size: 1.5rem;
+	}
+	
 	@media (min-width: $screen-sm-min) {
-		padding: 35px 35px 35px $plans-pad-left;
+		.plan-content {
+			display: table;
+			table-layout: fixed;
+		}
+		.td {
+			display: table-cell;
+			vertical-align: middle;
+			position: relative;
+		}
+		.licence, .link-info {
+			position: absolute;
+			left: 0;
+			width: 100%;			
+			bottom: -25px;
+		}
+		.link-info {
+			font-size: 0.9rem;
+			text-decoration: underline;
+			position: absolute;
+			text-align: center;
+		}
+		.ttl {display: none}
 	}
 }
 
@@ -592,36 +656,34 @@ $plans-pad-left: 40px;
 		}
 	}
 }
-	.plan-actions {
-		display: flex;
-		width: 300px;
-		@media (min-width: $screen-sm-min) {
-			display: none; 
-		}
-		.svg {height: 25px}
+.plan-actions {
+	display: flex;
+	width: 300px;
+	@media (min-width: $screen-sm-min) {display: none}
+	.svg {height: 25px}
+}
+.plan-btn {
+	display: flex;
+	flex-grow: 1;
+	flex-basis: 0;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+	padding: 0 5px;
+	&.fav {background: #eaf2f7}
+	&.compare {background: #e1eaef}
+	&.info {background: #dbe2e6}
+	&.sign {background: #ffca3c}
+	span {
+		display: block;
+		color: #000;
+		font-size: 0.85rem;
+		margin-top: 10px;				
+		hyphens: auto;
 	}
-		.plan-btn {
-			display: flex;
-			flex-grow: 1;
-			flex-basis: 0;
-			align-items: center;
-			align-content: center;
-			justify-content: center;
-			flex-direction: column;
-			text-align: center;
-			padding: 0 5px;
-			&.fav {background: #eaf2f7}
-			&.compare {background: #e1eaef}
-			&.info {background: #dbe2e6}
-			&.sign {background: #ffca3c}
-			span {
-				display: block;
-				color: #000;
-				font-size: 0.85rem;
-				margin-top: 10px;				
-				hyphens: auto;
-			}
-		}		
+}		
 /* -PLANS */
 
 
