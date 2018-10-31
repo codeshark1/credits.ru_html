@@ -29,6 +29,8 @@ $sect-mg-neg: 39px;
 	box-shadow: 2.5px 4.33px 76px 0px rgba(9, 3, 5, 0.23);
 	position: relative;
 }
+
+
 /* ==========================================================================
    HEADER
    ========================================================================== */
@@ -39,7 +41,6 @@ $sect-mg-neg: 39px;
 
 .header-site {
 	background: #fff;
-	//margin-bottom: $sect-mg;
 	box-shadow: 0 0 30px 1px rgba($color: #090305, $alpha: 0.10);	
 	.btn-menu {
 		position: relative;
@@ -755,12 +756,11 @@ $art-prev-bot-mg: 1.5rem;
 .h-article {
 	font-weight: 400;
 	line-height: 1.3;	
-	font-size: 20px;
-	font-size: 1.3rem;	
-	@media (min-width: $screen-sm-min) {height: 80px;}
+	font-size: 20px;	
 	overflow: hidden;
 	a {display: block;}
 }
+
 .article-prev {
 	padding: 0 30px 24px;
 	transition: all .15s;
@@ -768,13 +768,23 @@ $art-prev-bot-mg: 1.5rem;
 		box-shadow: 0 0 30px 1px rgba($color: #090305, $alpha: 0.1);
 	}
 }
-.row-mod .article-prev {
-	
-	@media (min-width: $screen-sm-min) {width: 48.5%;}
+.row-mod-2 .article-prev {	
 	margin-bottom: $art-prev-bot-mg;
 	&:last-child {margin-bottom: 0;}
-	&:nth-last-child(2) {margin-bottom: 0;}
+	@media (min-width: $screen-sm-min) {
+		width: 48.5%;
+		.h-article {height: 80px;}
+		&:nth-last-child(2) {margin-bottom: 0;}
+	}	
 }
+.row-mod-3 .article-prev {	
+	@media (min-width: $screen-sm-min) {width: 31.5%;}
+	@media (max-width: $screen-xs-max) {margin-bottom: $art-prev-bot-mg;
+		&:last-child {margin-bottom: 0;}
+	}
+	
+}
+
 
 .article-img-bg {
 	display: block;
@@ -849,6 +859,12 @@ $art-prev-bot-mg: 1.5rem;
 }
 
 .heading-lower {font-size: 1.2rem; font-weight: 400;}
+
+.col-md-4 {
+	@media (max-width: $screen-sm-max) {
+		margin-bottom: $sect-mg;
+	}
+}
 /* ==========================================================================
    SIDEBAR
    ========================================================================== */

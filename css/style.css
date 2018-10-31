@@ -85,8 +85,8 @@ label.checkbox {
 
 input[type="radio"],
 input[type="checkbox"] {
-  margin-right: 8px;
-  vertical-align: top; }
+  margin: 0 8px 0 0;
+  vertical-align: text-bottom; }
 
 input[type=text]:focus,
 input[type=email]:focus,
@@ -2110,11 +2110,7 @@ NAVIGATION
   font-weight: 400;
   line-height: 1.3;
   font-size: 20px;
-  font-size: 1.3rem;
   overflow: hidden; }
-  @media (min-width: 768px) {
-    .h-article {
-      height: 80px; } }
   .h-article a {
     display: block; }
 
@@ -2124,15 +2120,26 @@ NAVIGATION
   .article-prev:hover {
     box-shadow: 0 0 30px 1px rgba(9, 3, 5, 0.1); }
 
-.row-mod .article-prev {
+.row-mod-2 .article-prev {
   margin-bottom: 1.5rem; }
+  .row-mod-2 .article-prev:last-child {
+    margin-bottom: 0; }
   @media (min-width: 768px) {
-    .row-mod .article-prev {
-      width: 48.5%; } }
-  .row-mod .article-prev:last-child {
-    margin-bottom: 0; }
-  .row-mod .article-prev:nth-last-child(2) {
-    margin-bottom: 0; }
+    .row-mod-2 .article-prev {
+      width: 48.5%; }
+      .row-mod-2 .article-prev .h-article {
+        height: 80px; }
+      .row-mod-2 .article-prev:nth-last-child(2) {
+        margin-bottom: 0; } }
+
+@media (min-width: 768px) {
+  .row-mod-3 .article-prev {
+    width: 31.5%; } }
+@media (max-width: 767px) {
+  .row-mod-3 .article-prev {
+    margin-bottom: 1.5rem; }
+    .row-mod-3 .article-prev:last-child {
+      margin-bottom: 0; } }
 
 .article-img-bg {
   display: block;
@@ -2219,6 +2226,10 @@ NAVIGATION
 .heading-lower {
   font-size: 1.2rem;
   font-weight: 400; }
+
+@media (max-width: 991px) {
+  .col-md-4 {
+    margin-bottom: 2rem; } }
 
 /* ==========================================================================
    SIDEBAR

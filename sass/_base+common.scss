@@ -61,8 +61,8 @@ input.checkbox {margin-right: 8px; vertical-align: middle}
 label.checkbox {margin-bottom: 8px; display: block;}
 input[type="radio"],
 input[type="checkbox"] {
-  margin-right: 8px;
-  vertical-align: top; 
+  margin: 0 8px 0 0;
+  vertical-align: text-bottom; 
 }
 
 input[type=text]:focus,
