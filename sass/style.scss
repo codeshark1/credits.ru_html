@@ -96,13 +96,7 @@ $sect-mg-neg: 39px;
 	
 	&--rates {
 		padding: 1rem 0;
-		width: 265px;
-		overflow: hidden;
-		.list-rates {width: 680px;}
-		@media (min-width: $screen-lg-min) {
-			width: 80%;
-			.list-rates {width: auto}
-		}
+		width: 270px;
 	}	
 }
 .logo {display: inherit}

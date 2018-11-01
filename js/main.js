@@ -5,7 +5,7 @@ $(window).load(function() {
 
 jQuery(document).ready(function($){
 
-    function navigation_show(button, menu) {
+    function navigation_show(button, menu) { // глобальная
         //$(menu).hide();
         $(button).click(function(){
             if ( $(menu).is(':visible')){
