@@ -18,16 +18,27 @@ a {
 	transition: all .15s;
 	&:hover {color: $red}
 }
-.container {max-width: 1200px;}
+.container {
+	max-width: 1200px;
+	@media (max-width: $screen-xs-max) {
+		padding: 0;
+		.row {margin: 0;}
+	}
+}
 $sect-mg: 2rem;
 $sect-mg-neg: 39px;
 
 .wrapper-main {
-	max-width: 1250px; margin: 0 auto;
-	border: 1px solid #acacac;
 	background-color: #f5f5f5;
-	box-shadow: 2.5px 4.33px 76px 0px rgba(9, 3, 5, 0.23);
 	position: relative;
+	@media (max-width: $screen-xs-max) {
+		padding-top: 70px;
+	}
+	@media (min-width: $screen-lg-min) {
+		box-shadow: 2.5px 4.33px 76px 0px rgba(9, 3, 5, 0.23);
+		max-width: 1250px; margin: 0 auto;
+		border: 1px solid #acacac;		
+	}
 }
 
 
@@ -42,6 +53,7 @@ $sect-mg-neg: 39px;
 .header-site {
 	background: #fff;
 	box-shadow: 0 0 30px 1px rgba($color: #090305, $alpha: 0.10);	
+	position: relative;
 	.btn-menu {
 		position: relative;
 		top: 7px;
@@ -56,10 +68,15 @@ $sect-mg-neg: 39px;
 		justify-content: flex-end;
 	}
 
-	&--navigation {}	
+	&--navigation {}
 	@media (max-width: $screen-xs-max) {
-		&--lvl-1 {padding: 5px 0}
-		&--location, &--rates {
+		&--lvl-1 {padding: 5px 10px}
+		&--rates {
+			position: absolute;
+			top: -70px; left: 15px;
+
+		}
+		&--location {
 			display: none;
 		}
 		&--logo {
@@ -131,6 +148,7 @@ NAVIGATION
 	@media (max-width: $screen-xs-max) {
 		position: relative;
 		display: none;
+		padding: 0 15px;
 		&:before {
 			content: "";
 			position: absolute;
@@ -357,10 +375,12 @@ NAVIGATION
 }
 
 .section {
-	margin-bottom: $sect-mg;
+	margin-bottom: $sect-mg !important;
 }
 .section-shift {
-	margin-left: -$sect-mg-neg;
+	@media (min-width: $screen-lg-min) {
+		margin-left: -$sect-mg-neg;
+	}
 }
 
 .row-new {
@@ -390,45 +410,56 @@ NAVIGATION
 }
 
 .card {background: #ffffff;}
-.card-pad {padding: 2rem}
+.card-pad {
+	padding: 1.5rem 1rem;
+	@media (min-width: $screen-sm-min) {
+		padding: 2rem;
+	}
+}
 .h-section {
 	font-size: 30px;
-	font-weight: 300;
+	font-weight: 400;
 	margin-top: 0;
 	font-size: 1.7rem;
+	@media (max-width: $screen-xs-max) {
+		text-align: center;
+	}
+	@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+		margin-left: 15px;
+	}
 }
 .h-main {
-	position: relative;
-	margin-left: -$sect-mg-neg;
-	padding-left: $sect-mg-neg;
-	overflow: hidden;
-	&:before {
-		content: "";
-		height: 1.6rem;
-		width: 1.6rem;
-		position: absolute;
-		background: $red;
-		left: -0.8rem;
-		bottom: 2px;
-		border-radius: 100%;
+	@media (min-width: $screen-lg-min) {
+		position: relative;
+		margin-left: -$sect-mg-neg;
+		padding-left: $sect-mg-neg;
+		overflow: hidden;
+		&:before {
+			content: "";
+			height: 1.6rem;
+			width: 1.6rem;
+			position: absolute;
+			background: $red;
+			left: -0.8rem;
+			bottom: 2px;
+			border-radius: 100%;
+		}
 	}
 }
 
-.action-main {
-	@media (min-width: $screen-sm-min) {
-		width: 31.5%;		
+.actions-main {
+	@media (max-width: $screen-xs-max) {
+		margin-bottom: 2rem;
 	}
-	height: 105px;
-	margin-bottom: 1.5rem;
-	padding: 27px 25px 0 0;
+}
+.action-main {
+	margin-bottom: .5rem;
+	padding: 16px 0 16px 75px;
 	position: relative;
 	display: block;
 
 	&__icon {
-		//float: left;
-		//text-align: center;
-		//img {height: 45px;}
-		width: 40%;
+		width: 70px;
 		position: absolute;
 		height: 100%;
 		top: 0;
@@ -440,58 +471,91 @@ NAVIGATION
 	}
 	&__title {
 		font-size: 1.2rem;
-		margin: 0 0 .5rem 0;
+		margin: 0;
 		font-weight: 500;
 	}
-	&__comment {
-		font-size: 0.9rem;
-	}
-	&__title, &__comment {
-		margin-left: 42%;
-	}
+	&__comment {font-size: 0.9rem;}
+	@media (max-width: $screen-xs-max) {
+		position: relative;
+		&:after {
+			content: "";
+			width: 7px;height: 11px;
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 7 11' width='7'%3E%3Cpolygon points='7 5.5 0.7 11 0 10.39 5.6 5.5 0 0.61 0.7 0 7 5.5'/%3E%3C/svg%3E");
+			position: absolute;
+			right: 13px;
+			top: 50%;
+			margin-top: -5px;
+		}
+		&__comment {display: none;}
+		svg {max-height: 33px; max-width: 33px;}
+	}	
+	@media (min-width: $screen-sm-min) {
+		width: 31.5%;		
+		height: 105px;
+		padding: 27px 25px 0 0;
+		margin-bottom: 1.5rem;
+		&:nth-last-child(1),
+		&:nth-last-child(2),
+		&:nth-last-child(3) {display: none;}
+		&__icon {
+			width: 40%;
+		}
+		&__title {margin-bottom: .5rem;}
+		&__title, &__comment {
+			margin-left: 42%;
+		}
+	}	
 } 
 
 /* PLANS */
-$plans-pad-left: 40px;
 
-.nav-plans-wrapper {
-	border-bottom: 1px solid #acacac;
-	padding: 0 20px 0 $plans-pad-left;
-}
-.nav-plans {
-	max-width: 500px;
-	display: flex;
-	justify-content: space-between;
-	&__item {
-		display: inline-block;		
-		&:last-child {margin-right: 0;}
-		a {
-			color: $gray;
-			text-transform: uppercase;
-			display: block;
-			padding: 1rem 0;
-			position: relative;
-			transition: all .3s;
-			font-weight: 500;
-			&:after {
-				content: '';
-				height: 2px;
-				position: absolute;
-				bottom: 0;
-				left: 0;right: 0;
-				width: 0;
-				transition: width .3s;
-			}
+
+.nav-tabs {
+	a {
+		color: $gray;
+		text-transform: uppercase;
+		display: block;
+		padding: 1rem 0;
+		transition: all .3s;
+		font-weight: 500;		
+	}
+	&-wrapper {padding-left: 20px;}
+	@media (min-width: $screen-sm-min) {
+		max-width: 500px;
+		display: flex;
+		justify-content: space-between;
+		&-wrapper {
+			border-bottom: 1px solid #acacac;
+			padding: 0 20px;
 		}
-		&.active {
+		.menu-item {
+			display: inline-block;		
+			&:last-child {margin-right: 0;}
 			a {
-				color: $red;
+				position: relative;
 				&:after {
-					background: $red;
-					width: 100%;
+					content: '';
+					height: 2px;
+					position: absolute;
+					bottom: 0;
+					left: 0;right: 0;
+					width: 0;
+					transition: width .3s;
 				}
 			}
-		}
+			&.active {
+				a {
+					color: $red;
+					&:after {
+						background: $red;
+						width: 100%;
+					}
+				}
+			}
+		}		
+	}
+	@media (min-width: $screen-md-min) {
+		&-wrapper {padding-left: 40px;}
 	}
 }
 .tabcontent {display: none;}
@@ -500,6 +564,10 @@ $plans-pad-left: 40px;
 .plan {
 	border: 2px solid transparent;
 	position: relative;
+	background: #fff;
+	@media (max-width: $screen-xs-max) {
+		margin-bottom: 0.5rem;
+	}
 	&:after {
 		content: "";
 		display: block;
@@ -509,8 +577,7 @@ $plans-pad-left: 40px;
 		left: 0;
 		right: 0;
 		bottom: -1px;
-	}	
-
+	}
 	&:last-child:after {content: none}
 
 	&.plan-best {border-color: $blue;
@@ -518,10 +585,12 @@ $plans-pad-left: 40px;
 	}		
 	.plan-content {
 		display: flex;	
-		padding: 20px 20px 20px $plans-pad-left;
+		padding: 20px 20px 0 20px;
 		position: relative;
 		width: 100%;		
 		@media (max-width: $screen-xs-max) {flex-wrap: wrap;}
+		@media (min-width: $screen-sm-min) {padding: 20px}
+		@media (min-width: $screen-lg-min) {padding-left: 40px;}
 	}	
 	.td {
 		flex-grow: 1;
@@ -532,7 +601,11 @@ $plans-pad-left: 40px;
 		&_bankname {}
 		&_amount {}
 		&_time {}
-		&_rate {}
+		&_rate {
+			@media (max-width: $screen-xs-max) {
+				.data {color: $red;}
+			}
+		}
 		&_action {
 			align-items: flex-end;
 			flex-direction: column-reverse;
@@ -564,14 +637,19 @@ $plans-pad-left: 40px;
 		min-height: 30px;
 		display: flex;
 		align-items: center;
+		font-weight: 400;
+		@media (max-width: $screen-xs-max) {
+			font-weight: 600;
+		}
 	}
 	.h-plan-best {
 		background: $blue;
 		color: #fff;
 		font-weight: 500;
 		padding: 16px 0;
-		padding-left: $plans-pad-left;
+		padding-left: 20px;
 		margin: 0;
+		@media (min-width: $screen-sm-min) {padding-left: 40px;}
 		.icon {
 			background: url('../img/i-best.png') no-repeat;
 			width: 23px;height: 19px;
@@ -583,7 +661,7 @@ $plans-pad-left: 40px;
 	.licence {font-size: 0.75rem;}
 
 	@media (min-width: $screen-md-min) {
-		.plan-content {padding: 35px 35px 35px $plans-pad-left;}
+		.plan-content {padding: 35px 35px 35px 40px;}
 	}
 }
 .plan_inmain {
@@ -820,7 +898,7 @@ $art-prev-bot-mg: 1.5rem;
 }
 .h-article__sm {
 	font-size: 1.1rem;
-	font-weight: 400;
+	font-weight: 500;
 	margin: 0;
 	line-height: 1.3;	
 	@media (min-width: $screen-lg-min) {
@@ -863,11 +941,17 @@ $art-prev-bot-mg: 1.5rem;
 		margin-bottom: $sect-mg;
 	}
 }
+.col-lg-8, .col-lg-4 {
+	@media (max-width: $screen-sm-max) {		
+		padding: 0;	
+	}	
+}
 /* ==========================================================================
    SIDEBAR
    ========================================================================== */
 .sidebar-main {
-	@media (max-width: $screen-md-max) {
+	
+	@media (max-width: $screen-md-max) {		
 		margin-bottom: $sect-mg;
 	}
 }
@@ -936,7 +1020,6 @@ $art-prev-bot-mg: 1.5rem;
 @media (max-width: $screen-xs-max) {
 	.footer-site .menu-main,
 	.menu-footer {
-		margin: 0 -8px;
 		padding: 0;
 		a {
 			font-weight: 600;
