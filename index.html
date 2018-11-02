@@ -337,8 +337,12 @@
                         
                         <div class="section-shift">
                             <div class="nav-tabs-wrapper">
+                                <div class="nav-tabs-control">
+                                    <p class="title">Категория:</p>
+                                    <p class="tab-selected">Кредитные КАРТы</p>
+                                </div><!-- /.nav-tabs-control -->
                                 <ul class="nav-tabs js-nav-tabs">
-                                    <li class="menu-item active"><a href="#tab-vkladi">ВКЛАДЫ</a></li>
+                                    <li class="menu-item active"><a href="#tab-vkladi">Вклады</a></li>
                                     <li class="menu-item"><a href="#tab-krediti">Кредиты</a></li>
                                     <li class="menu-item"><a href="#tab-karti">Кредитные карты</a></li>
                                     <li class="menu-item"><a href="#tab-zaymi">Займы</a></li>
@@ -526,6 +530,8 @@
                     </section>
 
                     <section class="section">
+                        <h2 class="h-section visible-xs">Новости</h2>
+
                         <article class="card article-prev article-prev--full">
                             <a href="#" class="article-img-bg" style="background-image:url(img/photo-prev1.jpg)"></a>
                             <h2 class="h-article"><a href="#">Михаил Воронько: «Фактически степень мошенничества по токенизированным картам сведена к минимуму»</a></h2>
@@ -592,16 +598,16 @@
                         <form action="/" class="form">
                             <div class="form__i">
                                 <input class="email" type="email" placeholder="Введите вашу почту">
-                                <button type="submit" class="btn btn-cta btn-cta-2">Подписаться</button>
                             </div>
                             <label class="checkbox"><input type="checkbox" class="checkbox"> Подтверждаю согласие с <a href="#">условиями передачи данных</a></label>
+                            <button type="submit" class="btn btn-cta btn-cta-2">Подписаться</button>
                         </form>
                     </section>
                 </div><!-- /.col -->
 
                 <!-- sbar: -->
                 <div class="col-lg-4 sidebar-main">
-                    <h2 class="h-section">Лента новостей</h2>
+                    <h2 class="h-section hidden-xs">Лента новостей</h2>
                     <section class="card card-pad">
                         <article class="article-prev--sm">
                             <h3 class="h-article__sm"><a href="#">Исследование: индекс счастья в России впервые за долгое время оказался выше среднего по планете </a></h3>
@@ -811,9 +817,9 @@
             </section>
         </div><!-- /.container -->
 
-        <hr class="hr-page">
+        <hr class="hr-page hidden-xs">
 
-        <article class="about-main section container">
+        <article class="about-main section container hidden-xs">
             <div class="row section">
                 <div class="col-sm-6">
                     <h3 class="heading-lower">О Credits.ru</h3>
@@ -901,6 +907,11 @@
 
 <script>
     new SVGInjector().inject(document.querySelectorAll('svg[data-src]'));
+
+    $(function() {			
+
+    });
+
 </script>
 
 </body>

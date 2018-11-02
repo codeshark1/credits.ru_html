@@ -26,7 +26,14 @@ p, ul {margin: 0;}
 ul {padding: 0; list-style: none;}
 small {font-size: 100%;display: inline-block;}
 
-
+.hidden-xs {
+  @media (max-width: $screen-xs-max) {display: none;}
+}
+.visible-xs {
+  @media (min-width: $screen-sm-min) {
+    display: none;
+  }
+}
 /* ==========================================================================
   COMMON
   ========================================================================== */

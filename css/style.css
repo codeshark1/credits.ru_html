@@ -41,6 +41,14 @@ small {
   font-size: 100%;
   display: inline-block; }
 
+@media (max-width: 767px) {
+  .hidden-xs {
+    display: none; } }
+
+@media (min-width: 768px) {
+  .visible-xs {
+    display: none; } }
+
 /* ==========================================================================
   COMMON
   ========================================================================== */
@@ -1435,7 +1443,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     page-break-after: avoid; } }
 body {
   font-family: 'Ubuntu', sans-serif;
-  background: #f5f5f5;
+  background: #eeeeee;
   font-size: 16px;
   font-weight: 300; }
 
@@ -1798,7 +1806,7 @@ NAVIGATION
       padding: 2rem; } }
 
 .h-section {
-  font-size: 30px;
+  font-size: 18px;
   font-weight: 400;
   margin-top: 0;
   font-size: 1.7rem; }
@@ -1808,6 +1816,9 @@ NAVIGATION
   @media (min-width: 768px) and (max-width: 991px) {
     .h-section {
       margin-left: 15px; } }
+  @media (min-width: 768px) {
+    .h-section {
+      font-size: 30px; } }
 
 @media (min-width: 1200px) {
   .h-main {
@@ -1888,29 +1899,70 @@ NAVIGATION
 /* PLANS */
 .nav-tabs a {
   color: #555555;
-  text-transform: uppercase;
-  display: block;
-  padding: 1rem 0;
   transition: all .3s;
   font-weight: 500; }
-.nav-tabs-wrapper {
-  padding-left: 20px; }
+@media (max-width: 767px) {
+  .nav-tabs {
+    background: #fff;
+    display: inline-block;
+    padding: 0 15px;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    z-index: 2;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 5px 5px 2px rgba(0, 0, 0, 0.1);
+    display: none; }
+    .nav-tabs-wrapper {
+      margin: 0 15px 1rem;
+      position: relative; }
+    .nav-tabs-control {
+      border-radius: 5px;
+      background: #fff;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      font-weight: 400; }
+      .nav-tabs-control .tab-selected {
+        text-transform: uppercase;
+        cursor: pointer; }
+        .nav-tabs-control .tab-selected:after {
+          content: "";
+          width: 11px;
+          height: 7px;
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11 7' width='11'%3E%3Cpolygon points='5.5 7 0 0.7 0.61 0 5.5 5.6 10.39 0 11 0.7 5.5 7'/%3E%3C/svg%3E");
+          display: inline-block;
+          margin-left: 5px;
+          vertical-align: middle; }
+    .nav-tabs .menu-item {
+      text-align: right;
+      padding: 10px 0; }
+      .nav-tabs .menu-item.active a {
+        border-bottom: 2px solid #ff0000; } }
 @media (min-width: 768px) {
   .nav-tabs {
     max-width: 500px;
-    display: flex;
+    display: block !important;
+    display: flex !important;
     justify-content: space-between; }
     .nav-tabs-wrapper {
       border-bottom: 1px solid #acacac;
-      padding: 0 20px; }
+      padding: 0 20px;
+      background: #fff; }
+    .nav-tabs-control {
+      display: none; }
     .nav-tabs .menu-item {
       display: inline-block; }
       .nav-tabs .menu-item:last-child {
         margin-right: 0; }
       .nav-tabs .menu-item a {
-        position: relative; }
+        display: block;
+        position: relative;
+        padding: 1rem 0;
+        text-transform: uppercase; }
         .nav-tabs .menu-item a:after {
           content: '';
+          text-transform: uppercase;
           height: 2px;
           position: absolute;
           bottom: 0;
@@ -1934,12 +1986,14 @@ NAVIGATION
   display: block; }
 
 .plan {
-  border: 2px solid transparent;
   position: relative;
   background: #fff; }
   @media (max-width: 767px) {
     .plan {
       margin-bottom: 0.5rem; } }
+  @media (min-width: 768px) {
+    .plan {
+      border: 2px solid transparent; } }
   .plan:after {
     content: "";
     display: block;
@@ -1952,12 +2006,12 @@ NAVIGATION
   .plan:last-child:after {
     content: none; }
   .plan.plan-best {
-    border-color: #90c6f4; }
+    border: 2px solid #90c6f4; }
     .plan.plan-best:after {
       content: none; }
   .plan .plan-content {
     display: flex;
-    padding: 20px 20px 0 20px;
+    padding: 20px 0 0 20px;
     position: relative;
     width: 100%; }
     @media (max-width: 767px) {
@@ -1966,9 +2020,9 @@ NAVIGATION
     @media (min-width: 768px) {
       .plan .plan-content {
         padding: 20px; } }
-    @media (min-width: 1200px) {
+    @media (min-width: 992px) {
       .plan .plan-content {
-        padding-left: 40px; } }
+        padding: 30px 30px 35px 40px; } }
   .plan .td {
     flex-grow: 1;
     display: flex;
@@ -2027,9 +2081,6 @@ NAVIGATION
       margin-right: 16px; }
   .plan .licence {
     font-size: 0.75rem; }
-  @media (min-width: 992px) {
-    .plan .plan-content {
-      padding: 35px 35px 35px 40px; } }
 
 @media (min-width: 768px) {
   .plan_inmain .td {
@@ -2086,17 +2137,17 @@ NAVIGATION
     display: flex;
     overflow: hidden; }
     .plan-wrapper .plan-content, .plan-wrapper .plan-actions {
-      transition: all .3s; }
+      transition: all .2s ease-out; }
     .plan-wrapper .plan-actions {
-      margin-right: -300px; }
-    .plan-wrapper:hover .plan-content {
-      margin-left: -300px; }
-    .plan-wrapper:hover .plan-actions {
+      margin-right: -200px; }
+    .plan-wrapper.swiped .plan-content {
+      margin-left: -200px; }
+    .plan-wrapper.swiped .plan-actions {
       margin-right: 0; } }
 
 .plan-actions {
   display: flex;
-  width: 300px; }
+  width: 200px; }
   @media (min-width: 768px) {
     .plan-actions {
       display: none; } }
@@ -2114,9 +2165,11 @@ NAVIGATION
   text-align: center;
   padding: 0 5px; }
   .plan-btn.fav {
-    background: #eaf2f7; }
+    background: #eaf2f7;
+    display: none; }
   .plan-btn.compare {
-    background: #e1eaef; }
+    background: #e1eaef;
+    display: none; }
   .plan-btn.info {
     background: #dbe2e6; }
   .plan-btn.sign {
@@ -2134,40 +2187,52 @@ NAVIGATION
   background-image: url("../img/mishen@2x.png");
   background-repeat: no-repeat;
   background-size: 245px auto;
-  background-position: 15% 0; }
+  background-position: center 0; }
   .subscribe-main .title {
     margin: 0;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 20px;
     line-height: 1.7; }
     @media (max-width: 1199px) {
       .subscribe-main .title {
         margin-bottom: 1rem; } }
-  .subscribe-main .form {
-    position: relative; }
-    .subscribe-main .form__i {
-      padding-right: 170px;
-      margin-bottom: 15px; }
+  .subscribe-main .form__i {
+    margin-bottom: 15px; }
   .subscribe-main .email {
     border-color: #c4c4c4;
     border-radius: 5px;
     font-size: 14px;
     padding: 15px 16px; }
   .subscribe-main .btn {
-    position: absolute;
-    right: 0;
-    top: 0;
     font-size: 14px;
     padding: 16px 32px; }
-  .subscribe-main .checkbox {
-    margin-bottom: 0;
+  .subscribe-main label.checkbox {
+    margin-bottom: 15px;
     font-size: 0.9rem; }
-    .subscribe-main .checkbox a {
+    .subscribe-main label.checkbox a {
       text-decoration: underline; }
+  @media (max-width: 767px) {
+    .subscribe-main {
+      text-align: center; }
+      .subscribe-main .email {
+        text-align: center; } }
+  @media (min-width: 768px) {
+    .subscribe-main .form {
+      position: relative; }
+      .subscribe-main .form__i {
+        padding-right: 170px; }
+    .subscribe-main .checkbox {
+      margin-bottom: 0; }
+    .subscribe-main .btn {
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 16px 32px; } }
   @media (min-width: 992px) {
     .subscribe-main {
       display: flex;
-      padding: 35px 30px 15px; }
+      padding: 35px 30px 15px;
+      background-position: 15% 0; }
       .subscribe-main .title {
         width: 235px;
         flex-shrink: 0;
@@ -2258,8 +2323,10 @@ NAVIGATION
     background: #ff0000;
     width: 55px; }
   .article-prev--full .h-article {
-    font-size: 1.5rem;
-    height: 62px; }
+    font-size: 1.5rem; }
+  @media (min-width: 768px) {
+    .article-prev--full {
+      height: 62px; } }
   .article-prev--full .article-img-bg {
     height: 300px; }
 
@@ -2268,6 +2335,11 @@ NAVIGATION
 
 .article-prev--sm {
   margin-bottom: 32px; }
+  @media (max-width: 767px) {
+    .article-prev--sm {
+      display: none; }
+      .article-prev--sm:nth-child(1), .article-prev--sm:nth-child(2), .article-prev--sm:nth-child(3), .article-prev--sm:nth-child(4) {
+        display: block; } }
   .article-prev--sm .article-prev--footer {
     margin-top: 15px; }
 

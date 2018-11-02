@@ -8,7 +8,7 @@
 
 body {	
 	font-family: 'Ubuntu', sans-serif;
-	background: #f5f5f5;
+	background: #eeeeee;
 	font-size: 16px;
 	font-weight: 300;
 }
@@ -417,7 +417,7 @@ NAVIGATION
 	}
 }
 .h-section {
-	font-size: 30px;
+	font-size: 18px;
 	font-weight: 400;
 	margin-top: 0;
 	font-size: 1.7rem;
@@ -426,7 +426,9 @@ NAVIGATION
 	}
 	@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
 		margin-left: 15px;
+		
 	}
+	@media (min-width: $screen-sm-min) {font-size: 30px;}
 }
 .h-main {
 	@media (min-width: $screen-lg-min) {
@@ -512,29 +514,75 @@ NAVIGATION
 
 .nav-tabs {
 	a {
-		color: $gray;
-		text-transform: uppercase;
-		display: block;
-		padding: 1rem 0;
+		color: $gray;				
 		transition: all .3s;
 		font-weight: 500;		
 	}
-	&-wrapper {padding-left: 20px;}
+	@media (max-width: $screen-xs-max) {
+		&-wrapper {margin: 0 15px 1rem;
+			position: relative;
+		}
+		background: #fff;
+		display: inline-block;
+		padding: 0 15px;
+		position: absolute;
+		right: 0;
+		top: 50px;
+		z-index: 2;
+		border-radius: 0 0 5px 5px;
+		box-shadow: 0 5px 5px 2px rgba(#000,.1);
+		display: none;
+		
+		&-control {
+			border-radius: 5px;
+			background: #fff;
+			padding: 15px;
+			display: flex;
+			justify-content: space-between;
+			font-weight: 400;
+			.tab-selected {
+				text-transform: uppercase;
+				cursor: pointer;
+				&:after {
+					content: "";
+					width: 11px;height: 7px;
+					background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11 7' width='11'%3E%3Cpolygon points='5.5 7 0 0.7 0.61 0 5.5 5.6 10.39 0 11 0.7 5.5 7'/%3E%3C/svg%3E");
+					display: inline-block;
+					margin-left: 5px;
+					vertical-align: middle;
+				}
+			}
+		}
+		.menu-item {
+			text-align: right;
+			padding: 10px 0;
+			&.active a {
+				border-bottom: 2px solid $red;
+			}
+		}
+	}
 	@media (min-width: $screen-sm-min) {
 		max-width: 500px;
-		display: flex;
+		display: block !important;
+		display: flex !important;
 		justify-content: space-between;
 		&-wrapper {
 			border-bottom: 1px solid #acacac;
 			padding: 0 20px;
+			background: #fff;
 		}
+		&-control {display: none;}
 		.menu-item {
 			display: inline-block;		
 			&:last-child {margin-right: 0;}
 			a {
+				display: block;
 				position: relative;
+				padding: 1rem 0;
+				text-transform: uppercase;
 				&:after {
 					content: '';
+					text-transform: uppercase;
 					height: 2px;
 					position: absolute;
 					bottom: 0;
@@ -561,12 +609,14 @@ NAVIGATION
 .tabcontent {display: none;}
 .tabcontent:first-child {display: block;}
 
-.plan {
-	border: 2px solid transparent;
+.plan {	
 	position: relative;
 	background: #fff;
 	@media (max-width: $screen-xs-max) {
 		margin-bottom: 0.5rem;
+	}
+	@media (min-width: $screen-sm-min) {
+		border: 2px solid transparent;
 	}
 	&:after {
 		content: "";
@@ -580,17 +630,17 @@ NAVIGATION
 	}
 	&:last-child:after {content: none}
 
-	&.plan-best {border-color: $blue;
+	&.plan-best {border: 2px solid $blue;
 		&:after {content: none}
 	}		
 	.plan-content {
 		display: flex;	
-		padding: 20px 20px 0 20px;
+		padding: 20px 0 0 20px;
 		position: relative;
 		width: 100%;		
 		@media (max-width: $screen-xs-max) {flex-wrap: wrap;}
 		@media (min-width: $screen-sm-min) {padding: 20px}
-		@media (min-width: $screen-lg-min) {padding-left: 40px;}
+		@media (min-width: $screen-md-min) {padding: 30px 30px 35px 40px;}		
 	}	
 	.td {
 		flex-grow: 1;
@@ -660,9 +710,6 @@ NAVIGATION
 	}
 	.licence {font-size: 0.75rem;}
 
-	@media (min-width: $screen-md-min) {
-		.plan-content {padding: 35px 35px 35px 40px;}
-	}
 }
 .plan_inmain {
 	.td {
@@ -722,17 +769,17 @@ NAVIGATION
 	@media (max-width: $screen-xs-max) {
 		display: flex;
 		overflow: hidden;
-		.plan-content, .plan-actions {transition: all .3s;}
-		.plan-actions {margin-right: -300px;}
-		&:hover {
-			.plan-content {margin-left: -300px;}
+		.plan-content, .plan-actions {transition: all .2s ease-out;}
+		.plan-actions {margin-right: -200px;}
+		&.swiped {
+			.plan-content {margin-left: -200px;}
 			.plan-actions {margin-right: 0;}
 		}
 	}
 }
 .plan-actions {
 	display: flex;
-	width: 300px;
+	width: 200px;
 	@media (min-width: $screen-sm-min) {display: none}
 	.svg {height: 25px}
 }
@@ -746,8 +793,8 @@ NAVIGATION
 	flex-direction: column;
 	text-align: center;
 	padding: 0 5px;
-	&.fav {background: #eaf2f7}
-	&.compare {background: #e1eaef}
+	&.fav {background: #eaf2f7; display: none}
+	&.compare {background: #e1eaef; display: none}
 	&.info {background: #dbe2e6}
 	&.sign {background: #ffca3c}
 	span {
@@ -757,6 +804,7 @@ NAVIGATION
 		margin-top: 10px;				
 		hyphens: auto;
 	}
+
 }		
 /* -PLANS */
 
@@ -771,10 +819,10 @@ NAVIGATION
 	background-image: url('../img/mishen@2x.png');
 	background-repeat: no-repeat;
 	background-size: 245px auto;
-	background-position: 15% 0;
+	background-position: center 0;
 	.title {
 		margin: 0;
-		font-weight: 300;
+		font-weight: 400;
 		font-size: 20px;
 		line-height: 1.7;
 		@media (max-width: $screen-md-max) {
@@ -782,8 +830,7 @@ NAVIGATION
 		}
 	}
 	.form {
-		position: relative;		
-		&__i {padding-right: 170px; margin-bottom: 15px;}		
+		&__i {margin-bottom: 15px;}		
 	}
 	.email {
 		border-color: #c4c4c4;
@@ -792,20 +839,35 @@ NAVIGATION
 		padding: 15px 16px;
 	}
 	.btn {
-		position: absolute;
-		right: 0;top: 0;
 		font-size: 14px;
 		padding: 16px 32px;
 	}
-	.checkbox {
-		margin-bottom: 0;
+	label.checkbox {		
+		margin-bottom: 15px;
 		font-size: 0.9rem;
 		a {text-decoration: underline;}
 	}
-
+	@media (max-width: $screen-xs-max) {
+		text-align: center;
+		.email {text-align: center;}
+		//.btn {width: 100%;}
+	}
+	@media (min-width: $screen-sm-min) {
+		.form {
+			position: relative;		
+			&__i {padding-right: 170px;}		
+		}		
+		.checkbox {margin-bottom: 0;}
+		.btn {
+			position: absolute;
+			right: 0;top: 0;
+			padding: 16px 32px;
+		}		
+	}
 	@media (min-width: $screen-md-min) {
 		display: flex;
 		padding: 35px 30px 15px;
+		background-position: 15% 0;
 		.title {width: 235px; flex-shrink: 0;margin-right: 20px;}
 		.form {flex-grow: 1}
 	}
@@ -883,7 +945,8 @@ $art-prev-bot-mg: 1.5rem;
 	width: 100%;
 	margin-bottom: $art-prev-bot-mg;
 	hr {margin: 1.5rem 0; border: none; height: 2px; background: $red; width: 55px;}
-	.h-article {font-size: 1.5rem; height: 62px}
+	.h-article {font-size: 1.5rem;}
+	@media (min-width: $screen-sm-min) { height: 62px}
 	.article-img-bg {height: 300px;}
 }
 
@@ -894,6 +957,13 @@ $art-prev-bot-mg: 1.5rem;
 
 .article-prev--sm {
 	margin-bottom: 32px;
+	@media (max-width: $screen-xs-max) {
+		display: none;
+		&:nth-child(1),
+		&:nth-child(2),
+		&:nth-child(3),
+		&:nth-child(4) {display: block;}
+	}
 	.article-prev--footer {margin-top: 15px;}
 }
 .h-article__sm {
