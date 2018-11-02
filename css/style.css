@@ -2191,11 +2191,15 @@ NAVIGATION
   .subscribe-main .title {
     margin: 0;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 19px;
     line-height: 1.7; }
     @media (max-width: 1199px) {
       .subscribe-main .title {
         margin-bottom: 1rem; } }
+    @media (min-width: 992px) {
+      .subscribe-main .title {
+        position: relative;
+        top: -7px; } }
   .subscribe-main .form__i {
     margin-bottom: 15px; }
   .subscribe-main .email {
@@ -2325,7 +2329,7 @@ NAVIGATION
   .article-prev--full .h-article {
     font-size: 1.5rem; }
   @media (min-width: 768px) {
-    .article-prev--full {
+    .article-prev--full .h-article {
       height: 62px; } }
   .article-prev--full .article-img-bg {
     height: 300px; }

@@ -823,10 +823,14 @@ NAVIGATION
 	.title {
 		margin: 0;
 		font-weight: 400;
-		font-size: 20px;
+		font-size: 19px;
 		line-height: 1.7;
 		@media (max-width: $screen-md-max) {
 			margin-bottom: 1rem;
+		}
+		@media (min-width: $screen-md-min) {
+			position: relative;
+			top: -7px;
 		}
 	}
 	.form {
@@ -946,7 +950,9 @@ $art-prev-bot-mg: 1.5rem;
 	margin-bottom: $art-prev-bot-mg;
 	hr {margin: 1.5rem 0; border: none; height: 2px; background: $red; width: 55px;}
 	.h-article {font-size: 1.5rem;}
-	@media (min-width: $screen-sm-min) { height: 62px}
+	@media (min-width: $screen-sm-min) {
+		.h-article {height: 62px;}
+	}
 	.article-img-bg {height: 300px;}
 }
 
