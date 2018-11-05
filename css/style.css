@@ -41,7 +41,7 @@ small {
   font-size: 100%;
   display: inline-block; }
 
-@media (max-width: 767px) {
+@media (max-width: 576px) {
   .hidden-xs {
     display: none; } }
 
@@ -529,10 +529,11 @@ h1, h2, h3, h4 {
     font-size: 14px; }
     .breadcrumbs a:after {
       content: "";
+      width: 4px;
+      height: 4px;
+      background: #252525;
+      border-radius: 100%;
       display: inline-block;
-      width: 8px;
-      height: 12px;
-      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3Cpath d='M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z'/%3E%3C/svg%3E") no-repeat;
       vertical-align: middle;
       margin: 0 8px 0 12px; }
     .breadcrumbs a:last-child:after {
@@ -1762,9 +1763,6 @@ NAVIGATION
 /* ==========================================================================
    CONTENT
    ========================================================================== */
-.main-content {
-  margin-top: 2rem; }
-
 .section {
   margin-bottom: 2rem !important; }
 
@@ -1809,7 +1807,8 @@ NAVIGATION
   font-size: 18px;
   font-weight: 400;
   margin-top: 0;
-  font-size: 1.7rem; }
+  font-size: 1.7rem;
+  margin-bottom: 2rem; }
   @media (max-width: 767px) {
     .h-section {
       text-align: center; } }
@@ -1836,9 +1835,14 @@ NAVIGATION
       bottom: 2px;
       border-radius: 100%; } }
 
-@media (max-width: 767px) {
-  .actions-main {
-    margin-bottom: 2rem; } }
+.h-hero {
+  text-align: center; }
+
+.actions-main {
+  padding-top: 2rem; }
+  @media (max-width: 767px) {
+    .actions-main {
+      margin-bottom: 2rem; } }
 
 .action-main {
   margin-bottom: .5rem;
@@ -1896,6 +1900,48 @@ NAVIGATION
       .action-main__title, .action-main__comment {
         margin-left: 42%; } }
 
+/* SORTING/LISTING CONTROLS */
+.section-hero-bg {
+  background-color: #ebeef0;
+  background-image: url(../img/mishen.png);
+  background-size: 730px auto;
+  background-position: center top;
+  background-repeat: no-repeat;
+  padding-top: 2rem; }
+
+.lbl-top {
+  margin-bottom: 0.7rem;
+  min-height: 20px;
+  display: block;
+  white-space: nowrap; }
+
+@media (min-width: 768px) {
+  .input-text {
+    padding: 0 15px !important; } }
+
+.input-text, .btn-toggle_more {
+  min-height: 40px;
+  border-radius: 5px;
+  margin-bottom: 15px !important; }
+  @media (min-width: 768px) {
+    .input-text, .btn-toggle_more {
+      height: 64px;
+      margin-bottom: 30px !important; } }
+
+.btn-toggle_more {
+  width: 100%; }
+  .btn-toggle_more span {
+    display: inline-block;
+    background: #fff;
+    border-radius: 100%;
+    width: 22px;
+    height: 22px;
+    text-align: center;
+    line-height: 22px;
+    margin-right: 10px;
+    flex-shrink: 0; }
+
+/* --- SORTING/LISTING CONTROLS */
 /* PLANS */
 .nav-tabs a {
   color: #555555;
