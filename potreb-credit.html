@@ -280,48 +280,64 @@
                                 <p class="lbl lbl-top">Цель кредита</p>
                                 <select class="input-text"><option>Любая</option></select>
                             </div><!-- /.col -->
-                            <div class="col-sm-12 col-md-3"> <!--  -->
+                            <div class="col-sm-12 col-md-3 bx-center">
                                 <span class="lbl lbl-top d-none d-md-block"></span>
-                                <button type="button" class="btn btn-cta btn-toggle_more" id="js-btn-search-listing"><span class="indicator">+</span>Больше условий</button>
+                                <button type="button" class="btn btn-toggle_more" id="js-btn-search-listing"><span class="indicator">+</span>Больше условий</button>
                             </div><!-- /.col -->
                         </div><!-- /.row -->
 
-                        <div class="row justify-content-md-center search-listing-hidden" id="search-listing-hidden">
-                            <div class="col-sm-6 col-md-3 d-block d-md-none">
-                                <p class="lbl lbl-top">Цель кредита</p>
-                                <select class="input-text"><option>Любая</option></select>
-                            </div><!-- /.col -->
-                            
-                            <div class="col-sm-6 col-md-3">
-                                <p class="lbl lbl-top">Поручительство</p>
-                                <select class="input-text"><option>Неважно</option></select>
-                            </div><!-- /.col -->
-                            <div class="col-sm-6 col-md-3">
-                                <p class="lbl lbl-top">Список документов</p>
-                                <select class="input-text"><option>Неважно</option></select>
-                            </div><!-- /.col -->
-                            <div class="col-sm-6 col-md-3">
-                                <p class="lbl lbl-top">Категория заемщика</p>
-                                <select class="input-text"><option>Стандартные</option></select>
-                            </div><!-- /.col -->
-                            <div class="col-sm-6 col-md-3">
-                                <p class="lbl lbl-top">Способ получения</p>
-                                <select class="input-text"><option>Любой</option></select>
-                            </div><!-- /.col -->                                                                        
+                        <div class="search-listing-filter popup-mob" id="search-listing-filter">
+                            <div class="popup-header">
+                                <h3 class="h-popup">Фильтр</h3>
+                                <button type="button" class="close btn-close">
+                                    <svg data-src="img/i-x.svg"></svg>
+                                </button>
+                            </div><!-- /.popup-header -->
 
-                            <div class="col-sm-6 col-md-3">
-                                <p class="lbl lbl-top">Время рассмотрения заявки</p>
-                                <select class="input-text"><option>Любое</option></select>
-                            </div><!-- /.col -->
-                            <div class="col-sm-6 col-md-3">
-                                <p class="lbl lbl-top">Подтверждение дохода</p>
-                                <select class="input-text"><option>Любое</option></select>
-                            </div><!-- /.col -->
-                            <div class="col-sm-6 col-md-3">
-                                <p class="lbl lbl-top">Обеспечение</p>
-                                <select class="input-text"><option>Любое</option></select>
-                            </div><!-- /.col -->                                                
-                        </div><!-- /.row -->
+                            <div class="popup-content">
+                                <div class="row justify-content-md-center" id="search-listing-filter">
+                                    <div class="col-sm-6 col-md-3 d-block d-md-none">
+                                        <p class="lbl lbl-top">Цель кредита</p>
+                                        <select class="input-text"><option>Любая</option></select>
+                                    </div><!-- /.col -->
+                                    
+                                    <div class="col-sm-6 col-md-3">
+                                        <p class="lbl lbl-top">Поручительство</p>
+                                        <select class="input-text"><option>Неважно</option></select>
+                                    </div><!-- /.col -->
+                                    <div class="col-sm-6 col-md-3">
+                                        <p class="lbl lbl-top">Список документов</p>
+                                        <select class="input-text"><option>Неважно</option></select>
+                                    </div><!-- /.col -->
+                                    <div class="col-sm-6 col-md-3">
+                                        <p class="lbl lbl-top">Категория заемщика</p>
+                                        <select class="input-text"><option>Стандартные</option></select>
+                                    </div><!-- /.col -->
+                                    <div class="col-sm-6 col-md-3">
+                                        <p class="lbl lbl-top">Способ получения</p>
+                                        <select class="input-text"><option>Любой</option></select>
+                                    </div><!-- /.col -->                                                                        
+        
+                                    <div class="col-sm-6 col-md-3">
+                                        <p class="lbl lbl-top">Время рассмотрения заявки</p>
+                                        <select class="input-text"><option>Любое</option></select>
+                                    </div><!-- /.col -->
+                                    <div class="col-sm-6 col-md-3">
+                                        <p class="lbl lbl-top">Подтверждение дохода</p>
+                                        <select class="input-text"><option>Любое</option></select>
+                                    </div><!-- /.col -->
+                                    <div class="col-sm-6 col-md-3">
+                                        <p class="lbl lbl-top">Обеспечение</p>
+                                        <select class="input-text"><option>Любое</option></select>
+                                    </div><!-- /.col -->                                                
+                                </div><!-- /.row -->
+                            </div><!-- /.popup-content -->
+
+                            <div class="popup-footer popup-footer-buttons">
+                                <button type="button" class="btn btn-cta btn-pill">Подобрать</button>
+                                <button type="button" class="btn btn-second btn-pill">Сбросить фильтры</button>
+                            </div><!-- /.popup-footer -->
+                        </div><!-- /#search-listing-filter search-listing-filter popup-mob-->
 
                         <div class="row-search-bottom-mob">
                             <p class="results-credits-found">Найдено 150 <span>кредитов</span></p>

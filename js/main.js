@@ -13,7 +13,7 @@ jQuery(document).ready(function($){
                 $(this).removeClass('active');
             } else {
                 $(this).addClass('active');
-                $(menu).slideDown().addClass('active').css('display','flex');
+                $(menu).slideDown().addClass('active');
             }
         });
     }
@@ -22,7 +22,9 @@ jQuery(document).ready(function($){
     navigation_show('#js-btn-cities','#js-cities-wrapper');
     navigation_show('#js-cities-wrapper .close','#js-cities-wrapper');
 
-    function navigation_show_flex(button, menu) { // глобальная
+    
+    
+    function navigation_show_flex(button, menu) { // фильтр, страница поиска кредитов
         $(menu).hide();
         $(button).click(function(){
             if ( $(menu).is(':visible')){
@@ -34,7 +36,7 @@ jQuery(document).ready(function($){
             }
         });
     }    
-    navigation_show_flex('#js-btn-search-listing','#search-listing-hidden');
+    //navigation_show_flex('#js-btn-search-listing','#search-listing-filter');
 
     function menu_nested(menu_id) {
         $(menu_id).find('ul').hide();

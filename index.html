@@ -27,9 +27,9 @@
     <p class="browserupgrade">Вы используете <b>устаревший</b> браузер. Пожалуйста, <a href="http://browsehappy.com/?locale=ru_ru">обновите свой браузер</a> чтобы улучшить опыт работы с сайтом.</p>
 <![endif]-->
 
-<div class="preloader">
+<!-- <div class="preloader">
     <div class="pulse"></div>
-</div>
+</div> -->
 
 <div class="wrapper-main">
     <header class="header header-site">
@@ -41,6 +41,13 @@
                             <a class="selected" href="javascript:void(0)" id="js-btn-cities">
                                 <span>Россия</span>
                             </a>
+                            <div class="location-hint">
+                                <p class="title">Ваш город <span>Новоросcийск?</span></p>
+                                <div class="row-mod">
+                                    <a href="#" class="btn btn-cta btn-pill">Да</a>
+                                    <a href="#" class="link">Выбрать другой</a>
+                                </div><!-- /.row-mod -->
+                            </div><!-- /.location-hint -->
                         </div>
                     </div><!-- /.header--location -->
                     <div class="header--col-2 header--col-2_mod">
@@ -63,7 +70,7 @@
                         <div class="header--actions">
                             <form role="search" method="get" class="form-search-header closed" id="searchform" action="#">
                                 <input  type="search" class="search-field" autocomplete="off" placeholder="Поиск" title="Поиск" role="combobox">
-                                <button type="submit" class="search-submit" id="searchsubmit"></button>
+                                <button type="submit" class="search-submit" id="searchsubmit"><svg data-src="img/i-search.svg"></svg></button>
                             </form>
                             <button class="btn-menu" id="js-btn-menu"><span></span><span></span><span></span></button>
                         </div><!-- /.header--actions -->
@@ -82,7 +89,7 @@
                         <li class="menu-main__item sub">
                             <a href="javascript:void(0)">Кредиты</a>
                             <div class="dropdown">
-                                <ul class="menu-main__submenu">
+                                <ul class="menu-main__submenu cols">
                                     <li class="menu-main__item"><a href="/">Потребительские кредиты</a></li>
                                     <li class="menu-main__item"><a href="/">Автокредит</a></li>
                                     <li class="menu-main__item"><a href="/">Ипотека</a></li>
@@ -93,12 +100,36 @@
                                 </ul>
                             </div>                        
                         </li>
-                        <li class="menu-main__item"><a href="#">Карты</a></li>
+                        <li class="menu-main__item">
+                            <a href="#">Карты</a>
+                            <div class="dropdown">
+                                <ul class="menu-main__submenu">
+                                    <li class="menu-main__item"><a href="/">Кредитные карты</a></li>
+                                    <li class="menu-main__item"><a href="/">Карты рассрочки</a></li>
+                                    <li class="menu-main__item"><a href="/">Дебетовые карты</a></li>
+                                </ul>
+                            </div>                             
+                        </li>
                         <li class="menu-main__item"><a href="#">Ипотека</a></li>
-                        <li class="menu-main__item"><a href="#">Займы</a></li>
-                        <li class="menu-main__item"><a href="#">Страхование</a></li>
-                        <li class="menu-main__item"><a href="#">Инвестиции</a></li>
-                        <li class="menu-main__item"><a href="#">Сервисы</a></li>
+                        <li class="menu-main__item">
+                            <a href="#">Для бизнеса</a>
+                            <div class="dropdown">
+                                <ul class="menu-main__submenu">
+                                    <li class="menu-main__item"><a href="/">Лизинг</a></li>
+                                    <li class="menu-main__item"><a href="/">Кредиты для бизнеса</a></li>
+                                    <li class="menu-main__item"><a href="/">Депозиты юр. лицам</a></li>
+                                </ul>
+                            </div>                              
+                        </li>
+                        <li class="menu-main__item">
+                            <a href="#">Инвестиции</a>
+                            <div class="dropdown">
+                                <ul class="menu-main__submenu">
+                                    <li class="menu-main__item"><a href="/">Займы</a></li>
+                                    <li class="menu-main__item"><a href="/">Вклады</a></li>
+                                </ul>
+                            </div>                               
+                        </li>
                     </ul>
                 </nav><!-- /.header--navigation -->
             </div><!-- /.row -->
@@ -605,7 +636,7 @@
 
                 <!-- sbar: -->
                 <div class="col-lg-4 sidebar-main">
-                    <h2 class="h-section hidden-xs">Лента новостей</h2>
+                    <h2 class="h-section hidden-xs"><a href="#">Лента новостей</a></h2>
                     <section class="card card-pad">
                         <article class="article-prev--sm">
                             <h3 class="h-article__sm"><a href="#">Исследование: индекс счастья в России впервые за долгое время оказался выше среднего по планете </a></h3>
@@ -767,7 +798,10 @@
                                 </div>                            
                             </footer>                        
                         </article>
-                        <p class="view-all link-arrow"><a href="#">Смотреть все новости</a> <span class="arrow">&rarr;</span></p>                    
+                        <p class="view-all link-arrow">
+                            <a href="#">Смотреть все новости</a> 
+                            <svg class="arrow" data-src="img/i-arrow-more.svg"></svg>
+                        </p>                    
                     </section>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -811,7 +845,10 @@
                         </footer>
                     </article><!-- /.card -->                    
                 </div><!-- row -->
-                <p class="view-all link-arrow"><a href="#">Смотреть все статьи</a> <span class="arrow">&rarr;</span></p>                    
+                <p class="view-all link-arrow">
+                    <a href="#">Смотреть все статьи</a> 
+                    <svg class="arrow" data-src="img/i-arrow-more.svg"></svg>
+                </p>                    
             </section>
         </div><!-- /.container -->
 
@@ -862,8 +899,7 @@
                     </div><!-- /.footer--col-1 -->
                     <div class="footer-logo logo-mob"><img class="logo" src="img/logotype@2x.png" alt="credits.ru"></div>                    
                     <div class="footer--col-2">
-                        <p class="heading-footer">По вопросам работы портала: </p>
-                        <p class="tel-footer"><a href="tel:+">8 (800) 551 20 17</a></p>
+
                     </div><!-- /.footer--col-2 -->
                 </div><!-- /.row -->
 
@@ -892,10 +928,14 @@
             <div class="container">
                 <div class="row-mod">
                     <div class="footer--col-1">
-                        <small class="legal legal-link">При использовании материалов гиперссылка на Credits.ru обязательна</small>
+                        <p><small class="legal">При использовании материалов гиперссылка на Credits.ru обязательна</small></p>
+                        
+                        <p class="tel-footer legal">
+                            По вопросам работы портала: <a href="tel:+">8 (800) 551 20 17</a>
+                        </p>
                     </div><!-- /.footer--col-1 -->
                     <div class="footer--col-2">
-                        <small class="legal">&#169; 2002—2018 ООО «ВЕБИНВЕСТ»</small>
+                        <p class="legal"><small>&#169; 2002—2018 ООО «ВЕБИНВЕСТ»</small></p>
                     </div><!-- /.footer--col-2 -->
                 </div><!-- /.row -->             
             </div><!-- /.container -->

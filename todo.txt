@@ -1,7 +1,9 @@
+mob btm slider
+mob menu styling
 
 mobile
     mob sort drop
     mob move bread
-    mob btm slider
     mob btm banner
-menu styling
+
+custom checkbox?
