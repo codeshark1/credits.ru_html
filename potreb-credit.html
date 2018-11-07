@@ -257,7 +257,7 @@
         <section class="section">
             <div class="section-hero-bg">
                 <div class="container">
-                    <nav class="breadcrumbs">
+                    <nav class="breadcrumbs d-none d-md-block">
                         <a href="#">Главная</a>
                         <a href="#">Потребительские кредиты</a>
                     </nav>
@@ -282,11 +282,11 @@
                             </div><!-- /.col -->
                             <div class="col-sm-12 col-md-3"> <!--  -->
                                 <span class="lbl lbl-top d-none d-md-block"></span>
-                                <button class="btn btn-cta btn-toggle_more"><span>+</span>Больше условий</button>
+                                <button type="button" class="btn btn-cta btn-toggle_more" id="js-btn-search-listing"><span class="indicator">+</span>Больше условий</button>
                             </div><!-- /.col -->
                         </div><!-- /.row -->
 
-                        <div class="row justify-content-md-center">
+                        <div class="row justify-content-md-center search-listing-hidden" id="search-listing-hidden">
                             <div class="col-sm-6 col-md-3 d-block d-md-none">
                                 <p class="lbl lbl-top">Цель кредита</p>
                                 <select class="input-text"><option>Любая</option></select>
@@ -323,42 +323,194 @@
                             </div><!-- /.col -->                                                
                         </div><!-- /.row -->
 
-                        <p class="results-found">Найдено 150 кредитов</p>
+                        <div class="row-search-bottom-mob">
+                            <p class="results-credits-found">Найдено 150 <span>кредитов</span></p>
+                            <button type="button" class="btn btn-narrow btn-sorting">По ставке <i class="icon"></i></button>
+                        </div><!-- /.row-search-bottom-mob -->
                     </div><!-- /.container -->
 
                     <div class="search-checks-wrapper">
-                        <p class="credit-online-link">
+                        <p class="credit-online-link link-arrow">
                             <a href="#">Одобрение кредита онлайн</a> 
                             <span class="arrow">&rarr;</span>
                         </p>
 
                         <div class="search-checks">
-                            <div class="search-ckeck checked">Рефинансирование</div>
-                            <div class="search-ckeck">Без справки о доходах</div>
-                            <div class="search-ckeck">Без залога и поручителей</div>
-                            <div class="search-ckeck">Только по паспорту</div>
-                            <div class="search-ckeck">В день обращения<div>
+                            <div class="search-checks_i">
+                                <div class="search-ckeck checked">Рефинансирование</div>
+                                <div class="search-ckeck">Без справки о доходах</div>
+                                <div class="search-ckeck">Без залога и поручителей</div>
+                                <div class="search-ckeck">Только по паспорту</div>
+                                <div class="search-ckeck">В день обращения</div>
+                            </div><!-- /.search-checks_i -->
                         </div><!-- /.search-checks -->
                     </div><!-- /.search-checks-wrapper -->
                 </form>
             </div><!-- /.section-hero-bg -->
 
-            <div class="listing-controls">
-                <div class="container">
+            <div class="listing-controls">                
+                <div class="listing-controls--wrap">
                     <form action="/" class="listing-controls_sorting">
                         <div class="listing_sort sort-bank">Банк</div>
                         <div class="listing_sort sort-offer">Предложение банка</div>
-                        <div class="listing_sort sort-rate">Ставка <span class="arrow"></span></div>
+                        <div class="listing_sort sort-rate active">Ставка <span class="arrow"></span></div>
                         <div class="listing_sort sort-amount">Сумма <span class="arrow"></span></div>
                     </form>
-                    <div action="/" class="listing-controls_search">
+                    <div class="listing-controls_search">
                         <form role="search" class="form-search-header" id="searchform_listing" action="#">
                             <input  type="search" class="search-field" autocomplete="off" placeholder="Поиск" title="Поиск" role="combobox">
-                            <button type="submit" class="search-submit" id="searchsubmit"></button>
+                            <button type="submit" class="search-submit" id="searchsubmit-2"></button>
                         </form>                    
                     </div>                
-                </div><!-- /.container -->
+                </div><!-- /.listing-controls--wrap -->
             </div><!-- /.listing-controls -->
+
+            <div class="plans-insearch-wrapper">
+                <div class="plan plan_insearch">
+                    <div class="plan-wrapper">
+                        <div class="plan-content">
+                            <div class="td td_bankname">                                                    
+                                <img src="img/logo-rufinans-bank.png" alt="Русфинанс банк">
+                                <p class="licence">Лиц. № 4567</p>
+                            </div>
+                            <div class="td td_offer">                                                    
+                                <p class="data">«Первый почтовый с гарантированной ставкой»</p>
+                            </div>                                                
+                            <div class="td td_rate">
+                                <p class="ttl">Ставка</p>
+                                <p class="data">от 17,00%</p>
+                            </div>                                                                                    
+                            <div class="td td_amount">
+                                <p class="ttl">Сумма</p>
+                                <p class="data">
+                                    <span class="min">от 300 000 Р</span>
+                                    <span class="max">до 1 000 000 Р</span>
+                                </p>
+                            </div>
+                            <div class="td td_action">
+                                <a href="#" class="btn btn-cta">Оформить</a>
+                                <p class="link-info"><a href="#">Подробнее</a></p>
+                            </div>
+                        </div><!-- /.plan-content -->
+                        <div class="plan-actions">
+                            <a href="#" class="plan-btn fav">
+                                <img class="svg" src="img/panel-fav.svg" alt="icon">
+                                <span>В избранное</span>
+                            </a>
+                            <a href="#" class="plan-btn compare">
+                                <img class="svg" src="img/panel-compare.svg" alt="icon">
+                                <span>Сравнить</span>
+                            </a>                                                
+                            <a href="#" class="plan-btn info">
+                                <img class="svg" src="img/panel-info.svg" alt="icon">
+                                <span>Подробнее</span>
+                            </a>
+                            <a href="#" class="plan-btn sign">
+                                <img class="svg" src="img/panel-sign.svg" alt="icon">
+                                <span>Оформить</span>
+                            </a>                                                                                                
+                        </div><!-- /.plan-actions -->
+                    </div><!-- /.plan-wrapper -->
+                </div><!-- /.plan -->
+                <div class="plan plan_insearch">
+                    <div class="plan-wrapper">
+                        <div class="plan-content">
+                            <div class="td td_bankname">                                                    
+                                <img src="img/logo-rufinans-bank.png" alt="Русфинанс банк">
+                                <p class="licence">Лиц. № 4567</p>
+                            </div>
+                            <div class="td td_offer">                                                    
+                                <p class="data">«Первый почтовый с гарантированной ставкой»</p>
+                            </div>                                                
+                            <div class="td td_rate">
+                                <p class="ttl">Ставка</p>
+                                <p class="data">от 17,00%</p>
+                            </div>                                                                                    
+                            <div class="td td_amount">
+                                <p class="ttl">Сумма</p>
+                                <p class="data">
+                                    <span class="min">от 300 000 Р</span>
+                                    <span class="max">до 1 000 000 Р</span>
+                                </p>
+                            </div>
+                            <div class="td td_action">
+                                <a href="#" class="btn btn-cta">Оформить</a>
+                                <p class="link-info"><a href="#">Подробнее</a></p>
+                            </div>
+                        </div><!-- /.plan-content -->
+                        <div class="plan-actions">
+                            <a href="#" class="plan-btn fav">
+                                <img class="svg" src="img/panel-fav.svg" alt="icon">
+                                <span>В избранное</span>
+                            </a>
+                            <a href="#" class="plan-btn compare">
+                                <img class="svg" src="img/panel-compare.svg" alt="icon">
+                                <span>Сравнить</span>
+                            </a>                                                
+                            <a href="#" class="plan-btn info">
+                                <img class="svg" src="img/panel-info.svg" alt="icon">
+                                <span>Подробнее</span>
+                            </a>
+                            <a href="#" class="plan-btn sign">
+                                <img class="svg" src="img/panel-sign.svg" alt="icon">
+                                <span>Оформить</span>
+                            </a>                                                                                                
+                        </div><!-- /.plan-actions -->
+                    </div><!-- /.plan-wrapper -->
+                </div><!-- /.plan -->
+                <div class="plan plan_insearch">
+                    <div class="plan-wrapper">
+                        <div class="plan-content">
+                            <div class="td td_bankname">                                                    
+                                <img src="img/logo-rufinans-bank.png" alt="Русфинанс банк">
+                                <p class="licence">Лиц. № 4567</p>
+                            </div>
+                            <div class="td td_offer">                                                    
+                                <p class="data">«Первый почтовый с гарантированной ставкой»</p>
+                            </div>                                                
+                            <div class="td td_rate">
+                                <p class="ttl">Ставка</p>
+                                <p class="data">от 17,00%</p>
+                            </div>                                                                                    
+                            <div class="td td_amount">
+                                <p class="ttl">Сумма</p>
+                                <p class="data">
+                                    <span class="min">от 300 000 Р</span>
+                                    <span class="max">до 1 000 000 Р</span>
+                                </p>
+                            </div>
+                            <div class="td td_action">
+                                <a href="#" class="btn btn-cta">Оформить</a>
+                                <p class="link-info"><a href="#">Подробнее</a></p>
+                            </div>
+                        </div><!-- /.plan-content -->
+                        <div class="plan-actions">
+                            <a href="#" class="plan-btn fav">
+                                <img class="svg" src="img/panel-fav.svg" alt="icon">
+                                <span>В избранное</span>
+                            </a>
+                            <a href="#" class="plan-btn compare">
+                                <img class="svg" src="img/panel-compare.svg" alt="icon">
+                                <span>Сравнить</span>
+                            </a>                                                
+                            <a href="#" class="plan-btn info">
+                                <img class="svg" src="img/panel-info.svg" alt="icon">
+                                <span>Подробнее</span>
+                            </a>
+                            <a href="#" class="plan-btn sign">
+                                <img class="svg" src="img/panel-sign.svg" alt="icon">
+                                <span>Оформить</span>
+                            </a>                                                                                                
+                        </div><!-- /.plan-actions -->
+                    </div><!-- /.plan-wrapper -->
+                </div><!-- /.plan -->
+                
+                <button type="button" class="btn btn-more btn-more-vertical"><span class="arrow"></span> Ещё 3</button>
+            </div><!-- /.plans-insearch-wrapper -->            
+
+            <div class="bx-center">
+                <button type="button" class="btn btn-listing-showmore">Показать еще 15</button>
+            </div>
         </section><!-- /.section -->
 
         <div class="container">
@@ -401,8 +553,40 @@
                         </footer>
                     </article><!-- /.card -->                    
                 </div><!-- row -->
-                <p class="view-all"><a href="#">Смотреть все статьи</a> <span class="arrow">&rarr;</span></p>
+                <p class="view-all link-arrow"><a href="#">Смотреть все статьи</a> <span class="arrow">&rarr;</span></p>
             </section>
+
+            <section class="section section-accord">
+                <article class="accord">
+                    <h3 class="h-accord">Потребительское кредитование</h3>
+                    <p class="accord-content">Стоимость потребительского кредита зависит от многих параметров: суммы, срока, вида валюты, набора предоставляемых документов, 
+                            кредитной истории и других параметров. На кредите можно сэкономить, если оформить его на небольшой срок. Претендовать на минимальную 
+                            процентную ставку могут заемщики с положительной кредитной историей, предоставившие полный пакет документов и имеющие доход, 
+                            из которого на платежи по кредиту будет уходить не более 40% ежемесячного дохода. Также скидку могут получить заемщики, получающие 
+                            заработную плату через банк, в котором запрашивают кредит.</p>
+                </article><!-- /.accord-content -->
+
+                <article class="accord accord-open">
+                    <h3 class="h-accord">Ставки по потребительским кредитам</h3>
+                    <p class="accord-content">Стоимость потребительского кредита зависит от многих параметров: суммы, срока, вида валюты, набора предоставляемых документов, 
+                            кредитной истории и других параметров. На кредите можно сэкономить, если оформить его на небольшой срок. Претендовать на минимальную 
+                            процентную ставку могут заемщики с положительной кредитной историей, предоставившие полный пакет документов и имеющие доход, 
+                            из которого на платежи по кредиту будет уходить не более 40% ежемесячного дохода. Также скидку могут получить заемщики, получающие 
+                            заработную плату через банк, в котором запрашивают кредит.</p>
+                </article><!-- /.accord-content -->
+
+                <article class="accord">
+                    <h3 class="h-accord">Выгодные потребительские кредиты</h3>
+                    <p class="accord-content">Стоимость потребительского кредита зависит от многих параметров: суммы, срока, вида валюты, набора предоставляемых документов, 
+                            кредитной истории и других параметров. На кредите можно сэкономить, если оформить его на небольшой срок. Претендовать на минимальную 
+                            процентную ставку могут заемщики с положительной кредитной историей, предоставившие полный пакет документов и имеющие доход, 
+                            из которого на платежи по кредиту будет уходить не более 40% ежемесячного дохода. Также скидку могут получить заемщики, получающие 
+                            заработную плату через банк, в котором запрашивают кредит.</p>
+                </article><!-- /.accord-content -->
+            </section>
+            <script>
+
+            </script>
         </div><!-- /.container -->
 
         <hr class="hr-page hidden-xs">

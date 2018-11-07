@@ -13,7 +13,7 @@ jQuery(document).ready(function($){
                 $(this).removeClass('active');
             } else {
                 $(this).addClass('active');
-                $(menu).slideDown().addClass('active');
+                $(menu).slideDown().addClass('active').css('display','flex');
             }
         });
     }
@@ -21,6 +21,20 @@ jQuery(document).ready(function($){
     navigation_show('#js-btn-menu','#js-menu-wrapper');
     navigation_show('#js-btn-cities','#js-cities-wrapper');
     navigation_show('#js-cities-wrapper .close','#js-cities-wrapper');
+
+    function navigation_show_flex(button, menu) { // глобальная
+        $(menu).hide();
+        $(button).click(function(){
+            if ( $(menu).is(':visible')){
+                $(menu).slideUp().removeClass('active');
+                $(this).removeClass('active').find('.indicator').text('+');
+            } else {
+                $(this).addClass('active').find('.indicator').text('-');
+                $(menu).slideDown().addClass('active').css('display','flex');
+            }
+        });
+    }    
+    navigation_show_flex('#js-btn-search-listing','#search-listing-hidden');
 
     function menu_nested(menu_id) {
         $(menu_id).find('ul').hide();
@@ -90,6 +104,7 @@ jQuery(document).ready(function($){
         });
     }
     searchForm('#searchform');
+    searchForm('#searchform_listing');
 
     /* CATEGS (MOB BEHAVIOR) */
     $('#header-categs').click(function(){
@@ -104,5 +119,31 @@ jQuery(document).ready(function($){
         }
     });
 
+    function accordion() {
+        $('.accord-content').hide();                
+        $('.accord-open .accord-content').show();
+        $('.h-accord').click(function(){
+            if (! $(this).parent('.accord').hasClass('accord-open')) {
+                $(this).parents('.section-accord').find('.accord-open').removeClass('accord-open').find('.accord-content').slideUp()
+                $(this).parent('.accord').addClass('accord-open').find('.accord-content').slideDown();
+            }
+        });
+    }    
+    accordion();
+
     new SVGInjector().inject(document.querySelectorAll('svg[data-src]'));
+
+
+    function setControlWidth() {
+        $('.listing-controls--wrap').width( $('.plan-content').width() );
+        $('.sort-bank').width( $('.td_bankname').width() );
+        $('.sort-offer').outerWidth( $('.td_offer').width() );
+        $('.sort-rate').width( $('.td_rate').width() );
+        $('.sort-amount').width( $('.td_amount').width() );
+    }    
+    setControlWidth();
+    
+    $(window).resize(function(){
+        setControlWidth();
+    });
 });
