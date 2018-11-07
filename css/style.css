@@ -1841,6 +1841,11 @@ NAVIGATION
 .h-hero {
   text-align: center; }
 
+.city-picker {
+  display: inline-block;
+  border-bottom: 1px solid #252525;
+  cursor: pointer; }
+
 .actions-main {
   padding-top: 2rem; }
   @media (max-width: 767px) {

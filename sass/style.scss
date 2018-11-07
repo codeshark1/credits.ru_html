@@ -456,7 +456,11 @@ NAVIGATION
 .h-hero {
 	text-align: center;
 }
-
+.city-picker {
+	display: inline-block;
+	border-bottom: 1px solid $base-text;
+	cursor: pointer;
+}
 
 .actions-main {
 	padding-top: $sect-mg;
