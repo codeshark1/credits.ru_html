@@ -144,20 +144,10 @@ fieldset {
     margin-right: 0; } }
 
 /* SEARCH FORM */
-.form-search-mob .search-submit {
-  right: 12px;
-  top: 5px;
-  font-size: 18px; }
-.form-search-mob .search-field {
-  width: 100%;
-  padding: 8px 25px 8px 12px;
-  border: 1px solid #555555; }
-
-.form-search-mob,
 .form-search-header {
   position: relative;
-  transition: all .15s; }
-  .form-search-mob .search-submit,
+  transition: all .15s;
+  display: inline-block; }
   .form-search-header .search-submit {
     position: absolute;
     width: 20px;
@@ -168,18 +158,11 @@ fieldset {
     top: 4px;
     cursor: pointer;
     background: none; }
-    .form-search-mob .search-submit svg,
     .form-search-header .search-submit svg {
       max-width: 100%;
       max-height: 100%; }
-    .form-search-mob .search-submit:hover svg path,
     .form-search-header .search-submit:hover svg path {
       stroke: #ff0000; }
-
-.form-search-header {
-  display: inline-block; }
-  .form-search-header .search-field:focus, .form-search-header .search-submit:focus {
-    outline-width: 0; }
   .form-search-header .search-field {
     margin: 0;
     background-color: transparent;
@@ -198,6 +181,8 @@ fieldset {
       opacity: 0; }
     .form-search-header .search-field::input-placeholder {
       opacity: 0; }
+  .form-search-header .search-field:focus, .form-search-header .search-submit:focus {
+    outline-width: 0; }
   .form-search-header.closed .search-field {
     width: 35px; }
   .form-search-header.open .search-field {
@@ -214,6 +199,64 @@ fieldset {
     .form-search-header.open .search-field::-ms-input-placeholder {
       opacity: 1; }
     .form-search-header.open .search-field::input-placeholder {
+      opacity: 1; }
+
+/* SEARCH LISTING */
+.form-search-listing {
+  position: relative;
+  transition: all .15s;
+  display: inline-block; }
+  .form-search-listing .search-submit {
+    position: absolute;
+    width: 20px;
+    height: 28px;
+    border: none;
+    padding: 0;
+    right: 0;
+    top: 4px;
+    cursor: pointer;
+    background: none; }
+    .form-search-listing .search-submit svg {
+      max-width: 100%;
+      max-height: 100%; }
+    .form-search-listing .search-submit:hover svg path {
+      stroke: #ff0000; }
+  .form-search-listing .search-field {
+    margin: 0;
+    background-color: transparent;
+    padding: 8px 12px 8px 0;
+    height: 35px;
+    transition: all .15s;
+    cursor: pointer;
+    border: none;
+    border-bottom: 1px solid transparent;
+    color: transparent; }
+    .form-search-listing .search-field::-moz-placeholder {
+      opacity: 0; }
+    .form-search-listing .search-field::-webkit-input-placeholder {
+      opacity: 0; }
+    .form-search-listing .search-field::-ms-input-placeholder {
+      opacity: 0; }
+    .form-search-listing .search-field::input-placeholder {
+      opacity: 0; }
+  .form-search-listing .search-field:focus, .form-search-listing .search-submit:focus {
+    outline-width: 0; }
+  .form-search-listing.closed .search-field {
+    width: 35px; }
+  .form-search-listing.open .search-field {
+    width: 200px;
+    cursor: auto;
+    padding-right: 25px;
+    color: #555555;
+    box-shadow: none;
+    border-bottom: 1px solid #555555 !important; }
+    .form-search-listing.open .search-field::-moz-placeholder {
+      opacity: 1; }
+    .form-search-listing.open .search-field::-webkit-input-placeholder {
+      opacity: 1; }
+    .form-search-listing.open .search-field::-ms-input-placeholder {
+      opacity: 1; }
+    .form-search-listing.open .search-field::input-placeholder {
       opacity: 1; }
 
 /* VIEW */
@@ -1661,6 +1704,8 @@ NAVIGATION
 @media (min-width: 768px) {
   .header--navigation {
     display: block !important; }
+    .header--navigation .h-popup {
+      display: none; }
     .header--navigation .location-selector {
       display: none; } }
 
@@ -1769,6 +1814,7 @@ NAVIGATION
     .menu-main li:hover .sub-menu {
       border-top: 2px solid #9a9a9a;
       max-height: 500px !important;
+      height: auto !important;
       padding: 25px 0 10px 30px !important; } }
 
 .cities {

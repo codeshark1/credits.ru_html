@@ -111,23 +111,11 @@ fieldset {
 }
 
 /* SEARCH FORM */
-.form-search-mob {
-  .search-submit {
-    right: 12px;
-    top: 5px;
-    font-size: 18px;
-  }
-  .search-field {
-    width: 100%;
-    padding: 8px 25px 8px 12px;
-    border: 1px solid $gray;
-  }
-}
 
-.form-search-mob, 
 .form-search-header {
   position: relative;
   transition: all .15s;
+  display: inline-block;  
   .search-submit {
     position: absolute;
     width: 20px;
@@ -144,14 +132,7 @@ fieldset {
       max-height: 100%;      
     }
     &:hover svg path {stroke: $red;}
-  }
-}
-.form-search-header {
-  display: inline-block;  
-
-  .search-field, .search-submit {
-    &:focus {outline-width: 0;}
-  }
+  }  
   .search-field {
     margin: 0;
     background-color: transparent;
@@ -166,6 +147,66 @@ fieldset {
     &::-webkit-input-placeholder {opacity:  0;}
     &::-ms-input-placeholder {opacity:  0;}
     &::input-placeholder {opacity:  0;}
+  }  
+  .search-field, .search-submit {
+    &:focus {outline-width: 0;}
+  }
+  &.closed .search-field {width: 35px;}
+  &.open {
+    .search-field {
+      width: 200px;
+      cursor: auto;
+      padding-right: 25px;
+      color: $base-text;
+      box-shadow: none;
+      border-bottom: 1px solid $base-text !important;
+      &::-moz-placeholder {opacity:  1;}
+      &::-webkit-input-placeholder {opacity:  1;}
+      &::-ms-input-placeholder {opacity:  1;}
+      &::input-placeholder {opacity:  1;}      
+    }    
+  }
+}
+
+/* SEARCH LISTING */
+.form-search-listing {
+  position: relative;
+  transition: all .15s;
+  display: inline-block;  
+  .search-submit {
+    position: absolute;
+    width: 20px;
+    height: 28px;
+    border: none;
+    padding: 0;
+    right: 0;
+    top: 4px;
+    cursor: pointer;
+    background: none;
+    //background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 47.898125 47.898125' height='18' width='18'%3E%3Cg transform='matrix(1.25 0 0 -1.25 0 47.898)'%3E%3Cpath d='M31.934 21.852c0-8.542-6.925-15.467-15.467-15.467C7.924 6.385 1 13.31 1 21.852c0 8.542 6.925 15.467 15.468 15.467 8.542 0 15.467-6.926 15.467-15.468zM27.404 10.914L37.611.706' fill='none' stroke='%23000' stroke-width='2' stroke-miterlimit='10'/%3E%3C/g%3E%3C/svg%3E") no-repeat 0 5px;
+    svg {
+      max-width: 100%;
+      max-height: 100%;      
+    }
+    &:hover svg path {stroke: $red;}
+  }  
+  .search-field {
+    margin: 0;
+    background-color: transparent;
+    padding: 8px 12px 8px 0;    
+    height: 35px;
+    transition: all .15s;
+    cursor: pointer;
+    border:none;
+    border-bottom: 1px solid transparent;
+    color: transparent;
+    &::-moz-placeholder {opacity:  0;}
+    &::-webkit-input-placeholder {opacity:  0;}
+    &::-ms-input-placeholder {opacity:  0;}
+    &::input-placeholder {opacity:  0;}
+  }  
+  .search-field, .search-submit {
+    &:focus {outline-width: 0;}
   }
   &.closed .search-field {width: 35px;}
   &.open {
