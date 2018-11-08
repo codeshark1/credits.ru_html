@@ -287,7 +287,7 @@ NAVIGATION
 			transition: all .3s ease-in-out;
 			z-index: 10;				
 			list-style: none;
-			padding: 0 0 0 30px;
+			padding: 0 0 0 30px !important;
 			margin: 0;
 			display: block !important; 
 			li {
@@ -334,7 +334,7 @@ NAVIGATION
 		li:hover .sub-menu {
 			border-top: 2px solid #9a9a9a;
 			max-height: 500px !important;
-			padding: 25px 0 10px 30px;
+			padding: 25px 0 10px 30px !important;
 		}
 
 	}
@@ -1490,7 +1490,7 @@ $art-prev-bot-mg: 1.5rem;
 }
 .menu-footer {
 	&__item {display: inline-block;margin-right: 35px;}
-	a {font-size: 0.9rem; font-weight: 400 !important;}
+	a {font-size: 0.9rem; font-weight: 400 !important; }
 
 	&--legal {display: inline-block;
 		&__item {
@@ -1507,6 +1507,7 @@ $art-prev-bot-mg: 1.5rem;
 		a {
 			font-weight: 600;
 			font-size: 0.9rem;
+			border: none
 		}
 		&__item {
 			display: inline-block;

@@ -1728,7 +1728,7 @@ NAVIGATION
       transition: all .3s ease-in-out;
       z-index: 10;
       list-style: none;
-      padding: 0 0 0 30px;
+      padding: 0 0 0 30px !important;
       margin: 0;
       display: block !important; }
       .menu-main .sub-menu li {
@@ -1769,7 +1769,7 @@ NAVIGATION
     .menu-main li:hover .sub-menu {
       border-top: 2px solid #9a9a9a;
       max-height: 500px !important;
-      padding: 25px 0 10px 30px; } }
+      padding: 25px 0 10px 30px !important; } }
 
 .cities {
   background: #fff;
@@ -2898,7 +2898,8 @@ NAVIGATION
     .footer-site .menu-main a,
     .menu-footer a {
       font-weight: 600;
-      font-size: 0.9rem; }
+      font-size: 0.9rem;
+      border: none; }
     .footer-site .menu-main__item,
     .menu-footer__item {
       display: inline-block;
