@@ -146,60 +146,51 @@ fieldset {
 /* SEARCH FORM */
 .form-search-header {
   position: relative;
-  transition: all .15s;
-  display: inline-block; }
-  .form-search-header .search-submit {
-    position: absolute;
-    width: 20px;
-    height: 28px;
-    border: none;
-    padding: 0;
-    right: 0;
-    top: 4px;
-    cursor: pointer;
-    background: none; }
-    .form-search-header .search-submit svg {
-      max-width: 100%;
-      max-height: 100%; }
-    .form-search-header .search-submit:hover svg path {
-      stroke: #ff0000; }
+  transition: all .3s;
+  border-radius: 50px; }
   .form-search-header .search-field {
     margin: 0;
+    border-radius: 50px;
     background-color: transparent;
-    padding: 8px 12px 8px 0;
+    padding: 6px 3px 6px 20px;
     height: 35px;
     transition: all .15s;
     cursor: pointer;
+    border: none; }
+  .form-search-header .search-button {
+    position: absolute;
+    width: 18px;
+    height: 18px;
     border: none;
-    border-bottom: 1px solid transparent;
-    color: transparent; }
-    .form-search-header .search-field::-moz-placeholder {
-      opacity: 0; }
-    .form-search-header .search-field::-webkit-input-placeholder {
-      opacity: 0; }
-    .form-search-header .search-field::-ms-input-placeholder {
-      opacity: 0; }
-    .form-search-header .search-field::input-placeholder {
-      opacity: 0; }
+    padding: 0;
+    right: 8px;
+    top: 50%;
+    margin-top: -9px;
+    cursor: pointer;
+    background: none; }
+    .form-search-header .search-button svg {
+      max-width: 100%;
+      max-height: 100%; }
+    .form-search-header .search-button:hover svg path {
+      stroke: #ff0000; }
   .form-search-header .search-field:focus, .form-search-header .search-submit:focus {
     outline-width: 0; }
   .form-search-header.closed .search-field {
-    width: 35px; }
-  .form-search-header.open .search-field {
-    width: 200px;
-    cursor: auto;
-    padding-right: 25px;
-    color: #555555;
-    box-shadow: none;
-    border-bottom: 1px solid #555555 !important; }
-    .form-search-header.open .search-field::-moz-placeholder {
-      opacity: 1; }
-    .form-search-header.open .search-field::-webkit-input-placeholder {
-      opacity: 1; }
-    .form-search-header.open .search-field::-ms-input-placeholder {
-      opacity: 1; }
-    .form-search-header.open .search-field::input-placeholder {
-      opacity: 1; }
+    width: 0; }
+  .form-search-header.open {
+    width: 100%;
+    background: #f7f6f6; }
+    .form-search-header.open .search-field {
+      width: 100%;
+      cursor: auto;
+      padding-right: 25px;
+      color: #555555;
+      box-shadow: none; }
+    .form-search-header.open .search-button {
+      background: #d0d0d0 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='9' viewBox='0 0 24 24'%3E%3Cpath d='M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z'/%3E%3C/svg%3E") no-repeat 50% 50%;
+      border-radius: 100%; }
+      .form-search-header.open .search-button svg {
+        opacity: 0; }
 
 /* SEARCH LISTING */
 .form-search-listing {
@@ -1551,13 +1542,14 @@ a, svg, path, button {
   padding: 35px 0 40px; }
 
 .header-site {
-  background: #fff;
-  box-shadow: 0 0 30px 1px rgba(9, 3, 5, 0.1);
   position: relative; }
   .header-site .btn-menu {
     position: relative;
     top: 7px;
     margin-left: 15px; }
+  @media (min-width: 768px) {
+    .header-site {
+      background: #fff; } }
 
 .header--actions {
   text-align: right;
@@ -1566,7 +1558,9 @@ a, svg, path, button {
   justify-content: flex-end; }
 @media (max-width: 767px) {
   .header--lvl-1 {
-    padding: 5px 10px; }
+    padding: 5px 10px;
+    box-shadow: 0 0 30px 1px rgba(9, 3, 5, 0.1);
+    background: #fff; }
   .header--rates {
     position: absolute;
     top: -70px;
@@ -1580,7 +1574,7 @@ a, svg, path, button {
     width: 100px; } }
 @media (min-width: 768px) {
   .header--lvl-1 {
-    background: #f8f8f8; }
+    background: #f0f0f0; }
   .header--row {
     display: flex;
     justify-content: space-between;
@@ -1598,7 +1592,8 @@ a, svg, path, button {
   .header--location {
     padding-top: 1rem; }
   .header--actions {
-    padding: 16px 0 0 16px; }
+    padding: 16px 0 0 16px;
+    flex-grow: 1; }
   .header--logo {
     padding: 1.5rem 0; }
     .header--logo .logo {
@@ -1634,7 +1629,8 @@ a, svg, path, button {
   padding-left: 25px;
   position: relative;
   display: inline-block;
-  min-height: 20px; }
+  min-height: 20px;
+  font-weight: 400; }
   .location-selector .selected {
     text-decoration: underline;
     cursor: pointer;
@@ -1692,15 +1688,8 @@ NAVIGATION
     position: relative;
     display: none;
     padding: 15px; }
-    .header--navigation:before {
-      content: "";
-      position: absolute;
-      height: 1px;
-      background: #555555;
-      display: block;
-      top: 0;
-      left: -16px;
-      right: -16px; } }
+    .header--navigation .bx-center {
+      margin-top: 20px; } }
 @media (min-width: 768px) {
   .header--navigation {
     display: block !important; }
@@ -1732,15 +1721,17 @@ NAVIGATION
         height: 11px;
         background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11 7' width='11'%3E%3Cpolygon points='5.5 7 0 0.7 0.61 0 5.5 5.6 10.39 0 11 0.7 5.5 7'/%3E%3C/svg%3E") no-repeat;
         right: 0;
-        bottom: 5px;
-        position: absolute; }
+        bottom: 7px;
+        position: absolute;
+        transition: all .3s; }
     .menu-main .sub-menu {
       display: none;
       padding-top: 10px; }
       .menu-main .sub-menu .menu-main__item {
         padding: 10px 0; }
     .menu-main .menu-item--active > a:before {
-      transform: rotate(180deg); } }
+      transform: rotate(180deg);
+      bottom: 10px; } }
 @media (min-width: 768px) {
   .menu-main {
     display: flex;
@@ -2039,8 +2030,6 @@ NAVIGATION
       display: flex;
       flex-direction: column;
       justify-content: center; }
-      .action-main:nth-last-child(1), .action-main:nth-last-child(2), .action-main:nth-last-child(3) {
-        display: none; }
       .action-main__icon {
         width: 40%; }
       .action-main__title {

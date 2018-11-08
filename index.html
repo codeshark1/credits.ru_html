@@ -68,9 +68,11 @@
                         </div><!-- /.header--rates -->
 
                         <div class="header--actions">
-                            <form role="search" method="get" class="form-search-header closed" id="searchform" action="#">
+                            <form role="search" method="get" class="form-search-header closed" id="search-header" action="#">
                                 <input  type="search" class="search-field" autocomplete="off" placeholder="Поиск" title="Поиск" role="combobox">
-                                <button type="submit" class="search-submit" id="searchsubmit"><svg data-src="img/i-search.svg"></svg></button>
+                                <button type="button" class="search-button">
+                                    <svg data-src="img/i-search.svg"></svg>
+                                </button>
                             </form>
                             <button class="btn-menu" id="js-btn-menu"><span></span><span></span><span></span></button>
                         </div><!-- /.header--actions -->
@@ -139,6 +141,10 @@
             </div><!-- /.row -->
         </div><!-- /.container -->
     </header>
+
+    <div class="search-extended">
+        <input type="search" placeholder="Начать поиск">
+    </div><!-- /.search-extended -->
 
     <!-- Сities -->
     <div class="cities" id="js-cities-wrapper">
@@ -338,27 +344,20 @@
                     <h3 class="action-main__title">Кредитные карты</h3>
                     <p class="action-main__comment">Более 1 000 предложений</p>
                 </a>
-                <a href="#" class="action-main card">
+                <a href="#" class="action-main card d-block d-sm-none">
                     <div class="action-main__icon">
                         <svg data-src="img/i-sberegheniya.svg"></svg>
                     </div>
                     <h3 class="action-main__title">Сбережения</h3>
                     <p class="action-main__comment">Более 1 000 предложений</p>
                 </a>  
-                <a href="#" class="action-main card">
+                <a href="#" class="action-main card d-block d-sm-none">
                     <div class="action-main__icon">
                         <svg data-src="img/i-debit_card.svg">Дебетовые карты</svg>
                     </div>
                     <h3 class="action-main__title">Дебетовые карты</h3>
                     <p class="action-main__comment">Более 1 000 предложений</p>
                 </a>
-                <a href="#" class="action-main card">
-                    <div class="action-main__icon">
-                        <svg data-src="img/i-vklad.svg"></svg>
-                    </div>
-                    <h3 class="action-main__title">Сделать вклад</h3>
-                    <p class="action-main__comment">Более 1 000 предложений</p>
-                </a>                                              
             </div><!-- /.header--row -->
         </section><!-- /.actions-main container -->
 

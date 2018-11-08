@@ -91,14 +91,14 @@ jQuery(document).ready(function($){
 
     /* SEARCH FORM */
     function searchForm(formId) {
-        $('.search-submit, .search-field').click(function(e){
+        $('.search-button, .search-field').click(function(e){
             e.stopPropagation();
         });
-        $(formId).find('.search-submit').click(function(e){
+        $(formId).find('.search-button').click(function(e){
+            e.preventDefault();
             if ( $(this).parent(formId).hasClass('open') ) {
-                //do nothing
+                $(this).parent(formId).removeClass('open').addClass('closed');
             } else {
-                e.preventDefault();
                 $(this).parent(formId).removeClass('closed').addClass('open');
                 $(this).siblings('.search-field').focus();
             }
@@ -107,7 +107,7 @@ jQuery(document).ready(function($){
             $(formId).removeClass('open').addClass('closed');
         });
     }
-    searchForm('#searchform');
+    searchForm('#search-header');
     searchForm('#searchform_listing');
 
     /* CATEGS (MOB BEHAVIOR) */
