@@ -148,4 +148,11 @@ jQuery(document).ready(function($){
     $(window).resize(function(){
         setControlWidth();
     });
+
+    
+
+    $('.location-hint').find('.btn-cta').click(function(e){        
+        e.preventDefault();
+        $(this).parents('.location-hint').hide();
+    })
 });
