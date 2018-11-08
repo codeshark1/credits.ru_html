@@ -142,14 +142,13 @@ $sect-mg-neg: 39px;
 	background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 65.589127' height='20' width='16'%3E%3Cg transform='matrix(1.25 0 0 -1.25 0 65.59)'%3E%3Cpath d='M39 32.471c0-10.494-19-31-19-31s-19 20.506-19 31 8.506 19 19 19 19-8.506 19-19z' fill='none' stroke='%23000' stroke-width='2' stroke-miterlimit='10'/%3E%3Cpath d='M26 33.471a6 6 0 0 0-12 0 6 6 0 0 0 12 0z' fill='none' stroke='%23000' stroke-width='2' stroke-miterlimit='10'/%3E%3C/g%3E%3C/svg%3E") no-repeat 0 50%;
 	padding-left: 25px;
 	position: relative;
+	display: inline-block;
+	min-height: 20px;
 	.selected {
 		text-decoration: underline;
 		cursor: pointer;
 		color: $red;
 		font-size: 0.9rem;		
-	}
-	@media (max-width: $screen-xs) {
-		display: none;
 	}
 }
 .location-hint {
@@ -192,11 +191,13 @@ $sect-mg-neg: 39px;
 /* ==========================================================================
 NAVIGATION
 ========================================================================== */
+.h-popup {font-weight: 500;font-size: 18px;color: #000; margin: 0}
+
 .header--navigation {
 	@media (max-width: $screen-xs-max) {
 		position: relative;
 		display: none;
-		padding: 0 15px;
+		padding: 15px;
 		&:before {
 			content: "";
 			position: absolute;
@@ -209,13 +210,11 @@ NAVIGATION
 	}
 	@media (min-width: $screen-sm-min) {
 		display: block !important;
+		.location-selector {display: none;}
 	}
 }
 .menu-main {
-	&__item {
-		position: relative;
-		padding: 10px 0;
-	}
+	&__item {position: relative;}
 	a {
 		font-weight: 400;
 		display: block;
@@ -223,57 +222,74 @@ NAVIGATION
 	
 	
 	@media (max-width: $screen-xs-max) {				
-		padding: 16px 0;
-		&__submenu {
+		padding: 8px 0 16px;
+		>li{
+			padding-top: 15px;
+			>a {
+				border-bottom: 1px solid $border;
+				padding: 0 0 4px;
+				color: #000;
+				font-weight: 500;
+			}
+		}
+		.has-sub>a {position: relative;
+			&:before {
+				content: "";
+				width: 11px;height: 11px;
+				background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11 7' width='11'%3E%3Cpolygon points='5.5 7 0 0.7 0.61 0 5.5 5.6 10.39 0 11 0.7 5.5 7'/%3E%3C/svg%3E") no-repeat;			
+				right: 0;
+				bottom: 5px;
+				position: absolute;								
+			}
+		}
+		.sub-menu {
+			display: none;
 			padding-top: 10px;
-			a {padding-left: 20px;}			
-			.menu-main__item:last-child {padding-bottom: 0;}
+			.menu-main__item {padding: 10px 0;}
+		}
+		.menu-item--active>a:before{
+			transform: rotate(180deg);
 		}
 	}
 
 	@media (min-width: $screen-sm-min) {
 		display: flex;
 		justify-content: space-between;		
-		li {position: relative;}
-		li.sub:before {
-			content: "";
-			position: absolute;
-			bottom: 0;
-			left: 25px;
-			border-style: solid;
-			border-width: 0 4.5px 7px 4.5px;
-			border-color: transparent transparent #9a9a9a transparent;
-			opacity: 0;
-			transition: all .5s ease-in-out;
+		.menu-main__item {padding: 10px 0;}
+		li.has-sub{
+			position: relative;
+			&:before {
+				content: "";
+				position: absolute;
+				bottom: 0;
+				left: 25px;
+				border-style: solid;
+				border-width: 0 4.5px 7px 4.5px;
+				border-color: transparent transparent #9a9a9a transparent;
+				opacity: 0;
+				transition: all .3s ease-in-out;
+			}
 		}
 	
-		li:hover.sub:before {
+		li.has-sub:hover:before {
 			opacity: 1;
 		}
-		li:hover .dropdown {
-			max-height: 500px;
-		}
-	
-		.dropdown {
+
+		.sub-menu {
 			position: absolute;
 			top: 40px;
 			left: -8px;
 			width: auto;
-			max-height: 0;
+			max-height: 0 !important;
 			overflow: hidden;
 			background-color: #fff;
 			box-shadow: 7px 7px 24px 0 rgba(3, 0, 1, 0.16);
-			transition: max-height .8s ease-in-out;
-			z-index: 10;
-	
-			ul {
-			}
-		}
-		&__submenu {			
-			border-top: 2px solid #9a9a9a;
+			transition: all .3s ease-in-out;
+			z-index: 10;				
 			list-style: none;
-			padding: 25px 0 40px 30px;
+			padding: 0 0 0 30px;
 			margin: 0;
+			display: block !important; 
 			li {
 				display: block;
 				cursor: pointer;
@@ -283,10 +299,10 @@ NAVIGATION
 				&:hover a {
 					color: #ff2633;
 					padding: 0 0 0 14px;
-				}
-				&:hover a:before {
-					  opacity: 1;
-					transform: scale(1);
+					&:before {
+						opacity: 1;
+						transform: scale(1);
+					}
 				}
 				a {
 					position: relative;
@@ -295,25 +311,32 @@ NAVIGATION
 					font-size: 12px;
 					color: #000;
 					line-height: 1;
-				}
-				a:before {
-					position: absolute;
-					content: '';
-					top: 50%;
-					left: 4.5px;
-					width: 0;
-					height: 0;
-					border-style: solid;
-					border-width: 4.5px 0 4.5px 7px;
-					border-color: transparent transparent transparent #ff2634;
-					opacity: 0;
-					transform: scale(0.5);
-					  transition: all .3s ease-in-out;
-					  margin: -4.5px;
+					&:before {
+						position: absolute;
+						content: '';
+						top: 50%;
+						left: 4.5px;
+						width: 0;
+						height: 0;
+						border-style: solid;
+						border-width: 4.5px 0 4.5px 7px;
+						border-color: transparent transparent transparent #ff2634;
+						opacity: 0;
+						transform: scale(0.5);
+						  transition: all .3s ease-in-out;
+						  margin: -4.5px;
+					}
 				}
 			}
-			&.cols {column-count: 2}
+			&.cols {column-count: 2}			
 		}
+
+		li:hover .sub-menu {
+			border-top: 2px solid #9a9a9a;
+			max-height: 500px !important;
+			padding: 25px 0 10px 30px;
+		}
+
 	}
 }
 

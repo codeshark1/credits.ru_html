@@ -39,20 +39,22 @@ jQuery(document).ready(function($){
     //navigation_show_flex('#js-btn-search-listing','#search-listing-filter');
 
     function menu_nested(menu_id) {
-        $(menu_id).find('ul').hide();
-        $(menu_id).find('.menu-item--has-children>a').click(function(e){
-            e.preventDefault();
-            $(this).siblings('.sub-menu').slideDown();
-            if ( $(this).parent().hasClass('menu-item--active') ) {
-                $(this).siblings('.sub-menu').stop().slideUp();
-                $(this).parent().removeClass('menu-item--active');
-            } else {
-                $(this).parent().addClass('menu-item--active').siblings('.menu-item--active').removeClass('expanded').find('.sub-menu').stop().slideUp();
-                $(this).siblings('.sub-menu').stop().slideDown();
+        //$(menu_id).find('ul').hide();        
+        $(menu_id).find('.has-sub>a').click(function(e){
+            if ( $(window).width() < 768 ) {
+                e.preventDefault();
+                $(this).siblings('.sub-menu').slideDown();
+                if ( $(this).parent().hasClass('menu-item--active') ) {
+                    $(this).siblings('.sub-menu').stop().slideUp();
+                    $(this).parent().removeClass('menu-item--active');
+                } else {
+                    $(this).parent().addClass('menu-item--active').siblings('.menu-item--active').removeClass('menu-item--active').find('.sub-menu').stop().slideUp();
+                    $(this).siblings('.sub-menu').stop().slideDown();
+                }
             }
         });
     }
-    menu_nested('.menu-categs');
+    menu_nested('#menu-main');
 
     function tabs() { // глобальная
         $('.js-nav-tabs .menu-item a').click(function(e){
@@ -151,8 +153,10 @@ jQuery(document).ready(function($){
 
     
 
-    $('.location-hint').find('.btn-cta').click(function(e){        
-        e.preventDefault();
-        $(this).parents('.location-hint').hide();
-    })
+    (function hide_location_hint() {
+        $('.location-hint').find('.btn-cta').click(function(e){        
+            e.preventDefault();
+            $(this).parents('.location-hint').hide();
+        })
+    })();
 });

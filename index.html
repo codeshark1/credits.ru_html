@@ -39,7 +39,7 @@
                     <div class="header--location header--col-1">
                         <div class="location-selector">
                             <a class="selected" href="javascript:void(0)" id="js-btn-cities">
-                                <span>Россия</span>
+                                <span>Новоросcийск</span>
                             </a>
                             <div class="location-hint">
                                 <p class="title">Ваш город <span>Новоросcийск?</span></p>
@@ -48,7 +48,7 @@
                                     <a href="#" class="link">Выбрать другой</a>
                                 </div><!-- /.row-mod -->
                             </div><!-- /.location-hint -->
-                        </div>
+                        </div><!-- /.location-selector -->
                     </div><!-- /.header--location -->
                     <div class="header--col-2 header--col-2_mod">
                         <div class="header--rates">
@@ -85,52 +85,56 @@
                     <img class="logo" src="img/logotype@2x.png" alt="credits.ru">
                 </div><!-- /.header--logo -->
                 <nav class="header--navigation header--col-2" id="js-menu-wrapper">
-                    <ul class="menu-main">
-                        <li class="menu-main__item sub">
-                            <a href="javascript:void(0)">Кредиты</a>
-                            <div class="dropdown">
-                                <ul class="menu-main__submenu cols">
-                                    <li class="menu-main__item"><a href="/">Потребительские кредиты</a></li>
-                                    <li class="menu-main__item"><a href="/">Автокредит</a></li>
-                                    <li class="menu-main__item"><a href="/">Ипотека</a></li>
-                                    <li class="menu-main__item"><a href="/">Кредит наличными</a></li>
-                                    <li class="menu-main__item"><a href="/">Кредит под залог</a></li>
-                                    <li class="menu-main__item"><a href="/">Кредит для бизнеса</a></li>
-                                    <li class="menu-main__item"><a href="/">Кредитные брокеры</a></li>
-                                </ul>
-                            </div>                        
+                    <p class="h-popup">Меню</p>
+                    <ul class="menu-main" id="menu-main">
+                        <li class="menu-main__item has-sub">
+                            <a href="javascript:void(0)">Кредиты</a>                            
+                            <ul class="sub-menu cols">
+                                <li class="menu-main__item"><a href="/">Потребительские кредиты</a></li>
+                                <li class="menu-main__item"><a href="/">Автокредит</a></li>
+                                <li class="menu-main__item"><a href="/">Ипотека</a></li>
+                                <li class="menu-main__item"><a href="/">Кредит наличными</a></li>
+                                <li class="menu-main__item"><a href="/">Кредит под залог</a></li>
+                                <li class="menu-main__item"><a href="/">Кредит для бизнеса</a></li>
+                                <li class="menu-main__item"><a href="/">Кредитные брокеры</a></li>
+                            </ul>
                         </li>
-                        <li class="menu-main__item sub">
-                            <a href="#">Карты</a>
-                            <div class="dropdown">
-                                <ul class="menu-main__submenu">
-                                    <li class="menu-main__item"><a href="/">Кредитные карты</a></li>
-                                    <li class="menu-main__item"><a href="/">Карты рассрочки</a></li>
-                                    <li class="menu-main__item"><a href="/">Дебетовые карты</a></li>
-                                </ul>
-                            </div>                             
+                        <li class="menu-main__item has-sub">
+                            <a href="#">Карты</a>                            
+                            <ul class="sub-menu">
+                                <li class="menu-main__item"><a href="/">Кредитные карты</a></li>
+                                <li class="menu-main__item"><a href="/">Карты рассрочки</a></li>
+                                <li class="menu-main__item"><a href="/">Дебетовые карты</a></li>
+                            </ul>                            
                         </li>
-                        <li class="menu-main__item"><a href="#">Ипотека</a></li>
-                        <li class="menu-main__item sub">
-                            <a href="#">Для бизнеса</a>
-                            <div class="dropdown">
-                                <ul class="menu-main__submenu">
-                                    <li class="menu-main__item"><a href="/">Лизинг</a></li>
-                                    <li class="menu-main__item"><a href="/">Кредиты для бизнеса</a></li>
-                                    <li class="menu-main__item"><a href="/">Депозиты юр. лицам</a></li>
-                                </ul>
-                            </div>                              
+                        <li class="menu-main__item">
+                            <a href="#">Ипотека</a>
                         </li>
-                        <li class="menu-main__item sub">
-                            <a href="#">Инвестиции</a>
-                            <div class="dropdown">
-                                <ul class="menu-main__submenu">
-                                    <li class="menu-main__item"><a href="/">Займы</a></li>
-                                    <li class="menu-main__item"><a href="/">Вклады</a></li>
-                                </ul>
-                            </div>                               
+                        <li class="menu-main__item has-sub">
+                            <a href="#">Для бизнеса</a>                            
+                            <ul class="sub-menu">
+                                <li class="menu-main__item"><a href="/">Лизинг</a></li>
+                                <li class="menu-main__item"><a href="/">Кредиты для бизнеса</a></li>
+                                <li class="menu-main__item"><a href="/">Депозиты юр. лицам</a></li>
+                            </ul>                            
+                        </li>
+                        <li class="menu-main__item has-sub">
+                            <a href="#">Инвестиции</a>                            
+                            <ul class="sub-menu">
+                                <li class="menu-main__item"><a href="/">Займы</a></li>
+                                <li class="menu-main__item"><a href="/">Вклады</a></li>
+                            </ul>                            
                         </li>
                     </ul>
+
+                    <div class="bx-center">
+                        <div class="location-selector">
+                            Регион:
+                            <a class="selected" href="javascript:void(0)">
+                                <span>Новоросcийск</span>
+                            </a>
+                        </div><!-- /.location-selector -->
+                    </div><!-- /.bx-center -->
                 </nav><!-- /.header--navigation -->
             </div><!-- /.row -->
         </div><!-- /.container -->
