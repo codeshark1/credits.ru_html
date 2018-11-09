@@ -153,7 +153,7 @@ fieldset {
     margin: 0;
     border-radius: 50px;
     background-color: transparent;
-    padding: 6px 3px 6px 20px;
+    padding: 0;
     height: 35px;
     transition: all .15s;
     cursor: pointer;
@@ -184,9 +184,9 @@ fieldset {
     .form-search-header.open .search-field {
       width: 100%;
       cursor: auto;
-      padding-right: 25px;
       color: #555555;
-      box-shadow: none; }
+      box-shadow: none;
+      padding: 6px 25px 6px 20px; }
     .form-search-header.open .search-button {
       background: #d0d0d0 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='9' viewBox='0 0 24 24'%3E%3Cpath d='M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z'/%3E%3C/svg%3E") no-repeat 50% 50%;
       border-radius: 100%; }
