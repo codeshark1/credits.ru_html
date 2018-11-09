@@ -161,10 +161,16 @@ jQuery(document).ready(function($){
 
     
 
-    (function hide_location_hint() {
-        $('.location-hint').find('.btn-cta').click(function(e){        
-            e.preventDefault();
-            $(this).parents('.location-hint').hide();
-        })
-    })();
+    function hide_location_hint() {
+        $('#location-hint').hide();
+    };
+
+    $('#location-hint').find('.btn-cta').click(function(e){
+        e.preventDefault();
+        hide_location_hint();
+    });
+
+    $('#js-btn-cities').click(function(e){        
+        hide_location_hint();
+    });
 });

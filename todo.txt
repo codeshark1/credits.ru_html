@@ -1,5 +1,5 @@
 
-search mobile
+jquery vesion
 
 mobile credits
     mob btm slider
