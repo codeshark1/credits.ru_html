@@ -624,11 +624,13 @@
                     </section>
 
                     <section class="section">
-                        <h2 class="h-section visible-xs">Новости</h2>
+                        <h2 class="h-section visible-xs">Лента новостей</h2>
 
                         <article class="card article-prev article-prev--full">
-                            <a href="#" class="article-img-bg" style="background-image:url(img/photo-prev1.jpg)"></a>
-                            <h2 class="h-article"><a href="#">Михаил Воронько: «Фактически степень мошенничества по токенизированным картам сведена к минимуму»</a></h2>
+                            <div class="article-prev--header">
+                                <a href="#" class="article-img-bg" style="background-image:url(img/photo-prev1.jpg)"></a>
+                                <h2 class="h-article"><a href="#">Михаил Воронько: «Фактически степень мошенничества по токенизированным картам сведена к минимуму»</a></h2>
+                            </div><!-- /.article-prev--header -->
                             <hr>
                             <p class="article-prev--excerpt">Еще осенью, когда рубль слабел, экономисты всерьез обсуждали вероятность девальвации после президентских выборов-2018: дескать, до 18 марта рубль </p>
                             <footer class="article-prev--footer row-mod">
@@ -639,10 +641,12 @@
                                 </div>                            
                             </footer>
                         </article><!-- /.card -->
-                        <div class="row-mod row-mod-2">
+                        <div class="row-mod row-mod-2 xs-show-some">
                             <article class="card article-prev">
-                                <a href="#" class="article-img-bg" style="background-image:url(img/photo-prev2.jpg)"></a>
-                                <h2 class="h-article"><a href="#">Шойгу предложил открыть гуманитарные коридоры из Восточной Гуты</a></h2>
+                                <div class="article-prev--header">
+                                    <a href="#" class="article-img-bg" style="background-image:url(img/photo-prev2.jpg)"></a>
+                                    <h2 class="h-article"><a href="#">Шойгу предложил открыть гуманитарные коридоры из Восточной Гуты</a></h2>
+                                </div><!-- /.article-prev--header -->
                                 <footer class="article-prev--footer row-mod">                            
                                     <div><a href="#">Новости рынка</a></div>
                                     <div>
@@ -652,8 +656,10 @@
                                 </footer>
                             </article><!-- /.card -->
                             <article class="card article-prev">
-                                <a href="#" class="article-img-bg" style="background-image:url(img/photo-prev3.jpg)"></a>
-                                <h2 class="h-article"><a href="#">Шойгу предложил открыть гуманитарные коридоры из Восточной Гуты</a></h2>
+                                <div class="article-prev--header">
+                                    <a href="#" class="article-img-bg" style="background-image:url(img/photo-prev3.jpg)"></a>
+                                    <h2 class="h-article"><a href="#">Шойгу предложил открыть гуманитарные коридоры из Восточной Гуты</a></h2>
+                                </div><!-- /.article-prev--header -->
                                 <footer class="article-prev--footer row-mod">                            
                                     <div><a href="#">Новости рынка</a></div>
                                     <div>
@@ -663,8 +669,10 @@
                                 </footer>
                             </article><!-- /.card -->
                             <article class="card article-prev">
-                                <a href="#" class="article-img-bg" style="background-image:url(img/photo-prev2.jpg)"></a>
-                                <h2 class="h-article"><a href="#">Шойгу предложил открыть гуманитарные коридоры из Восточной Гуты</a></h2>
+                                <div class="article-prev--header">
+                                    <a href="#" class="article-img-bg" style="background-image:url(img/photo-prev2.jpg)"></a>
+                                    <h2 class="h-article"><a href="#">Шойгу предложил открыть гуманитарные коридоры из Восточной Гуты</a></h2>
+                                </div><!-- /.article-prev--header -->
                                 <footer class="article-prev--footer row-mod">                            
                                     <div><a href="#">Новости рынка</a></div>
                                     <div>
@@ -674,8 +682,10 @@
                                 </footer>
                             </article><!-- /.card -->
                             <article class="card article-prev">
-                                <a href="#" class="article-img-bg" style="background-image:url(img/photo-prev2.jpg)"></a>
-                                <h2 class="h-article"><a href="#">Шойгу предложил открыть гуманитарные коридоры из Восточной Гуты</a></h2>
+                                <div class="article-prev--header">
+                                    <a href="#" class="article-img-bg" style="background-image:url(img/photo-prev2.jpg)"></a>
+                                    <h2 class="h-article"><a href="#">Шойгу предложил открыть гуманитарные коридоры из Восточной Гуты</a></h2>
+                                </div><!-- /.article-prev--header -->
                                 <footer class="article-prev--footer row-mod">                            
                                     <div><a href="#">Новости рынка</a></div>
                                     <div>
@@ -687,7 +697,7 @@
                         </div><!-- /.row -->
                     </section>
 
-                    <section class="subscribe-main card section">
+                    <section class="subscribe-main card section hidden-xs">
                         <h3 class="title">Подпишись, будь в курсе финансовых событий!</h3>
                         <form action="/" class="form">
                             <div class="form__i">
@@ -703,170 +713,175 @@
                 <div class="col-lg-4 sidebar-main">
                     <h2 class="h-section hidden-xs"><a href="#">Лента новостей</a></h2>
                     <section class="card card-pad">
-                        <article class="article-prev--sm">
-                            <h3 class="h-article__sm"><a href="#">Исследование: индекс счастья в России впервые за долгое время оказался выше среднего по планете </a></h3>
-                            <footer class="article-prev--footer row-mod">
-                                <div><a href="#">Пресс-релизы</a></div>
-                                <div>
-                                    <p class="article--date">14.02.2018</p>
-                                    <p class="article--views">150</p>
-                                </div>                            
-                            </footer>                        
-                        </article>
-                        <article class="article-prev--sm">
-                            <h3 class="h-article__sm"><a href="#">Исследование: индекс счастья в России впервые за долгое время оказался выше среднего по планете </a></h3>
-                            <footer class="article-prev--footer row-mod">
-                                <div><a href="#">Пресс-релизы</a></div>
-                                <div>
-                                    <p class="article--date">14.02.2018</p>
-                                    <p class="article--views">150</p>
-                                </div>                            
-                            </footer>                        
-                        </article>
-                        <article class="article-prev--sm">
-                            <h3 class="h-article__sm"><a href="#">Исследование: индекс счастья в России впервые за долгое время оказался выше среднего по планете </a></h3>
-                            <footer class="article-prev--footer row-mod">
-                                <div><a href="#">Пресс-релизы</a></div>
-                                <div>
-                                    <p class="article--date">14.02.2018</p>
-                                    <p class="article--views">150</p>
-                                </div>                            
-                            </footer>                        
-                        </article>
-                        <article class="article-prev--sm">
-                            <h3 class="h-article__sm"><a href="#">Исследование: индекс счастья в России впервые за долгое время оказался выше среднего по планете </a></h3>
-                            <footer class="article-prev--footer row-mod">
-                                <div><a href="#">Пресс-релизы</a></div>
-                                <div>
-                                    <p class="article--date">14.02.2018</p>
-                                    <p class="article--views">150</p>
-                                </div>                            
-                            </footer>                        
-                        </article>
-                        <article class="article-prev--sm">
-                            <h3 class="h-article__sm"><a href="#">Исследование: индекс счастья в России впервые за долгое время оказался выше среднего по планете </a></h3>
-                            <footer class="article-prev--footer row-mod">
-                                <div><a href="#">Пресс-релизы</a></div>
-                                <div>
-                                    <p class="article--date">14.02.2018</p>
-                                    <p class="article--views">150</p>
-                                </div>                            
-                            </footer>                        
-                        </article>
-                        <article class="article-prev--sm">
-                            <h3 class="h-article__sm"><a href="#">Исследование: индекс счастья в России впервые за долгое время оказался выше среднего по планете </a></h3>
-                            <footer class="article-prev--footer row-mod">
-                                <div><a href="#">Пресс-релизы</a></div>
-                                <div>
-                                    <p class="article--date">14.02.2018</p>
-                                    <p class="article--views">150</p>
-                                </div>                            
-                            </footer>                        
-                        </article>
-                        <article class="article-prev--sm">
-                            <h3 class="h-article__sm"><a href="#">Исследование: индекс счастья в России впервые за долгое время оказался выше среднего по планете </a></h3>
-                            <footer class="article-prev--footer row-mod">
-                                <div><a href="#">Пресс-релизы</a></div>
-                                <div>
-                                    <p class="article--date">14.02.2018</p>
-                                    <p class="article--views">150</p>
-                                </div>                            
-                            </footer>                        
-                        </article>
-                        <article class="article-prev--sm">
-                            <h3 class="h-article__sm"><a href="#">Исследование: индекс счастья в России впервые за долгое время оказался выше среднего по планете </a></h3>
-                            <footer class="article-prev--footer row-mod">
-                                <div><a href="#">Пресс-релизы</a></div>
-                                <div>
-                                    <p class="article--date">14.02.2018</p>
-                                    <p class="article--views">150</p>
-                                </div>                            
-                            </footer>                        
-                        </article>
-                        <article class="article-prev--sm">
-                            <h3 class="h-article__sm"><a href="#">Исследование: индекс счастья в России впервые за долгое время оказался выше среднего по планете </a></h3>
-                            <footer class="article-prev--footer row-mod">
-                                <div><a href="#">Пресс-релизы</a></div>
-                                <div>
-                                    <p class="article--date">14.02.2018</p>
-                                    <p class="article--views">150</p>
-                                </div>                            
-                            </footer>                        
-                        </article>
-                        <article class="article-prev--sm">
-                            <h3 class="h-article__sm"><a href="#">Исследование: индекс счастья в России впервые за долгое время оказался выше среднего по планете </a></h3>
-                            <footer class="article-prev--footer row-mod">
-                                <div><a href="#">Пресс-релизы</a></div>
-                                <div>
-                                    <p class="article--date">14.02.2018</p>
-                                    <p class="article--views">150</p>
-                                </div>                            
-                            </footer>                        
-                        </article>
-                        <article class="article-prev--sm">
-                            <h3 class="h-article__sm"><a href="#">Исследование: индекс счастья в России впервые за долгое время оказался выше среднего по планете </a></h3>
-                            <footer class="article-prev--footer row-mod">
-                                <div><a href="#">Пресс-релизы</a></div>
-                                <div>
-                                    <p class="article--date">14.02.2018</p>
-                                    <p class="article--views">150</p>
-                                </div>                            
-                            </footer>                        
-                        </article>
-                        <article class="article-prev--sm">
-                            <h3 class="h-article__sm"><a href="#">Исследование: индекс счастья в России впервые за долгое время оказался выше среднего по планете </a></h3>
-                            <footer class="article-prev--footer row-mod">
-                                <div><a href="#">Пресс-релизы</a></div>
-                                <div>
-                                    <p class="article--date">14.02.2018</p>
-                                    <p class="article--views">150</p>
-                                </div>                            
-                            </footer>                        
-                        </article>
-                        <article class="article-prev--sm">
-                            <h3 class="h-article__sm"><a href="#">Исследование: индекс счастья в России впервые за долгое время оказался выше среднего по планете </a></h3>
-                            <footer class="article-prev--footer row-mod">
-                                <div><a href="#">Пресс-релизы</a></div>
-                                <div>
-                                    <p class="article--date">14.02.2018</p>
-                                    <p class="article--views">150</p>
-                                </div>                            
-                            </footer>                        
-                        </article>
-                        <article class="article-prev--sm">
-                            <h3 class="h-article__sm"><a href="#">Исследование: индекс счастья в России впервые за долгое время оказался выше среднего по планете </a></h3>
-                            <footer class="article-prev--footer row-mod">
-                                <div><a href="#">Пресс-релизы</a></div>
-                                <div>
-                                    <p class="article--date">14.02.2018</p>
-                                    <p class="article--views">150</p>
-                                </div>                            
-                            </footer>                        
-                        </article>
-                        <article class="article-prev--sm">
-                            <h3 class="h-article__sm"><a href="#">Исследование: индекс счастья в России впервые за долгое время оказался выше среднего по планете </a></h3>
-                            <footer class="article-prev--footer row-mod">
-                                <div><a href="#">Пресс-релизы</a></div>
-                                <div>
-                                    <p class="article--date">14.02.2018</p>
-                                    <p class="article--views">150</p>
-                                </div>                            
-                            </footer>                        
-                        </article>                    
-                        <article class="article-prev--sm">
-                            <h3 class="h-article__sm"><a href="#">Исследование: индекс счастья в России впервые за долгое время оказался выше среднего по планете </a></h3>
-                            <footer class="article-prev--footer row-mod">
-                                <div><a href="#">Пресс-релизы</a></div>
-                                <div>
-                                    <p class="article--date">14.02.2018</p>
-                                    <p class="article--views">150</p>
-                                </div>                            
-                            </footer>                        
-                        </article>
-                        <p class="view-all link-arrow">
+                        <div class="wrapper">
+                            <article class="article-prev--sm">
+                                <h3 class="h-article__sm"><a href="#">Исследование: индекс счастья в России впервые за долгое время оказался выше среднего по планете </a></h3>
+                                <footer class="article-prev--footer row-mod">
+                                    <div><a href="#">Пресс-релизы</a></div>
+                                    <div>
+                                        <p class="article--date">14.02.2018</p>
+                                        <p class="article--views">150</p>
+                                    </div>                            
+                                </footer>                        
+                            </article>
+                            <article class="article-prev--sm">
+                                <h3 class="h-article__sm"><a href="#">Исследование: индекс счастья в России впервые за долгое время оказался выше среднего по планете </a></h3>
+                                <footer class="article-prev--footer row-mod">
+                                    <div><a href="#">Пресс-релизы</a></div>
+                                    <div>
+                                        <p class="article--date">14.02.2018</p>
+                                        <p class="article--views">150</p>
+                                    </div>                            
+                                </footer>                        
+                            </article>
+                            <article class="article-prev--sm">
+                                <h3 class="h-article__sm"><a href="#">Исследование: индекс счастья в России впервые за долгое время оказался выше среднего по планете </a></h3>
+                                <footer class="article-prev--footer row-mod">
+                                    <div><a href="#">Пресс-релизы</a></div>
+                                    <div>
+                                        <p class="article--date">14.02.2018</p>
+                                        <p class="article--views">150</p>
+                                    </div>                            
+                                </footer>                        
+                            </article>
+                            <article class="article-prev--sm">
+                                <h3 class="h-article__sm"><a href="#">Исследование: индекс счастья в России впервые за долгое время оказался выше среднего по планете </a></h3>
+                                <footer class="article-prev--footer row-mod">
+                                    <div><a href="#">Пресс-релизы</a></div>
+                                    <div>
+                                        <p class="article--date">14.02.2018</p>
+                                        <p class="article--views">150</p>
+                                    </div>                            
+                                </footer>                        
+                            </article>
+                            <article class="article-prev--sm">
+                                <h3 class="h-article__sm"><a href="#">Исследование: индекс счастья в России впервые за долгое время оказался выше среднего по планете </a></h3>
+                                <footer class="article-prev--footer row-mod">
+                                    <div><a href="#">Пресс-релизы</a></div>
+                                    <div>
+                                        <p class="article--date">14.02.2018</p>
+                                        <p class="article--views">150</p>
+                                    </div>                            
+                                </footer>                        
+                            </article>
+                            <article class="article-prev--sm">
+                                <h3 class="h-article__sm"><a href="#">Исследование: индекс счастья в России впервые за долгое время оказался выше среднего по планете </a></h3>
+                                <footer class="article-prev--footer row-mod">
+                                    <div><a href="#">Пресс-релизы</a></div>
+                                    <div>
+                                        <p class="article--date">14.02.2018</p>
+                                        <p class="article--views">150</p>
+                                    </div>                            
+                                </footer>                        
+                            </article>
+                            <article class="article-prev--sm">
+                                <h3 class="h-article__sm"><a href="#">Исследование: индекс счастья в России впервые за долгое время оказался выше среднего по планете </a></h3>
+                                <footer class="article-prev--footer row-mod">
+                                    <div><a href="#">Пресс-релизы</a></div>
+                                    <div>
+                                        <p class="article--date">14.02.2018</p>
+                                        <p class="article--views">150</p>
+                                    </div>                            
+                                </footer>                        
+                            </article>
+                            <article class="article-prev--sm">
+                                <h3 class="h-article__sm"><a href="#">Исследование: индекс счастья в России впервые за долгое время оказался выше среднего по планете </a></h3>
+                                <footer class="article-prev--footer row-mod">
+                                    <div><a href="#">Пресс-релизы</a></div>
+                                    <div>
+                                        <p class="article--date">14.02.2018</p>
+                                        <p class="article--views">150</p>
+                                    </div>                            
+                                </footer>                        
+                            </article>
+                            <article class="article-prev--sm">
+                                <h3 class="h-article__sm"><a href="#">Исследование: индекс счастья в России впервые за долгое время оказался выше среднего по планете </a></h3>
+                                <footer class="article-prev--footer row-mod">
+                                    <div><a href="#">Пресс-релизы</a></div>
+                                    <div>
+                                        <p class="article--date">14.02.2018</p>
+                                        <p class="article--views">150</p>
+                                    </div>                            
+                                </footer>                        
+                            </article>
+                            <article class="article-prev--sm">
+                                <h3 class="h-article__sm"><a href="#">Исследование: индекс счастья в России впервые за долгое время оказался выше среднего по планете </a></h3>
+                                <footer class="article-prev--footer row-mod">
+                                    <div><a href="#">Пресс-релизы</a></div>
+                                    <div>
+                                        <p class="article--date">14.02.2018</p>
+                                        <p class="article--views">150</p>
+                                    </div>                            
+                                </footer>                        
+                            </article>
+                            <article class="article-prev--sm">
+                                <h3 class="h-article__sm"><a href="#">Исследование: индекс счастья в России впервые за долгое время оказался выше среднего по планете </a></h3>
+                                <footer class="article-prev--footer row-mod">
+                                    <div><a href="#">Пресс-релизы</a></div>
+                                    <div>
+                                        <p class="article--date">14.02.2018</p>
+                                        <p class="article--views">150</p>
+                                    </div>                            
+                                </footer>                        
+                            </article>
+                            <article class="article-prev--sm">
+                                <h3 class="h-article__sm"><a href="#">Исследование: индекс счастья в России впервые за долгое время оказался выше среднего по планете </a></h3>
+                                <footer class="article-prev--footer row-mod">
+                                    <div><a href="#">Пресс-релизы</a></div>
+                                    <div>
+                                        <p class="article--date">14.02.2018</p>
+                                        <p class="article--views">150</p>
+                                    </div>                            
+                                </footer>                        
+                            </article>
+                            <article class="article-prev--sm">
+                                <h3 class="h-article__sm"><a href="#">Исследование: индекс счастья в России впервые за долгое время оказался выше среднего по планете </a></h3>
+                                <footer class="article-prev--footer row-mod">
+                                    <div><a href="#">Пресс-релизы</a></div>
+                                    <div>
+                                        <p class="article--date">14.02.2018</p>
+                                        <p class="article--views">150</p>
+                                    </div>                            
+                                </footer>                        
+                            </article>
+                            <article class="article-prev--sm">
+                                <h3 class="h-article__sm"><a href="#">Исследование: индекс счастья в России впервые за долгое время оказался выше среднего по планете </a></h3>
+                                <footer class="article-prev--footer row-mod">
+                                    <div><a href="#">Пресс-релизы</a></div>
+                                    <div>
+                                        <p class="article--date">14.02.2018</p>
+                                        <p class="article--views">150</p>
+                                    </div>                            
+                                </footer>                        
+                            </article>
+                            <article class="article-prev--sm">
+                                <h3 class="h-article__sm"><a href="#">Исследование: индекс счастья в России впервые за долгое время оказался выше среднего по планете </a></h3>
+                                <footer class="article-prev--footer row-mod">
+                                    <div><a href="#">Пресс-релизы</a></div>
+                                    <div>
+                                        <p class="article--date">14.02.2018</p>
+                                        <p class="article--views">150</p>
+                                    </div>                            
+                                </footer>                        
+                            </article>                    
+                            <article class="article-prev--sm">
+                                <h3 class="h-article__sm"><a href="#">Исследование: индекс счастья в России впервые за долгое время оказался выше среднего по планете </a></h3>
+                                <footer class="article-prev--footer row-mod">
+                                    <div><a href="#">Пресс-релизы</a></div>
+                                    <div>
+                                        <p class="article--date">14.02.2018</p>
+                                        <p class="article--views">150</p>
+                                    </div>                            
+                                </footer>                        
+                            </article>
+                        </div><!-- /.wrapper -->
+                        <p class="view-all link-arrow hidden-xs">
                             <a href="#">Смотреть все новости <svg class="arrow" data-src="img/i-arrow-more.svg"></svg></a>                             
-                        </p>                    
+                        </p>
                     </section>
+                    <p class="view-all link-arrow visible-xs">
+                        <a href="#">Смотреть все новости <svg class="arrow" data-src="img/i-arrow-more.svg"></svg></a>                             
+                    </p>                    
                 </div><!-- /.col -->
             </div><!-- /.row -->
 
@@ -874,8 +889,10 @@
                 <h3 class="h-section h-main">Рекомендуемые статьи</h3>
                 <div class="row-mod row-mod-3 section">                    
                     <article class="card article-prev">
-                        <a href="#" class="article-img-bg" style="background-image:url(img/photo-prev2.jpg)"></a>
-                        <h2 class="h-article"><a href="#">Шойгу предложил открыть гуманитарные коридоры из Восточной Гуты</a></h2>
+                        <div class="article-prev--header">
+                            <a href="#" class="article-img-bg" style="background-image:url(img/photo-prev2.jpg)"></a>
+                            <h2 class="h-article"><a href="#">Шойгу предложил открыть гуманитарные коридоры из Восточной Гуты</a></h2>
+                        </div><!-- /.article-prev--header -->
                         <footer class="article-prev--footer row-mod">                            
                             <div><a href="#">Новости рынка</a></div>
                             <div>
@@ -886,8 +903,10 @@
                     </article><!-- /.card -->            
                 
                     <article class="card article-prev">
-                        <a href="#" class="article-img-bg" style="background-image:url(img/photo-prev2.jpg)"></a>
-                        <h2 class="h-article"><a href="#">Шойгу предложил открыть гуманитарные коридоры из Восточной Гуты</a></h2>
+                        <div class="article-prev--header">
+                            <a href="#" class="article-img-bg" style="background-image:url(img/photo-prev2.jpg)"></a>
+                            <h2 class="h-article"><a href="#">Шойгу предложил открыть гуманитарные коридоры из Восточной Гуты</a></h2>
+                        </div><!-- /.article-prev--header -->
                         <footer class="article-prev--footer row-mod">                            
                             <div><a href="#">Новости рынка</a></div>
                             <div>
@@ -898,8 +917,10 @@
                     </article><!-- /.card -->            
                 
                     <article class="card article-prev">
-                        <a href="#" class="article-img-bg" style="background-image:url(img/photo-prev2.jpg)"></a>
-                        <h2 class="h-article"><a href="#">Шойгу предложил открыть гуманитарные коридоры из Восточной Гуты</a></h2>
+                        <div class="article-prev--header">
+                            <a href="#" class="article-img-bg" style="background-image:url(img/photo-prev2.jpg)"></a>
+                            <h2 class="h-article"><a href="#">Шойгу предложил открыть гуманитарные коридоры из Восточной Гуты</a></h2>
+                        </div><!-- /.article-prev--header -->
                         <footer class="article-prev--footer row-mod">                            
                             <div><a href="#">Новости рынка</a></div>
                             <div>

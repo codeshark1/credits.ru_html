@@ -166,4 +166,10 @@ jQuery(document).ready(function($){
     $('#js-btn-cities').click(function(e){        
         hide_location_hint();
     });
+
+    //клонирование
+    function cloneSubscribe(element,target) {
+        $(element).clone().removeClass('hidden-xs').insertAfter(target).addClass('visible-xs');
+    }
+    cloneSubscribe('.subscribe-main','.sidebar-main');
 });

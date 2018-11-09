@@ -26,11 +26,11 @@ ul {padding: 0; list-style: none;}
 small {font-size: 100%;display: inline-block;}
 
 .hidden-xs {
-  @media (max-width: $screen-xs) {display: none;}
+  @media (max-width: $screen-xs) {display: none !important;}
 }
 .visible-xs {
-  @media (min-width: $screen-sm) {
-    display: none;
+  @media (min-width: $screen-xs) {
+    display: none !important;
   }
 }
 .bx-center {text-align: center;}
