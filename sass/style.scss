@@ -532,7 +532,6 @@ NAVIGATION
 	font-size: 18px;
 	font-weight: 400;
 	margin-top: 0;
-	font-size: 1.7rem;
 	margin-bottom: 2rem;
 	@media (max-width: $screen-xs-max) {
 		text-align: center;
@@ -1084,6 +1083,12 @@ NAVIGATION
 		@media (min-width: $screen-sm-min) {
 			min-height: 70px;
 		}
+		@media (max-width: $screen-xs-max) {
+			&_bankname {order: 1}
+			&_amount {order: 2}
+			&_time {order: 3}
+			&_rate {order: 4}	
+		}
 	}
 }
 .plan_insearch {
@@ -1300,7 +1305,7 @@ NAVIGATION
 	@media (min-width: $screen-md-min) {
 		display: flex;
 		padding: 35px 30px 15px;
-		background-position: 15% 0;
+		background-position: 20% 0;
 		.title {width: 235px; flex-shrink: 0;margin-right: 20px;}
 		.form {flex-grow: 1}
 	}
@@ -1419,8 +1424,8 @@ $art-prev-bot-mg: 1.5rem;
 		color: $red; 
 		margin-right: 15px;
 		&:hover {
-			&+.arrow {
-				left: 10px;
+			.arrow {
+				left: 40px;
 			}
 		}
 	}
@@ -1428,7 +1433,7 @@ $art-prev-bot-mg: 1.5rem;
 		* {fill: $red; stroke: $red}
 		position: relative; 
 		transition: all .15s;
-		left: 0;
+		left: 29px;
 		width: 18px;
 		vertical-align: middle;
 	}
@@ -1497,6 +1502,7 @@ $art-prev-bot-mg: 1.5rem;
 		.section {margin-bottom: 0;}
 		.row-mod {display: inherit}
 	}
+	.row-mod {flex-wrap: nowrap}
 }
 
 .footer {
@@ -1528,6 +1534,11 @@ $art-prev-bot-mg: 1.5rem;
 		padding-top: 1rem;
 		.legal {padding-bottom: 1rem;}
 	}	
+	.mg-lg {
+		@media (min-width: $screen-sm-min) {
+			margin-bottom: 2rem;
+		}
+	}
 }
 .menu-footer {
 	&__item {display: inline-block;margin-right: 35px;}
@@ -1619,6 +1630,7 @@ $art-prev-bot-mg: 1.5rem;
 	@media (min-width: $screen-sm-min) {
 		display: flex;
 		justify-content: space-between;
+		
 	}	
 
 }

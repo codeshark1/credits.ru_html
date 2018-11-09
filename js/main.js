@@ -88,6 +88,13 @@ jQuery(document).ready(function($){
         threshold:0,
         duration: 100
     });
+    $(".plan-wrapper").click(function(){
+        if ($(this).hasClass('swiped') )  {
+            $(this).removeClass('swiped')
+        } else {
+            $(this).addClass('swiped')
+        }
+    });
 
 
     /* SEARCH FORM */

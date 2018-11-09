@@ -346,7 +346,7 @@ fieldset {
   border-width: 2px;
   line-height: 32px; }
   .btn--stroked:hover {
-    background: #555555; }
+    background: #969696; }
 
 .btn--full {
   width: 100%;
@@ -680,7 +680,7 @@ h1, h2, h3, h4 {
     color: rgba(85, 85, 85, 0.75); }
 
 .article-main hr {
-  background: #555555;
+  background: #969696;
   height: 2px;
   border: none;
   margin-bottom: 24px; }
@@ -751,10 +751,10 @@ h1, h2, h3, h4 {
       -webkit-overflow-scrolling: touch;
       white-space: nowrap; } }
 .article-main--body th, .article-main--body td {
-  border: 1px solid #555555;
+  border: 1px solid #969696;
   padding: 8px; }
 .article-main--body th {
-  background: rgba(85, 85, 85, 0.5); }
+  background: rgba(150, 150, 150, 0.5); }
 .article-main--body .title {
   font-weight: 500; }
 
@@ -886,7 +886,7 @@ h1, h2, h3, h4 {
 
 /* card-links */
 .card-links {
-  border: 1px solid #555555;
+  border: 1px solid #969696;
   padding: 16px 20px; }
   .card-links .heading {
     margin: 0 0 8px 0;
@@ -904,11 +904,11 @@ h1, h2, h3, h4 {
       left: -11px;
       top: 6px; }
   .card-links a {
-    border-bottom: 1px solid #555555; }
+    border-bottom: 1px solid #969696; }
 
 /* card-about */
 .card-about {
-  border: 1px solid #555555;
+  border: 1px solid #969696;
   padding: 32px;
   margin-top: 40px; }
   @media (min-width: 992px) {
@@ -927,7 +927,7 @@ h1, h2, h3, h4 {
 
 .card-list-item {
   transition: all .3s;
-  border-bottom: 1px solid #555555;
+  border-bottom: 1px solid #969696;
   padding: 14px 0;
   display: block;
   background-image: none !important; }
@@ -1988,7 +1988,6 @@ NAVIGATION
   font-size: 18px;
   font-weight: 400;
   margin-top: 0;
-  font-size: 1.7rem;
   margin-bottom: 2rem; }
   @media (max-width: 767px) {
     .h-section {
@@ -2323,7 +2322,7 @@ NAVIGATION
 /* --- SORTING/LISTING CONTROLS */
 /* PLANS */
 .nav-tabs a {
-  color: #555555;
+  color: #969696;
   transition: all .3s;
   font-weight: 400; }
 @media (max-width: 767px) {
@@ -2478,7 +2477,7 @@ NAVIGATION
         .plan .td_action {
           display: none; } }
   .plan .ttl {
-    color: #555555;
+    color: #969696;
     font-size: 0.9rem; }
   .plan .data {
     color: #000;
@@ -2512,6 +2511,15 @@ NAVIGATION
 @media (min-width: 768px) {
   .plan_inmain .td {
     min-height: 70px; } }
+@media (max-width: 767px) {
+  .plan_inmain .td_bankname {
+    order: 1; }
+  .plan_inmain .td_amount {
+    order: 2; }
+  .plan_inmain .td_time {
+    order: 3; }
+  .plan_inmain .td_rate {
+    order: 4; } }
 
 .plan_insearch {
   background: #fff; }
@@ -2736,7 +2744,7 @@ NAVIGATION
     .subscribe-main {
       display: flex;
       padding: 35px 30px 15px;
-      background-position: 15% 0; }
+      background-position: 20% 0; }
       .subscribe-main .title {
         width: 235px;
         flex-shrink: 0;
@@ -2863,12 +2871,12 @@ NAVIGATION
   .link-arrow a {
     color: #ff0000;
     margin-right: 15px; }
-    .link-arrow a:hover + .arrow {
-      left: 10px; }
+    .link-arrow a:hover .arrow {
+      left: 40px; }
   .link-arrow .arrow {
     position: relative;
     transition: all .15s;
-    left: 0;
+    left: 29px;
     width: 18px;
     vertical-align: middle; }
     .link-arrow .arrow * {
@@ -2935,6 +2943,8 @@ NAVIGATION
         margin-bottom: 0; }
       .footer-site .row-mod {
         display: inherit; } }
+  .footer-site .row-mod {
+    flex-wrap: nowrap; }
 
 @media (min-width: 768px) {
   .footer--col-1 {
@@ -2959,6 +2969,9 @@ NAVIGATION
   padding-top: 1rem; }
   .footer--lvl-2 .legal {
     padding-bottom: 1rem; }
+@media (min-width: 768px) {
+  .footer .mg-lg {
+    margin-bottom: 2rem; } }
 
 .menu-footer__item {
   display: inline-block;
@@ -2973,7 +2986,7 @@ NAVIGATION
   .menu-footer--legal a {
     font-size: 0.8rem;
     text-decoration: underline;
-    color: #555555; }
+    color: #969696; }
 
 @media (max-width: 767px) {
   .footer-site .menu-main,
