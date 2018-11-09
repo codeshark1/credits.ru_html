@@ -68,12 +68,13 @@
                         </div><!-- /.header--rates -->
 
                         <div class="header--actions">
-                            <form role="search" method="get" class="form-search-header closed" id="search-header" action="#">
+                            <form role="search" method="get" class="form-search-header closed d-none d-md-block" id="search-header" action="#">
                                 <input  type="search" class="search-field" autocomplete="off" placeholder="Поиск" title="Поиск" role="combobox">
                                 <button type="button" class="search-button">
                                     <svg data-src="img/i-search.svg"></svg>
                                 </button>
                             </form>
+                            <button type="button" class="btn-search btn-search-for-extended d-md-none" id="btn-search-extended"><svg data-src="img/i-search.svg"></svg></button>
                             <button class="btn-menu" id="js-btn-menu"><span></span><span></span><span></span></button>
                         </div><!-- /.header--actions -->
                     </div><!-- /.header--col-2 -->
@@ -142,9 +143,23 @@
         </div><!-- /.container -->
     </header>
 
-    <div class="search-extended d-block d-sm-none">
-        <input type="search" placeholder="Начать поиск">
-    </div><!-- /.search-extended -->
+    <div id="search-extended" class="search-extended-wrapper">
+        <form class="search-extended d-block d-sm-none">
+            <input type="search" class="search-field" placeholder="Начать поиск" value="Кре">
+            <ul class="search-suggests">
+                <li class="item"><mark>Кре</mark>диты</li>
+                <li class="item"><mark>Кре</mark>дитование</li>
+                <li class="item"><mark>Кре</mark>дитный лемит</li>
+                <li class="item"><mark>Кре</mark>диты</li>
+                <li class="item"><mark>Кре</mark>дитование</li>
+                <li class="item"><mark>Кре</mark>дитный лемит</li>
+            </ul>
+            <div class="search-extended-footer row-mod">
+                <label class="checkbox"><input type="checkbox">Искать в текущем разделе</label>
+                <button type="submit" class="btn btn-cta">Найти</button>
+            </div>
+        </form><!-- /.search-extended -->
+    </div><!-- search-extended wrapper-->
 
     <!-- Сities -->
     <div class="cities" id="js-cities-wrapper">

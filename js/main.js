@@ -21,6 +21,7 @@ jQuery(document).ready(function($){
     navigation_show('#js-btn-menu','#js-menu-wrapper');
     navigation_show('#js-btn-cities','#js-cities-wrapper');
     navigation_show('#js-cities-wrapper .close','#js-cities-wrapper');
+    navigation_show('#btn-search-extended','#search-extended');
 
     
     
