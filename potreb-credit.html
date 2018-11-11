@@ -18,7 +18,7 @@
             
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
 </head>
@@ -34,10 +34,17 @@
                     <div class="header--location header--col-1">
                         <div class="location-selector">
                             <a class="selected" href="javascript:void(0)" id="js-btn-cities">
-                                <span>Россия</span>
+                                <span>Новоросcийск</span>
                             </a>
-                        </div>
-                    </div><!-- /.header--location -->
+                            <div class="location-hint"  id="location-hint">
+                                <p class="title">Ваш город <span>Новоросcийск?</span></p>
+                                <div class="row-mod">
+                                    <a href="#" class="btn btn-cta btn-pill">Да</a>
+                                    <a href="#" class="link">Выбрать другой</a>
+                                </div><!-- /.row-mod -->
+                            </div><!-- /.location-hint -->
+                        </div><!-- /.location-selector -->
+                    </div><!-- /.header--location -->                    
                     <div class="header--col-2 header--col-2_mod">
                         <div class="header--rates">
                             <p class="list-rates--date">06.10</p>
@@ -56,10 +63,13 @@
                         </div><!-- /.header--rates -->
 
                         <div class="header--actions">
-                            <form role="search" method="get" class="form-search-header closed" id="searchform" action="#">
-                                <input  type="search" class="search-field" autocomplete="off" placeholder="Поиск" title="Поиск" role="combobox">
-                                <button type="submit" class="search-submit" id="searchsubmit"></button>
+                            <form role="search" method="get" class="form-search-header closed d-none d-md-block" id="search-header" action="#">
+                                <input  type="text" class="search-field" autocomplete="off" placeholder="Поиск" title="Поиск" role="combobox">
+                                <button type="button" class="search-button">
+                                    <svg data-src="img/i-search.svg"></svg>
+                                </button>
                             </form>
+                            <button type="button" class="btn-search btn-search-for-extended d-md-none" id="btn-search-extended"><svg data-src="img/i-search.svg"></svg></button>
                             <button class="btn-menu" id="js-btn-menu"><span></span><span></span><span></span></button>
                         </div><!-- /.header--actions -->
                     </div><!-- /.header--col-2 -->
@@ -73,32 +83,79 @@
                     <img class="logo" src="img/logotype@2x.png" alt="credits.ru">
                 </div><!-- /.header--logo -->
                 <nav class="header--navigation header--col-2" id="js-menu-wrapper">
-                    <ul class="menu-main">
-                        <li class="menu-main__item sub">
-                            <a href="javascript:void(0)">Кредиты</a>
-                            <div class="dropdown">
-                                <ul class="menu-main__submenu">
-                                    <li class="menu-main__item"><a href="/">Потребительские кредиты</a></li>
-                                    <li class="menu-main__item"><a href="/">Автокредит</a></li>
-                                    <li class="menu-main__item"><a href="/">Ипотека</a></li>
-                                    <li class="menu-main__item"><a href="/">Кредит наличными</a></li>
-                                    <li class="menu-main__item"><a href="/">Кредит под залог</a></li>
-                                    <li class="menu-main__item"><a href="/">Кредит для бизнеса</a></li>
-                                    <li class="menu-main__item"><a href="/">Кредитные брокеры</a></li>
-                                </ul>
-                            </div>                        
+                    <p class="h-popup">Меню</p>
+                    <ul class="menu-main" id="menu-main">
+                        <li class="menu-main__item has-sub">
+                            <a href="javascript:void(0)">Кредиты</a>                            
+                            <ul class="sub-menu cols">
+                                <li class="menu-main__item"><a href="/">Потребительские кредиты</a></li>
+                                <li class="menu-main__item"><a href="/">Автокредит</a></li>
+                                <li class="menu-main__item"><a href="/">Ипотека</a></li>
+                                <li class="menu-main__item"><a href="/">Кредит наличными</a></li>
+                                <li class="menu-main__item"><a href="/">Кредит под залог</a></li>
+                                <li class="menu-main__item"><a href="/">Кредит для бизнеса</a></li>
+                                <li class="menu-main__item"><a href="/">Кредитные брокеры</a></li>
+                            </ul>
                         </li>
-                        <li class="menu-main__item"><a href="#">Карты</a></li>
-                        <li class="menu-main__item"><a href="#">Ипотека</a></li>
-                        <li class="menu-main__item"><a href="#">Займы</a></li>
-                        <li class="menu-main__item"><a href="#">Страхование</a></li>
-                        <li class="menu-main__item"><a href="#">Инвестиции</a></li>
-                        <li class="menu-main__item"><a href="#">Сервисы</a></li>
+                        <li class="menu-main__item has-sub">
+                            <a href="#">Карты</a>                            
+                            <ul class="sub-menu">
+                                <li class="menu-main__item"><a href="/">Кредитные карты</a></li>
+                                <li class="menu-main__item"><a href="/">Карты рассрочки</a></li>
+                                <li class="menu-main__item"><a href="/">Дебетовые карты</a></li>
+                            </ul>                            
+                        </li>
+                        <li class="menu-main__item">
+                            <a href="#">Ипотека</a>
+                        </li>
+                        <li class="menu-main__item has-sub">
+                            <a href="#">Для бизнеса</a>                            
+                            <ul class="sub-menu">
+                                <li class="menu-main__item"><a href="/">Лизинг</a></li>
+                                <li class="menu-main__item"><a href="/">Кредиты для бизнеса</a></li>
+                                <li class="menu-main__item"><a href="/">Депозиты юр. лицам</a></li>
+                            </ul>                            
+                        </li>
+                        <li class="menu-main__item has-sub">
+                            <a href="#">Инвестиции</a>                            
+                            <ul class="sub-menu">
+                                <li class="menu-main__item"><a href="/">Займы</a></li>
+                                <li class="menu-main__item"><a href="/">Вклады</a></li>
+                            </ul>                            
+                        </li>
                     </ul>
+
+                    <div class="bx-center">
+                        <div class="location-selector">
+                            Регион:
+                            <a class="selected" href="javascript:void(0)">
+                                <span>Новоросcийск</span>
+                            </a>
+                        </div><!-- /.location-selector -->
+                    </div><!-- /.bx-center -->
                 </nav><!-- /.header--navigation -->
             </div><!-- /.row -->
         </div><!-- /.container -->
     </header>
+
+    <div id="search-extended" class="search-extended-wrapper">
+        <form class="search-extended d-block d-md-none">
+            <input type="search" class="search-field" placeholder="Начать поиск" value="Кре">
+            <ul class="search-suggests">
+                <li class="item"><mark>Кре</mark>диты</li>
+                <li class="item"><mark>Кре</mark>дитование</li>
+                <li class="item"><mark>Кре</mark>дитный лемит</li>
+                <li class="item"><mark>Кре</mark>диты</li>
+                <li class="item"><mark>Кре</mark>дитование</li>
+                <li class="item"><mark>Кре</mark>дитный лемит</li>
+            </ul>
+
+            <div class="search-extended-footer row-mod">
+                <label class="checkbox"><input type="checkbox">Искать в текущем разделе</label>
+                <button type="submit" class="btn btn-cta">Найти</button>
+            </div>
+        </form><!-- /.search-extended -->
+    </div><!-- search-extended wrapper-->
 
     <!-- Сities -->
     <div class="cities" id="js-cities-wrapper">
@@ -287,56 +344,58 @@
                         </div><!-- /.row -->
 
                         <div class="search-listing-filter popup-mob" id="search-listing-filter">
-                            <div class="popup-header">
-                                <h3 class="h-popup">Фильтр</h3>
-                                <button type="button" class="close btn-close">
-                                    <svg data-src="img/i-x.svg"></svg>
-                                </button>
-                            </div><!-- /.popup-header -->
+                            <div class="wrapper">
+                                <div class="popup-header">
+                                    <h3 class="h-popup">Фильтр</h3>
+                                    <button type="button" class="close btn-close">
+                                        <svg data-src="img/i-x.svg"></svg>
+                                    </button>
+                                </div><!-- /.popup-header -->
 
-                            <div class="popup-content">
-                                <div class="row justify-content-md-center" id="search-listing-filter">
-                                    <div class="col-sm-6 col-md-3 d-block d-md-none">
-                                        <p class="lbl lbl-top">Цель кредита</p>
-                                        <select class="input-text"><option>Любая</option></select>
-                                    </div><!-- /.col -->
-                                    
-                                    <div class="col-sm-6 col-md-3">
-                                        <p class="lbl lbl-top">Поручительство</p>
-                                        <select class="input-text"><option>Неважно</option></select>
-                                    </div><!-- /.col -->
-                                    <div class="col-sm-6 col-md-3">
-                                        <p class="lbl lbl-top">Список документов</p>
-                                        <select class="input-text"><option>Неважно</option></select>
-                                    </div><!-- /.col -->
-                                    <div class="col-sm-6 col-md-3">
-                                        <p class="lbl lbl-top">Категория заемщика</p>
-                                        <select class="input-text"><option>Стандартные</option></select>
-                                    </div><!-- /.col -->
-                                    <div class="col-sm-6 col-md-3">
-                                        <p class="lbl lbl-top">Способ получения</p>
-                                        <select class="input-text"><option>Любой</option></select>
-                                    </div><!-- /.col -->                                                                        
-        
-                                    <div class="col-sm-6 col-md-3">
-                                        <p class="lbl lbl-top">Время рассмотрения заявки</p>
-                                        <select class="input-text"><option>Любое</option></select>
-                                    </div><!-- /.col -->
-                                    <div class="col-sm-6 col-md-3">
-                                        <p class="lbl lbl-top">Подтверждение дохода</p>
-                                        <select class="input-text"><option>Любое</option></select>
-                                    </div><!-- /.col -->
-                                    <div class="col-sm-6 col-md-3">
-                                        <p class="lbl lbl-top">Обеспечение</p>
-                                        <select class="input-text"><option>Любое</option></select>
-                                    </div><!-- /.col -->                                                
-                                </div><!-- /.row -->
-                            </div><!-- /.popup-content -->
+                                <div class="popup-content">
+                                    <div class="row justify-content-md-center" id="search-listing-filter">
+                                        <div class="col-sm-6 col-md-3 d-block d-md-none">
+                                            <p class="lbl lbl-top">Цель кредита</p>
+                                            <select class="input-text"><option>Любая</option></select>
+                                        </div><!-- /.col -->
+                                        
+                                        <div class="col-sm-6 col-md-3">
+                                            <p class="lbl lbl-top">Поручительство</p>
+                                            <select class="input-text"><option>Неважно</option></select>
+                                        </div><!-- /.col -->
+                                        <div class="col-sm-6 col-md-3">
+                                            <p class="lbl lbl-top">Список документов</p>
+                                            <select class="input-text"><option>Неважно</option></select>
+                                        </div><!-- /.col -->
+                                        <div class="col-sm-6 col-md-3">
+                                            <p class="lbl lbl-top">Категория заемщика</p>
+                                            <select class="input-text"><option>Стандартные</option></select>
+                                        </div><!-- /.col -->
+                                        <div class="col-sm-6 col-md-3">
+                                            <p class="lbl lbl-top">Способ получения</p>
+                                            <select class="input-text"><option>Любой</option></select>
+                                        </div><!-- /.col -->                                                                        
+            
+                                        <div class="col-sm-6 col-md-3">
+                                            <p class="lbl lbl-top">Время рассмотрения заявки</p>
+                                            <select class="input-text"><option>Любое</option></select>
+                                        </div><!-- /.col -->
+                                        <div class="col-sm-6 col-md-3">
+                                            <p class="lbl lbl-top">Подтверждение дохода</p>
+                                            <select class="input-text"><option>Любое</option></select>
+                                        </div><!-- /.col -->
+                                        <div class="col-sm-6 col-md-3">
+                                            <p class="lbl lbl-top">Обеспечение</p>
+                                            <select class="input-text"><option>Любое</option></select>
+                                        </div><!-- /.col -->                                                
+                                    </div><!-- /.row -->
+                                </div><!-- /.popup-content -->
 
-                            <div class="popup-footer popup-footer-buttons">
-                                <button type="button" class="btn btn-cta btn-pill">Подобрать</button>
-                                <button type="button" class="btn btn-second btn-pill">Сбросить фильтры</button>
-                            </div><!-- /.popup-footer -->
+                                <div class="popup-footer popup-footer-buttons">
+                                    <button type="button" class="btn btn-cta btn-pill">Подобрать</button>
+                                    <button type="button" class="btn btn-second btn-pill">Сбросить фильтры</button>
+                                </div><!-- /.popup-footer -->
+                            </div><!-- /.wrapper -->
                         </div><!-- /#search-listing-filter search-listing-filter popup-mob-->
 
                         <div class="row-search-bottom-mob">
@@ -631,10 +690,10 @@
         </article><!-- /.about-main container -->
     </main><!-- /.main-content -->
 
-    <footer class="footer-site"> 
+    <footer class="footer-site footer"> 
         <div class="footer--lvl-1">
             <div class="container">
-                <div class="row-mod section">
+                <div class="row-mod mg-lg">
                     <div class="footer--col-1">
                         <ul class="menu-main">
                             <li class="menu-main__item"><a href="#">Кредиты</a></li>
@@ -652,8 +711,7 @@
                     </div><!-- /.footer--col-1 -->
                     <div class="footer-logo logo-mob"><img class="logo" src="img/logotype@2x.png" alt="credits.ru"></div>                    
                     <div class="footer--col-2">
-                        <p class="heading-footer">По вопросам работы портала: </p>
-                        <p class="tel-footer"><a href="tel:+">8 (800) 551 20 17</a></p>
+
                     </div><!-- /.footer--col-2 -->
                 </div><!-- /.row -->
 
@@ -667,11 +725,11 @@
                     </div><!-- /.footer--col-1 -->
                     <div class="footer--col-2">
                         <ul class="menu-social">
-                            <li class="menu-social__item vk"><a href="#"></a></li>
-                            <li class="menu-social__item fb"><a href="#"></a></li>
-                            <li class="menu-social__item in"><a href="#"></a></li>
-                            <li class="menu-social__item tw"><a href="#"></a></li>
-                            <li class="menu-social__item yt"><a href="#"></a></li>                        
+                            <li class="menu-item vk"><a href="#"><svg data-src="img/i-s-vk.svg"></svg></a></li>
+                            <li class="menu-item fb"><a href="#"><svg data-src="img/i-s-facebook.svg"></svg></a></li>
+                            <li class="menu-item in"><a href="#"><svg data-src="img/i-s-instagram.svg"></svg></a></li>
+                            <li class="menu-item tw"><a href="#"><svg data-src="img/i-s-twitter.svg"></svg></a></li>
+                            <li class="menu-item yt"><a href="#"><svg data-src="img/i-s-youtube.svg"></svg></a></li>                        
                         </ul><!-- /.menu-footer -->                    
                     </div><!-- /.footer--col-2 -->
                 </div><!-- /.row -->           
@@ -682,10 +740,14 @@
             <div class="container">
                 <div class="row-mod">
                     <div class="footer--col-1">
-                        <small class="legal legal-link">При использовании материалов гиперссылка на Credits.ru обязательна</small>
+                        <p><small class="legal">При использовании материалов гиперссылка на Credits.ru обязательна</small></p>
+                        
+                        <p class="tel-footer legal">
+                            По вопросам работы портала: <a href="tel:+">8 (800) 551 20 17</a>
+                        </p>
                     </div><!-- /.footer--col-1 -->
                     <div class="footer--col-2">
-                        <small class="legal">&#169; 2002—2018 ООО «ВЕБИНВЕСТ»</small>
+                        <p class="legal"><small>&#169; 2002—2018 ООО «ВЕБИНВЕСТ»</small></p>
                     </div><!-- /.footer--col-2 -->
                 </div><!-- /.row -->             
             </div><!-- /.container -->

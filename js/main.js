@@ -172,4 +172,20 @@ jQuery(document).ready(function($){
         $(element).clone().removeClass('hidden-xs').insertAfter(target).addClass('visible-xs');
     }
     cloneSubscribe('.subscribe-main','.sidebar-main');
+
+
+    function customCheckbox() {
+        if ($('label.checkbox input').length) {
+            $('label.checkbox').each(function(){
+                $(this).removeClass('checked');
+            });
+            $('label.checkbox input:checked').each(function(){
+                $(this).parent('label').addClass('checked');
+            });
+        }
+    }
+    customCheckbox();
+    $('label.checkbox').click(function(){
+        customCheckbox();
+    });
 });
