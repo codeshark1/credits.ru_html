@@ -600,8 +600,10 @@ h1, h2, h3, h4 {
       display: inline-block;
       vertical-align: middle;
       margin: 0 8px 0 12px; }
-    .breadcrumbs a:last-child:after {
-      content: none; }
+    .breadcrumbs a:last-child {
+      color: #969696; }
+      .breadcrumbs a:last-child:after {
+        content: none; }
 
 .row-mod {
   display: flex;

@@ -609,7 +609,10 @@ h1, h2, h3, h4 {line-height: 1.1; font-weight: 500}
       vertical-align: middle;
       margin: 0 8px 0 12px;
     }    
-    &:last-child:after {content: none}
+    &:last-child {
+      color: $gray;
+      &:after {content: none}
+    }
   }
 }
 
