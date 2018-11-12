@@ -127,6 +127,7 @@ fieldset {
     transition: all .15s;
     cursor: pointer;
     border: none;
+    border-color: transparent !important;
   }
   .search-button {
     position: absolute;
@@ -408,21 +409,36 @@ label.checkbox {
   cursor: pointer;
   svg {width: 100%;height: 100%; max-width: 100%; max-height: 100%}
 }
+
+.btn-top {
+  background: $action;
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 50px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;  
+  border-radius: 100%;
+  width: 70px;height: 70px;  
+  box-shadow: 0.5px 0.866px 16px 0px rgba(9, 3, 5, 0.16);
+  svg {width: 23px;}
+  @media (max-width: $screen-xs-max) {
+    display: none;
+  }
+  @media (min-width: 1000px) {
+    
+  }  
+  @media (min-width: $screen-lg-min) {
+    margin-left: 1300px;
+    right: auto;
+  }
+}
 /* ==========================================================================
    MENUS
    ========================================================================== */
-.but-nav {
-  width: 38px; height: 20px;
-  border: none;  
-  padding: 0;
-  position: absolute;
-  top: 20px;
-  right: 15px;
-  cursor: pointer;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='38px' height='20px'%3E%3Cpath fill-rule='evenodd' fill='rgb%280, 0, 0%29' d='M36.000,11.999 L2.000,11.999 C0.895,11.999 -0.000,11.104 -0.000,9.999 C-0.000,8.895 0.895,7.999 2.000,7.999 L36.000,7.999 C37.104,7.999 38.000,8.895 38.000,9.999 C38.000,11.104 37.104,11.999 36.000,11.999 ZM36.000,3.999 L2.000,3.999 C0.895,3.999 -0.000,3.104 -0.000,1.999 C-0.000,0.895 0.895,-0.001 2.000,-0.001 L36.000,-0.001 C37.104,-0.001 38.000,0.895 38.000,1.999 C38.000,3.104 37.104,3.999 36.000,3.999 ZM2.000,15.999 L36.000,15.999 C37.104,15.999 38.000,16.895 38.000,17.999 C38.000,19.104 37.104,19.999 36.000,19.999 L2.000,19.999 C0.895,19.999 -0.000,19.104 -0.000,17.999 C-0.000,16.895 0.895,15.999 2.000,15.999 Z'/%3E%3C/svg%3E") no-repeat;
-  @media (min-width: $screen-sm-min) {display: none;}
-}
-
 .nav-menu {
   a {padding: 14px 0; display: block;}
 }

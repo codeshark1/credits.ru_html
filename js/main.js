@@ -25,19 +25,21 @@ jQuery(document).ready(function($){
 
     
     
-    function navigation_show_flex(button, menu) { // фильтр, страница поиска кредитов
-        $(menu).hide();
-        $(button).click(function(){
-            if ( $(menu).is(':visible')){
-                $(menu).slideUp().removeClass('active');
-                $(this).removeClass('active').find('.indicator').text('+');
+    function show_form_filter(button, block) { // фильтр, страница поиска кредитов
+        $(block).hide();
+        $(button).click(function(e){
+            //e.preventDefault();
+            if ( $(block).is(':visible')) {
+                $(block).slideUp().removeClass('active');
+                $('#js-btn-search-listing').removeClass('active').find('.indicator').text('+');
             } else {
-                $(this).addClass('active').find('.indicator').text('-');
-                $(menu).slideDown().addClass('active').css('display','flex');
+                $('#js-btn-search-listing').addClass('active').find('.indicator').text('-');
+                $(block).slideDown().addClass('active');
             }
         });
     }    
-    //navigation_show_flex('#js-btn-search-listing','#search-listing-filter');
+    show_form_filter('#js-btn-search-listing','#search-listing-filter');
+    show_form_filter('#search-listing-filter .btn-close','#search-listing-filter');
 
     function menu_nested(menu_id) {
         //$(menu_id).find('ul').hide();        
@@ -157,12 +159,10 @@ jQuery(document).ready(function($){
     function hide_location_hint() {
         $('#location-hint').hide();
     };
-
     $('#location-hint').find('.btn-cta').click(function(e){
         e.preventDefault();
         hide_location_hint();
     });
-
     $('#js-btn-cities').click(function(e){        
         hide_location_hint();
     });
@@ -187,5 +187,34 @@ jQuery(document).ready(function($){
     customCheckbox();
     $('label.checkbox').click(function(){
         customCheckbox();
+    });
+
+
+
+
+
+
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            document.getElementById("btn-top").style.display = "block";
+        } else {
+            document.getElementById("btn-top").style.display = "none";
+        }
+    }
+    function topFunction() {
+        document.body.scrollTop = 0; 
+        document.documentElement.scrollTop = 0;
+    }
+
+    function scrollToSection(){
+        $('html, body').animate({
+             scrollTop: $('.header-site').offset().top
+        }, 500);
+    }
+
+    $('#btn-top').click(function(){
+        scrollToSection();
     });
 });

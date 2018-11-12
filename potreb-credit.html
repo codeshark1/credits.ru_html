@@ -306,7 +306,7 @@
                 </li>
             </ul>
         </div>
-        <div class="close btn-close"></div>
+        <button class="close btn-close"><svg data-src="img/i-x.svg"></svg></button>
     </div>
     <!-- End Сities -->    
 
@@ -343,7 +343,7 @@
                             </div><!-- /.col -->
                         </div><!-- /.row -->
 
-                        <div class="search-listing-filter popup-mob" id="search-listing-filter">
+                        <div class="search-listing-filter" id="search-listing-filter">
                             <div class="wrapper">
                                 <div class="popup-header">
                                     <h3 class="h-popup">Фильтр</h3>
@@ -400,15 +400,21 @@
 
                         <div class="row-search-bottom-mob">
                             <p class="results-credits-found">Найдено 150 <span>кредитов</span></p>
-                            <button type="button" class="btn btn-narrow btn-sorting">По ставке <i class="icon"></i></button>
+                            <div class="mob-sorting-wrapper" id="sorting-switcher">
+                                <button type="button" class="btn btn-narrow btn-sorting">По ставке <i class="icon"></i></button>
+                                <div class="mob-sorting-menu">
+                                    <p class="menu-item active">По ставке</p>
+                                    <p class="menu-item">По сумме</p>
+                                    <p class="menu-item">По популярности</p>
+                                </div><!-- /.mob-sorting-menu -->
+                            </div><!-- /.mob-sorting-wrapper -->
                         </div><!-- /.row-search-bottom-mob -->
                     </div><!-- /.container -->
 
                     <div class="search-checks-wrapper">
                         <p class="credit-online-link link-arrow">
-                            <a href="#">Одобрение кредита онлайн</a> 
-                            <span class="arrow">&rarr;</span>
-                        </p>
+                            <a href="#">Одобрение кредита онлайн <svg class="arrow" data-src="img/i-arrow-more.svg"></svg></a>                             
+                        </p>                        
 
                         <div class="search-checks">
                             <div class="search-checks_i">

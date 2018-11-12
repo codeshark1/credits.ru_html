@@ -1,8 +1,10 @@
+credits 
+    partner
 
 mobile credits
-    mob btm slider
     mob credits sort drop
     mob move bread
+    mob btm slider
     mob btm banner
 
 arrow down:
