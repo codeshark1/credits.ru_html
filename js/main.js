@@ -194,19 +194,16 @@ jQuery(document).ready(function($){
 
 
 
-    window.onscroll = function() {scrollFunction()};
+    
 
     function scrollFunction() {
         if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-            document.getElementById("btn-top").style.display = "block";
+            document.getElementById("btn-top").style.opacity = 1;
         } else {
-            document.getElementById("btn-top").style.display = "none";
+            document.getElementById("btn-top").style.opacity = 0;
         }
     }
-    function topFunction() {
-        document.body.scrollTop = 0; 
-        document.documentElement.scrollTop = 0;
-    }
+    window.onscroll = function() {scrollFunction()};
 
     function scrollToSection(){
         $('html, body').animate({

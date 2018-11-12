@@ -416,7 +416,7 @@ label.checkbox {
 
 .btn-top {
   background: #ffca3c;
-  display: none;
+  opacity: 0;
   position: fixed;
   bottom: 20px;
   right: 50px;
@@ -2569,7 +2569,15 @@ NAVIGATION
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: flex-start; }
+    align-items: flex-start;
+    position: relative; }
+    .plan .td_bankname {
+      width: 21%; }
+      .plan .td_bankname a {
+        display: inline-block;
+        width: 120px; }
+        .plan .td_bankname a img {
+          max-height: 100px; }
     .plan .td_rate .data {
       color: #ff0000; }
     .plan .td_action {
@@ -2591,7 +2599,8 @@ NAVIGATION
           display: none; } }
   .plan .ttl {
     color: #969696;
-    font-size: 0.9rem; }
+    font-size: 0.9rem;
+    margin-bottom: 5px; }
   .plan .data {
     color: #000;
     line-height: 1;

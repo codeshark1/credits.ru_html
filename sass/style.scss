@@ -1112,7 +1112,17 @@ NAVIGATION
 		flex-direction: column;		
 		justify-content: space-between;
 		align-items: flex-start;		
-		&_bankname {}
+		position: relative;
+		&_bankname {
+			width: 21%;
+			a {
+				display: inline-block;
+				width: 120px;
+				img {
+					max-height: 100px;
+				}
+			}
+		}
 		&_amount {}
 		&_time {}
 		&_rate {
@@ -1129,9 +1139,7 @@ NAVIGATION
 			flex-direction: row;
 		}
 		&_lic {}
-		&_link {
-			align-items: center;			
-		}
+		&_link {align-items: center}
 		@media (max-width: $screen-xs-max) {
 			flex-grow: 1;
 			width: 50%;
@@ -1142,6 +1150,7 @@ NAVIGATION
 	.ttl {
 		color: $gray;
 		font-size: 0.9rem;
+		margin-bottom: 5px;
 	}
 	.data {
 		color: #000;
