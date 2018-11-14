@@ -69,14 +69,39 @@ jQuery(document).ready(function($){
             $(tab_id).fadeIn(300);
             $(this).parents('.nav-tabs-wrapper').find('.tab-selected').text($(this).text());
             if ($(window).width() < 768) {
-                $(this).parents('.nav-tabs').slideUp(100);
+                $(this).parents('.nav-tabs').fadeOut(100);
             }
         });
-        $('.tab-selected').click(function(){
-            $(this).parents('.nav-tabs-wrapper').find('.nav-tabs').slideDown(100);
+        $('.tab-selected').click(function(e){
+            e.preventDefault();
+            $(this).parents('.nav-tabs-wrapper').find('.nav-tabs').fadeIn(100);
         });
     }
     tabs();
+
+    function drop_menu() {
+        $('.drop-menu-trigger').click(function(e){
+            e.preventDefault();
+            if ( $(this).siblings('.drop-menu').is(':visible') ) {
+                $(this).siblings('.drop-menu').fadeOut(100);
+            } else {
+                $(this).siblings('.drop-menu').fadeIn(100)
+            }
+        });
+        $('.drop-menu a').click(function(e){
+            e.preventDefault();
+            if (! $(this).hasClass('active') ) {
+                $(this).parents('.drop-menu-wrapper').find('.active').removeClass('active');
+                $(this).addClass('active')
+                .parents('.drop-menu-wrapper')
+                .find('.drop-menu-trigger')
+                .text($(this).text())
+                .siblings('.drop-menu')
+                .fadeOut(100);
+            }
+        });
+    }
+    drop_menu();
 
     $(".plan-wrapper").swipe( { // глобальная
         swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
@@ -88,7 +113,7 @@ jQuery(document).ready(function($){
             }
         },
         threshold:0,
-        duration: 100
+        duration: 0
     });
 
 
@@ -168,10 +193,10 @@ jQuery(document).ready(function($){
     });
 
     //клонирование
-    function cloneSubscribe(element,target) {
+    /* function cloneSubscribe(element,target) {
         $(element).clone().removeClass('hidden-xs').insertAfter(target).addClass('visible-xs');
     }
-    cloneSubscribe('.subscribe-main','.sidebar-main');
+    cloneSubscribe('.subscribe-main','.sidebar-main'); */
 
 
     function customCheckbox() {

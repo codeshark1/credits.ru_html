@@ -691,10 +691,15 @@ NAVIGATION
 .btn-narrow {padding: 0;}
 
 .btn-sorting {
-	.icon {
+	position: relative;
+	&:after {
+		content: "";
 		width: 6px;height: 8px;
 		margin-left: 4px;
+		display: inline-block;
 		background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='6px' height='8px'%3E%3Cpath d='M3.000,-0.001 L6.000,3.000 L-0.001,3.000 L3.000,-0.001 ZM3.000,8.001 L-0.000,4.999 L6.001,4.999 L3.000,8.001 Z'/%3E%3C/svg%3E");
+	}
+	.icon {
 	}
 }
 
@@ -707,28 +712,6 @@ NAVIGATION
 	}
 	@media (min-width: $screen-sm-min) {
 		.btn-sorting {display: none;}
-	}
-}
-
-.mob-sorting-wrapper {
-	position: relative;
-}
-.mob-sorting-menu {
-	background: #fff;
-	border-radius: 5px;
-	position: absolute;
-	right: 0;
-	top: 130%;
-	z-index: 5;
-	box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.14);
-	min-width: 160px;
-	width: fit-content;
-	overflow: hidden;
-	.menu-item {
-		cursor: pointer;
-		display: block;
-		padding: 10px 17px;
-		&.active {background: #f8fcff}
 	}
 }
 
@@ -842,6 +825,12 @@ NAVIGATION
 	}
 }
 
+.sorting-mob-switcher {
+	@media (min-width: $screen-sm-min) {
+		display: none !important;
+	}
+}
+
 .plans-insearch-wrapper {
 	@media (min-width: $screen-sm-min) {
 		margin-bottom: 60px;
@@ -878,8 +867,9 @@ NAVIGATION
 	@media (max-width: $screen-xs-max) {
 		background: #fff;
 		color: $red;
-		font-weight: 400;
+		font-weight: 500;
 		font-size: 14px;
+		width: 100%;
 	}
 
 	@media (min-width: $screen-sm-min) {
@@ -979,13 +969,13 @@ NAVIGATION
 			position: relative;
 		}
 		background: #fff;
+		border-radius: 5px;
+
 		display: inline-block;
-		padding: 0 15px;
 		position: absolute;
 		right: 0;
 		top: 50px;
 		z-index: 2;
-		border-radius: 0 0 5px 5px;
 		box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.14);
 		display: none;
 		
@@ -1009,12 +999,12 @@ NAVIGATION
 				}
 			}
 		}
-		.menu-item {
-			text-align: right;
-			padding: 10px 0;
-			&.active a {
-				border-bottom: 2px solid $red;
+		.menu-item {			
+			a {
+				padding: 10px 17px;
+				display: block;
 			}
+			&.active a {background: #f8fcff}
 		}
 	}
 	@media (min-width: $screen-sm-min) {
@@ -1118,10 +1108,8 @@ NAVIGATION
 			a {
 				display: inline-block;
 				width: 120px;
-				img {
-					max-height: 100px;
-				}
 			}
+			img {max-height: 100px; min-width: 100px}
 		}
 		&_amount {}
 		&_time {}
@@ -1617,6 +1605,11 @@ section+.view-all {
 	@media (max-width: $screen-sm-max) {		
 		padding: 0;	
 	}	
+}
+
+.banner-mob {
+	a {display: block;}
+	img {width: 100%;}
 }
 /* ==========================================================================
    SIDEBAR

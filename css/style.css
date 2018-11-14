@@ -202,20 +202,20 @@ fieldset {
   position: relative;
   transition: all .15s;
   display: inline-block; }
-  .form-search-listing .search-submit {
+  .form-search-listing .search-button {
     position: absolute;
-    width: 20px;
-    height: 28px;
+    width: 18px;
+    height: 18px;
     border: none;
     padding: 0;
     right: 0;
-    top: 4px;
+    bottom: 7px;
     cursor: pointer;
     background: none; }
-    .form-search-listing .search-submit svg {
+    .form-search-listing .search-button svg {
       max-width: 100%;
       max-height: 100%; }
-    .form-search-listing .search-submit:hover svg path {
+    .form-search-listing .search-button:hover svg path {
       stroke: #ff0000; }
   .form-search-listing .search-field {
     margin: 0;
@@ -224,9 +224,11 @@ fieldset {
     height: 35px;
     transition: all .15s;
     cursor: pointer;
-    border: none;
+    border: none !important;
     border-bottom: 1px solid transparent;
-    color: transparent; }
+    color: transparent;
+    border-radius: 0;
+    box-shadow: none !important; }
     .form-search-listing .search-field::-moz-placeholder {
       opacity: 0; }
     .form-search-listing .search-field::-webkit-input-placeholder {
@@ -240,12 +242,12 @@ fieldset {
   .form-search-listing.closed .search-field {
     width: 35px; }
   .form-search-listing.open .search-field {
-    width: 200px;
+    width: 100%;
     cursor: auto;
     padding-right: 25px;
     color: #555555;
     box-shadow: none;
-    border-bottom: 1px solid #555555 !important; }
+    border-bottom: 1px solid #969696 !important; }
     .form-search-listing.open .search-field::-moz-placeholder {
       opacity: 1; }
     .form-search-listing.open .search-field::-webkit-input-placeholder {
@@ -282,6 +284,31 @@ label.checkbox {
     position: absolute; }
   label.checkbox.checked:after {
     transform: scale(1); }
+
+/* DROP (MINI)MENU */
+.drop-menu-wrapper {
+  position: relative; }
+
+.drop-menu {
+  background: #fff;
+  border-radius: 5px;
+  position: absolute;
+  right: 0;
+  top: 130%;
+  z-index: 5;
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.14);
+  min-width: 160px;
+  width: fit-content;
+  overflow: hidden;
+  display: none; }
+  .drop-menu .menu-item {
+    cursor: pointer;
+    display: block; }
+    .drop-menu .menu-item a {
+      display: block;
+      padding: 10px 17px; }
+      .drop-menu .menu-item a.active {
+        background: #f8fcff; }
 
 /* IMAGES */
 .aligncenter, .alignleft, .alignright {
@@ -616,6 +643,9 @@ h1, h2, h3, h4 {
       color: #969696; }
       .breadcrumbs a:last-child:after {
         content: none; }
+  @media (max-width: 991px) {
+    .breadcrumbs {
+      padding: 0 10px; } }
 
 .row-mod {
   display: flex;
@@ -2177,11 +2207,15 @@ NAVIGATION
 .btn-narrow {
   padding: 0; }
 
-.btn-sorting .icon {
-  width: 6px;
-  height: 8px;
-  margin-left: 4px;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='6px' height='8px'%3E%3Cpath d='M3.000,-0.001 L6.000,3.000 L-0.001,3.000 L3.000,-0.001 ZM3.000,8.001 L-0.000,4.999 L6.001,4.999 L3.000,8.001 Z'/%3E%3C/svg%3E"); }
+.btn-sorting {
+  position: relative; }
+  .btn-sorting:after {
+    content: "";
+    width: 6px;
+    height: 8px;
+    margin-left: 4px;
+    display: inline-block;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='6px' height='8px'%3E%3Cpath d='M3.000,-0.001 L6.000,3.000 L-0.001,3.000 L3.000,-0.001 ZM3.000,8.001 L-0.000,4.999 L6.001,4.999 L3.000,8.001 Z'/%3E%3C/svg%3E"); }
 
 @media (max-width: 767px) {
   .row-search-bottom-mob {
@@ -2192,27 +2226,6 @@ NAVIGATION
 @media (min-width: 768px) {
   .row-search-bottom-mob .btn-sorting {
     display: none; } }
-
-.mob-sorting-wrapper {
-  position: relative; }
-
-.mob-sorting-menu {
-  background: #fff;
-  border-radius: 5px;
-  position: absolute;
-  right: 0;
-  top: 130%;
-  z-index: 5;
-  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.14);
-  min-width: 160px;
-  width: fit-content;
-  overflow: hidden; }
-  .mob-sorting-menu .menu-item {
-    cursor: pointer;
-    display: block;
-    padding: 10px 17px; }
-    .mob-sorting-menu .menu-item.active {
-      background: #f8fcff; }
 
 .results-credits-found {
   font-size: 0.9rem; }
@@ -2308,6 +2321,10 @@ NAVIGATION
     transform: rotate(180deg); }
 
 @media (min-width: 768px) {
+  .sorting-mob-switcher {
+    display: none !important; } }
+
+@media (min-width: 768px) {
   .plans-insearch-wrapper {
     margin-bottom: 60px; } }
 @media (min-width: 992px) {
@@ -2342,8 +2359,9 @@ NAVIGATION
   .btn-listing-showmore {
     background: #fff;
     color: #ff0000;
-    font-weight: 400;
-    font-size: 14px; } }
+    font-weight: 500;
+    font-size: 14px;
+    width: 100%; } }
 @media (min-width: 768px) {
   .btn-listing-showmore {
     background: #ffca3c !important;
@@ -2441,13 +2459,12 @@ NAVIGATION
 @media (max-width: 767px) {
   .nav-tabs {
     background: #fff;
+    border-radius: 5px;
     display: inline-block;
-    padding: 0 15px;
     position: absolute;
     right: 0;
     top: 50px;
     z-index: 2;
-    border-radius: 0 0 5px 5px;
     box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.14);
     display: none; }
     .nav-tabs-wrapper {
@@ -2471,11 +2488,11 @@ NAVIGATION
           display: inline-block;
           margin-left: 10px;
           vertical-align: middle; }
-    .nav-tabs .menu-item {
-      text-align: right;
-      padding: 10px 0; }
-      .nav-tabs .menu-item.active a {
-        border-bottom: 2px solid #ff0000; } }
+    .nav-tabs .menu-item a {
+      padding: 10px 17px;
+      display: block; }
+    .nav-tabs .menu-item.active a {
+      background: #f8fcff; } }
 @media (min-width: 768px) {
   .nav-tabs {
     max-width: 500px;
@@ -2576,8 +2593,9 @@ NAVIGATION
       .plan .td_bankname a {
         display: inline-block;
         width: 120px; }
-        .plan .td_bankname a img {
-          max-height: 100px; }
+      .plan .td_bankname img {
+        max-height: 100px;
+        min-width: 100px; }
     .plan .td_rate .data {
       color: #ff0000; }
     .plan .td_action {
@@ -3078,6 +3096,11 @@ section + .view-all {
 @media (max-width: 991px) {
   .col-lg-8, .col-lg-4 {
     padding: 0; } }
+
+.banner-mob a {
+  display: block; }
+.banner-mob img {
+  width: 100%; }
 
 /* ==========================================================================
    SIDEBAR

@@ -157,7 +157,6 @@ fieldset {
     width: 100%;
     background: #f7f6f6;
     .search-field {
-      //width: 200px;
       width: 100%;
       cursor: auto;
       color: $base-text;
@@ -177,17 +176,16 @@ fieldset {
   position: relative;
   transition: all .15s;
   display: inline-block;  
-  .search-submit {
+  .search-button {
     position: absolute;
-    width: 20px;
-    height: 28px;
+    width: 18px;
+    height: 18px;
     border: none;
     padding: 0;
     right: 0;
-    top: 4px;
+    bottom: 7px;
     cursor: pointer;
     background: none;
-    //background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 47.898125 47.898125' height='18' width='18'%3E%3Cg transform='matrix(1.25 0 0 -1.25 0 47.898)'%3E%3Cpath d='M31.934 21.852c0-8.542-6.925-15.467-15.467-15.467C7.924 6.385 1 13.31 1 21.852c0 8.542 6.925 15.467 15.468 15.467 8.542 0 15.467-6.926 15.467-15.468zM27.404 10.914L37.611.706' fill='none' stroke='%23000' stroke-width='2' stroke-miterlimit='10'/%3E%3C/g%3E%3C/svg%3E") no-repeat 0 5px;
     svg {
       max-width: 100%;
       max-height: 100%;      
@@ -201,9 +199,11 @@ fieldset {
     height: 35px;
     transition: all .15s;
     cursor: pointer;
-    border:none;
+    border:none !important;
     border-bottom: 1px solid transparent;
     color: transparent;
+    border-radius: 0;
+    box-shadow: none !important;
     &::-moz-placeholder {opacity:  0;}
     &::-webkit-input-placeholder {opacity:  0;}
     &::-ms-input-placeholder {opacity:  0;}
@@ -215,16 +215,16 @@ fieldset {
   &.closed .search-field {width: 35px;}
   &.open {
     .search-field {
-      width: 200px;
+      width: 100%;
       cursor: auto;
       padding-right: 25px;
       color: $base-text;
       box-shadow: none;
-      border-bottom: 1px solid $base-text !important;
+      border-bottom: 1px solid $gray !important;
       &::-moz-placeholder {opacity:  1;}
       &::-webkit-input-placeholder {opacity:  1;}
       &::-ms-input-placeholder {opacity:  1;}
-      &::input-placeholder {opacity:  1;}      
+      &::input-placeholder {opacity:  1;}
     }
   }
 }
@@ -257,7 +257,32 @@ label.checkbox {
   }
 }
 
-
+/* DROP (MINI)MENU */
+.drop-menu-wrapper {
+	position: relative;
+}
+.drop-menu {
+	background: #fff;
+	border-radius: 5px;
+	position: absolute;
+	right: 0;
+	top: 130%;
+	z-index: 5;
+	box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.14);
+	min-width: 160px;
+	width: fit-content;
+	overflow: hidden;
+	display: none;
+	.menu-item {
+		cursor: pointer;
+		display: block;
+		a {
+			display: block;
+			padding: 10px 17px;
+			&.active {background: #f8fcff}
+		}
+	}	
+}
 
 /* IMAGES */
 .aligncenter, .alignleft, .alignright {display: block;margin: 0 auto 20px;}
@@ -630,6 +655,9 @@ h1, h2, h3, h4 {line-height: 1.1; font-weight: 500}
       color: $gray;
       &:after {content: none}
     }
+  }
+  @media (max-width: $screen-sm-max) {
+    padding: 0 10px;
   }
 }
 
