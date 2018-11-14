@@ -2335,26 +2335,6 @@ NAVIGATION
 .btn-more {
   background: #ffca3c; }
 
-.btn-more-vertical {
-  text-transform: uppercase;
-  font-size: 14px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  padding: 0;
-  width: 170px;
-  height: 40px;
-  transform: rotate(-90deg) translateX(65px) translateY(-65px); }
-  @media (max-width: 991px) {
-    .btn-more-vertical {
-      display: none; } }
-  .btn-more-vertical .arrow {
-    display: inline-block;
-    width: 6px;
-    height: 10px;
-    margin-right: 10px;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 7 11' height='10' width=%0A'6'%3E%3Cpolygon points='0 5.5 6.3 0 7 0.61 1.4 5.5 7 10.39 6.3 11 0 5.5'/%3E%3C/svg%3E") no-repeat; }
-
 @media (max-width: 767px) {
   .btn-listing-showmore {
     background: #fff;
@@ -2773,6 +2753,53 @@ NAVIGATION
     font-size: 0.85rem;
     margin-top: 10px;
     hyphens: auto; }
+
+.btn-more-vertical {
+  text-transform: uppercase;
+  font-size: 14px;
+  position: absolute;
+  left: -42px;
+  bottom: 0;
+  padding: 0;
+  height: 100%;
+  width: 40px !important;
+  cursor: pointer; }
+  @media (max-width: 991px) {
+    .btn-more-vertical {
+      display: none; } }
+  .btn-more-vertical .label {
+    top: 50%;
+    position: relative;
+    color: #000;
+    font-weight: 400;
+    white-space: nowrap;
+    transform: rotate(-90deg);
+    display: inline-block;
+    line-height: 100%;
+    font-size: 14px;
+    margin-left: -8px; }
+  .btn-more-vertical .arrow {
+    display: inline-block;
+    width: 6px;
+    height: 10px;
+    margin-right: 10px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 7 11' height='10' width=%0A'6'%3E%3Cpolygon points='0 5.5 6.3 0 7 0.61 1.4 5.5 7 10.39 6.3 11 0 5.5'/%3E%3C/svg%3E") no-repeat;
+    transition: all .15s; }
+  .btn-more-vertical.active .arrow {
+    transform: rotate(180deg); }
+
+.plan-children {
+  position: relative;
+  display: none; }
+  .plan-children:before {
+    content: "";
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    background: #ffca3c;
+    top: -2px;
+    bottom: -2px;
+    left: -2px; }
 
 /* -PLANS */
 /* ACCORDION */
