@@ -156,11 +156,13 @@ jQuery(document).ready(function($){
 
 
     function setControlWidth() {
-        $('.listing-controls--wrap').width( $('.plan-content').width() );
-        $('.sort-bank').width( $('.td_bankname').width() );
-        $('.sort-offer').outerWidth( $('.td_offer').width() );
-        $('.sort-rate').width( $('.td_rate').width() );
-        $('.sort-amount').width( $('.td_amount').width() );
+        $('.listing-controls--wrap').width( $('.plan-content').width() ); //потреб, авто
+        $('.sort-bank').width( $('.td_bankname').width() ); //потреб, авто
+        $('.sort-offer').outerWidth( $('.td_offer').width() ); //потреб, авто
+        $('.sort-rate').width( $('.td_rate').width() ); //потреб, авто
+        $('.sort-amount').width( $('.td_amount').width() ); //потреб, авто
+
+        $('.sort-overpay').width( $('.td_overpay').width() ); //авто
     }    
     setControlWidth();
     

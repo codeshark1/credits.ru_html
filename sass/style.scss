@@ -650,13 +650,21 @@ NAVIGATION
 		padding: 0 15px !important;
 	}
 }
-.input-text, .btn-toggle_more {
-	border-radius: 5px;
+.input-checkbox {
+	.checkbox {margin-bottom: 0;}
+	display: flex;
+	align-items: center;
+	min-height: 40px;
+}
+.input-text, .btn-toggle_more, .input-checkbox {
 	margin-bottom: 15px !important;
 	@media (min-width: $screen-sm) {				
 		height: 64px;
 		margin-bottom: 30px !important;
 	}
+}
+.input-text, .btn-toggle_more {
+	border-radius: 5px;
 }
 .btn-toggle_more {	
 	.indicator {
@@ -1633,7 +1641,7 @@ section+.view-all {
 
 .col-md-4 {
 	@media (max-width: $screen-sm-max) {
-		margin-bottom: $sect-mg;
+		//margin-bottom: $sect-mg;
 	}
 }
 .col-lg-8, .col-lg-4 {
