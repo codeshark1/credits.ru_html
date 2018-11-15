@@ -2038,7 +2038,8 @@ NAVIGATION
   font-size: 20px;
   font-weight: 400;
   margin-top: 0;
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem;
+  line-height: 1.9rem; }
   @media (max-width: 767px) {
     .h-section {
       text-align: center; } }
@@ -2074,7 +2075,8 @@ NAVIGATION
   cursor: pointer; }
 
 .actions-main {
-  padding-top: 2rem; }
+  padding-top: 2rem;
+  margin-bottom: .5rem; }
   @media (max-width: 767px) {
     .actions-main {
       margin-bottom: 2rem; } }

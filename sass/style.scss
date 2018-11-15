@@ -532,6 +532,7 @@ NAVIGATION
 	font-weight: 400;
 	margin-top: 0;
 	margin-bottom: 2rem;
+	line-height: 1.9rem;
 	@media (max-width: $screen-xs-max) {
 		text-align: center;
 	}
@@ -573,6 +574,7 @@ NAVIGATION
 	@media (max-width: $screen-xs-max) {
 		margin-bottom: 2rem;
 	}
+	margin-bottom: .5rem;
 }
 .action-main {
 	margin-bottom: .5rem;	
