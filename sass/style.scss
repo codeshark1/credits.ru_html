@@ -1091,34 +1091,13 @@ NAVIGATION
 		flex-grow: 1;
 		display: flex;
 		flex-direction: column;		
-		justify-content: space-between;
+		justify-content: center;
 		align-items: flex-start;		
 		position: relative;
 		&_bankname {
-			width: 21%;
-			a {
-				display: inline-block;
-				width: 120px;
-			}
+			a {display: inline-block;width: 120px;}
 			img {max-height: 100px; min-width: 100px}
 		}
-		&_amount {}
-		&_time {}
-		&_rate {
-			.data {color: $red;}
-		}
-		&_action {
-			align-items: flex-end;
-			flex-direction: column-reverse;
-			flex-grow: 0;
-		}
-		&_combined {
-			flex-basis: 100%;
-			order: 1;
-			flex-direction: row;
-		}
-		&_lic {}
-		&_link {align-items: center}
 		@media (max-width: $screen-xs-max) {
 			flex-grow: 1;
 			width: 50%;
@@ -1129,7 +1108,8 @@ NAVIGATION
 	.ttl {
 		color: $gray;
 		font-size: 0.9rem;
-		margin-bottom: 5px;
+		position: absolute;
+		left: 0;top: 0;width: 100%;
 	}
 	.data {
 		color: #000;
@@ -1159,7 +1139,19 @@ NAVIGATION
 	.btn-cta {border-radius: 25px;}
 }
 .plan_inmain {
-	.td {
+	.td {//740
+		padding-top: 25px;
+		&_bankname {} //170
+		&_amount {} //155
+		&_time {} //130
+		&_rate {//130
+			.data {color: $red;}
+		}
+		&_action { //
+			align-items: flex-end;
+			flex-direction: column-reverse;
+			flex-grow: 0;
+		}		
 		@media (min-width: $screen-sm-min) {
 			min-height: 70px;
 		}
@@ -1173,9 +1165,9 @@ NAVIGATION
 }
 .plan_insearch {
 	background: #fff; 
-	.td {position: relative;}
-	.td_amount 	{
-		.data {display: block;}
+	.plan-content {position: relative;}
+	
+	.td_amount 	{		
 		span {display: block;}
 		.min {margin-bottom: 10px;}
 	}
@@ -1199,12 +1191,11 @@ NAVIGATION
 	}
 	@media (min-width: $screen-sm-min) {
 		.plan-content {
-			display: table;
-			table-layout: fixed;
+			//display: table;
+			//table-layout: fixed;
 		}
 		.td {
-			display: table-cell;
-			vertical-align: middle;			
+			justify-content: center;			
 			padding-bottom: 20px;
 		}
 		.td_bankname{width: 21%;} //210
@@ -1213,7 +1204,7 @@ NAVIGATION
 		} //320
 		.td_rate 	{width: 16%;} //185	
 		.td_amount 	{width: 17%;} //150	
-		.td_action 	{width: 14%; text-align: center;} //140
+		.td_action 	{width: 14%; align-items: center; flex-direction: column} //140
 
 		.licence, .link-info {bottom: -5px;}
 		.link-info {
@@ -1225,9 +1216,17 @@ NAVIGATION
 	}
 	@media (min-width: $screen-md-min) {
 		.licence, .link-info {
-			bottom: -20px;
+			bottom: -5px;
 		}		
 	}
+}
+.plan_potreb {
+	.td_amount {
+		.data {display: block;}
+	}
+	.td_rate {
+		.data {color: $red;}
+	}	
 }
 
 .plan-wrapper {

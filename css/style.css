@@ -2578,29 +2578,15 @@ NAVIGATION
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start;
     position: relative; }
-    .plan .td_bankname {
-      width: 21%; }
-      .plan .td_bankname a {
-        display: inline-block;
-        width: 120px; }
-      .plan .td_bankname img {
-        max-height: 100px;
-        min-width: 100px; }
-    .plan .td_rate .data {
-      color: #ff0000; }
-    .plan .td_action {
-      align-items: flex-end;
-      flex-direction: column-reverse;
-      flex-grow: 0; }
-    .plan .td_combined {
-      flex-basis: 100%;
-      order: 1;
-      flex-direction: row; }
-    .plan .td_link {
-      align-items: center; }
+    .plan .td_bankname a {
+      display: inline-block;
+      width: 120px; }
+    .plan .td_bankname img {
+      max-height: 100px;
+      min-width: 100px; }
     @media (max-width: 767px) {
       .plan .td {
         flex-grow: 1;
@@ -2611,7 +2597,10 @@ NAVIGATION
   .plan .ttl {
     color: #969696;
     font-size: 0.9rem;
-    margin-bottom: 5px; }
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%; }
   .plan .data {
     color: #000;
     line-height: 1;
@@ -2641,25 +2630,31 @@ NAVIGATION
   .plan .btn-cta {
     border-radius: 25px; }
 
-@media (min-width: 768px) {
-  .plan_inmain .td {
-    min-height: 70px; } }
-@media (max-width: 767px) {
-  .plan_inmain .td_bankname {
-    order: 1; }
-  .plan_inmain .td_amount {
-    order: 2; }
-  .plan_inmain .td_time {
-    order: 3; }
-  .plan_inmain .td_rate {
-    order: 4; } }
+.plan_inmain .td {
+  padding-top: 25px; }
+  .plan_inmain .td_rate .data {
+    color: #ff0000; }
+  .plan_inmain .td_action {
+    align-items: flex-end;
+    flex-direction: column-reverse;
+    flex-grow: 0; }
+  @media (min-width: 768px) {
+    .plan_inmain .td {
+      min-height: 70px; } }
+  @media (max-width: 767px) {
+    .plan_inmain .td_bankname {
+      order: 1; }
+    .plan_inmain .td_amount {
+      order: 2; }
+    .plan_inmain .td_time {
+      order: 3; }
+    .plan_inmain .td_rate {
+      order: 4; } }
 
 .plan_insearch {
   background: #fff; }
-  .plan_insearch .td {
+  .plan_insearch .plan-content {
     position: relative; }
-  .plan_insearch .td_amount .data {
-    display: block; }
   .plan_insearch .td_amount span {
     display: block; }
   .plan_insearch .td_amount .min {
@@ -2686,12 +2681,8 @@ NAVIGATION
     .plan_insearch .plan-content {
       padding-top: 40px; } }
   @media (min-width: 768px) {
-    .plan_insearch .plan-content {
-      display: table;
-      table-layout: fixed; }
     .plan_insearch .td {
-      display: table-cell;
-      vertical-align: middle;
+      justify-content: center;
       padding-bottom: 20px; }
     .plan_insearch .td_bankname {
       width: 21%; }
@@ -2705,7 +2696,8 @@ NAVIGATION
       width: 17%; }
     .plan_insearch .td_action {
       width: 14%;
-      text-align: center; }
+      align-items: center;
+      flex-direction: column; }
     .plan_insearch .licence, .plan_insearch .link-info {
       bottom: -5px; }
     .plan_insearch .link-info {
@@ -2716,7 +2708,12 @@ NAVIGATION
       display: none; } }
   @media (min-width: 992px) {
     .plan_insearch .licence, .plan_insearch .link-info {
-      bottom: -20px; } }
+      bottom: -5px; } }
+
+.plan_potreb .td_amount .data {
+  display: block; }
+.plan_potreb .td_rate .data {
+  color: #ff0000; }
 
 @media (max-width: 767px) {
   .plan-wrapper {
