@@ -639,18 +639,18 @@ h1, h2, h3, h4 {line-height: 1.1; font-weight: 500}
 
 .breadcrumbs {
   margin-bottom: 12px;
-  a {
+  li {
     display: inline-block;
     margin-bottom: 12px;
+    position: relative;
     font-size: 14px;
-
     &:after {
       content: ""; width: 4px;height: 4px;background: $base-text;
       border-radius: 100%;
       display: inline-block;
       vertical-align: middle;
       margin: 0 8px 0 12px;
-    }    
+    }
     &:last-child {
       color: $gray;
       &:after {content: none}

@@ -626,11 +626,12 @@ h1, h2, h3, h4 {
 
 .breadcrumbs {
   margin-bottom: 12px; }
-  .breadcrumbs a {
+  .breadcrumbs li {
     display: inline-block;
     margin-bottom: 12px;
+    position: relative;
     font-size: 14px; }
-    .breadcrumbs a:after {
+    .breadcrumbs li:after {
       content: "";
       width: 4px;
       height: 4px;
@@ -639,9 +640,9 @@ h1, h2, h3, h4 {
       display: inline-block;
       vertical-align: middle;
       margin: 0 8px 0 12px; }
-    .breadcrumbs a:last-child {
+    .breadcrumbs li:last-child {
       color: #969696; }
-      .breadcrumbs a:last-child:after {
+      .breadcrumbs li:last-child:after {
         content: none; }
   @media (max-width: 991px) {
     .breadcrumbs {
