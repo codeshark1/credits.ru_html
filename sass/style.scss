@@ -719,7 +719,7 @@ NAVIGATION
 		display: flex;
 		justify-content: space-between;
 		padding: 0 15px;
-		margin-bottom: 15px;
+		padding-bottom: 15px;
 	}
 	@media (min-width: $screen-sm-min) {
 		.btn-sorting {display: none;}
@@ -727,12 +727,11 @@ NAVIGATION
 }
 
 
-
-.results-credits-found {	
+.results-credits-found {
 	font-size: 0.9rem;
 	@media (min-width: $screen-sm-min) {
 		text-align: center;
-		margin-bottom: 20px;
+		padding-bottom: 20px;
 	}
 }
 
@@ -819,8 +818,8 @@ NAVIGATION
 	color: #000;
 	flex-shrink: 0;
 	font-size: 14px;
-	&.sort-rate, &.sort-amount {
-		cursor: pointer;		
+	&.sort-rate, &.sort-amount, &.sort-overpay {
+		cursor: pointer;
 	}
 	.arrow {
 		display: inline-block;
@@ -1078,6 +1077,7 @@ NAVIGATION
 		padding: 20px 0 0 20px;
 		position: relative;
 		width: 100%;		
+		flex-wrap: wrap;
 		@media (max-width: $screen-xs-max) {flex-wrap: wrap;}
 		@media (min-width: $screen-sm-min) {padding: 20px}
 		@media (min-width: $screen-md-min) {padding: 30px 30px 35px 35px;}		
@@ -1092,6 +1092,7 @@ NAVIGATION
 			a {display: inline-block;width: 120px;}
 			img {max-height: 100px; min-width: 100px}
 		}
+		&_rate {.data {color: $red}}
 		@media (max-width: $screen-xs-max) {
 			flex-grow: 1;
 			width: 50%;
@@ -1189,11 +1190,11 @@ NAVIGATION
 		width: 100%;	
 	}	
 	@media (max-width: $screen-xs-max) {
-		.ttl {height: 20px; display: block;}
-		.td_amount .min {display: none;}
-		.td_amount .max {font-size: 1.5rem;}
+		.ttl {height: 20px; display: block}
+		.td_amount .min {display: none}
+		.td_amount, .td_overpay {font-size: 1.5rem}
 		.licence {top: -25px}
-		.plan-content {padding-top: 40px;}
+		.plan-content {padding-top: 40px}
 	}
 	@media (min-width: $screen-sm-min) {
 		.td {
@@ -1201,9 +1202,9 @@ NAVIGATION
 			padding-bottom: 20px;
 		}
 		.td_bankname{width: 20%;} //210
-		.td_offer 	{width: 30%;			
-			.data {padding-right: 10px;}
-		} //320
+		.td_offer 	{width: 30%;
+			.data {padding-right: 10px}
+		}
 		.td_rate 	{width: 19%;} //185	
 		.td_amount 	{width: 17%;} //150	
 		.td_action 	{width: 14%; align-items: center; flex-direction: column} //140
@@ -1217,22 +1218,41 @@ NAVIGATION
 		.ttl {display: none}
 	}
 }
+
+.plan_potreb {
+	.td_amount {
+		.data {display: block}
+	}
+}
 .td_action {
 	.wrapper {position: relative;}
 	.link-info {bottom: -30px}
 }
 
-
-
-.plan_potreb {
-	.td_amount {
-		.data {display: block;}
+.plan_wide-title {
+	@media (max-width: $screen-xs-max) {
+		.plan-content {padding-top: 20px;}
 	}
-	.td_rate {
-		.data {color: $red;}
-	}	
+	.td_rate, .td_amount,.td_overpay {
+		@media (min-width: $screen-sm-min) {
+			padding-top: 20px;
+		}
+	}
+	.licence {
+		top: auto;
+		bottom: 0;
+	}
 }
 
+.td_title {
+	flex-basis: 100%;
+	padding-bottom: 0 !important;
+	font-size: 1.1rem;
+	color: #000;
+	@media (max-width: $screen-xs-max) {
+		padding-left: 0 !important;
+	}
+}
 .plan-wrapper {
 	@media (max-width: $screen-xs-max) {
 		display: flex;

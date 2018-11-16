@@ -162,7 +162,8 @@ jQuery(document).ready(function($){
         $('.sort-rate').width( $('.td_rate').width() ); //потреб, авто
         $('.sort-amount').width( $('.td_amount').width() ); //потреб, авто
 
-        $('.sort-overpay').width( $('.td_overpay').width() ); //авто
+        $('.sort-overpay').width( $('.td_overpay').width() ); //авто        
+        $('.td_title').css( 'padding-left', $('.td_bankname').width() ); //авто        
     }    
     setControlWidth();
     
@@ -229,6 +230,26 @@ jQuery(document).ready(function($){
     })
 
 
+    function show_form_filter(button, block) { // фильтр, страница поиска кредитов
+		$(block).hide();
+		$(button).click(function(e){
+			//e.preventDefault();
+			if ( $(block).is(':visible')) {
+				$(block).slideUp().removeClass('active');
+				$('#js-btn-search-listing').removeClass('active').find('.indicator').text('+');
+			} else {
+				$('#js-btn-search-listing').addClass('active').find('.indicator').text('-');
+				$(block).slideDown().addClass('active');
+			}
+			if($(window).width() < 576){
+				if($(block).hasClass('active')){
+					$('body').addClass('overflow-hidden');
+				}else{
+					$('body').removeClass('overflow-hidden');
+				}
+			}
+		});
+	}    
 
     
     /* SCROLL TO TOP */

@@ -2238,7 +2238,7 @@ NAVIGATION
     display: flex;
     justify-content: space-between;
     padding: 0 15px;
-    margin-bottom: 15px; } }
+    padding-bottom: 15px; } }
 @media (min-width: 768px) {
   .row-search-bottom-mob .btn-sorting {
     display: none; } }
@@ -2248,7 +2248,7 @@ NAVIGATION
   @media (min-width: 768px) {
     .results-credits-found {
       text-align: center;
-      margin-bottom: 20px; } }
+      padding-bottom: 20px; } }
 
 .credit-online-link {
   background: #fff;
@@ -2325,7 +2325,7 @@ NAVIGATION
   color: #000;
   flex-shrink: 0;
   font-size: 14px; }
-  .listing_sort.sort-rate, .listing_sort.sort-amount {
+  .listing_sort.sort-rate, .listing_sort.sort-amount, .listing_sort.sort-overpay {
     cursor: pointer; }
   .listing_sort .arrow {
     display: inline-block;
@@ -2561,7 +2561,8 @@ NAVIGATION
     display: flex;
     padding: 20px 0 0 20px;
     position: relative;
-    width: 100%; }
+    width: 100%;
+    flex-wrap: wrap; }
     @media (max-width: 767px) {
       .plan .plan-content {
         flex-wrap: wrap; } }
@@ -2583,6 +2584,8 @@ NAVIGATION
     .plan .td_bankname img {
       max-height: 100px;
       min-width: 100px; }
+    .plan .td_rate .data {
+      color: #ff0000; }
     @media (max-width: 767px) {
       .plan .td {
         flex-grow: 1;
@@ -2687,7 +2690,7 @@ NAVIGATION
       display: block; }
     .plan_insearch .td_amount .min {
       display: none; }
-    .plan_insearch .td_amount .max {
+    .plan_insearch .td_amount, .plan_insearch .td_overpay {
       font-size: 1.5rem; }
     .plan_insearch .licence {
       top: -25px; }
@@ -2720,15 +2723,32 @@ NAVIGATION
     .plan_insearch .ttl {
       display: none; } }
 
+.plan_potreb .td_amount .data {
+  display: block; }
+
 .td_action .wrapper {
   position: relative; }
 .td_action .link-info {
   bottom: -30px; }
 
-.plan_potreb .td_amount .data {
-  display: block; }
-.plan_potreb .td_rate .data {
-  color: #ff0000; }
+@media (max-width: 767px) {
+  .plan_wide-title .plan-content {
+    padding-top: 20px; } }
+@media (min-width: 768px) {
+  .plan_wide-title .td_rate, .plan_wide-title .td_amount, .plan_wide-title .td_overpay {
+    padding-top: 20px; } }
+.plan_wide-title .licence {
+  top: auto;
+  bottom: 0; }
+
+.td_title {
+  flex-basis: 100%;
+  padding-bottom: 0 !important;
+  font-size: 1.1rem;
+  color: #000; }
+  @media (max-width: 767px) {
+    .td_title {
+      padding-left: 0 !important; } }
 
 @media (max-width: 767px) {
   .plan-wrapper {
