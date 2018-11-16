@@ -2070,6 +2070,9 @@ NAVIGATION
 
 .h-hero {
   text-align: center; }
+  @media (min-width: 768px) {
+    .h-hero {
+      margin-bottom: 2.5rem; } }
 
 .city-picker {
   display: inline-block;
@@ -2308,7 +2311,6 @@ NAVIGATION
       margin: 0 auto; }
     .listing-controls_sorting {
       display: flex;
-      justify-content: space-between;
       width: 75%; }
     .listing-controls_search {
       display: flex;
@@ -2321,7 +2323,8 @@ NAVIGATION
 
 .listing_sort {
   color: #000;
-  flex-shrink: 0; }
+  flex-shrink: 0;
+  font-size: 14px; }
   .listing_sort.sort-rate, .listing_sort.sort-amount {
     cursor: pointer; }
   .listing_sort .arrow {
@@ -2539,12 +2542,6 @@ NAVIGATION
 .plan {
   position: relative;
   background: #fff; }
-  @media (max-width: 767px) {
-    .plan {
-      margin-bottom: 0.5rem; } }
-  @media (min-width: 768px) {
-    .plan {
-      border: 2px solid transparent; } }
   .plan:after {
     content: "";
     display: block;
@@ -2578,7 +2575,6 @@ NAVIGATION
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: flex-start;
     position: relative; }
     .plan .td_bankname a {
@@ -2596,11 +2592,7 @@ NAVIGATION
           display: none; } }
   .plan .ttl {
     color: #969696;
-    font-size: 0.9rem;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%; }
+    font-size: 0.9rem; }
   .plan .data {
     color: #000;
     line-height: 1;
@@ -2629,27 +2621,48 @@ NAVIGATION
     font-size: 0.75rem; }
   .plan .btn-cta {
     border-radius: 25px; }
-
-.plan_inmain .td {
-  padding-top: 25px; }
-  .plan_inmain .td_rate .data {
-    color: #ff0000; }
-  .plan_inmain .td_action {
-    align-items: flex-end;
-    flex-direction: column-reverse;
-    flex-grow: 0; }
-  @media (min-width: 768px) {
-    .plan_inmain .td {
-      min-height: 70px; } }
   @media (max-width: 767px) {
+    .plan {
+      margin-bottom: 0.5rem; } }
+  @media (min-width: 768px) {
+    .plan {
+      border: 2px solid transparent; }
+      .plan .ttl {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%; } }
+
+.plan_inmain .td_rate .data {
+  color: #ff0000; }
+.plan_inmain .td_action {
+  align-items: flex-end;
+  flex-direction: column-reverse;
+  flex-grow: 0; }
+@media (min-width: 768px) {
+  .plan_inmain .td {
+    padding-top: 25px;
+    min-height: 70px;
+    justify-content: center; }
     .plan_inmain .td_bankname {
-      order: 1; }
+      width: 23%; }
     .plan_inmain .td_amount {
-      order: 2; }
+      width: 21%; }
     .plan_inmain .td_time {
-      order: 3; }
+      width: 17.5%; }
     .plan_inmain .td_rate {
-      order: 4; } }
+      width: 17.5%; }
+    .plan_inmain .td_action {
+      width: 21%; } }
+@media (max-width: 767px) {
+  .plan_inmain .td_bankname {
+    order: 1; }
+  .plan_inmain .td_amount {
+    order: 2; }
+  .plan_inmain .td_time {
+    order: 3; }
+  .plan_inmain .td_rate {
+    order: 4; } }
 
 .plan_insearch {
   background: #fff; }
@@ -2685,20 +2698,20 @@ NAVIGATION
       justify-content: center;
       padding-bottom: 20px; }
     .plan_insearch .td_bankname {
-      width: 21%; }
+      width: 20%; }
     .plan_insearch .td_offer {
-      width: 32%; }
+      width: 30%; }
       .plan_insearch .td_offer .data {
         padding-right: 10px; }
     .plan_insearch .td_rate {
-      width: 16%; }
+      width: 19%; }
     .plan_insearch .td_amount {
       width: 17%; }
     .plan_insearch .td_action {
       width: 14%;
       align-items: center;
       flex-direction: column; }
-    .plan_insearch .licence, .plan_insearch .link-info {
+    .plan_insearch .licence {
       bottom: -5px; }
     .plan_insearch .link-info {
       font-size: 0.9rem;
@@ -2706,9 +2719,11 @@ NAVIGATION
       text-align: center; }
     .plan_insearch .ttl {
       display: none; } }
-  @media (min-width: 992px) {
-    .plan_insearch .licence, .plan_insearch .link-info {
-      bottom: -5px; } }
+
+.td_action .wrapper {
+  position: relative; }
+.td_action .link-info {
+  bottom: -30px; }
 
 .plan_potreb .td_amount .data {
   display: block; }

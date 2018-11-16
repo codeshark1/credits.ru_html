@@ -561,7 +561,8 @@ NAVIGATION
 	}
 }
 .h-hero {
-	text-align: center;
+	text-align: center;	
+	@media (min-width: $screen-sm-min) {margin-bottom: 2.5rem;}
 }
 .city-picker {
 	display: inline-block;
@@ -798,8 +799,7 @@ NAVIGATION
 			margin: 0 auto;
 		}
 		&_sorting {
-			display: flex;
-			justify-content: space-between;
+			display: flex;			
 			width: 75%;
 		}
 		&_search {
@@ -818,6 +818,7 @@ NAVIGATION
 .listing_sort {
 	color: #000;
 	flex-shrink: 0;
+	font-size: 14px;
 	&.sort-rate, &.sort-amount {
 		cursor: pointer;		
 	}
@@ -1057,12 +1058,6 @@ NAVIGATION
 .plan {	
 	position: relative;
 	background: #fff;
-	@media (max-width: $screen-xs-max) {
-		margin-bottom: 0.5rem;
-	}
-	@media (min-width: $screen-sm-min) {
-		border: 2px solid transparent;
-	}
 	&:after {
 		content: "";
 		display: block;
@@ -1090,8 +1085,7 @@ NAVIGATION
 	.td {
 		flex-grow: 1;
 		display: flex;
-		flex-direction: column;		
-		justify-content: center;
+		flex-direction: column;				
 		align-items: flex-start;		
 		position: relative;
 		&_bankname {
@@ -1108,8 +1102,6 @@ NAVIGATION
 	.ttl {
 		color: $gray;
 		font-size: 0.9rem;
-		position: absolute;
-		left: 0;top: 0;width: 100%;
 	}
 	.data {
 		color: #000;
@@ -1137,23 +1129,37 @@ NAVIGATION
 	}
 	.licence {font-size: 0.75rem;}
 	.btn-cta {border-radius: 25px;}
+	@media (max-width: $screen-xs-max) {
+		margin-bottom: 0.5rem;
+	}
+	@media (min-width: $screen-sm-min) {
+		border: 2px solid transparent;
+		.ttl {
+			position: absolute;
+			left: 0;top: 0;width: 100%;			
+		}
+	}	
 }
 .plan_inmain {
-	.td {//740
-		padding-top: 25px;
-		&_bankname {} //170
-		&_amount {} //155
-		&_time {} //130
-		&_rate {//130
+	.td {		
+		&_rate {
 			.data {color: $red;}
 		}
-		&_action { //
+		&_action {
 			align-items: flex-end;
 			flex-direction: column-reverse;
 			flex-grow: 0;
 		}		
 		@media (min-width: $screen-sm-min) {
+			padding-top: 25px;
 			min-height: 70px;
+			justify-content: center;
+			//740
+			&_bankname {width: 23%;} //170 23
+			&_amount {width: 21%;} //155 21
+			&_time {width: 17.5%;} //130 17.5
+			&_rate {width: 17.5%;}
+			&_action {width: 21%;}		
 		}
 		@media (max-width: $screen-xs-max) {
 			&_bankname {order: 1}
@@ -1190,23 +1196,19 @@ NAVIGATION
 		.plan-content {padding-top: 40px;}
 	}
 	@media (min-width: $screen-sm-min) {
-		.plan-content {
-			//display: table;
-			//table-layout: fixed;
-		}
 		.td {
 			justify-content: center;			
 			padding-bottom: 20px;
 		}
-		.td_bankname{width: 21%;} //210
-		.td_offer 	{width: 32%;			
+		.td_bankname{width: 20%;} //210
+		.td_offer 	{width: 30%;			
 			.data {padding-right: 10px;}
 		} //320
-		.td_rate 	{width: 16%;} //185	
+		.td_rate 	{width: 19%;} //185	
 		.td_amount 	{width: 17%;} //150	
 		.td_action 	{width: 14%; align-items: center; flex-direction: column} //140
 
-		.licence, .link-info {bottom: -5px;}
+		.licence {bottom: -5px;}
 		.link-info {
 			font-size: 0.9rem;
 			text-decoration: underline;
@@ -1214,12 +1216,14 @@ NAVIGATION
 		}
 		.ttl {display: none}
 	}
-	@media (min-width: $screen-md-min) {
-		.licence, .link-info {
-			bottom: -5px;
-		}		
-	}
 }
+.td_action {
+	.wrapper {position: relative;}
+	.link-info {bottom: -30px}
+}
+
+
+
 .plan_potreb {
 	.td_amount {
 		.data {display: block;}
