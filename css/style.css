@@ -273,6 +273,8 @@ label.checkbox, label.radio {
   label.checkbox:after, label.radio:after {
     transition: all .15s;
     transform: scale(0); }
+  label.checkbox.checked, label.radio.checked {
+    font-weight: 500; }
   label.checkbox.checked:after, label.radio.checked:after {
     transform: scale(1); }
   label.checkbox input, label.radio input {
@@ -3071,6 +3073,8 @@ NAVIGATION
     font-size: 0.9rem; }
     .subscribe-main label.checkbox a {
       text-decoration: underline; }
+    .subscribe-main label.checkbox.checked {
+      font-weight: 300; }
   @media (max-width: 767px) {
     .subscribe-main {
       text-align: center; }

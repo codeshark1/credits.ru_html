@@ -247,6 +247,7 @@ label.checkbox, label.radio {
     transition: all .15s;
     transform: scale(0);    
   }  
+  &.checked {font-weight: 500;}
   &.checked:after {
     transform: scale(1);
   }

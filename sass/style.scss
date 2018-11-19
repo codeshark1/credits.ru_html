@@ -1558,6 +1558,7 @@ NAVIGATION
 		margin-bottom: 15px;
 		font-size: 0.9rem;
 		a {text-decoration: underline;}
+		&.checked {font-weight: 300;}
 	}
 	@media (max-width: $screen-xs-max) {
 		text-align: center;
