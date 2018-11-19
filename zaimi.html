@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ипотека</title>
+    <title>Займы</title>
 	<link rel="shortcut icon" href="img/favicon/favicon.ico?v=2" type="image/x-icon" />
 	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png" />
 	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png" />
@@ -314,54 +314,21 @@
                         </ul>
                     </nav>
 
-                    <p class="h-section h-hero">Ипотека в <span class="city-picker">Москве</span></p>
+                    <p class="h-section h-hero">Займы в <span class="city-picker">Москве</span></p>
                 </div><!-- /.container -->
 
                 <form action="/">
                     <div class="container">
-                        <div class="ipoteka-types-wrapper">
-                            <div class="ipoteka-types-current ipoteka-type">
-                                <svg class="all" data-src="img/ipo-all.svg"></svg>
-                                Все                                
-                            </div>
-                            <div class="row-ipoteka-types">
-                                <div class="ipoteka-type active">
-                                    <svg class="all" data-src="img/ipo-all.svg"></svg>
-                                    Все
-                                </div>
-                                <div class="ipoteka-type">
-                                    <svg class="novo" data-src="img/ipo-novo.svg"></svg>
-                                    Новостройка
-                                </div>
-                                <div class="ipoteka-type">
-                                    <svg class="vtor" data-src="img/ipo-vtor.svg"></svg>
-                                    Вторичка
-                                </div>
-                                <div class="ipoteka-type">
-                                    <svg class="zagor" data-src="img/ipo-zagor.svg"></svg>
-                                    Загородный дом
-                                </div>
-                                <div class="ipoteka-type ">
-                                    <svg class="stroy" data-src="img/ipo-stroy.svg"></svg>
-                                    Строящаяся
-                                </div>
-                            </div><!-- /.row-ipoteka-types -->
-                        </div><!-- /.ipoteka-types-wrapper -->
-
                         <div class="row justify-content-sm-center">
-                            <div class="col-sm-6 col-md-3">
-                                <p class="lbl lbl-top">Стоимость недвижимости</p>
+                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                <p class="lbl lbl-top">Сумма займа</p>
                                 <input type="text" class="input-text" placeholder="10 000 Р">
                             </div><!-- /.col -->
-                            <div class="col-sm-6 col-md-3">
-                                <p class="lbl lbl-top">Первоначальный взнос</p>
-                                <input type="text" class="input-text" placeholder="10 000 Р">
+                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                <p class="lbl lbl-top">Срок займа</p>
+                                <input type="text" class="input-text" placeholder="Введите срок (дней)">
                             </div><!-- /.col -->
-                            <div class="col-sm-6 col-md-3 col-lg-2">
-                                <p class="lbl lbl-top">Срок </p>
-                                <select class="input-text"><option>Любой</option></select>
-                            </div><!-- /.col -->
-                            <div class="col-sm-12 col-md-3 bx-center">
+                            <div class="col-sm-12 col-md-4 col-lg-3 bx-center">
                                 <span class="lbl lbl-top d-none d-md-block"></span>
                                 <button type="button" class="btn btn-toggle_more" id="js-btn-search-listing"><span class="indicator">+</span>Больше условий</button>
                             </div><!-- /.col -->
@@ -377,24 +344,32 @@
                                 </div><!-- /.popup-header -->
 
                                 <div class="popup-content">
-                                    <div class="row" id="search-listing-filter">                                        
-                                        <div class="col-sm-6 col-md-3">
-                                            <p class="lbl lbl-top">Обеспечение</p>
+                                    <div class="row justify-content-sm-center" id="search-listing-filter">                                        
+                                        <div class="col-sm-6 col-md-4 col-lg-3">
+                                            <p class="lbl lbl-top">Время рассмотрения заявки</p>
+                                            <select class="input-text"><option>Любое</option></select>
+                                        </div><!-- /.col -->
+                                        <div class="col-sm-6 col-md-4 col-lg-3">
+                                            <p class="lbl lbl-top">Способ получения</p>
                                             <select class="input-text"><option>Неважно</option></select>
                                         </div><!-- /.col -->
-                                        <div class="col-sm-6 col-md-3">
-                                            <p class="lbl lbl-top">Тип процента</p>
+                                        <div class="col-sm-6 col-md-4 col-lg-3">
+                                            <p class="lbl lbl-top">Оформление</p>
                                             <select class="input-text"><option>Неважно</option></select>
-                                        </div><!-- /.col -->
-                                        <div class="col-sm-6 col-md-3">
-                                            <p class="lbl lbl-top">Подтверждение дохода</p>
-                                            <select class="input-text"><option>Стандартные</option></select>
-                                        </div><!-- /.col -->
-                                        <div class="col-sm-6 col-md-3">
-                                            <p class="lbl lbl-top">Вид ипотеки</p>
-                                            <select class="input-text"><option>Любой</option></select>
-                                        </div><!-- /.col -->                                          
+                                        </div><!-- /.col -->                                        
                                     </div><!-- /.row -->                                    
+                                    <div class="row justify-content-sm-center">
+                                        <div class="col-sm-12 col-lg-9 checkboxes-inline">
+                                            <label class="radio">
+                                                <input type="radio" name="zaim-type" checked>
+                                                Прологнация
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="zaim-type">
+                                                Отсрочка
+                                            </label>                                            
+                                        </div>
+                                    </div><!-- /.row -->
                                 </div><!-- /.popup-content -->
 
                                 <div class="popup-footer popup-footer-buttons">
@@ -405,7 +380,7 @@
                         </div><!-- /# search-listing-filter popup-mob-->
 
                         <div class="row-search-bottom-mob">
-                            <p class="results-credits-found">Найдено 150 <span>карт</span></p>
+                            <p class="results-credits-found">Найдено 150 <span>займов</span></p>
                             <div class="drop-menu-wrapper js-drop-menu-wrapper sorting-mob-switcher">
                                 <button type="button" class="btn-sorting drop-menu-trigger js-drop-menu-trigger btn btn-narrow">По ставке</button>
                                 <div class="drop-menu js-drop-menu">

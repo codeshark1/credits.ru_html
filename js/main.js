@@ -217,11 +217,22 @@ jQuery(document).ready(function($){
                 $(this).parent('label').addClass('checked');
             });
         }
+        if ($('label.radio input').length) {
+            $('label.radio').each(function(){
+                $(this).removeClass('checked');
+            });
+            $('label.radio input:checked').each(function(){
+                $(this).parent('label').addClass('checked');
+            });
+        }        
     }
     customCheckbox();
     $('label.checkbox').click(function(){
         customCheckbox();
     });
+    $('label.radio').click(function(){
+        customCheckbox();
+    });    
 
 
     /* PLAN CHILDREN */
