@@ -818,7 +818,7 @@ NAVIGATION
 	color: #000;
 	flex-shrink: 0;
 	font-size: 14px;
-	&.sort-rate, &.sort-amount, &.sort-overpay {
+	&.sort-rate, &.sort-amount, &.sort-overpay, &.sort-time {
 		cursor: pointer;
 	}
 	.arrow {
@@ -944,6 +944,19 @@ NAVIGATION
 .popup-header {}
 .popup-footer {}
 
+.listing-filter-centered {
+	
+	@media (max-width: $screen-xs-max) {padding: 0 15px;}
+	@media (min-width: $screen-sm-min) {
+		display: flex;
+		justify-content: center;
+		.input-checkbox, .input-text {
+			margin: 0 2%;
+			&:first-child {margin-left: 0;}
+			&:last-child {margin-right: 0;}
+		}
+	}
+}
 
 /* --- SORTING/LISTING CONTROLS */
 
@@ -1091,8 +1104,7 @@ NAVIGATION
 		&_bankname {
 			a {display: inline-block;width: 120px;}
 			img {max-height: 100px; min-width: 100px}
-		}
-		&_rate {.data {color: $red}}
+		}		
 		@media (max-width: $screen-xs-max) {
 			flex-grow: 1;
 			width: 50%;
@@ -1112,6 +1124,10 @@ NAVIGATION
 		align-items: center;
 		font-weight: 400;
 	}
+	.data-important {
+		font-size: 1.5rem;
+		color: $red;	
+	}	
 	.h-plan-best {
 		background: $blue;
 		color: #fff;
@@ -1141,7 +1157,7 @@ NAVIGATION
 		}
 	}	
 }
-.plan_inmain {
+.plan_inmain { //home
 	.td {		
 		&_rate {
 			.data {color: $red;}
@@ -1151,6 +1167,7 @@ NAVIGATION
 			flex-direction: column-reverse;
 			flex-grow: 0;
 		}		
+		&_rate {.data {color: $red}}
 		@media (min-width: $screen-sm-min) {
 			padding-top: 25px;
 			min-height: 70px;
@@ -1170,6 +1187,7 @@ NAVIGATION
 		}
 	}
 }
+
 .plan_insearch {
 	background: #fff; 
 	.plan-content {position: relative;}
@@ -1180,10 +1198,6 @@ NAVIGATION
 	}
 	
 	.td_offer .date {font-size: 1.1rem;}
-	.td_rate .data {
-		font-weight: 400;
-		font-size: 1.5rem;
-	}
 	.licence, .link-info {
 		position: absolute;
 		left: 0;
@@ -1218,7 +1232,20 @@ NAVIGATION
 		.ttl {display: none}
 	}
 }
-
+.plan_sber {
+	@media (max-width: $screen-xs-max) {
+		.td_title {order: 1}
+		.td_bankname {order: 2}
+		.td_rate {order:4}
+		.td_time {order:5}
+		.td_amount 	{order: 3}
+	}
+	@media (min-width: $screen-sm-min) {
+		.td_rate 	{width: 22%;}
+		.td_time 	{width: 22%;}
+		.td_amount 	{width: 22%;}
+	}
+}
 .plan_potreb {
 	.td_amount {
 		.data {display: block}
@@ -1233,7 +1260,7 @@ NAVIGATION
 	@media (max-width: $screen-xs-max) {
 		.plan-content {padding-top: 20px;}
 	}
-	.td_rate, .td_amount,.td_overpay {
+	.td_rate, .td_amount,.td_overpay, .td_time {
 		@media (min-width: $screen-sm-min) {
 			padding-top: 20px;
 		}
@@ -1345,6 +1372,35 @@ NAVIGATION
 		bottom: -2px;
 		left: -2px;
 	}
+}
+
+
+.row-ipoteka-types {
+	.ipoteka-type {
+		background: #fff;
+	}
+	@media (min-width: $screen-sm-min) {
+		display: flex;
+		margin-bottom: 30px;
+		.ipoteka-type {
+			text-transform: uppercase;
+			height: 64px;
+			line-height: 1;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-grow: 1;
+			margin: 0 10px;
+			&:first-child {margin-left: 0;}
+			&:last-child {margin-right: 0;}
+			svg {
+				max-width: 34px;
+				max-height: 31px;
+				margin-right: 5px;
+			}
+		}
+	}
+
 }
 /* -PLANS */
 

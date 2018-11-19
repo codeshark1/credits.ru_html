@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Автокредит</title>
+    <title>Вклады</title>
 	<link rel="shortcut icon" href="img/favicon/favicon.ico?v=2" type="image/x-icon" />
 	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png" />
 	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png" />
@@ -314,23 +314,23 @@
                         </ul>
                     </nav>
 
-                    <p class="h-section h-hero">Автокредит в <span class="city-picker">Москве</span></p>
+                    <p class="h-section h-hero">Вклады в <span class="city-picker">Москве</span></p>
                 </div><!-- /.container -->
 
                 <form action="/">
                     <div class="container">
                         <div class="row">
-                            <div class="col-sm-6 col-md-4">
-                                <p class="lbl lbl-top">Стоимость автомобиля</p>
+                            <div class="col-sm-6 col-md-3">
+                                <p class="lbl lbl-top">Сумма вклада</p>
                                 <input type="text" class="input-text" placeholder="10 000 Р">
                             </div><!-- /.col -->
                             <div class="col-sm-6 col-md-3">
-                                <p class="lbl lbl-top">Первоначальный взнос</p>
-                                <input type="text" class="input-text" placeholder="10 000 Р">
+                                <p class="lbl lbl-top">Срок вклада</p>
+                                <select class="input-text"><option>1 месяц</option></select>
                             </div><!-- /.col -->
-                            <div class="col-sm-6 col-md-2">
-                                <p class="lbl lbl-top">Срок кредита</p>
-                                <select class="input-text"><option>Любой</option></select>
+                            <div class="col-sm-6 col-md-3 d-none d-md-block">
+                                <p class="lbl lbl-top">Валюта</p>
+                                <select class="input-text"><option>Рубль</option></select>
                             </div><!-- /.col -->
                             <div class="col-sm-12 col-md-3 bx-center">
                                 <span class="lbl lbl-top d-none d-md-block"></span>
@@ -348,29 +348,20 @@
                                 </div><!-- /.popup-header -->
 
                                 <div class="popup-content">
-                                    <div class="row justify-content-md-center" id="search-listing-filter">
-                                        <div class="col-sm-6 col-md-3">
-                                            <p class="lbl lbl-top">Состояние</p>
-                                            <select class="input-text"><option>Неважно</option></select>
-                                        </div><!-- /.col -->
-                                        
-                                        <div class="col-sm-6 col-md-3">
-                                            <p class="lbl lbl-top">Тип транспорта</p>
-                                            <select class="input-text"><option>Неважно</option></select>
-                                        </div><!-- /.col -->
-
-                                        <div class="col-sm-6 col-md-3">
-                                            <p class="lbl lbl-top">Подтверждение дохода</p>
-                                            <select class="input-text"><option>Неважно</option></select>
-                                        </div><!-- /.col -->
-
-                                        <div class="col-sm-6 col-md-3">
-                                            <p class="lbl lbl-top d-none d-sm-block"></p>
-                                            <div class="input-checkbox">
-                                                <label class="checkbox"><input type="checkbox">Без КАСКО</label>
-                                            </div>
-                                        </div><!-- /.col -->                                              
-                                    </div><!-- /.row -->
+                                    <div class="listing-filter-centered" id="search-listing-filter">
+                                        <div class="input-checkbox">
+                                            <label class="checkbox"><input type="checkbox">Пополнение счета</label>
+                                        </div>
+                                        <div class="input-checkbox">
+                                            <label class="checkbox"><input type="checkbox">Страхование</label>
+                                        </div>
+                                        <div class="input-checkbox">
+                                            <label class="checkbox"><input type="checkbox">Частичное снятие</label>
+                                        </div>
+                                        <div class="input-checkbox">
+                                            <label class="checkbox"><input type="checkbox">Выплата процентов ежемесячно</label>
+                                        </div>                                                                                                                        
+                                    </div><!-- /#filter-->
                                 </div><!-- /.popup-content -->
 
                                 <div class="popup-footer popup-footer-buttons">
@@ -381,7 +372,7 @@
                         </div><!-- /# search-listing-filter popup-mob-->
 
                         <div class="row-search-bottom-mob">
-                            <p class="results-credits-found">Найдено 150 <span>кредитов</span></p>
+                            <p class="results-credits-found">Найдено 150 <span>вкладов</span></p>
                             <div class="drop-menu-wrapper js-drop-menu-wrapper sorting-mob-switcher">
                                 <button type="button" class="btn-sorting drop-menu-trigger js-drop-menu-trigger btn btn-narrow">По ставке</button>
                                 <div class="drop-menu js-drop-menu">
@@ -400,8 +391,8 @@
                     <form action="/" class="listing-controls_sorting">
                         <div class="listing_sort sort-bank">Банк</div>
                         <div class="listing_sort sort-rate">Ставка в год <span class="arrow"></span></div>
-                        <div class="listing_sort sort-amount">Платёж в месяц <span class="arrow"></span></div>
-                        <div class="listing_sort sort-overpay">Переплата <span class="arrow"></span></div>
+                        <div class="listing_sort sort-time">Срок вклада <span class="arrow"></span></div>
+                        <div class="listing_sort sort-amount">Доход <span class="arrow"></span></div>
                     </form>
                     <div class="listing-controls_search">
                         <form role="search" class="form-search-listing closed" id="searchform_listing" action="#">
@@ -415,27 +406,27 @@
             </div><!-- /.listing-controls -->
 
             <div class="plans-insearch-wrapper">
-                <div class="plan plan_insearch plan_wide-title">
+                <div class="plan plan_insearch plan_wide-title plan_sber">
                     <div class="plan-wrapper">
                         <div class="plan-content">
                             <div class="td td_title">
-                                Автокредит «Классический - с пробегом Плюс»
+                                Вклад «Быстро деньги для семьи»
                             </div>
                             <div class="td td_bankname">
                                 <a href="#"><img src="img/logo-rufinans-bank.png" alt="Русфинанс банк"></a>
                                 <p class="licence">Лиц. № 4567</p>
                             </div>
                             <div class="td td_rate">
-                                <p class="ttl">Ставка</p>
-                                <p class="data data-important">от 17,00%</p>
+                                <p class="ttl">Ставка в год</p>
+                                <p class="data">от 17,00%</p>
                             </div>                                                                                    
-                            <div class="td td_amount">
-                                <p class="ttl">Платёж в месяц</p>
-                                <p class="data">30 000 Р</p>
+                            <div class="td td_time">
+                                <p class="ttl">Срок вклада</p>
+                                <p class="data">3 года</p>
                             </div>
-                            <div class="td td_overpay">  
-                                <p class="ttl">Переплата</p>                                                  
-                                <p class="data">-100 000 Р</p>
+                            <div class="td td_amount">  
+                                <p class="ttl">Доход</p>                                                  
+                                <p class="data data-important">+ 40 000 Р</p>
                             </div>                                                
                             <div class="td td_action">
                                 <div class="wrapper">
@@ -464,27 +455,27 @@
                         </div><!-- /.plan-actions -->
                     </div><!-- /.plan-wrapper -->
                 </div><!-- /.plan -->
-                <div class="plan plan_insearch plan_wide-title">
+                <div class="plan plan_insearch plan_wide-title plan_sber">
                     <div class="plan-wrapper">
                         <div class="plan-content">
                             <div class="td td_title">
-                                Автокредит «Классический - с пробегом Плюс»
+                                Вклад «Быстро деньги для семьи»
                             </div>
                             <div class="td td_bankname">
-                                <a href="#"><img src="img/logo-moskcredit-bank.png" alt="Русфинанс банк"></a>
+                                <a href="#"><img src="img/logo-rufinans-bank.png" alt="Русфинанс банк"></a>
                                 <p class="licence">Лиц. № 4567</p>
                             </div>
                             <div class="td td_rate">
-                                <p class="ttl">Ставка</p>
-                                <p class="data data-important">от 17,00%</p>
+                                <p class="ttl">Ставка в год</p>
+                                <p class="data">от 17,00%</p>
                             </div>                                                                                    
-                            <div class="td td_amount">
-                                <p class="ttl">Платёж в месяц</p>
-                                <p class="data">30 000 Р</p>
+                            <div class="td td_time">
+                                <p class="ttl">Срок вклада</p>
+                                <p class="data">3 года</p>
                             </div>
-                            <div class="td td_overpay">  
-                                <p class="ttl">Переплата</p>                                                  
-                                <p class="data">-100 000 Р</p>
+                            <div class="td td_amount">  
+                                <p class="ttl">Доход</p>                                                  
+                                <p class="data data-important">+ 40 000 Р</p>
                             </div>                                                
                             <div class="td td_action">
                                 <div class="wrapper">
@@ -513,27 +504,27 @@
                         </div><!-- /.plan-actions -->
                     </div><!-- /.plan-wrapper -->
                 </div><!-- /.plan -->
-                <div class="plan plan_insearch plan_wide-title">
+                <div class="plan plan_insearch plan_wide-title plan_sber">
                     <div class="plan-wrapper">
                         <div class="plan-content">
                             <div class="td td_title">
-                                Автокредит «Классический - с пробегом Плюс»
+                                Вклад «Быстро деньги для семьи»
                             </div>
                             <div class="td td_bankname">
-                                <a href="#"><img src="img/logo-sovkom-bank.png" alt="Русфинанс банк"></a>
+                                <a href="#"><img src="img/logo-rufinans-bank.png" alt="Русфинанс банк"></a>
                                 <p class="licence">Лиц. № 4567</p>
                             </div>
                             <div class="td td_rate">
-                                <p class="ttl">Ставка</p>
-                                <p class="data data-important">от 17,00%</p>
+                                <p class="ttl">Ставка в год</p>
+                                <p class="data">от 17,00%</p>
                             </div>                                                                                    
-                            <div class="td td_amount">
-                                <p class="ttl">Платёж в месяц</p>
-                                <p class="data">30 000 Р</p>
+                            <div class="td td_time">
+                                <p class="ttl">Срок вклада</p>
+                                <p class="data">3 года</p>
                             </div>
-                            <div class="td td_overpay">  
-                                <p class="ttl">Переплата</p>                                                  
-                                <p class="data">-100 000 Р</p>
+                            <div class="td td_amount">  
+                                <p class="ttl">Доход</p>                                                  
+                                <p class="data data-important">+ 40 000 Р</p>
                             </div>                                                
                             <div class="td td_action">
                                 <div class="wrapper">
@@ -561,7 +552,7 @@
                             </a>                                                                                                
                         </div><!-- /.plan-actions -->
                     </div><!-- /.plan-wrapper -->
-                </div><!-- /.plan -->                                
+                </div><!-- /.plan -->                                                              
             </div><!-- /.plans-insearch-wrapper -->            
 
             <div class="bx-center">

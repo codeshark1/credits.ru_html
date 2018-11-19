@@ -26,18 +26,25 @@ jQuery(document).ready(function($){
     
     
     function show_form_filter(button, block) { // фильтр, страница поиска кредитов
-        $(block).hide();
-        $(button).click(function(e){
-            //e.preventDefault();
-            if ( $(block).is(':visible')) {
-                $(block).slideUp().removeClass('active');
-                $('#js-btn-search-listing').removeClass('active').find('.indicator').text('+');
-            } else {
-                $('#js-btn-search-listing').addClass('active').find('.indicator').text('-');
-                $(block).slideDown().addClass('active');
-            }
-        });
-    }    
+		$(block).hide();
+		$(button).click(function(e){
+			//e.preventDefault();
+			if ( $(block).is(':visible')) {
+				$(block).slideUp().removeClass('active');
+				$('#js-btn-search-listing').removeClass('active').find('.indicator').text('+');
+			} else {
+				$('#js-btn-search-listing').addClass('active').find('.indicator').text('-');
+				$(block).slideDown().addClass('active');
+			}
+			if($(window).width() < 576){
+				if($(block).hasClass('active')){
+					$('body').addClass('overflow-hidden');
+				}else{
+					$('body').removeClass('overflow-hidden');
+				}
+			}
+		});
+	}  
     show_form_filter('#js-btn-search-listing','#search-listing-filter');
     show_form_filter('#search-listing-filter .btn-close','#search-listing-filter');
 
@@ -161,6 +168,7 @@ jQuery(document).ready(function($){
         $('.sort-offer').outerWidth( $('.td_offer').width() ); //потреб, авто
         $('.sort-rate').width( $('.td_rate').width() ); //потреб, авто
         $('.sort-amount').width( $('.td_amount').width() ); //потреб, авто
+        $('.sort-time').width( $('.td_time').width() ); //вклады
 
         $('.sort-overpay').width( $('.td_overpay').width() ); //авто        
         $('.td_title').css( 'padding-left', $('.td_bankname').width() ); //авто        
@@ -227,29 +235,7 @@ jQuery(document).ready(function($){
             $(this).addClass('active');
             $(block).slideDown(100).addClass('active');
         }
-    })
-
-
-    function show_form_filter(button, block) { // фильтр, страница поиска кредитов
-		$(block).hide();
-		$(button).click(function(e){
-			//e.preventDefault();
-			if ( $(block).is(':visible')) {
-				$(block).slideUp().removeClass('active');
-				$('#js-btn-search-listing').removeClass('active').find('.indicator').text('+');
-			} else {
-				$('#js-btn-search-listing').addClass('active').find('.indicator').text('-');
-				$(block).slideDown().addClass('active');
-			}
-			if($(window).width() < 576){
-				if($(block).hasClass('active')){
-					$('body').addClass('overflow-hidden');
-				}else{
-					$('body').removeClass('overflow-hidden');
-				}
-			}
-		});
-	}    
+    })  
 
     
     /* SCROLL TO TOP */

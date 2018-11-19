@@ -2325,7 +2325,7 @@ NAVIGATION
   color: #000;
   flex-shrink: 0;
   font-size: 14px; }
-  .listing_sort.sort-rate, .listing_sort.sort-amount, .listing_sort.sort-overpay {
+  .listing_sort.sort-rate, .listing_sort.sort-amount, .listing_sort.sort-overpay, .listing_sort.sort-time {
     cursor: pointer; }
   .listing_sort .arrow {
     display: inline-block;
@@ -2445,6 +2445,20 @@ NAVIGATION
     max-height: unset; }
   .search-listing-filter .wrapper {
     padding: 0; } }
+
+@media (max-width: 767px) {
+  .listing-filter-centered {
+    padding: 0 15px; } }
+@media (min-width: 768px) {
+  .listing-filter-centered {
+    display: flex;
+    justify-content: center; }
+    .listing-filter-centered .input-checkbox, .listing-filter-centered .input-text {
+      margin: 0 2%; }
+      .listing-filter-centered .input-checkbox:first-child, .listing-filter-centered .input-text:first-child {
+        margin-left: 0; }
+      .listing-filter-centered .input-checkbox:last-child, .listing-filter-centered .input-text:last-child {
+        margin-right: 0; } }
 
 /* --- SORTING/LISTING CONTROLS */
 /* PLANS */
@@ -2584,8 +2598,6 @@ NAVIGATION
     .plan .td_bankname img {
       max-height: 100px;
       min-width: 100px; }
-    .plan .td_rate .data {
-      color: #ff0000; }
     @media (max-width: 767px) {
       .plan .td {
         flex-grow: 1;
@@ -2603,6 +2615,9 @@ NAVIGATION
     display: flex;
     align-items: center;
     font-weight: 400; }
+  .plan .data-important {
+    font-size: 1.5rem;
+    color: #ff0000; }
   .plan .h-plan-best {
     background: #90c6f4;
     color: #fff;
@@ -2642,6 +2657,8 @@ NAVIGATION
   align-items: flex-end;
   flex-direction: column-reverse;
   flex-grow: 0; }
+.plan_inmain .td_rate .data {
+  color: #ff0000; }
 @media (min-width: 768px) {
   .plan_inmain .td {
     padding-top: 25px;
@@ -2677,9 +2694,6 @@ NAVIGATION
     margin-bottom: 10px; }
   .plan_insearch .td_offer .date {
     font-size: 1.1rem; }
-  .plan_insearch .td_rate .data {
-    font-weight: 400;
-    font-size: 1.5rem; }
   .plan_insearch .licence, .plan_insearch .link-info {
     position: absolute;
     left: 0;
@@ -2723,6 +2737,25 @@ NAVIGATION
     .plan_insearch .ttl {
       display: none; } }
 
+@media (max-width: 767px) {
+  .plan_sber .td_title {
+    order: 1; }
+  .plan_sber .td_bankname {
+    order: 2; }
+  .plan_sber .td_rate {
+    order: 4; }
+  .plan_sber .td_time {
+    order: 5; }
+  .plan_sber .td_amount {
+    order: 3; } }
+@media (min-width: 768px) {
+  .plan_sber .td_rate {
+    width: 22%; }
+  .plan_sber .td_time {
+    width: 22%; }
+  .plan_sber .td_amount {
+    width: 22%; } }
+
 .plan_potreb .td_amount .data {
   display: block; }
 
@@ -2735,7 +2768,7 @@ NAVIGATION
   .plan_wide-title .plan-content {
     padding-top: 20px; } }
 @media (min-width: 768px) {
-  .plan_wide-title .td_rate, .plan_wide-title .td_amount, .plan_wide-title .td_overpay {
+  .plan_wide-title .td_rate, .plan_wide-title .td_amount, .plan_wide-title .td_overpay, .plan_wide-title .td_time {
     padding-top: 20px; } }
 .plan_wide-title .licence {
   top: auto;
@@ -2845,6 +2878,30 @@ NAVIGATION
     top: -2px;
     bottom: -2px;
     left: -2px; }
+
+.row-ipoteka-types .ipoteka-type {
+  background: #fff; }
+@media (min-width: 768px) {
+  .row-ipoteka-types {
+    display: flex;
+    margin-bottom: 30px; }
+    .row-ipoteka-types .ipoteka-type {
+      text-transform: uppercase;
+      height: 64px;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-grow: 1;
+      margin: 0 10px; }
+      .row-ipoteka-types .ipoteka-type:first-child {
+        margin-left: 0; }
+      .row-ipoteka-types .ipoteka-type:last-child {
+        margin-right: 0; }
+      .row-ipoteka-types .ipoteka-type svg {
+        max-width: 34px;
+        max-height: 31px;
+        margin-right: 5px; } }
 
 /* -PLANS */
 /* ACCORDION */
