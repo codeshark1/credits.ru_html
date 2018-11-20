@@ -8,7 +8,7 @@
 
 body {	
 	font-family: 'Ubuntu', sans-serif;
-	background: #eeeeee;
+	background: #f5f5f5;
 	font-size: 14px;
 	font-weight: 300;
 	@media (min-width: $screen-md-min) {
@@ -487,6 +487,9 @@ NAVIGATION
    ========================================================================== */
 .section {
 	margin-bottom: $sect-mg !important;
+	@media (min-width: $screen-sm-min) {
+		&.mg-extra {margin-bottom: 4rem !important;}
+	}
 }
 .section-top {
 	padding-top: 20px;
@@ -644,6 +647,9 @@ NAVIGATION
 			padding: 0;	
 		}	
 	}	
+	&.bg-body {
+		background-color: #f5f5f5;
+	}
 }
 
 .lbl-top {
@@ -728,7 +734,7 @@ NAVIGATION
 	}
 }
 
-.row-search-bottom-mob {
+.row-search-bottom-mob {	
 	@media (max-width: $screen-xs-max) {
 		display: flex;
 		justify-content: space-between;
@@ -738,6 +744,7 @@ NAVIGATION
 	@media (min-width: $screen-sm-min) {
 		.btn-sorting {display: none;}
 	}
+	&.centered {justify-content: center;}
 }
 
 
@@ -755,7 +762,7 @@ NAVIGATION
 	text-align: center;
 }
 .search-checks {
-	background: #efefef;
+	//background: #efefef;
 	padding-top: 16px;
 	text-align: center;
 	overflow: auto;
@@ -814,6 +821,7 @@ NAVIGATION
 		&_sorting {
 			display: flex;			
 			width: 75%;
+			align-items: center;
 		}
 		&_search {
 			display: flex;
@@ -835,6 +843,7 @@ NAVIGATION
 	&.sort-rate, &.sort-amount, &.sort-overpay, &.sort-time {
 		cursor: pointer;
 	}
+
 	.arrow {
 		display: inline-block;
 		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11 7' width='11'%3E%3Cpolygon points='5.5 7 0 0.7 0.61 0 5.5 5.6 10.39 0 11 0.7 5.5 7'/%3E%3C/svg%3E");
@@ -842,9 +851,20 @@ NAVIGATION
 		height: 7px;
 		margin-left: 3px;
 	}
+
+	&.clickable {
+		cursor: pointer;
+		&:hover {color: $red}
+	}	
+
 	&.active {
 		.arrow {
 			transform: rotate(180deg);
+		}
+	}
+	&.clickable:hover {
+		.arrow {
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11 7' fill='red' width='11'%3E%3Cpolygon points='5.5 7 0 0.7 0.61 0 5.5 5.6 10.39 0 11 0.7 5.5 7'/%3E%3C/svg%3E");
 		}
 	}
 }
@@ -857,7 +877,7 @@ NAVIGATION
 
 .plans-insearch-wrapper {
 	@media (min-width: $screen-sm-min) {
-		margin-bottom: 60px;
+		margin-bottom: 50px;
 	}
 	@media (min-width: $screen-md-min) {
 		padding: 0 40px;
@@ -1107,7 +1127,7 @@ NAVIGATION
 		flex-wrap: wrap;
 		@media (max-width: $screen-xs-max) {flex-wrap: wrap;}
 		@media (min-width: $screen-sm-min) {padding: 20px}
-		@media (min-width: $screen-md-min) {padding: 30px 30px 35px 35px;}		
+		@media (min-width: $screen-md-min) {padding: 30px}		
 	}	
 	.td {
 		flex-grow: 1;
@@ -1116,8 +1136,13 @@ NAVIGATION
 		align-items: flex-start;		
 		position: relative;
 		&_bankname {
-			a {display: inline-block;width: 120px;}
-			img {max-height: 100px; min-width: 100px}
+			padding-right: 10px;
+			a {display: inline-block;max-width: 120px;}
+			img {
+				max-height: 100px; 
+				min-width: 100px; 
+				object-fit: scale-down;
+			}
 		}		
 		@media (max-width: $screen-xs-max) {
 			flex-grow: 1;
@@ -1126,6 +1151,7 @@ NAVIGATION
 			&_action {display: none;}
 		}
 	}	
+	img {display: block;}
 	.ttl {
 		color: $gray;
 		font-size: 0.9rem;
@@ -1269,6 +1295,31 @@ NAVIGATION
 		.data {display: block}
 	}
 }
+
+.plan_catalog {
+	.ttl {
+		display: block;
+		//position: initial;
+	}
+	.plan-content {padding-top: 20px}
+	@media (max-width: $screen-xs-max) {
+		.td_bankname .ttl {position: relative; top: -5px}
+		.td_addr .ttl {display: none}
+	}
+	@media (min-width: $screen-sm-min) {
+		.plan-content {padding-top: 20px;}
+		.td {
+			padding-bottom: 0;
+			padding-top: 50px;
+		}
+		.td_bankname {width: 20%}
+		.td_addr {width: 30%;padding-right: 50px}
+		.td_tel {width: 15%}
+		.td_site {width: 15%}
+		.td_action {width: 20%}
+	}
+}
+.td_site a {text-decoration: underline;}
 .td_action {
 	.wrapper {position: relative;}
 	.link-info {bottom: -30px}
@@ -1286,6 +1337,75 @@ NAVIGATION
 	.licence {
 		top: auto;
 		bottom: 0;
+	}
+}
+
+.plan_credit-cards {
+	.licence, .link-info {
+		position: initial;
+	}
+	.td {justify-content: initial; padding-bottom: 0;}
+	.td__row {
+		display: flex;
+		width: 100%;		
+	}	
+	@media (max-width: $screen-xs-max) {
+		.td__row {margin-bottom: 10px;}
+		.plan-content {padding: 15px 0 0 15px;
+			&>.td__row:first-child {margin-bottom: 0;}
+		}
+		.td_bankname,.td_price, .td_bonuses {display: none;}
+		.td {margin-bottom: 0;}
+		.td_limit, .td_period {
+			.data {font-weight: 500;}
+		}
+		.td_period {order: 1}
+		.td_rate {order: 2}
+		.td_limit {order: 3}
+
+		.td_title_simple {
+			display: flex;
+			flex-direction: row;
+			align-items: stretch;
+			margin-bottom: 20px;
+			.text {
+				padding-left: 15px;
+				position: relative;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+		}
+	}
+	@media (min-width: $screen-sm-min) {
+		.plan-content > .td__row:last-child {
+			margin-top: 20px;
+		}
+		.td {flex-grow: 0}
+
+		.licence {line-height: 21px}
+		//1120
+		.td_bankname {
+			width: 16%; 
+			flex-grow: 0;
+		}
+		.td_action {
+			width: 14%; 
+			flex-grow: 0;
+			flex-direction: column-reverse;
+		}
+
+		.td_wrapper {width: 70%}  //780
+
+			.td_rate {width: 24%;} //185
+			.td_limit {width: 26%;} //205
+			.td_period {width: 24%} //185
+			.td_price {width: 26%;} //205
+
+		.td_title_simple {
+			margin-bottom: 15px;
+			.licence, .image {display: none;}
+		}			
 	}
 }
 
@@ -1403,6 +1523,8 @@ NAVIGATION
 		.ipoteka-types-current {display: none;}
 	}	
 }
+.row .ipoteka-types-wrapper {margin-left: 0; margin-right: 0}
+
 .ipoteka-types-current {
 	border-radius: 5px;
 	position: relative;
@@ -1433,15 +1555,15 @@ NAVIGATION
 	display: flex;
 	align-items: center;
 	padding-left: 12px;	
-	svg {
-		width: 17px;
+	svg {		
 		max-height: 100%;
 		margin-right: 7px;
 	}	
 	@media (max-width: $screen-xs-max) {
 		&.active {
 			background: #f8fcff
-		}		
+		}
+		svg {width: 17px;}		
 	}
 	@media (min-width: $screen-sm-min) {
 		text-transform: uppercase;
@@ -1474,6 +1596,9 @@ NAVIGATION
 		font-size: 18px;
 	}		
 }
+
+
+label.checkbox-column {margin-bottom: 20px;}
 /* -PLANS */
 
 
@@ -1609,14 +1734,15 @@ NAVIGATION
 	font-size: 20px;
 	svg {margin-right: 10px;}
 }
-.p-distance, .p-money {
+.p-distance, .p-money, .p-cool {
 	padding-left: 25px;
-	font-size: 0.85rem;	
+	font-size: 0.85rem;
 	min-height: 22px;
 	line-height: 20px;
 }
 .p-distance {background: url('../img/i-plane.png') no-repeat 0 50%;}
 .p-money {background: url('../img/i-coin.png') no-repeat 0 50%;}
+.p-cool {background: url('../img/i-cool.png') no-repeat 0 50%;}
 
 .card-credit_card {
 	

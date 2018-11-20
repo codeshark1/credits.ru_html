@@ -1,5 +1,3 @@
-credits 
-    partner view
 
 
 arrow down:

@@ -171,7 +171,12 @@ jQuery(document).ready(function($){
         $('.sort-time').width( $('.td_time').width() ); //вклады
 
         $('.sort-overpay').width( $('.td_overpay').width() ); //авто        
-        $('.td_title').css( 'padding-left', $('.td_bankname').width() ); //авто        
+        $('.plan_wide-title .td_title').css( 'padding-left', $('.td_bankname').width() ); //авто        
+
+        
+        $('.sort-limit').width( $('.td_limit').width() ); //кредитки        
+        $('.sort-period').width( $('.td_period').width() ); //кредитки        
+        $('.sort-price').width( $('.td_price').width() ); //кредитки               
     }    
     setControlWidth();
     
