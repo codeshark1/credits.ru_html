@@ -67,7 +67,7 @@ textarea {margin-bottom: 8px;}
 input[type="number"] {padding-right: 0;}
 label {cursor: pointer;}
 input.checkbox {margin-right: 8px; vertical-align: middle}
-label.checkbox {margin-bottom: 8px; display: block;}
+label.checkbox {margin-bottom: 8px; display: inline-block;}
 input[type="radio"],
 input[type="checkbox"] {
   margin: 0 8px 0 0;
@@ -85,7 +85,7 @@ textarea:focus {
 }
 
 .lbl {  
-  font-weight: 500;
+  font-weight: 400;
   font-size: 14px;
 }
 .lbl--top {
@@ -293,6 +293,7 @@ label.checkbox {
     left: 4px;
     margin-top: -5px;
   }  
+  a {text-decoration: underline;}
 }
 label.radio {
   &:before {
@@ -572,33 +573,31 @@ label.radio {
   }
 }
 
-.pagination, .pagination-mob {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
+.pagination {
+  
   .pgn-page {
     display: inline-block;
+    font-size: 1.15rem;
+    padding: 0 3px;
+    margin-right: 3px;
+    &:last-child {margin-right: 0;}
   }
-  a {font-size: 12px;}
-  .mdc-button {
-    padding-left: 15px;
-    padding-right: 15px;
-    min-width: auto;
-    border-width: 1px;
+  a {color: #7d7d7d}
+  .current {
+    color: #000;
+    position: relative;
+    &:after {
+      content: "";
+      height: 1px;
+      width: 100%;
+      left: 0;bottom: 0;right: 0;
+      background: $action;
+      position: absolute;
+    }
   }
 }
-.pagination {
-  @media (max-width: $screen-xs-max) {
-    display: none;
-  }
-  [rel="last"] svg {margin-left: 4px;}  
-}
-.pagination-mob {
-  @media (min-width: $screen-sm-min) {
-    display: none;
-  }
-}
+
+
 
 .widget-menu {
   margin-bottom: 24px;
@@ -706,10 +705,8 @@ h1, h2, h3, h4 {line-height: 1.1; font-weight: 500}
 .h-card-list {font-size: 1.5rem;}
 
 .breadcrumbs {
-  margin-bottom: 12px;
   li {
     display: inline-block;
-    margin-bottom: 12px;
     position: relative;
     font-size: 14px;
     &:after {
@@ -803,8 +800,9 @@ h1, h2, h3, h4 {line-height: 1.1; font-weight: 500}
   .article-date {color: rgba($base-text, .75)}
 }
 
+hr {background: #dcdcdc; height: 1px; border: none;}
 .article-main {
-  hr {background: $gray; height: 2px; border: none; margin-bottom: 24px;}
+  hr {margin-bottom: 24px;}
 }
 .article-main--body {
   p, blockquote, ul, ol, figure, img, table {
@@ -1098,6 +1096,77 @@ h1, h2, h3, h4 {line-height: 1.1; font-weight: 500}
       right: 0;
       font-size: .75rem;
       span {display: none;}
+    }
+  }
+}
+
+.section-fullcolor > .nav-tabs-content-wrapper {  
+  @media (min-width: $screen-sm-min) {margin-top: -20px;}
+}
+.nav-tabs-content {
+	a {
+		transition: all .3s;
+		font-weight: 400;		
+	}
+  &-wrapper {margin-bottom: 20px}
+
+	@media (min-width: $screen-sm-min) {
+		&-wrapper {
+			border-bottom: 1px solid #acacac;
+      background: #fff;
+      margin-bottom: 40px;
+		}
+		&-control {display: none;}
+		.menu-item {
+      display: inline-block;		
+      margin-right: 50px;
+			&:last-child {margin-right: 0;}
+			a {
+				display: block;
+				position: relative;
+				padding-bottom: 1rem;
+				&:after {
+					content: '';
+					text-transform: uppercase;
+					height: 2px;
+					position: absolute;
+					bottom: 0;
+					left: 0;right: 0;
+					width: 0;
+					transition: width .3s;
+				}
+			}
+			&.active {
+				a {
+					color: $red;
+					font-weight: 500;
+					&:after {
+						background: $red;
+						width: 100%;
+					}
+				}
+			}
+			&.active,&:hover {
+				a:after {
+					background: $red;
+					width: 100%;
+				}				
+			}
+		}		
+	}
+}
+
+.nav-tabs-news {
+  padding-top: 15px;
+  @media (min-width: $screen-md-min) {
+    display: flex !important;
+    padding-right: 10px;
+    align-items: flex-end;
+    .menu-item {
+      margin-right: 3%;
+      flex-grow: 1;
+      display: inline-flex;
+      &:last-child {margin-right: 0;}
     }
   }
 }

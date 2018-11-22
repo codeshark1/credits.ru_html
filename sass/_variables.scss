@@ -44,7 +44,8 @@ $screen-md-max:              ($screen-lg-min - 1);
     flex-wrap: wrap;
 }
 
-$base-text: #555555;
+$base-text: #000;
+$base-text-lighter: #555555;
 $link-text: $base-text;
 $gray: #969696;
 $action: #ffca3c;

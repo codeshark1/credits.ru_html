@@ -177,6 +177,9 @@ jQuery(document).ready(function($){
         $('.sort-limit').width( $('.td_limit').width() ); //кредитки        
         $('.sort-period').width( $('.td_period').width() ); //кредитки        
         $('.sort-price').width( $('.td_price').width() ); //кредитки               
+
+        $('.sort-docs').width( $('.td_docs').width() ); //results               
+        $('.sort-prob').width( $('.td_prob').width() + 20 ); //results               
     }    
     setControlWidth();
     
