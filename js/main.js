@@ -5,7 +5,7 @@ $(window).load(function() {
 
 jQuery(document).ready(function($){
 
-    function navigation_show(button, menu) { // глобальная
+    function navigation_show(button, menu, othermenu, otherbutton) { // глобальная
         //$(menu).hide();
         $(button).click(function(){
             if ( $(menu).is(':visible')){
@@ -14,14 +14,16 @@ jQuery(document).ready(function($){
             } else {
                 $(this).addClass('active');
                 $(menu).slideDown().addClass('active');
+                $(othermenu).slideUp().removeClass('active');
+                $(otherbutton).removeClass('active');
             }
         });
     }
 
-    navigation_show('#js-btn-menu','#js-menu-wrapper');
+    navigation_show('#js-btn-menu','#js-menu-wrapper','#search-extended','#btn-search-extended');
     navigation_show('#js-btn-cities','#js-cities-wrapper');
     navigation_show('#js-cities-wrapper .close','#js-cities-wrapper');
-    navigation_show('#btn-search-extended','#search-extended');
+    navigation_show('#btn-search-extended','#search-extended','#js-menu-wrapper','#js-btn-menu');
 
     
     

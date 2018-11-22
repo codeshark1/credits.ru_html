@@ -517,9 +517,9 @@ label.radio {
   color: white;
   cursor: pointer;  
   border-radius: 100%;
-  width: 70px;height: 70px;  
+  width: 40px;height: 40px;  
   box-shadow: 0.5px 0.866px 16px 0px rgba(9, 3, 5, 0.16);
-  svg {width: 23px;}
+  svg {width: 15px;}
   @media (max-width: $screen-xs-max) {
     display: none;
   }

@@ -516,11 +516,11 @@ label.radio:after {
   color: white;
   cursor: pointer;
   border-radius: 100%;
-  width: 70px;
-  height: 70px;
+  width: 40px;
+  height: 40px;
   box-shadow: 0.5px 0.866px 16px 0px rgba(9, 3, 5, 0.16); }
   .btn-top svg {
-    width: 23px; }
+    width: 15px; }
   @media (max-width: 767px) {
     .btn-top {
       display: none; } }
@@ -2046,7 +2046,8 @@ NAVIGATION
     top: 40px;
     right: -15px;
     cursor: pointer;
-    transition: all .5s; }
+    transition: all .5s;
+    opacity: .3; }
   .cities.active {
     max-height: 470px; }
     .cities.active .close {
@@ -2058,7 +2059,8 @@ NAVIGATION
       height: 39px;
       font-size: 12px;
       border: 1px solid #dcdcdc;
-      padding: 0 15px; }
+      padding: 0 15px;
+      border-radius: 0; }
   .cities .menu-item {
     display: block;
     margin-bottom: 10px;

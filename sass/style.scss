@@ -406,6 +406,7 @@ NAVIGATION
 		right: -15px;
 		cursor: pointer;
 		transition: all .5s;
+		opacity: .3;
 	}
 	&.active {max-height: 470px;
 		.close {right: 15px !important;}
@@ -420,6 +421,7 @@ NAVIGATION
 		  font-size: 12px;
 		  border: 1px solid #dcdcdc;
 		  padding: 0 15px;
+		  border-radius: 0;
 		}
 	}
 
