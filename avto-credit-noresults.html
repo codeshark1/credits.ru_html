@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Кредитные карты</title>
+    <title>Автокредит</title>
 	<link rel="shortcut icon" href="img/favicon/favicon.ico?v=2" type="image/x-icon" />
 	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png" />
 	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png" />
@@ -137,10 +137,10 @@
             <ul class="search-suggests">
                 <li class="item"><mark>Кре</mark>диты</li>
                 <li class="item"><mark>Кре</mark>дитование</li>
-                <li class="item"><mark>Кре</mark>дитный лимит</li>
+                <li class="item"><mark>Кре</mark>дитный лемит</li>
                 <li class="item"><mark>Кре</mark>диты</li>
                 <li class="item"><mark>Кре</mark>дитование</li>
-                <li class="item"><mark>Кре</mark>дитный лимит</li>
+                <li class="item"><mark>Кре</mark>дитный лемит</li>
             </ul>
 
             <div class="search-extended-footer row-mod">
@@ -314,42 +314,25 @@
                         </ul>
                     </nav>
 
-                    <p class="h-section h-hero">Кредитные карты <span class="city-picker">Москве</span></p>
+                    <p class="h-section h-hero">Автокредит в <span class="city-picker">Москве</span></p>
                 </div><!-- /.container -->
 
                 <form action="/">
                     <div class="container">
-                        <div class="row justify-content-sm-center">
-                            <div class="col-lg-9">
-                                <div class="ipoteka-types-wrapper">
-                                    <div class="ipoteka-types-current ipoteka-type">                                
-                                        <svg class="all-cards" data-src="img/credit-cards-all.svg"></svg>
-                                        Все карты                                                                                  
-                                    </div>
-                                    <div class="row-ipoteka-types">
-                                        <div class="ipoteka-type active">
-                                            <svg class="all-cards" data-src="img/credit-cards-all.svg"></svg>
-                                            Все карты
-                                        </div>
-                                        <div class="ipoteka-type">
-                                            <svg class="cashback-cards" data-src="img/credit-cards-cashback.svg"></svg>
-                                            КЭШБЭК
-                                        </div>
-                                        <div class="ipoteka-type">
-                                            <svg class="travel-cards" data-src="img/credit-cards-travel.svg"></svg>
-                                            Для путешествий
-                                        </div>
-                                    </div><!-- /.row-ipoteka-types -->
-                                </div><!-- /.ipoteka-types-wrapper -->
-                            </div>
-                        </div><!-- /.row -->
-
-                        <div class="row justify-content-sm-center">
-                            <div class="col-md-4 col-lg-3">
-                                <p class="lbl lbl-top">Покупки по карте в месяц</p>
+                        <div class="row">
+                            <div class="col-sm-6 col-md-4">
+                                <p class="lbl lbl-top">Стоимость автомобиля</p>
                                 <input type="text" class="input-text" placeholder="10 000 Р">
                             </div><!-- /.col -->
-                            <div class="col-md-4 col-lg-3 bx-center">
+                            <div class="col-sm-6 col-md-3">
+                                <p class="lbl lbl-top">Первоначальный взнос</p>
+                                <input type="text" class="input-text" placeholder="10 000 Р">
+                            </div><!-- /.col -->
+                            <div class="col-sm-6 col-md-2">
+                                <p class="lbl lbl-top">Срок кредита</p>
+                                <select class="input-text"><option>Любой</option></select>
+                            </div><!-- /.col -->
+                            <div class="col-sm-12 col-md-3 bx-center">
                                 <span class="lbl lbl-top d-none d-md-block"></span>
                                 <button type="button" class="btn btn-toggle_more" id="js-btn-search-listing"><span class="indicator">+</span>Больше условий</button>
                             </div><!-- /.col -->
@@ -365,32 +348,29 @@
                                 </div><!-- /.popup-header -->
 
                                 <div class="popup-content">
-                                    <div class="row justify-content-sm-center" id="search-listing-filter">                                        
-                                        <div class="col-sm-4 col-lg-3">
-                                            <p class="lbl lbl-top">Валюта</p>
-                                            <select class="input-text"><option>Руб</option></select>
-
-                                            <label class="checkbox checkbox-column"><input type="checkbox">Льготный период на наличные</label>
-                                            <label class="checkbox checkbox-column"><input type="checkbox">Наличные в любых банкоматах</label>
-                                            <label class="checkbox checkbox-column"><input type="checkbox">Бесплатные SMS оповещения</label>
-                                        </div><!-- /.col -->
-                                        <div class="col-sm-4 col-lg-3">
-                                            <p class="lbl lbl-top">Платежные системы</p>
+                                    <div class="row justify-content-md-center" id="search-listing-filter">
+                                        <div class="col-sm-6 col-md-3">
+                                            <p class="lbl lbl-top">Состояние</p>
                                             <select class="input-text"><option>Неважно</option></select>
-
-                                            <label class="checkbox checkbox-column"><input type="checkbox">Бесплатное обслуживание</label>
-                                            <label class="checkbox checkbox-column"><input type="checkbox">Бесконтактная оплата</label>
-                                            <label class="checkbox checkbox-column"><input type="checkbox">Овердрафт</label>
                                         </div><!-- /.col -->
-                                        <div class="col-sm-4 col-lg-3">
-                                            <p class="lbl lbl-top">Тип карты</p>
+                                        
+                                        <div class="col-sm-6 col-md-3">
+                                            <p class="lbl lbl-top">Тип транспорта</p>
                                             <select class="input-text"><option>Неважно</option></select>
+                                        </div><!-- /.col -->
 
-                                            <label class="checkbox checkbox-column"><input type="checkbox">Начисление миль</label>
-                                            <label class="checkbox checkbox-column"><input type="checkbox">3D Secure</label>
-                                            <label class="checkbox checkbox-column"><input type="checkbox">Для оплаты проезда</label>
-                                        </div><!-- /.col -->                                                                                
-                                    </div><!-- /.row -->                                    
+                                        <div class="col-sm-6 col-md-3">
+                                            <p class="lbl lbl-top">Подтверждение дохода</p>
+                                            <select class="input-text"><option>Неважно</option></select>
+                                        </div><!-- /.col -->
+
+                                        <div class="col-sm-6 col-md-3">
+                                            <p class="lbl lbl-top d-none d-sm-block"></p>
+                                            <div class="input-checkbox">
+                                                <label class="checkbox"><input type="checkbox">Без КАСКО</label>
+                                            </div>
+                                        </div><!-- /.col -->                                              
+                                    </div><!-- /.row -->
                                 </div><!-- /.popup-content -->
 
                                 <div class="popup-footer popup-footer-buttons">
@@ -401,7 +381,7 @@
                         </div><!-- /# search-listing-filter popup-mob-->
 
                         <div class="row-search-bottom-mob">
-                            <p class="results-credits-found">Найдено 150 <span>карт</span></p>
+                            <p class="results-credits-found">Найдено 150 <span>кредитов</span></p>
                             <div class="drop-menu-wrapper js-drop-menu-wrapper sorting-mob-switcher">
                                 <button type="button" class="btn-sorting drop-menu-trigger js-drop-menu-trigger btn btn-narrow">По ставке</button>
                                 <div class="drop-menu js-drop-menu">
@@ -415,14 +395,13 @@
                 </form>
             </div><!-- /.section-hero-bg -->
 
-            <div class="listing-controls">                
-                <div class="listing-controls--wrap">
+            <div class="listing-controls">
+                <div class="listing-controls--wrap no-results">
                     <form action="/" class="listing-controls_sorting">
-                        <div class="listing_sort sort-bank clickable active">Банк <span class="arrow"></span></div>
-                        <div class="listing_sort sort-rate clickable">Ставка в год <span class="arrow"></span></div>
-                        <div class="listing_sort sort-limit clickable">Лимит средств<span class="arrow"></span></div>
-                        <div class="listing_sort sort-period clickable">Льготный период <span class="arrow"></span></div>
-                        <div class="listing_sort sort-price clickable">Стоимость обслуживания <span class="arrow"></span></div>
+                        <div class="listing_sort sort-bank">Банк</div>
+                        <div class="listing_sort sort-rate">Ставка в год <span class="arrow"></span></div>
+                        <div class="listing_sort sort-amount">Платёж в месяц <span class="arrow"></span></div>
+                        <div class="listing_sort sort-overpay">Переплата <span class="arrow"></span></div>
                     </form>
                     <div class="listing-controls_search">
                         <form role="search" class="form-search-listing closed" id="searchform_listing" action="#">
@@ -435,266 +414,6 @@
                 </div><!-- /.listing-controls--wrap -->
             </div><!-- /.listing-controls -->
 
-            <div class="plans-insearch-wrapper">
-                <div class="plan plan_insearch plan_credit-cards">
-                    <div class="plan-wrapper">
-                        <div class="plan-content">
-                            <div class="td__row">
-                                <div class="td td_bankname">
-                                    <a href="#"><img src="img/card-all-airlines.png" alt="pic"></a>
-                                </div><!-- td td_bankname -->                                
-                                <div class="td td_wrapper">
-                                    <div class="td td__row td_title_simple">
-                                        <div class="image">
-                                            <a href="#"><img src="img/card-all-airlines.png" alt="pic"></a>
-                                        </div><!-- /.image -->
-                                        <div class="text">
-                                            <p class="data">Карта «All Airlines» Masterсard World, Тинькофф банк</p>                                
-                                            <p class="licence">Лиц. № 4567</p>
-                                        </div><!-- /.text -->
-                                    </div>
-                                    <div class="td__row">
-                                        <div class="td td_rate">
-                                            <p class="ttl">Ставка в год</p>
-                                            <p class="data data-important">от 13%</p>
-                                        </div>
-                                        <div class="td td_limit">
-                                            <p class="ttl">Кредитный лимит</p>
-                                            <p class="data">до 500 000 Р</p>
-                                        </div>
-                                        <div class="td td_period">  
-                                            <p class="ttl">Льгот. период</p>                                                  
-                                            <p class="data">до 50 дней</p>
-                                        </div>
-                                        <div class="td td_price">
-                                            <p class="ttl">Стоимость обслуживания</p>
-                                            <p class="data">от 590 Р в год</p>
-                                        </div>
-                                    </div><!-- /.td__row -->                                    
-                                </div><!-- /.td td_wrapper -->
-                                <div class="td td_action">                                    
-                                    <a href="#" class="btn btn-cta">Оформить</a>                                    
-                                </div><!-- td td_action -->
-                            </div><!-- /.td__row -->
-                            <div class="td__row">
-                                <div class="td td_bankname">                                    
-                                    <p class="licence">Лиц. № 4567</p>
-                                </div><!-- td td_bankname -->
-
-                                <div class="td td_wrapper">                                    
-                                    <div class="td__row">
-                                        <div class="td td_rate">
-                                            <p class="p-distance">4 800 миль в год</p>
-                                        </div>
-                                        <div class="td td_limit">
-                                            <p class="p-money">10% cashback</p>
-                                        </div>
-                                        <div class="td td_period td_bonuses">  
-                                            <p class="p-cool">Акции и бонусы</p>
-                                        </div>
-                                    </div><!-- /.td__row -->
-                                </div><!-- /.td td__wrapper -->
-
-                                <div class="td td_action">
-                                    <div class="wrapper">
-                                        <p class="link-info"><a href="#">Подробнее</a></p>
-                                    </div>
-                                </div><!-- td td_action -->
-                            </div><!-- /.td__row -->
-                        </div><!-- /.plan-content -->
-                        <div class="plan-actions">
-                            <a href="#" class="plan-btn fav">
-                                <img class="svg" src="img/panel-fav.svg" alt="icon">
-                                <span>В избранное</span>
-                            </a>
-                            <a href="#" class="plan-btn compare">
-                                <img class="svg" src="img/panel-compare.svg" alt="icon">
-                                <span>Сравнить</span>
-                            </a>                                                
-                            <a href="#" class="plan-btn info">
-                                <img class="svg" src="img/panel-info.svg" alt="icon">
-                                <span>Подробнее</span>
-                            </a>
-                            <a href="#" class="plan-btn sign">
-                                <img class="svg" src="img/panel-sign.svg" alt="icon">
-                                <span>Оформить</span>
-                            </a>                                                                                                
-                        </div><!-- /.plan-actions -->
-                    </div><!-- /.plan-wrapper -->
-                </div><!-- /.plan -->                             
-                <div class="plan plan_insearch plan_credit-cards">
-                    <div class="plan-wrapper">
-                        <div class="plan-content">
-                            <div class="td__row">
-                                <div class="td td_bankname">
-                                    <a href="#"><img src="img/card-all-airlines.png" alt="pic"></a>
-                                </div><!-- td td_bankname -->                                
-                                <div class="td td_wrapper">
-                                    <div class="td td__row td_title_simple">
-                                        <div class="image">
-                                            <a href="#"><img src="img/card-all-airlines.png" alt="pic"></a>
-                                        </div><!-- /.image -->
-                                        <div class="text">
-                                            <p class="data">Карта «All Airlines» Masterсard World, Тинькофф банк</p>                                
-                                            <p class="licence">Лиц. № 4567</p>
-                                        </div><!-- /.text -->
-                                    </div>
-                                    <div class="td__row">
-                                        <div class="td td_rate">
-                                            <p class="ttl">Ставка в год</p>
-                                            <p class="data data-important">от 13%</p>
-                                        </div>
-                                        <div class="td td_limit">
-                                            <p class="ttl">Кредитный лимит</p>
-                                            <p class="data">до 500 000 Р</p>
-                                        </div>
-                                        <div class="td td_period">  
-                                            <p class="ttl">Льгот. период</p>                                                  
-                                            <p class="data">до 50 дней</p>
-                                        </div>
-                                        <div class="td td_price">
-                                            <p class="ttl">Стоимость обслуживания</p>
-                                            <p class="data">от 590 Р в год</p>
-                                        </div>
-                                    </div><!-- /.td__row -->                                    
-                                </div><!-- /.td td_wrapper -->
-                                <div class="td td_action">                                    
-                                    <a href="#" class="btn btn-cta">Оформить</a>                                    
-                                </div><!-- td td_action -->
-                            </div><!-- /.td__row -->
-                            <div class="td__row">
-                                <div class="td td_bankname">                                    
-                                    <p class="licence">Лиц. № 4567</p>
-                                </div><!-- td td_bankname -->
-
-                                <div class="td td_wrapper">                                    
-                                    <div class="td__row">
-                                        <div class="td td_rate">
-                                            <p class="p-distance">4 800 миль в год</p>
-                                        </div>
-                                        <div class="td td_limit">
-                                            <p class="p-money">10% cashback</p>
-                                        </div>
-                                        <div class="td td_period td_bonuses">  
-                                            <p class="p-cool">Акции и бонусы</p>
-                                        </div>
-                                    </div><!-- /.td__row -->
-                                </div><!-- /.td td__wrapper -->
-
-                                <div class="td td_action">
-                                    <div class="wrapper">
-                                        <p class="link-info"><a href="#">Подробнее</a></p>
-                                    </div>
-                                </div><!-- td td_action -->
-                            </div><!-- /.td__row -->
-                        </div><!-- /.plan-content -->
-                        <div class="plan-actions">
-                            <a href="#" class="plan-btn fav">
-                                <img class="svg" src="img/panel-fav.svg" alt="icon">
-                                <span>В избранное</span>
-                            </a>
-                            <a href="#" class="plan-btn compare">
-                                <img class="svg" src="img/panel-compare.svg" alt="icon">
-                                <span>Сравнить</span>
-                            </a>                                                
-                            <a href="#" class="plan-btn info">
-                                <img class="svg" src="img/panel-info.svg" alt="icon">
-                                <span>Подробнее</span>
-                            </a>
-                            <a href="#" class="plan-btn sign">
-                                <img class="svg" src="img/panel-sign.svg" alt="icon">
-                                <span>Оформить</span>
-                            </a>                                                                                                
-                        </div><!-- /.plan-actions -->
-                    </div><!-- /.plan-wrapper -->
-                </div><!-- /.plan -->                             
-                <div class="plan plan_insearch plan_credit-cards">
-                    <div class="plan-wrapper">
-                        <div class="plan-content">
-                            <div class="td__row">
-                                <div class="td td_bankname">
-                                    <a href="#"><img src="img/card-all-airlines.png" alt="pic"></a>
-                                </div><!-- td td_bankname -->                                
-                                <div class="td td_wrapper">
-                                    <div class="td td__row td_title_simple">
-                                        <div class="image">
-                                            <a href="#"><img src="img/card-all-airlines.png" alt="pic"></a>
-                                        </div><!-- /.image -->
-                                        <div class="text">
-                                            <p class="data">Карта «All Airlines» Masterсard World, Тинькофф банк</p>                                
-                                            <p class="licence">Лиц. № 4567</p>
-                                        </div><!-- /.text -->
-                                    </div>
-                                    <div class="td__row">
-                                        <div class="td td_rate">
-                                            <p class="ttl">Ставка в год</p>
-                                            <p class="data data-important">от 13%</p>
-                                        </div>
-                                        <div class="td td_limit">
-                                            <p class="ttl">Кредитный лимит</p>
-                                            <p class="data">до 500 000 Р</p>
-                                        </div>
-                                        <div class="td td_period">  
-                                            <p class="ttl">Льгот. период</p>                                                  
-                                            <p class="data">до 50 дней</p>
-                                        </div>
-                                        <div class="td td_price">
-                                            <p class="ttl">Стоимость обслуживания</p>
-                                            <p class="data">от 590 Р в год</p>
-                                        </div>
-                                    </div><!-- /.td__row -->                                    
-                                </div><!-- /.td td_wrapper -->
-                                <div class="td td_action">                                    
-                                    <a href="#" class="btn btn-cta">Оформить</a>                                    
-                                </div><!-- td td_action -->
-                            </div><!-- /.td__row -->
-                            <div class="td__row">
-                                <div class="td td_bankname">                                    
-                                    <p class="licence">Лиц. № 4567</p>
-                                </div><!-- td td_bankname -->
-
-                                <div class="td td_wrapper">                                    
-                                    <div class="td__row">
-                                        <div class="td td_rate">
-                                            <p class="p-distance">4 800 миль в год</p>
-                                        </div>
-                                        <div class="td td_limit">
-                                            <p class="p-money">10% cashback</p>
-                                        </div>
-                                        <div class="td td_period td_bonuses">  
-                                            <p class="p-cool">Акции и бонусы</p>
-                                        </div>
-                                    </div><!-- /.td__row -->
-                                </div><!-- /.td td__wrapper -->
-
-                                <div class="td td_action">
-                                    <div class="wrapper">
-                                        <p class="link-info"><a href="#">Подробнее</a></p>
-                                    </div>
-                                </div><!-- td td_action -->
-                            </div><!-- /.td__row -->
-                        </div><!-- /.plan-content -->
-                        <div class="plan-actions">
-                            <a href="#" class="plan-btn fav">
-                                <img class="svg" src="img/panel-fav.svg" alt="icon">
-                                <span>В избранное</span>
-                            </a>
-                            <a href="#" class="plan-btn compare">
-                                <img class="svg" src="img/panel-compare.svg" alt="icon">
-                                <span>Сравнить</span>
-                            </a>                                                
-                            <a href="#" class="plan-btn info">
-                                <img class="svg" src="img/panel-info.svg" alt="icon">
-                                <span>Подробнее</span>
-                            </a>
-                            <a href="#" class="plan-btn sign">
-                                <img class="svg" src="img/panel-sign.svg" alt="icon">
-                                <span>Оформить</span>
-                            </a>                                                                                                
-                        </div><!-- /.plan-actions -->
-                    </div><!-- /.plan-wrapper -->
-                </div><!-- /.plan -->                                                                 
-            </div><!-- /.plans-insearch-wrapper -->            
 
             <div class="bx-center">
                 <button type="button" class="btn btn-listing-showmore">Показать еще 15</button>

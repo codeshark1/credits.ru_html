@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&subset=cyrillic");
+@import url("http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&subset=cyrillic");
 /* ==========================================================================
    BASE
    ========================================================================== */
@@ -2598,10 +2598,16 @@ NAVIGATION
     border-width: 1px 0;
     margin-bottom: 10px; }
     .listing-controls--wrap {
-      padding: 5px 0;
+      padding-top: 5px;
+      padding-bottom: 5px;
       display: flex;
       align-items: center;
       margin: 0 auto; }
+      .listing-controls--wrap.no-results {
+        padding-left: 15px;
+        padding-right: 15px; }
+        .listing-controls--wrap.no-results .listing-controls_sorting {
+          justify-content: space-between; }
     .listing-controls_sorting {
       display: flex;
       width: 75%;
@@ -2618,7 +2624,8 @@ NAVIGATION
 .listing_sort {
   color: #000;
   flex-shrink: 0;
-  font-size: 14px; }
+  font-size: 14px;
+  flex-grow: 1; }
   .listing_sort.sort-rate, .listing_sort.sort-amount, .listing_sort.sort-overpay, .listing_sort.sort-time {
     cursor: pointer; }
   .listing_sort .arrow {
