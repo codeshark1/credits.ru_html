@@ -88,29 +88,31 @@ jQuery(document).ready(function($){
     }
     tabs();
 
-    function drop_menu() {
-        $('.drop-menu-trigger').click(function(e){
+    function drop_menu(trigger, menu, link, wrapper) {
+        $(trigger).click(function(e){
             e.preventDefault();
-            if ( $(this).siblings('.drop-menu').is(':visible') ) {
-                $(this).siblings('.drop-menu').fadeOut(100);
+            if ( $(this).siblings(menu).is(':visible') ) {
+                $(this).siblings(menu).fadeOut(100);
             } else {
-                $(this).siblings('.drop-menu').fadeIn(100)
+                $(this).siblings(menu).fadeIn(100)
             }
         });
-        $('.drop-menu a').click(function(e){
+        $(link).click(function(e){
             e.preventDefault();
             if (! $(this).hasClass('active') ) {
-                $(this).parents('.drop-menu-wrapper').find('.active').removeClass('active');
+                $(this).parents(wrapper).find('.active').removeClass('active');
+                console.log(link);
                 $(this).addClass('active')
-                .parents('.drop-menu-wrapper')
-                .find('.drop-menu-trigger')
-                .text($(this).text())
-                .siblings('.drop-menu')
+                .parents(wrapper)
+                .find(trigger)
+                .html($(this).html())
+                .siblings(menu)
                 .fadeOut(100);
             }
         });
     }
-    drop_menu();
+    drop_menu('.drop-menu-trigger', '.drop-menu', '.drop-menu a', '.drop-menu-wrapper');
+    drop_menu('.ipoteka-types-current', '.row-ipoteka-types', '.ipoteka-type', '.ipoteka-types-wrapper');
 
     $(".plan-wrapper").swipe( { // глобальная
         swipe:function(event, direction, distance, duration, fingerCount, fingerData) {

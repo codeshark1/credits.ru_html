@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&subset=cyrillic");
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&subset=cyrillic");
 /* ==========================================================================
    BASE
    ========================================================================== */
@@ -3361,7 +3361,7 @@ NAVIGATION
 .ipoteka-types-wrapper {
   position: relative;
   margin: 0 0 15px 0; }
-  @media (max-width: 767px) {
+  @media (max-width: 576px) {
     .ipoteka-types-wrapper {
       margin: 0 15px 15px; } }
   @media (min-width: 768px) {
@@ -3373,6 +3373,16 @@ NAVIGATION
 .row .ipoteka-types-wrapper {
   margin-left: 0;
   margin-right: 0; }
+
+@media (max-width: 767px) {
+  .row-ipoteka-types {
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.14);
+    display: none; } }
+@media (min-width: 768px) {
+  .row-ipoteka-types {
+    display: flex !important; } }
 
 .ipoteka-types-current {
   border-radius: 5px;
@@ -3388,32 +3398,23 @@ NAVIGATION
     bottom: 0;
     margin: auto; }
 
-@media (max-width: 767px) {
-  .row-ipoteka-types {
-    border-radius: 5px;
-    overflow: hidden;
-    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.14); } }
-@media (min-width: 768px) {
-  .row-ipoteka-types {
-    display: flex; } }
-
-.ipoteka-type {
+.ipoteka-type, .ipoteka-types-current {
   background: #fff;
   cursor: pointer;
   height: 40px;
   display: flex;
   align-items: center;
   padding-left: 12px; }
-  .ipoteka-type svg {
+  .ipoteka-type svg, .ipoteka-types-current svg {
     max-height: 100%;
     margin-right: 7px; }
   @media (max-width: 767px) {
-    .ipoteka-type.active {
+    .ipoteka-type.active, .ipoteka-types-current.active {
       background: #f8fcff; }
-    .ipoteka-type svg {
+    .ipoteka-type svg, .ipoteka-types-current svg {
       width: 17px; } }
   @media (min-width: 768px) {
-    .ipoteka-type {
+    .ipoteka-type, .ipoteka-types-current {
       text-transform: uppercase;
       height: 64px;
       justify-content: center;
@@ -3422,29 +3423,29 @@ NAVIGATION
       border-radius: 5px;
       font-size: 14px;
       padding: 0 5px; }
-      .ipoteka-type:first-child {
+      .ipoteka-type:first-child, .ipoteka-types-current:first-child {
         margin-left: 0; }
-      .ipoteka-type:last-child {
+      .ipoteka-type:last-child, .ipoteka-types-current:last-child {
         margin-right: 0; }
-      .ipoteka-type svg {
+      .ipoteka-type svg, .ipoteka-types-current svg {
         max-width: 34px;
         max-height: 31px;
         margin-right: 7px; }
-      .ipoteka-type.active {
+      .ipoteka-type.active, .ipoteka-types-current.active {
         box-shadow: 0 0 0 2px #ffca3c; }
-      .ipoteka-type .all {
+      .ipoteka-type .all, .ipoteka-types-current .all {
         width: 24px; }
-      .ipoteka-type .vtor {
+      .ipoteka-type .vtor, .ipoteka-types-current .vtor {
         width: 31px; }
-      .ipoteka-type .zagor {
+      .ipoteka-type .zagor, .ipoteka-types-current .zagor {
         width: 31px; }
-      .ipoteka-type .stroy {
+      .ipoteka-type .stroy, .ipoteka-types-current .stroy {
         width: 25px; } }
   @media (min-width: 992px) {
-    .ipoteka-type {
+    .ipoteka-type, .ipoteka-types-current {
       font-size: 1rem; } }
   @media (min-width: 1200px) {
-    .ipoteka-type {
+    .ipoteka-type, .ipoteka-types-current {
       font-size: 18px; } }
 
 label.checkbox-column {
