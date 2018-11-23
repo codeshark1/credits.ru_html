@@ -1997,12 +1997,6 @@ NAVIGATION
         margin: 0 35px 15px 0;
         page-break-inside: avoid;
         break-inside: avoid-column; }
-        .menu-main .sub-menu li:hover a {
-          color: #ff2633;
-          padding: 0 0 0 14px; }
-          .menu-main .sub-menu li:hover a:before {
-            opacity: 1;
-            transform: scale(1); }
         .menu-main .sub-menu li a {
           position: relative;
           display: block;
@@ -2014,7 +2008,7 @@ NAVIGATION
             position: absolute;
             content: '';
             top: 50%;
-            left: 4.5px;
+            left: -6px;
             width: 0;
             height: 0;
             border-style: solid;
@@ -2024,6 +2018,11 @@ NAVIGATION
             transform: scale(0.5);
             transition: all .3s ease-in-out;
             margin: -4.5px; }
+        .menu-main .sub-menu li:hover a {
+          color: #ff2633; }
+          .menu-main .sub-menu li:hover a:before {
+            opacity: 1;
+            transform: scale(1); }
       .menu-main .sub-menu.cols {
         column-count: 2; }
     .menu-main li:hover .sub-menu {
@@ -4347,6 +4346,15 @@ section + .view-all {
     .legal-wrapper .menu {
       display: flex; } }
 
+@media (min-width: 768px) {
+  .link-footer, .tel-footer {
+    display: inline-block; }
+
+  .link-footer {
+    margin-right: 20px; }
+
+  .footer--lvl-2 .footer--col-1 {
+    max-width: 850px; } }
 .tel-footer a {
   color: #fff; }
 

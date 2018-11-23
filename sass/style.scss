@@ -343,14 +343,6 @@ NAVIGATION
 				margin: 0 35px 15px 0;
 				page-break-inside: avoid;
 				break-inside: avoid-column;
-				&:hover a {
-					color: #ff2633;
-					padding: 0 0 0 14px;
-					&:before {
-						opacity: 1;
-						transform: scale(1);
-					}
-				}
 				a {
 					position: relative;
 					display: block;
@@ -362,7 +354,8 @@ NAVIGATION
 						position: absolute;
 						content: '';
 						top: 50%;
-						left: 4.5px;
+						//left: 4.5px;
+						left: -6px;
 						width: 0;
 						height: 0;
 						border-style: solid;
@@ -370,10 +363,18 @@ NAVIGATION
 						border-color: transparent transparent transparent #ff2634;
 						opacity: 0;
 						transform: scale(0.5);
-						  transition: all .3s ease-in-out;
-						  margin: -4.5px;
+						transition: all .3s ease-in-out;
+						margin: -4.5px;
 					}
 				}
+				&:hover a {
+					color: #ff2633;
+					//padding: 0 0 0 14px;
+					&:before {
+						opacity: 1;
+						transform: scale(1);
+					}
+				}				
 			}
 			&.cols {column-count: 2}			
 		}
@@ -2736,7 +2737,13 @@ section+.view-all {
 		.menu {display: flex;}
 	}
 }
-
+@media (min-width: $screen-sm-min) {
+	.link-footer, .tel-footer {
+		display: inline-block;
+	}
+	.link-footer {margin-right: 20px;}
+	.footer--lvl-2 .footer--col-1 {max-width: 850px;}	
+}
 .tel-footer {
 	a {color: #fff}
 }
