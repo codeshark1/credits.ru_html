@@ -92,22 +92,21 @@ jQuery(document).ready(function($){
         $(trigger).click(function(e){
             e.preventDefault();
             if ( $(this).siblings(menu).is(':visible') ) {
-                $(this).siblings(menu).fadeOut(100);
+                $(this).siblings(menu).css('display','none');
             } else {
-                $(this).siblings(menu).fadeIn(100)
+                $(this).siblings(menu).css('display','block')
             }
         });
         $(link).click(function(e){
             e.preventDefault();
             if (! $(this).hasClass('active') ) {
                 $(this).parents(wrapper).find('.active').removeClass('active');
-                console.log(link);
                 $(this).addClass('active')
                 .parents(wrapper)
                 .find(trigger)
                 .html($(this).html())
                 .siblings(menu)
-                .fadeOut(100);
+                .hide();
             }
         });
     }
