@@ -1162,16 +1162,13 @@ hr {background: #dcdcdc; height: 1px; border: none;}
 
 .nav-tabs-news {
   padding-top: 15px;
-  @media (min-width: $screen-md-min) {
+  @media (min-width: $screen-sm-min) {
+    .menu-item {margin-right: 0}
     display: flex !important;
     padding-right: 10px;
     align-items: flex-end;
-    .menu-item {
-      margin-right: 3%;
-      flex-grow: 1;
-      display: inline-flex;
-      &:last-child {margin-right: 0;}
-    }
+    flex-wrap: nowrap;
+    justify-content: space-between;
   }
 }
 

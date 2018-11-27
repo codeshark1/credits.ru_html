@@ -1174,17 +1174,15 @@ hr {
 
 .nav-tabs-news {
   padding-top: 15px; }
-  @media (min-width: 992px) {
+  @media (min-width: 768px) {
     .nav-tabs-news {
       display: flex !important;
       padding-right: 10px;
-      align-items: flex-end; }
+      align-items: flex-end;
+      flex-wrap: nowrap;
+      justify-content: space-between; }
       .nav-tabs-news .menu-item {
-        margin-right: 3%;
-        flex-grow: 1;
-        display: inline-flex; }
-        .nav-tabs-news .menu-item:last-child {
-          margin-right: 0; } }
+        margin-right: 0; } }
 
 /* ==========================================================================
    SIDEBAR
