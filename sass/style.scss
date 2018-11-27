@@ -502,6 +502,13 @@ NAVIGATION
 .section-top {
 	padding-top: 16px;
 }
+
+.no-mg-xs {
+	@media (max-width: $screen-xs-max) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
 .section-shift {	
 	@media (min-width: $screen-sm-min) {
 		.content {
@@ -1177,7 +1184,7 @@ NAVIGATION
 		transition: all .3s;
 		font-weight: 400;		
 	}
-	@media (max-width: $screen-xs-max) {
+	@media (max-width: $screen-xs) {
 		&-wrapper {margin: 0 15px 1rem;
 			position: relative;
 		}
@@ -1220,7 +1227,7 @@ NAVIGATION
 			&.active a {background: #f8fcff}
 		}
 	}
-	@media (min-width: $screen-sm-min) {
+	@media (min-width: $screen-xs-min) {
 		max-width: 500px;
 		display: block !important;
 		display: flex !important;

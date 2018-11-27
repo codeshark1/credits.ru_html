@@ -2132,6 +2132,11 @@ NAVIGATION
 .section-top {
   padding-top: 16px; }
 
+@media (max-width: 767px) {
+  .no-mg-xs {
+    padding-left: 0;
+    padding-right: 0; } }
+
 @media (min-width: 768px) {
   .section-shift .content {
     padding-left: 39px !important; } }
@@ -2778,7 +2783,7 @@ NAVIGATION
   color: #969696;
   transition: all .3s;
   font-weight: 400; }
-@media (max-width: 767px) {
+@media (max-width: 576px) {
   .nav-tabs {
     background: #fff;
     border-radius: 5px;
@@ -2815,7 +2820,7 @@ NAVIGATION
       display: block; }
     .nav-tabs .menu-item.active a {
       background: #f8fcff; } }
-@media (min-width: 768px) {
+@media (min-width: 576px) {
   .nav-tabs {
     max-width: 500px;
     display: block !important;
