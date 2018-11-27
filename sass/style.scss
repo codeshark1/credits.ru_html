@@ -500,7 +500,7 @@ NAVIGATION
 	}
 }
 .section-top {
-	padding-top: 20px;
+	padding-top: 16px;
 }
 .section-shift {	
 	@media (min-width: $screen-sm-min) {
@@ -613,7 +613,7 @@ NAVIGATION
 	}
 	@media (min-width: $screen-sm-min) {
 		font-size: 35px;
-		margin: 35px 0 20px;
+		margin: 0 0 20px 0;
 		&:before {
 			width: 64px;height: 37px;margin-left: -32px;
 		}
@@ -761,9 +761,9 @@ NAVIGATION
 	padding-bottom: 30px;
 	.container {padding-left: 15px;padding-right: 15px;}
 	@media (min-width: $screen-sm-min) {
-		padding-top: 20px;
+		padding-top: 16px;
 		padding-bottom: 30px;
-		.h-hero {margin-top: 50px;}
+		//.h-hero {margin-top: 50px;}
 	}
 }
 

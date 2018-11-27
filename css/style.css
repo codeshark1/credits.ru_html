@@ -704,6 +704,11 @@ h1, h2, h3, h4 {
 @media (max-width: 991px) {
   .breadcrumbs {
     padding: 0 10px; } }
+@media (min-width: 768px) {
+  .breadcrumbs {
+    margin-bottom: 55px; }
+    .breadcrumbs:last-child {
+      margin-bottom: 0; } }
 
 .row-mod {
   display: flex;
@@ -2127,7 +2132,7 @@ NAVIGATION
       margin-bottom: 4rem !important; } }
 
 .section-top {
-  padding-top: 20px; }
+  padding-top: 16px; }
 
 @media (min-width: 768px) {
   .section-shift .content {
@@ -2234,7 +2239,7 @@ NAVIGATION
   @media (min-width: 768px) {
     .h-searchcredits {
       font-size: 35px;
-      margin: 35px 0 20px; }
+      margin: 0 0 20px 0; }
       .h-searchcredits:before {
         width: 64px;
         height: 37px;
@@ -2391,10 +2396,8 @@ NAVIGATION
     padding-right: 15px; }
   @media (min-width: 768px) {
     .section-hero {
-      padding-top: 20px;
-      padding-bottom: 30px; }
-      .section-hero .h-hero {
-        margin-top: 50px; } }
+      padding-top: 16px;
+      padding-bottom: 30px; } }
 
 .h-hero {
   font-size: 20px;
