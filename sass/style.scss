@@ -1014,6 +1014,7 @@ NAVIGATION
 	flex-shrink: 0;
 	font-size: 14px;
 	flex-grow: 1;
+	white-space: nowrap;
 	&.sort-rate, &.sort-amount, &.sort-overpay, &.sort-time {
 		cursor: pointer;
 	}
@@ -2021,7 +2022,7 @@ label.checkbox-column {margin-bottom: 20px;}
 .section-article {
 	background: #fff;
 	padding: 20px 15px;
-	p {margin-bottom: 25px;}
+	>p {margin-bottom: 25px;}
 	.bx-footer,.bx-header {
 		font-size: 0.85rem;
 		margin-bottom: 25px;
@@ -2053,7 +2054,7 @@ label.checkbox-column {margin-bottom: 20px;}
 	.h2 {font-weight: 400; font-size: 16px; margin: 0 0 10px 0}
 	@media (min-width: $screen-sm-min) {
 		padding: 35px 40px;
-		p {margin-bottom: 35px;}
+		>p {margin-bottom: 35px;}
 		.h2 {font-size: 20px; margin: 0 0 15px 0}
 		.bx-footer {margin-bottom: 35px;}
 		.h-section {margin-bottom: 30px;}

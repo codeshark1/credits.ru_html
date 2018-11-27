@@ -2626,7 +2626,8 @@ NAVIGATION
   color: #000;
   flex-shrink: 0;
   font-size: 14px;
-  flex-grow: 1; }
+  flex-grow: 1;
+  white-space: nowrap; }
   .listing_sort.sort-rate, .listing_sort.sort-amount, .listing_sort.sort-overpay, .listing_sort.sort-time {
     cursor: pointer; }
   .listing_sort .arrow {
@@ -3635,7 +3636,7 @@ label.checkbox-column {
 .section-article {
   background: #fff;
   padding: 20px 15px; }
-  .section-article p {
+  .section-article > p {
     margin-bottom: 25px; }
   .section-article .bx-footer, .section-article .bx-header {
     font-size: 0.85rem;
@@ -3673,7 +3674,7 @@ label.checkbox-column {
   @media (min-width: 768px) {
     .section-article {
       padding: 35px 40px; }
-      .section-article p {
+      .section-article > p {
         margin-bottom: 35px; }
       .section-article .h2 {
         font-size: 20px;
