@@ -3012,6 +3012,9 @@ NAVIGATION
     position: absolute;
     left: 0;
     width: 100%; }
+  @media (max-width: 576px) {
+    .plan_insearch .ttl {
+      white-space: nowrap; } }
   @media (max-width: 767px) {
     .plan_insearch .ttl {
       height: 20px;

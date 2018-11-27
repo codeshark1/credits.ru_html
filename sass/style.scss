@@ -1416,6 +1416,9 @@ NAVIGATION
 		left: 0;
 		width: 100%;	
 	}	
+	@media (max-width: $screen-xs) {
+		.ttl {white-space: nowrap}
+	}
 	@media (max-width: $screen-xs-max) {
 		.ttl {height: 20px; display: block}
 		.td_amount .min {display: none}
