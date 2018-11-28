@@ -67,10 +67,31 @@ textarea {
   width: 100%;
   border: 1px solid rgba(0, 0, 0, 0.07);
   margin: 0;
-  font-size: 14px;
+  font-size: 1rem;
   transition: all .3s ease-in-out;
   border-radius: 5px;
   padding: 12px 15px; }
+  input[type="text"].input-price,
+  input[type="email"].input-price,
+  input[type="password"].input-price,
+  input[type="url"].input-price,
+  input[type="tel"].input-price,
+  input[type="number"].input-price,
+  input[type="search"].input-price,
+  select.input-price,
+  textarea.input-price {
+    font-size: 1.3rem; }
+    @media (min-width: 768px) {
+      input[type="text"].input-price,
+      input[type="email"].input-price,
+      input[type="password"].input-price,
+      input[type="url"].input-price,
+      input[type="tel"].input-price,
+      input[type="number"].input-price,
+      input[type="search"].input-price,
+      select.input-price,
+      textarea.input-price {
+        font-size: 1.5rem; } }
 
 textarea {
   resize: vertical;
@@ -3413,7 +3434,8 @@ NAVIGATION
   height: 40px;
   display: flex;
   align-items: center;
-  padding-left: 12px; }
+  padding-left: 12px;
+  display: flex; }
   .ipoteka-type svg, .ipoteka-types-current svg {
     max-height: 100%;
     margin-right: 7px; }

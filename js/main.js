@@ -89,27 +89,28 @@ jQuery(document).ready(function($){
     tabs();
 
     function drop_menu(trigger, menu, link, wrapper) {
-        $(trigger).click(function(e){
-            e.preventDefault();
-            if ( $(this).siblings(menu).is(':visible') ) {
-                $(this).siblings(menu).css('display','none');
-            } else {
-                $(this).siblings(menu).css('display','block')
-            }
-        });
-        $(link).click(function(e){
-            e.preventDefault();
-            if (! $(this).hasClass('active') ) {
-                $(this).parents(wrapper).find('.active').removeClass('active');
-                $(this).addClass('active')
-                .parents(wrapper)
-                .find(trigger)
-                .html($(this).html())
-                .siblings(menu)
-                .hide();
-            }
-        });
-    }
+		$(trigger).html($(link+'.active').html()).attr('href', $(link+'.active').attr('href'));
+		$(trigger).click(function(e){
+			e.preventDefault();
+			if ( $(this).siblings(menu).is(':visible') ) {
+				$(this).siblings(menu).css('display','none');
+			} else {
+				$(this).siblings(menu).css('display','block')
+			}
+		});
+		$(link).click(function(e){
+			if (! $(this).hasClass('active') ) {
+				$(this).parents(wrapper).find('.active').removeClass('active');
+				$(this).addClass('active')
+					.parents(wrapper)
+					.find(trigger)
+					.html($(this).html())
+					.siblings(menu)
+					.hide();
+			}
+		});
+	}
+
     drop_menu('.drop-menu-trigger', '.drop-menu', '.drop-menu a', '.drop-menu-wrapper');
     drop_menu('.ipoteka-types-current', '.row-ipoteka-types', '.ipoteka-type', '.ipoteka-types-wrapper');
 

@@ -52,10 +52,16 @@ textarea {
   width: 100%;
   border: 1px solid rgba(#000, .07);
   margin: 0;
-  font-size: 14px;
+  font-size: 1rem;
   transition: all .3s ease-in-out;
   border-radius: 5px;
   padding: 12px 15px;
+  &.input-price {
+    font-size: 1.3rem;
+    @media (min-width: $screen-sm-min) {
+      font-size: 1.5rem;
+    }
+  }  
 }
 textarea {
   resize: vertical;
@@ -83,6 +89,7 @@ textarea:focus {
   box-shadow: 0 0 5px #6889ff;
   border: 1px solid #6889ff;
 }
+
 
 .lbl {  
   font-weight: 400;
