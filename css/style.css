@@ -724,7 +724,8 @@ h1, h2, h3, h4 {
       content: none; }
 @media (max-width: 991px) {
   .breadcrumbs {
-    padding: 0 10px; } }
+    padding: 0 10px;
+    margin-bottom: 30px; } }
 @media (min-width: 768px) {
   .breadcrumbs {
     margin-bottom: 55px; }
@@ -1151,59 +1152,6 @@ hr {
 @media (min-width: 768px) {
   .section-fullcolor > .nav-tabs-content-wrapper {
     margin-top: -20px; } }
-
-.nav-tabs-content a {
-  transition: all .3s;
-  font-weight: 400; }
-.nav-tabs-content-wrapper {
-  margin-bottom: 20px; }
-@media (min-width: 768px) {
-  .nav-tabs-content-wrapper {
-    border-bottom: 1px solid #acacac;
-    background: #fff;
-    margin-bottom: 40px; }
-  .nav-tabs-content-control {
-    display: none; }
-  .nav-tabs-content .menu-item {
-    display: inline-block;
-    margin-right: 50px; }
-    .nav-tabs-content .menu-item:last-child {
-      margin-right: 0; }
-    .nav-tabs-content .menu-item a {
-      display: block;
-      position: relative;
-      padding-bottom: 1rem; }
-      .nav-tabs-content .menu-item a:after {
-        content: '';
-        text-transform: uppercase;
-        height: 2px;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        width: 0;
-        transition: width .3s; }
-    .nav-tabs-content .menu-item.active a {
-      color: #ff0000;
-      font-weight: 500; }
-      .nav-tabs-content .menu-item.active a:after {
-        background: #ff0000;
-        width: 100%; }
-    .nav-tabs-content .menu-item.active a:after, .nav-tabs-content .menu-item:hover a:after {
-      background: #ff0000;
-      width: 100%; } }
-
-.nav-tabs-news {
-  padding-top: 15px; }
-  @media (min-width: 768px) {
-    .nav-tabs-news {
-      display: flex !important;
-      padding-right: 10px;
-      align-items: flex-end;
-      flex-wrap: nowrap;
-      justify-content: space-between; }
-      .nav-tabs-news .menu-item {
-        margin-right: 0; } }
 
 /* ==========================================================================
    SIDEBAR
@@ -2804,6 +2752,27 @@ NAVIGATION
   color: #969696;
   transition: all .3s;
   font-weight: 400; }
+.nav-tabs-control {
+  border-radius: 5px;
+  background: #fff;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 400;
+  margin-bottom: 1rem; }
+  .nav-tabs-control .tab-selected {
+    text-transform: uppercase;
+    cursor: pointer; }
+    .nav-tabs-control .tab-selected:after {
+      content: "";
+      width: 11px;
+      height: 7px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11 7' width='11'%3E%3Cpolygon points='5.5 7 0 0.7 0.61 0 5.5 5.6 10.39 0 11 0.7 5.5 7'/%3E%3C/svg%3E");
+      display: inline-block;
+      margin-left: 10px;
+      vertical-align: middle; }
+.nav-tabs-wrapper {
+  position: relative; }
 @media (max-width: 576px) {
   .nav-tabs {
     background: #fff;
@@ -2815,27 +2784,6 @@ NAVIGATION
     z-index: 2;
     box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.14);
     display: none; }
-    .nav-tabs-wrapper {
-      margin: 0 15px 1rem;
-      position: relative; }
-    .nav-tabs-control {
-      border-radius: 5px;
-      background: #fff;
-      padding: 15px;
-      display: flex;
-      justify-content: space-between;
-      font-weight: 400; }
-      .nav-tabs-control .tab-selected {
-        text-transform: uppercase;
-        cursor: pointer; }
-        .nav-tabs-control .tab-selected:after {
-          content: "";
-          width: 11px;
-          height: 7px;
-          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11 7' width='11'%3E%3Cpolygon points='5.5 7 0 0.7 0.61 0 5.5 5.6 10.39 0 11 0.7 5.5 7'/%3E%3C/svg%3E");
-          display: inline-block;
-          margin-left: 10px;
-          vertical-align: middle; }
     .nav-tabs .menu-item a {
       padding: 10px 17px;
       display: block; }
@@ -2844,15 +2792,11 @@ NAVIGATION
 @media (min-width: 576px) {
   .nav-tabs {
     max-width: 500px;
-    display: block !important;
-    display: flex !important;
     justify-content: space-between; }
     .nav-tabs-wrapper {
       border-bottom: 1px solid #acacac;
       padding: 0 20px;
       background: #fff; }
-    .nav-tabs-control {
-      display: none; }
     .nav-tabs .menu-item {
       display: inline-block; }
       .nav-tabs .menu-item:last-child {
@@ -3480,7 +3424,8 @@ NAVIGATION
       font-size: 18px; } }
 
 label.checkbox-column {
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  display: block; }
 
 /* -PLANS */
 /* ACCORDION */
@@ -3630,6 +3575,9 @@ label.checkbox-column {
 .p-cool {
   background: url("../img/i-cool.png") no-repeat 0 50%; }
 
+@media (max-width: 576px) {
+  .card-credit_card {
+    padding: 0; } }
 @media (min-width: 576px) {
   .card-credit_card {
     margin-bottom: 30px; } }
@@ -4265,6 +4213,63 @@ section + .view-all {
 
 .nav-tabs-wrapper-newsfeed {
   margin-bottom: 0; }
+
+.nav-tabs-content a {
+  transition: all .3s;
+  font-weight: 400; }
+.nav-tabs-content-wrapper {
+  margin-bottom: 20px; }
+@media (min-width: 768px) {
+  .nav-tabs-content-wrapper {
+    border-bottom: 1px solid #acacac;
+    background: #fff;
+    margin-bottom: 40px; }
+  .nav-tabs-content-control {
+    display: none; }
+  .nav-tabs-content .menu-item {
+    display: inline-block;
+    margin-right: 50px; }
+    .nav-tabs-content .menu-item:last-child {
+      margin-right: 0; }
+    .nav-tabs-content .menu-item a {
+      display: block;
+      position: relative;
+      padding-bottom: 1rem; }
+      .nav-tabs-content .menu-item a:after {
+        content: '';
+        text-transform: uppercase;
+        height: 2px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 0;
+        transition: width .3s; }
+    .nav-tabs-content .menu-item.active a {
+      color: #ff0000;
+      font-weight: 500; }
+      .nav-tabs-content .menu-item.active a:after {
+        background: #ff0000;
+        width: 100%; }
+    .nav-tabs-content .menu-item.active a:after, .nav-tabs-content .menu-item:hover a:after {
+      background: #ff0000;
+      width: 100%; } }
+
+.nav-tabs-news {
+  max-width: inherit !important; }
+  .nav-tabs-news .menu-item a {
+    text-transform: none; }
+  @media (min-width: 768px) {
+    .nav-tabs-news {
+      padding-right: 10px;
+      align-items: flex-end;
+      flex-wrap: nowrap;
+      justify-content: space-between; }
+      .nav-tabs-news .menu-item {
+        margin-right: 0; } }
+  @media (min-width: 1200px) {
+    .nav-tabs-news {
+      padding-right: 20px; } }
 
 /* ==========================================================================
    SIDEBAR

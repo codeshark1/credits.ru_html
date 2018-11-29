@@ -74,16 +74,16 @@ jQuery(document).ready(function($){
             var tab_id = $(this).attr('href');
             $('.js-nav-tabs li').removeClass('active');
             $(this).parent().addClass('active');
-            $('.tabcontent').fadeOut(300);
+            $('.tabcontent').css('display','none');
             $(tab_id).fadeIn(300);
             $(this).parents('.nav-tabs-wrapper').find('.tab-selected').text($(this).text());
             if ($(window).width() < 768) {
-                $(this).parents('.nav-tabs').fadeOut(100);
+                $(this).parents('.nav-tabs').css('display','none');
             }
         });
         $('.tab-selected').click(function(e){
             e.preventDefault();
-            $(this).parents('.nav-tabs-wrapper').find('.nav-tabs').fadeIn(100);
+            $(this).parents('.nav-tabs-wrapper').find('.nav-tabs').css('display','block');
         });
     }
     tabs();

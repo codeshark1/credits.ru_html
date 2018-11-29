@@ -1184,13 +1184,33 @@ NAVIGATION
 		transition: all .3s;
 		font-weight: 400;		
 	}
-	@media (max-width: $screen-xs) {
-		&-wrapper {margin: 0 15px 1rem;
-			position: relative;
+
+	&-control {
+		border-radius: 5px;
+		background: #fff;
+		padding: 15px;
+		display: flex;
+		justify-content: space-between;
+		font-weight: 400;
+		margin-bottom: 1rem;
+		.tab-selected {
+			text-transform: uppercase;
+			cursor: pointer;
+			&:after {
+				content: "";
+				width: 11px;height: 7px;
+				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11 7' width='11'%3E%3Cpolygon points='5.5 7 0 0.7 0.61 0 5.5 5.6 10.39 0 11 0.7 5.5 7'/%3E%3C/svg%3E");
+				display: inline-block;
+				margin-left: 10px;
+				vertical-align: middle;
+			}
 		}
+	}
+
+	&-wrapper {position: relative;}
+	@media (max-width: $screen-xs) {
 		background: #fff;
 		border-radius: 5px;
-
 		display: inline-block;
 		position: absolute;
 		right: 0;
@@ -1199,26 +1219,7 @@ NAVIGATION
 		box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.14);
 		display: none;
 		
-		&-control {
-			border-radius: 5px;
-			background: #fff;
-			padding: 15px;
-			display: flex;
-			justify-content: space-between;
-			font-weight: 400;
-			.tab-selected {
-				text-transform: uppercase;
-				cursor: pointer;
-				&:after {
-					content: "";
-					width: 11px;height: 7px;
-					background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11 7' width='11'%3E%3Cpolygon points='5.5 7 0 0.7 0.61 0 5.5 5.6 10.39 0 11 0.7 5.5 7'/%3E%3C/svg%3E");
-					display: inline-block;
-					margin-left: 10px;
-					vertical-align: middle;
-				}
-			}
-		}
+
 		.menu-item {			
 			a {
 				padding: 10px 17px;
@@ -1229,15 +1230,15 @@ NAVIGATION
 	}
 	@media (min-width: $screen-xs-min) {
 		max-width: 500px;
-		display: block !important;
-		display: flex !important;
+		//display: block !important;
+		//display: flex !important;
 		justify-content: space-between;
 		&-wrapper {
 			border-bottom: 1px solid #acacac;
 			padding: 0 20px;
 			background: #fff;
 		}
-		&-control {display: none;}
+		//&-control {display: none;}
 		.menu-item {
 			display: inline-block;		
 			&:last-child {margin-right: 0;}
@@ -1844,7 +1845,7 @@ NAVIGATION
 }
 
 
-label.checkbox-column {margin-bottom: 20px;}
+label.checkbox-column {margin-bottom: 20px; display: block;}
 /* -PLANS */
 
 
@@ -1989,8 +1990,11 @@ label.checkbox-column {margin-bottom: 20px;}
 .p-money {background: url('../img/i-coin.png') no-repeat 0 50%;}
 .p-cool {background: url('../img/i-cool.png') no-repeat 0 50%;}
 
-.card-credit_card {
-	
+.card-credit_card {	
+	@media (max-width: $screen-xs) {
+		padding: 0;
+	}
+
 	@media (min-width: $screen-xs) {
 		margin-bottom: 30px;
 	}
@@ -2632,6 +2636,77 @@ section+.view-all {
 }
 .nav-tabs-wrapper-newsfeed {
 	margin-bottom: 0;
+}
+
+
+.nav-tabs-content {
+	a {
+		transition: all .3s;
+		font-weight: 400;		
+	}
+  &-wrapper {margin-bottom: 20px}
+
+	@media (min-width: $screen-sm-min) {
+		&-wrapper {
+			border-bottom: 1px solid #acacac;
+      background: #fff;
+      margin-bottom: 40px;
+		}
+		&-control {display: none;}
+		.menu-item {
+      display: inline-block;		
+      margin-right: 50px;
+			&:last-child {margin-right: 0;}
+			a {
+				display: block;
+				position: relative;
+				padding-bottom: 1rem;
+				&:after {
+					content: '';
+					text-transform: uppercase;
+					height: 2px;
+					position: absolute;
+					bottom: 0;
+					left: 0;right: 0;
+					width: 0;
+					transition: width .3s;
+				}
+			}
+			&.active {
+				a {
+					color: $red;
+					font-weight: 500;
+					&:after {
+						background: $red;
+						width: 100%;
+					}
+				}
+			}
+			&.active,&:hover {
+				a:after {
+					background: $red;
+					width: 100%;
+				}				
+			}
+		}		
+	}
+}
+
+.nav-tabs-news {
+  max-width: inherit !important;
+  .menu-item {
+	  a {text-transform: none;}
+  }
+  @media (min-width: $screen-sm-min) {
+    .menu-item {margin-right: 0}    
+    padding-right: 10px;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  @media (min-width: $screen-lg-min) {
+    padding-right: 20px;
+  }
 }
 /* ==========================================================================
    SIDEBAR
