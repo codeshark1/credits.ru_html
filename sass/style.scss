@@ -1426,7 +1426,11 @@ NAVIGATION
 		width: 100%;	
 	}	
 	@media (max-width: $screen-xs) {
-		.ttl {white-space: nowrap}
+		.ttl {
+			//white-space: nowrap;
+			line-height: 1;
+			margin-bottom: 5px;
+		}
 	}
 	@media (max-width: $screen-xs-max) {
 		.ttl {height: 20px; display: block}
@@ -1594,7 +1598,75 @@ NAVIGATION
 	}
 }
 
-.plan_article {}
+.plan_debet-cards {
+	.licence, .link-info {
+		position: initial;
+	}
+	.td {justify-content: initial; padding-bottom: 0;}
+	.td__row {
+		display: flex;
+		width: 100%;		
+	}	
+	@media (max-width: $screen-xs-max) {
+		.td__row {margin-bottom: 10px;}
+		.plan-content {padding: 15px 0 0 15px;
+			&>.td__row:first-child {margin-bottom: 0;}
+		}
+		.td_bankname {display: none;}
+		.td {margin-bottom: 0;}
+		.td_limit, .td_period {
+			.data {font-weight: 500;}
+		}
+		/* .td_price {order: 1}
+		.td_rate {order: 2}
+		.td_limit {order: 3} */
+		.td_rate {width: 35%;} 
+		.td_limit {width: 30%;}
+		.td_price {width: 35%;}
+		.td_title_simple {
+			display: flex;
+			flex-direction: row;
+			align-items: stretch;
+			margin-bottom: 20px;
+			.text {
+				padding-left: 15px;
+				position: relative;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+		}
+	}
+	@media (min-width: $screen-sm-min) {
+		.plan-content > .td__row:last-child {
+			margin-top: 20px;
+		}
+		.td {flex-grow: 0}
+
+		.licence {line-height: 21px}
+		//1120
+		.td_bankname {
+			width: 16%; 
+			flex-grow: 0;
+		}
+		.td_action {
+			width: 14%; 
+			flex-grow: 0;
+			flex-direction: column-reverse;
+		}
+
+		.td_wrapper {width: 70%}  //780
+
+			.td_rate {width: 34%;} 
+			.td_limit {width: 32%;}
+			.td_price {width: 34%;}
+
+		.td_title_simple {
+			margin-bottom: 15px;
+			.licence, .image {display: none;}
+		}			
+	}
+}
 
 .plan_searchresults {
 	.td {justify-content: flex-start;}

@@ -2986,7 +2986,8 @@ NAVIGATION
     width: 100%; }
   @media (max-width: 576px) {
     .plan_insearch .ttl {
-      white-space: nowrap; } }
+      line-height: 1;
+      margin-bottom: 5px; } }
   @media (max-width: 767px) {
     .plan_insearch .ttl {
       height: 20px;
@@ -3160,6 +3161,75 @@ NAVIGATION
   .plan_credit-cards .td_title_simple {
     margin-bottom: 15px; }
     .plan_credit-cards .td_title_simple .licence, .plan_credit-cards .td_title_simple .image {
+      display: none; } }
+
+.plan_debet-cards .licence, .plan_debet-cards .link-info {
+  position: initial; }
+.plan_debet-cards .td {
+  justify-content: initial;
+  padding-bottom: 0; }
+.plan_debet-cards .td__row {
+  display: flex;
+  width: 100%; }
+@media (max-width: 767px) {
+  .plan_debet-cards {
+    /* .td_price {order: 1}
+    .td_rate {order: 2}
+    .td_limit {order: 3} */ }
+    .plan_debet-cards .td__row {
+      margin-bottom: 10px; }
+    .plan_debet-cards .plan-content {
+      padding: 15px 0 0 15px; }
+      .plan_debet-cards .plan-content > .td__row:first-child {
+        margin-bottom: 0; }
+    .plan_debet-cards .td_bankname {
+      display: none; }
+    .plan_debet-cards .td {
+      margin-bottom: 0; }
+    .plan_debet-cards .td_limit .data, .plan_debet-cards .td_period .data {
+      font-weight: 500; }
+    .plan_debet-cards .td_rate {
+      width: 35%; }
+    .plan_debet-cards .td_limit {
+      width: 30%; }
+    .plan_debet-cards .td_price {
+      width: 35%; }
+    .plan_debet-cards .td_title_simple {
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+      margin-bottom: 20px; }
+      .plan_debet-cards .td_title_simple .text {
+        padding-left: 15px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; } }
+@media (min-width: 768px) {
+  .plan_debet-cards .plan-content > .td__row:last-child {
+    margin-top: 20px; }
+  .plan_debet-cards .td {
+    flex-grow: 0; }
+  .plan_debet-cards .licence {
+    line-height: 21px; }
+  .plan_debet-cards .td_bankname {
+    width: 16%;
+    flex-grow: 0; }
+  .plan_debet-cards .td_action {
+    width: 14%;
+    flex-grow: 0;
+    flex-direction: column-reverse; }
+  .plan_debet-cards .td_wrapper {
+    width: 70%; }
+  .plan_debet-cards .td_rate {
+    width: 34%; }
+  .plan_debet-cards .td_limit {
+    width: 32%; }
+  .plan_debet-cards .td_price {
+    width: 34%; }
+  .plan_debet-cards .td_title_simple {
+    margin-bottom: 15px; }
+    .plan_debet-cards .td_title_simple .licence, .plan_debet-cards .td_title_simple .image {
       display: none; } }
 
 .plan_searchresults .td {
