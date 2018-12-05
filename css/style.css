@@ -1996,7 +1996,7 @@ NAVIGATION
             opacity: 1;
             transform: scale(1); }
       .menu-main .sub-menu.cols {
-        column-count: 2; }
+        columns: 2; }
     .menu-main li:hover .sub-menu {
       border-top: 2px solid #9a9a9a;
       max-height: 500px !important;
