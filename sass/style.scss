@@ -350,12 +350,12 @@ NAVIGATION
 					font-size: 12px;
 					color: #000;
 					line-height: 1;
+					padding: 0 10px 0 0;
 					&:before {
 						position: absolute;
 						content: '';
 						top: 50%;
-						//left: 4.5px;
-						left: -6px;
+						left: 0;
 						width: 0;
 						height: 0;
 						border-style: solid;
@@ -367,19 +367,23 @@ NAVIGATION
 						margin: -4.5px;
 					}
 				}
-				&:hover a {
-					color: #ff2633;
-					//padding: 0 0 0 14px;
-					&:before {
-						opacity: 1;
-						transform: scale(1);
-					}
-				}				
+				&:hover, &:focus-within {
+					a {
+						color: #ff2633;
+						padding: 0 0 0 10px;
+						&:before {
+							opacity: 1;
+							transform: scale(1);
+						}
+					}		
+				}		
 			}
 			&.cols {columns: 2}			
 		}
 
-		li:hover .sub-menu {
+		li:hover .sub-menu,
+		li:focus-within .sub-menu,
+		li .sub-menu:hover {
 			border-top: 2px solid #9a9a9a;
 			max-height: 500px !important;
 			height: auto !important;

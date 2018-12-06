@@ -1975,12 +1975,13 @@ NAVIGATION
           white-space: nowrap;
           font-size: 12px;
           color: #000;
-          line-height: 1; }
+          line-height: 1;
+          padding: 0 10px 0 0; }
           .menu-main .sub-menu li a:before {
             position: absolute;
             content: '';
             top: 50%;
-            left: -6px;
+            left: 0;
             width: 0;
             height: 0;
             border-style: solid;
@@ -1990,14 +1991,17 @@ NAVIGATION
             transform: scale(0.5);
             transition: all .3s ease-in-out;
             margin: -4.5px; }
-        .menu-main .sub-menu li:hover a {
-          color: #ff2633; }
-          .menu-main .sub-menu li:hover a:before {
+        .menu-main .sub-menu li:hover a, .menu-main .sub-menu li:focus-within a {
+          color: #ff2633;
+          padding: 0 0 0 10px; }
+          .menu-main .sub-menu li:hover a:before, .menu-main .sub-menu li:focus-within a:before {
             opacity: 1;
             transform: scale(1); }
       .menu-main .sub-menu.cols {
         columns: 2; }
-    .menu-main li:hover .sub-menu {
+    .menu-main li:hover .sub-menu,
+    .menu-main li:focus-within .sub-menu,
+    .menu-main li .sub-menu:hover {
       border-top: 2px solid #9a9a9a;
       max-height: 500px !important;
       height: auto !important;
