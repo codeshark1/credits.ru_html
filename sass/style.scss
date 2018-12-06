@@ -305,21 +305,7 @@ NAVIGATION
 		.menu-main__item {padding: 10px 0;}
 		li.has-sub{
 			position: relative;
-			&:before {
-				content: "";
-				position: absolute;
-				bottom: 0;
-				left: 25px;
-				border-style: solid;
-				border-width: 0 4.5px 7px 4.5px;
-				border-color: transparent transparent #9a9a9a transparent;
-				opacity: 0;
-				transition: all .3s ease-in-out;
-			}
-		}
-	
-		li.has-sub:hover:before {
-			opacity: 1;
+
 		}
 
 		.sub-menu {
@@ -327,9 +313,6 @@ NAVIGATION
 			top: 40px;
 			left: -8px;
 			width: auto;
-			//max-height: 0 !important;
-			//overflow: hidden;
-			//z-index: 10;
 			background-color: #fff;
 			box-shadow: 7px 7px 24px 0 rgba(3, 0, 1, 0.16);
 			
@@ -341,8 +324,7 @@ NAVIGATION
 
 			transform: translateY(-1em);
 			z-index: -1;
-			//transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;			
-			transition: all 0.3s ease-in-out;
+			transition: all 0.2s ease-in-out;
 			li {
 				display: block;
 				cursor: pointer;
@@ -386,7 +368,19 @@ NAVIGATION
 					}		
 				}		
 			}
-			&.cols {columns: 2}			
+			&.cols {columns: 2}		
+			
+			&:before {
+				content: "";
+				position: absolute;
+				top: -7px;
+				left: 25px;
+				border-style: solid;
+				border-width: 0 4.5px 7px 4.5px;
+				border-color: transparent transparent #9a9a9a transparent;
+				opacity: 0;
+				transition: all 0.2s ease-in-out;
+			}			
 		}
 
 		li:hover .sub-menu,
@@ -394,13 +388,12 @@ NAVIGATION
 		li:focus-within .sub-menu {
 			border-top: 2px solid #9a9a9a;
 			padding: 25px 0 10px 30px !important;
-			//max-height: 500px !important;
-			//height: auto !important;
 			visibility: visible; /* shows sub-menu */
 			opacity: 1;
 			z-index: 10;
 			transform: translateY(0%);
 			transition-delay: 0s, 0s, 0.3s; /* this removes the transition delay so the menu will be visible while the other styles transition */			
+			&:before {opacity: 1;}
 		}
 
 	}
