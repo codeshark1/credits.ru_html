@@ -188,7 +188,7 @@ $sect-mg-neg: 39px;
 	border: 1px solid $border;
 	padding: 20px 25px;
 	z-index: 2;
-	min-width: 355px;
+	width: 355px;
  	width: -ms-max-content;
 	width: -webkit-max-content;
 	width: max-content; 
@@ -302,11 +302,8 @@ NAVIGATION
 	@media (min-width: $screen-sm-min) {		
 		display: flex;
 		justify-content: space-between;		
-		.menu-main__item {padding: 10px 0;}
-		li.has-sub{
-			position: relative;
+		li {padding: 10px 0;position: relative;}
 
-		}
 
 		.sub-menu {
 			position: absolute;
@@ -356,8 +353,7 @@ NAVIGATION
 					}
 				}
 				&:hover, 
-				&:focus,
-				&:focus-within {
+				&:focus {
 					a {
 						color: #ff2633;
 						padding: 0 0 0 10px;
@@ -383,16 +379,25 @@ NAVIGATION
 			}			
 		}
 
-		li:hover .sub-menu,
-		li:focus .sub-menu,
 		li:focus-within .sub-menu {
 			border-top: 2px solid #9a9a9a;
 			padding: 25px 0 10px 30px !important;
-			visibility: visible; /* shows sub-menu */
+			visibility: visible;
 			opacity: 1;
 			z-index: 10;
 			transform: translateY(0%);
-			transition-delay: 0s, 0s, 0.3s; /* this removes the transition delay so the menu will be visible while the other styles transition */			
+			transition-delay: 0s, 0s, 0.3s;
+			&:before {opacity: 1;}
+		}		
+		li:focus .sub-menu,
+		li:hover .sub-menu {
+			border-top: 2px solid #9a9a9a;
+			padding: 25px 0 10px 30px !important;
+			visibility: visible;
+			opacity: 1;
+			z-index: 10;
+			transform: translateY(0%);
+			transition-delay: 0s, 0s, 0.3s;
 			&:before {opacity: 1;}
 		}
 

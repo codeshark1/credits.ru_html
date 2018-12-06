@@ -1809,7 +1809,7 @@ a, svg, path, button {
   border: 1px solid #d8d8d8;
   padding: 20px 25px;
   z-index: 2;
-  min-width: 355px;
+  width: 355px;
   width: -ms-max-content;
   width: -webkit-max-content;
   width: max-content;
@@ -1933,9 +1933,8 @@ NAVIGATION
   .menu-main {
     display: flex;
     justify-content: space-between; }
-    .menu-main .menu-main__item {
-      padding: 10px 0; }
-    .menu-main li.has-sub {
+    .menu-main li {
+      padding: 10px 0;
       position: relative; }
     .menu-main .sub-menu {
       position: absolute;
@@ -1979,10 +1978,10 @@ NAVIGATION
             transform: scale(0.5);
             transition: all .3s ease-in-out;
             margin: -4.5px; }
-        .menu-main .sub-menu li:hover a, .menu-main .sub-menu li:focus a, .menu-main .sub-menu li:focus-within a {
+        .menu-main .sub-menu li:hover a, .menu-main .sub-menu li:focus a {
           color: #ff2633;
           padding: 0 0 0 10px; }
-          .menu-main .sub-menu li:hover a:before, .menu-main .sub-menu li:focus a:before, .menu-main .sub-menu li:focus-within a:before {
+          .menu-main .sub-menu li:hover a:before, .menu-main .sub-menu li:focus a:before {
             opacity: 1;
             transform: scale(1); }
       .menu-main .sub-menu.cols {
@@ -1997,21 +1996,27 @@ NAVIGATION
         border-color: transparent transparent #9a9a9a transparent;
         opacity: 0;
         transition: all 0.2s ease-in-out; }
-    .menu-main li:hover .sub-menu,
-    .menu-main li:focus .sub-menu,
     .menu-main li:focus-within .sub-menu {
       border-top: 2px solid #9a9a9a;
       padding: 25px 0 10px 30px !important;
       visibility: visible;
-      /* shows sub-menu */
       opacity: 1;
       z-index: 10;
       transform: translateY(0%);
-      transition-delay: 0s, 0s, 0.3s;
-      /* this removes the transition delay so the menu will be visible while the other styles transition */ }
-      .menu-main li:hover .sub-menu:before,
-      .menu-main li:focus .sub-menu:before,
+      transition-delay: 0s, 0s, 0.3s; }
       .menu-main li:focus-within .sub-menu:before {
+        opacity: 1; }
+    .menu-main li:focus .sub-menu,
+    .menu-main li:hover .sub-menu {
+      border-top: 2px solid #9a9a9a;
+      padding: 25px 0 10px 30px !important;
+      visibility: visible;
+      opacity: 1;
+      z-index: 10;
+      transform: translateY(0%);
+      transition-delay: 0s, 0s, 0.3s; }
+      .menu-main li:focus .sub-menu:before,
+      .menu-main li:hover .sub-menu:before {
         opacity: 1; } }
 
 .cities {
