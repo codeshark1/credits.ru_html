@@ -49,12 +49,16 @@ input[type="number"],
 input[type="search"], 
 select,
 textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;  
   width: 100%;
-  border: 1px solid rgba(#000, .07);
+  border: 1px solid #d0d0d0;
   margin: 0;
   font-size: 1rem;
   transition: all .3s ease-in-out;
   border-radius: 5px;
+
   padding: 12px 15px;
   &.input-price {
     font-size: 1.3rem;
@@ -62,6 +66,9 @@ textarea {
       font-size: 1.5rem;
     }
   }  
+  &:hover {
+    border-color: #989898;
+  }
 }
 textarea {
   resize: vertical;
@@ -80,14 +87,17 @@ input[type="checkbox"] {
   vertical-align: middle; 
 }
 
-input[type=text]:focus,
-input[type=email]:focus,
-input[type=password]:focus,
-input[type=url]:focus,
-input[type=search]:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="url"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
 textarea:focus {
-  box-shadow: 0 0 5px #6889ff;
-  border: 1px solid #6889ff;
+  box-shadow: none;
+  border-color: #555555;
+  outline: none;
 }
 
 
@@ -423,6 +433,7 @@ label.radio {
   background: $action !important; 
   color: #000;  
   border: none !important;
+  min-width: 72px;
   //box-shadow: 0 0 30px 1px rgba($color: #090305, $alpha: 0.16);
   &:hover {
     background: #f4d165 !important;

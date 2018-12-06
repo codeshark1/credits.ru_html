@@ -85,6 +85,14 @@ jQuery(document).ready(function($){
             e.preventDefault();
             $(this).parents('.nav-tabs-wrapper').find('.nav-tabs').css('display','block');
         });
+       
+
+        $('html').click(function(){
+            $('.nav-tabs').css('display','none');
+        });        
+        $('.nav-tabs-wrapper').click(function(e){
+            e.stopPropagation();
+        });
     }
     tabs();
 
@@ -106,7 +114,10 @@ jQuery(document).ready(function($){
                 .html($(this).html())
                 .siblings(menu)
                 .hide();			
-		});
+        });
+
+        
+
 	}
 
     drop_menu('.drop-menu-trigger', '.drop-menu', '.drop-menu a', '.drop-menu-wrapper');
@@ -152,7 +163,9 @@ jQuery(document).ready(function($){
         $('.accord-content').hide();                
         $('.accord-open .accord-content').show();
         $('.h-accord').click(function(){
-            if (! $(this).parent('.accord').hasClass('accord-open')) {
+            if ($(this).parent('.accord').hasClass('accord-open')) {
+                $(this).siblings('.accord-content').slideUp().parents('.accord').removeClass('accord-open');
+            } else {
                 $(this).parents('.section-accord').find('.accord-open').removeClass('accord-open').find('.accord-content').slideUp()
                 $(this).parent('.accord').addClass('accord-open').find('.accord-content').slideDown();
             }
@@ -201,9 +214,9 @@ jQuery(document).ready(function($){
     
 
     function hide_location_hint() {
-        $('#location-hint').hide();
+        $('.location-hint').hide();
     };
-    $('#location-hint').find('.btn-cta').click(function(e){
+    $('.location-hint').find('.btn-cta').click(function(e){
         e.preventDefault();
         hide_location_hint();
     });
