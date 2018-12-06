@@ -98,16 +98,14 @@ jQuery(document).ready(function($){
 				$(this).siblings(menu).css('display','block')
 			}
 		});
-		$(link).click(function(e){
-			if (! $(this).hasClass('active') ) {
-				$(this).parents(wrapper).find('.active').removeClass('active');
-				$(this).addClass('active')
-					.parents(wrapper)
-					.find(trigger)
-					.html($(this).html())
-					.siblings(menu)
-					.hide();
-			}
+		$(link).click(function(e){			
+            $(this).parents(wrapper).find('.active').removeClass('active');
+            $(this).addClass('active')
+                .parents(wrapper)
+                .find(trigger)
+                .html($(this).html())
+                .siblings(menu)
+                .hide();			
 		});
 	}
 
