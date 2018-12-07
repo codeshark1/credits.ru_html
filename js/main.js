@@ -72,7 +72,7 @@ jQuery(document).ready(function($){
         $('.js-nav-tabs .menu-item a').click(function(e){
             e.preventDefault();
             var tab_id = $(this).attr('href');
-            $('.js-nav-tabs li').removeClass('active');
+            $('.js-nav-tabs .menu-item').removeClass('active');
             $(this).parent().addClass('active');
             $('.tabcontent').css('display','none');
             $(tab_id).fadeIn(300);
@@ -88,7 +88,7 @@ jQuery(document).ready(function($){
        
 
         $('html').click(function(){
-            $('.nav-tabs').css('display','none');
+            $('.js-nav-tabs').css('display','none');
         });        
         $('.nav-tabs-wrapper').click(function(e){
             e.stopPropagation();
