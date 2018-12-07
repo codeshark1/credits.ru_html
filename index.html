@@ -979,6 +979,69 @@
                             заработную плату через банк, в котором запрашивают кредит.</p>
                 </article><!-- /.accord-content -->
             </section>
+
+            <section class="section section-links d-none d-md-block">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <p class="heading-lower">Кредиты</p>
+                        <ul class="menu-links-bottom">
+                            <li class="menu-item"><a href="#">Потребительские кредиты</a></li>
+                            <li class="menu-item"><a href="#">Подобрать кредит</a></li>
+                            <li class="menu-item"><a href="#">Онлайн-заявка на кредит</a></li>
+                            <li class="menu-item"><a href="#">Кредит наличными</a></li>
+                            <li class="menu-item"><a href="#">Экспресс-кредиты</a></li>
+                        </ul>
+                    </div><!-- /.col -->
+                    <div class="col-sm-3">
+                        <p class="heading-lower">Популярные предложения</p>
+                        <ul class="menu-links-bottom">
+                            </a></li>
+                            <li class="menu-item"><a href="#">Отзывы о потребительских кредитах</a></li>
+                            <li class="menu-item"><a href="#">Кредит с плохой кредитной историей</a></li>
+                            <li class="menu-item"><a href="#">Лучшие кредиты</a></li>
+                            <li class="menu-item"><a href="#">Под поручительство</a></li>
+                            <li class="menu-item"><a href="#">Под залог авто</a></li>
+                        </ul>
+                    </div><!-- /.col --> 
+                    <div class="col-sm-3">
+                        <p class="heading-lower">Кредиты от банков</p>
+                        <ul class="menu-links-bottom">                            
+                            <li class="menu-item"><a href="#">Сбербанк</a></li>
+                            <li class="menu-item"><a href="#">Газпромбанк</a></li>
+                            <li class="menu-item"><a href="#">ФК Открытие</a></li>
+                            <li class="menu-item"><a href="#">ВТБ 24</a></li>
+                            <li class="menu-item"><a href="#">Россельхозбанк</a></li>
+                        </ul>
+                    </div><!-- /.col -->
+                    <div class="col-sm-3 col-xl-2">
+                        <p class="heading-lower">Типы кредитов</p>
+
+                        <div id="slider-links">
+                            <ul class="menu-links-bottom">
+                                <li class="menu-item"><a href="#">С 18 лет</a></li>
+                                <li class="menu-item"><a href="#">Под залог авто</a></li>
+                                <li class="menu-item"><a href="#">Для плохой истории</a></li>
+                                <li class="menu-item"><a href="#">Под кредит</a></li>
+                                <li class="menu-item"><a href="#">На неотложные нужды</a></li>
+                            </ul>
+                            <ul class="menu-links-bottom">
+                                <li class="menu-item"><a href="#">С 18 лет</a></li>
+                                <li class="menu-item"><a href="#">Под залог авто</a></li>
+                                <li class="menu-item"><a href="#">Для плохой истории</a></li>
+                                <li class="menu-item"><a href="#">Под кредит</a></li>
+                                <li class="menu-item"><a href="#">На неотложные нужды</a></li>
+                            </ul>
+                            <ul class="menu-links-bottom">
+                                <li class="menu-item"><a href="#">С 18 лет</a></li>
+                                <li class="menu-item"><a href="#">Под залог авто</a></li>
+                                <li class="menu-item"><a href="#">Для плохой истории</a></li>
+                                <li class="menu-item"><a href="#">Под кредит</a></li>
+                                <li class="menu-item"><a href="#">На неотложные нужды</a></li>
+                            </ul>                                                        
+                        </div><!-- /#slider-links -->                        
+                    </div><!-- /.col -->                                                            
+                </div><!-- /.row -->
+            </section><!-- /.section section-links -->
         </div><!-- /.container -->
     </main><!-- /.main-content -->
 
@@ -1048,6 +1111,19 @@
 
     <button class="btn-top" id="btn-top" title="Наверх"><svg data-src="img/arrow-up.svg"></svg></button>
 </div><!-- /.wrapper-main -->
+
+<script>
+    $(window).on('load', function() {
+        $('#slider-links').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            mobileFirst: true,
+            adaptiveHeight:true,
+            prevArrow: "<button type='button' class='slick-prev'></button>",
+            nextArrow: "<button type='button' class='slick-next'></button>"
+        });
+    });
+</script>
 
 </body>
 </html>

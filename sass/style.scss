@@ -9,7 +9,6 @@
 body {	
 	font-family: 'Ubuntu', sans-serif;
 	background: #f5f5f5;
-	font-size: 14px;
 	font-weight: 300;
 	@media (min-width: $screen-md-min) {
 		font-size: 16px;
@@ -58,6 +57,7 @@ $sect-mg-neg: 39px;
 
 .header-site {		
 	position: relative;
+	margin-bottom: 2px;
 	.btn-menu {
 		position: relative;
 		top: 6px;
@@ -877,6 +877,7 @@ NAVIGATION
 	border-radius: 5px;
 }
 .btn-toggle_more {	
+
 	.indicator {
 		display: inline-block;
 		background: #fff;
@@ -900,10 +901,9 @@ NAVIGATION
 	@media (min-width: $screen-xs-min) {
 		@include btn-cta();
 		width: 100%;
-		.indicator {width: 22px;height: 22px;line-height: 22px;}
-		&.active {
-			.indicator {line-height: 19px}
-		}		
+		font-size: 16px;
+		.indicator {width: 22px;height: 22px;line-height: 20px;}
+
 	}
 }
 
@@ -1023,6 +1023,7 @@ NAVIGATION
 			display: flex;			
 			width: 75%;
 			align-items: center;
+			min-height: 25px;
 		}
 		&_search {
 			display: flex;
@@ -1360,6 +1361,9 @@ NAVIGATION
 	.ttl {
 		color: #555555;
 		font-size: 0.9rem;
+		@media (max-width: $screen-xs-max) {
+			margin-bottom: 5px;
+		}
 	}
 	.data {
 		color: #000;
@@ -1368,6 +1372,10 @@ NAVIGATION
 		display: flex;
 		align-items: center;
 		font-weight: 400;
+		font-size: 16px;
+		@media (max-width: $screen-xs-max) {		
+			font-weight: 500;
+		}			
 	}
 	.data-important {
 		font-size: 1.5rem;
@@ -1509,14 +1517,12 @@ NAVIGATION
 }
 
 .plan_catalog {
-	.ttl {
-		display: block;
-		//position: initial;
-	}
+	.ttl {display: block;}
 	.plan-content {padding-top: 20px}
 	@media (max-width: $screen-xs-max) {
 		.td_bankname .ttl {position: relative; top: -5px}
 		.td_addr .ttl {display: none}
+		.data {font-weight: 400;font-size: 12px;}
 	}
 	@media (min-width: $screen-sm-min) {
 		.plan-content {padding-top: 20px;}
@@ -1652,7 +1658,7 @@ NAVIGATION
 			display: flex;
 			flex-direction: row;
 			align-items: stretch;
-			margin-bottom: 20px;
+			margin-bottom: 20px;			
 			.text {
 				padding-left: 15px;
 				position: relative;
@@ -1691,6 +1697,10 @@ NAVIGATION
 			.licence, .image {display: none;}
 		}			
 	}
+}
+
+.td_title_simple {
+	.image {min-width: 88px; }
 }
 
 .plan_searchresults {
@@ -2276,7 +2286,9 @@ label.checkbox-column {margin-bottom: 20px; display: block;}
 	font-size: 0.85rem;
 	margin-top: 20px;
 	color: #555555;
-	a {color: #555555;}	
+	a {color: #555555;
+		&:hover {color: $red}
+	}	
 	@media (min-width: $screen-sm-min) {margin-top: 2rem;}
 	.article--date {margin-right: 16px;}
 }
@@ -2351,6 +2363,7 @@ label.checkbox-column {margin-bottom: 20px; display: block;}
 	justify-content: space-between;
 	min-height: 100%;
 	margin-bottom: 10px;
+	position: relative;
 	@media (max-width: $screen-xs-max) {
 		padding: 15px;
 	}
@@ -2386,6 +2399,15 @@ label.checkbox-column {margin-bottom: 20px; display: block;}
 	.article-prev--footer {
 		margin: 0;
 		p {margin-bottom: 0;}
+	}
+	.article-prev--footer, .h-article {
+		position: relative;
+		z-index: 2;
+	}
+	.link-wrapper {
+		position: absolute;
+		left: 0;top: 0;right: 0;bottom: 0;
+		display: block;
 	}
 }
 
@@ -2450,9 +2472,16 @@ section+.view-all {
 	}
 }
 
-.heading-lower {font-size: 1.2rem; font-weight: 400;}
+.heading-lower {
+	font-size: 1.2rem; 
+	font-weight: 400;
+	margin-bottom: 24px;
+}
 
-
+.menu-links-bottom {
+	.menu-item {margin-bottom: 10px;}
+	a {font-size: 14px;}
+}
 
 .banner-mob {
 	a {display: block;}
@@ -2491,6 +2520,10 @@ section+.view-all {
 .bank-intro-row {
 	.bx-rate {
 		.rate {font-size: 20px; font-weight: 400;}
+	}
+	@media (max-width: 400px) {
+		.bx-card {width: 150px;}
+
 	}
 	@media (max-width: $screen-xs-max) {
 		.bx-rate-action {

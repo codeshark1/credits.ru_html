@@ -201,6 +201,8 @@ fieldset {
   position: relative;
   transition: all .15s;
   display: inline-block;  
+  background: #fff;
+  text-align: right;
   .search-button {
     position: absolute;
     width: 18px;
@@ -209,6 +211,7 @@ fieldset {
     padding: 0;
     right: 0;
     bottom: 7px;
+    top: 0;bottom: 0; margin: auto;    
     cursor: pointer;
     background: none;
     svg {
@@ -237,7 +240,7 @@ fieldset {
   .search-field, .search-submit {
     &:focus {outline-width: 0;}
   }
-  &.closed .search-field {width: 35px;}
+  &.closed .search-field {width: 0;}
   &.open {
     .search-field {
       width: 100%;
@@ -444,6 +447,7 @@ label.radio {
   color: #000;  
   border: none !important;
   min-width: 72px;
+  
   //box-shadow: 0 0 30px 1px rgba($color: #090305, $alpha: 0.16);
   &:hover {
     background: #f4d165 !important;
@@ -454,6 +458,7 @@ label.radio {
     box-shadow: inset 0 0 30px 1px rgba($color: #090305, $alpha: 0.16)
   }  
   svg {width: 17px; margin-left: 20px;}
+  @media (min-width: $screen-sm-min) {font-size: 16px;  }
 }
 .btn-cta {
   @include btn-cta();
@@ -551,13 +556,11 @@ label.radio {
   @media (max-width: $screen-xs-max) {
     display: none;
   }
-  @media (min-width: 1000px) {
-    
-  }  
-  @media (min-width: $screen-lg-min) {
+  @media (min-width: 1450px) {
     margin-left: 1300px;
     right: auto;
-  }
+    
+  }  
 }
 /* ==========================================================================
    MENUS
@@ -737,6 +740,7 @@ h1, h2, h3, h4 {line-height: 1.1; font-weight: 500}
     display: inline-block;
     position: relative;
     font-size: 14px;
+    font-weight: 500;
     &:after {
       content: ""; width: 4px;height: 4px;background: $base-text;
       border-radius: 100%;
@@ -748,6 +752,7 @@ h1, h2, h3, h4 {line-height: 1.1; font-weight: 500}
       color: $gray;
       &:after {content: none}
     }
+    a {color: #000}
   }
 
   @media (max-width: $screen-sm-max) {
