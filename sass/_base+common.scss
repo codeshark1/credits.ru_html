@@ -47,11 +47,21 @@ input[type="url"],
 input[type="tel"], 
 input[type="number"], 
 input[type="search"], 
-select,
 textarea {
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;  
+  appearance: none;
+}
+
+input[type="text"], 
+input[type="email"], 
+input[type="password"], 
+input[type="url"], 
+input[type="tel"], 
+input[type="number"], 
+input[type="search"], 
+select,
+textarea {  
   width: 100%;
   border: 1px solid #d0d0d0;
   margin: 0;

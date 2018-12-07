@@ -76,7 +76,13 @@ jQuery(document).ready(function($){
             $(this).parent().addClass('active');
             $('.tabcontent').css('display','none');
             $(tab_id).fadeIn(300);
+            if($('select').hasClass('tab-select')){
+                $('select.tab-select option').prop('selected', false);
+                $('select.tab-select option[value="'+tab_id+'"]').prop('selected', true);
+             }   
             $(this).parents('.nav-tabs-wrapper').find('.tab-selected').text($(this).text());
+            
+
             if ($(window).width() < 768) {
                 $(this).parents('.nav-tabs').css('display','none');
             }
@@ -85,6 +91,12 @@ jQuery(document).ready(function($){
             e.preventDefault();
             $(this).parents('.nav-tabs-wrapper').find('.nav-tabs').css('display','block');
         });
+        $('.tab-select').on('change', function(){
+            $('.js-nav-tabs .menu-item').removeClass('active');
+            $('.js-nav-tabs .menu-item a[href="'+$(this).val()+'"]').parent().addClass('active');
+            $('.tabcontent:not('+$(this).val()+')').css('display','none');
+            $('.tabcontent'+$(this).val()).fadeIn(300);
+        })
        
 
         $('html').click(function(){
