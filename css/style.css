@@ -2025,19 +2025,20 @@ NAVIGATION
       margin: 0;
       display: block !important;
       transform: translateY(-1em);
-      z-index: -1;
-      transition: all 0.2s ease-in-out; }
+      z-index: 10;
+      transition: all 0.2s ease-in-out;
+      padding: 15px 0 20px 30px !important;
+      border-top: 2px solid #9a9a9a; }
       .menu-main .sub-menu li {
         display: block;
         cursor: pointer;
-        margin: 0 35px 15px 0;
         page-break-inside: avoid;
         break-inside: avoid-column; }
         .menu-main .sub-menu li a {
           position: relative;
           display: block;
           white-space: nowrap;
-          font-size: 12px;
+          font-size: 14px;
           color: #000;
           line-height: 1;
           padding: 0 10px 0 0; }
@@ -2048,9 +2049,10 @@ NAVIGATION
             left: 0;
             width: 0;
             height: 0;
-            border-style: solid;
-            border-width: 4.5px 0 4.5px 7px;
-            border-color: transparent transparent transparent #ff2634;
+            border-top: 4px solid transparent;
+            border-left: 7px solid red;
+            border-bottom: 4px solid transparent;
+            transition: all 0.2s ease-in-out;
             opacity: 0;
             transform: scale(0.5);
             transition: all .3s ease-in-out;
@@ -2068,14 +2070,16 @@ NAVIGATION
         position: absolute;
         top: -7px;
         left: 25px;
-        border-style: solid;
+        /* border-style: solid;
         border-width: 0 4.5px 7px 4.5px;
-        border-color: transparent transparent #9a9a9a transparent;
-        opacity: 0;
+        border-color: transparent transparent #9a9a9a transparent; */
+        width: 0;
+        height: 0;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-bottom: 7px solid #9a9a9a;
         transition: all 0.2s ease-in-out; }
     .menu-main li:focus-within .sub-menu {
-      border-top: 2px solid #9a9a9a;
-      padding: 25px 0 10px 30px !important;
       visibility: visible;
       opacity: 1;
       z-index: 10;
@@ -2085,8 +2089,6 @@ NAVIGATION
         opacity: 1; }
     .menu-main li:focus .sub-menu,
     .menu-main li:hover .sub-menu {
-      border-top: 2px solid #9a9a9a;
-      padding: 25px 0 10px 30px !important;
       visibility: visible;
       opacity: 1;
       z-index: 10;
@@ -2095,6 +2097,10 @@ NAVIGATION
       .menu-main li:focus .sub-menu:before,
       .menu-main li:hover .sub-menu:before {
         opacity: 1; } }
+@media (min-width: 768px) and (max-width: 1200px) {
+  .menu-main li:last-child .sub-menu {
+    right: 0;
+    left: auto; } }
 
 .cities {
   background: #fff;
