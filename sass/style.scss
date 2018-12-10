@@ -313,7 +313,6 @@ NAVIGATION
 			background-color: #fff;
 			box-shadow: 7px 7px 24px 0 rgba(3, 0, 1, 0.16);
 			list-style: none;
-			padding: 0 0 0 30px !important;
 			margin: 0;
 			display: block !important; 
 			transform: translateY(-1em);
@@ -321,7 +320,7 @@ NAVIGATION
 			z-index: -1;
 			transition: all 0.2s ease-in-out;
 
-			padding: 15px 0 20px 30px !important;
+			padding: 15px 30px 20px;
 			border-top: 2px solid #9a9a9a;
 			li {
 				display: block;
@@ -365,7 +364,7 @@ NAVIGATION
 					}		
 				}		
 			}
-			&.cols {columns: 2}		
+			&.cols {columns: 2; padding-right: 0;}		
 			
 			&:before {
 				content: "";
