@@ -33,9 +33,9 @@ jQuery(document).ready(function($){
 			//e.preventDefault();
 			if ( $(block).is(':visible')) {
 				$(block).slideUp().removeClass('active');
-				$('#js-btn-search-listing').removeClass('active').find('.indicator').text('+');
+				$('#js-btn-search-listing').removeClass('active');
 			} else {
-				$('#js-btn-search-listing').addClass('active').find('.indicator').text('-');
+				$('#js-btn-search-listing').addClass('active');
 				$(block).slideDown().addClass('active');
 			}
 			if($(window).width() < 576){

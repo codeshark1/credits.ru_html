@@ -247,9 +247,8 @@ fieldset {
 .form-search-listing {
   position: relative;
   transition: all .15s;
-  display: inline-block;
-  background: #fff;
-  text-align: right; }
+  text-align: right;
+  width: 100%; }
   .form-search-listing .search-button {
     position: absolute;
     width: 18px;
@@ -270,7 +269,7 @@ fieldset {
       stroke: #ff0000; }
   .form-search-listing .search-field {
     margin: 0;
-    background-color: transparent;
+    background: #fff;
     padding: 8px 12px 8px 0;
     height: 35px;
     transition: all .15s;
@@ -2563,7 +2562,8 @@ NAVIGATION
   flex-shrink: 0;
   font-size: 20px;
   letter-spacing: 0;
-  writing-mode: unset; }
+  writing-mode: unset;
+  background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 24 24'%3E%3Cpath d='M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z'/%3E%3C/svg%3E") 50% 50% no-repeat; }
 @media (max-width: 576px) {
   .btn-toggle_more {
     background: #ffffff;

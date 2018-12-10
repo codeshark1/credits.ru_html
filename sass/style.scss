@@ -898,6 +898,7 @@ NAVIGATION
 		font-size: 20px;
 		letter-spacing: 0;
 		writing-mode: unset;
+		background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 24 24'%3E%3Cpath d='M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z'/%3E%3C/svg%3E") 50% 50% no-repeat;
 	}
 
 	@media (max-width: $screen-xs) { 
