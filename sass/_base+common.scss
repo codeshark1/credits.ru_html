@@ -387,7 +387,7 @@ label.radio {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-size: .875rem;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: .04em;
   text-decoration: none;
   --mdc-ripple-fg-size: 0;
@@ -451,7 +451,7 @@ label.radio {
   //box-shadow: 0 0 30px 1px rgba($color: #090305, $alpha: 0.16);
   &:hover {
     background: #f4d165 !important;
-    color: $base-text;
+    color: $base-text !important;
     //box-shadow: 0 0 30px 1px rgba($color: #090305, $alpha: 0.2);
   }
   &:active {
@@ -479,6 +479,9 @@ label.radio {
   color: #fff;
   font-weight: 400;
   font-size: 16px;
+  &:hover {
+    color: #fff !important;
+  }
   .mob {
     @media (min-width: $screen-sm-min) {display: none;}
   }
