@@ -3221,8 +3221,6 @@ NAVIGATION
 .plan_credit-cards .td__row {
   display: flex;
   width: 100%; }
-.plan_credit-cards .td_bankname a {
-  height: 76px; }
 @media (max-width: 767px) {
   .plan_credit-cards .td__row {
     margin-bottom: 10px; }
@@ -3350,6 +3348,9 @@ NAVIGATION
     margin-bottom: 15px; }
     .plan_debet-cards .td_title_simple .licence, .plan_debet-cards .td_title_simple .image {
       display: none; } }
+
+.plan_credit-cards .td_bankname a, .plan_dedet-cards .td_bankname a {
+  height: 76px; }
 
 .td_title_simple .image {
   min-width: 88px; }

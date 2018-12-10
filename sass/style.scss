@@ -1566,8 +1566,7 @@ NAVIGATION
 	.td__row {
 		display: flex;
 		width: 100%;		
-	}
-	.td_bankname a {height: 76px;}
+	}	
 	@media (max-width: $screen-xs-max) {
 		.td__row {margin-bottom: 10px;}
 		.plan-content {padding: 15px 0 0 15px;
@@ -1698,6 +1697,10 @@ NAVIGATION
 		}			
 	}
 }
+.plan_credit-cards, .plan_dedet-cards {
+	.td_bankname a {height: 76px;}
+}
+
 
 .td_title_simple {
 	.image {min-width: 88px; }
