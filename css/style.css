@@ -3804,7 +3804,7 @@ label.checkbox-column {
 .section-article {
   background: #fff;
   padding: 20px 15px; }
-  .section-article > p {
+  .section-article > p, .section-article > blockquote, .section-article > table, .section-article > ul, .section-article > ol {
     margin-bottom: 25px; }
   .section-article .bx-footer, .section-article .bx-header {
     font-size: 0.85rem;
@@ -3835,18 +3835,62 @@ label.checkbox-column {
       margin-top: 25px; }
   .section-article .plan {
     margin: 0 -15px 20px; }
-  .section-article .h2 {
+  .section-article h2, .section-article h3, .section-article h4, .section-article h5, .section-article h6 {
     font-weight: 400;
+    margin: 0 0 10px 0; }
+  .section-article h2 {
     font-size: 16px;
     margin: 0 0 10px 0; }
+  .section-article blockquote {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding: 0px 45px;
+    text-align: justify;
+    color: #6f6f6f;
+    position: relative;
+    font-style: italic; }
+    .section-article blockquote:before, .section-article blockquote:after {
+      content: "";
+      display: inline-block;
+      width: 35px;
+      height: 22px;
+      background: url(../img/quote.png) 0 0 no-repeat;
+      position: absolute; }
+    .section-article blockquote:before {
+      top: 0px;
+      left: 0px; }
+    .section-article blockquote:after {
+      right: 0px;
+      bottom: 0px;
+      transform: rotate(180deg); }
+  .section-article table {
+    border-collapse: collapse; }
+    .section-article table td, .section-article table th {
+      border: 1px solid #dbdbdb;
+      text-align: left;
+      padding: 4px 4px 4px 8px; }
+    .section-article table th {
+      background: #f6f6f6; }
+  .section-article > ul, .section-article > ol {
+    margin-left: 20px;
+    padding: 0; }
+    .section-article > ul li, .section-article > ol li {
+      margin-bottom: 5px; }
+      .section-article > ul li:last-child, .section-article > ol li:last-child {
+        margin-bottom: 0; }
+  .section-article > ul {
+    list-style-type: disc; }
   @media (min-width: 768px) {
     .section-article {
       padding: 35px 40px; }
-      .section-article > p {
+      .section-article > p, .section-article > blockquote, .section-article > table, .section-article > ul, .section-article > ol {
         margin-bottom: 35px; }
-      .section-article .h2 {
+      .section-article h2 {
         font-size: 20px;
         margin: 0 0 15px 0; }
+      .section-article > ul, .section-article > ol {
+        margin-left: 40px; }
       .section-article .bx-footer {
         margin-bottom: 35px; }
       .section-article .h-section {

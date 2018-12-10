@@ -2141,7 +2141,7 @@ label.checkbox-column {margin-bottom: 20px; display: block;}
 .section-article {
 	background: #fff;
 	padding: 20px 15px;
-	>p {margin-bottom: 25px;}
+	>p, >blockquote, >table, >ul, >ol {margin-bottom: 25px;}
 	.bx-footer,.bx-header {
 		font-size: 0.85rem;
 		margin-bottom: 25px;
@@ -2170,11 +2170,58 @@ label.checkbox-column {margin-bottom: 20px; display: block;}
 		}
 	}
 	.plan {margin:0 -15px 20px;}
-	.h2 {font-weight: 400; font-size: 16px; margin: 0 0 10px 0}
+	h2,h3,h4,h5,h6 {font-weight: 400; margin: 0 0 10px 0}
+	h2 {font-size: 16px; margin: 0 0 10px 0}
+
+	blockquote {
+		margin-left: 0;
+		margin-right: 0;
+		margin-top: 0;
+		padding: 0px 45px;
+		text-align: justify;
+		color: #6f6f6f;
+		position: relative;
+		font-style: italic;
+
+		&:before,&:after {
+			content: "";
+			display: inline-block;
+			width: 35px;
+			height: 22px;
+			background: url(../img/quote.png) 0 0 no-repeat;
+			position: absolute;
+		}	
+		&:before {
+			top: 0px;
+			left: 0px;					
+		}	
+		&:after {
+			right: 0px;
+			bottom: 0px;			
+			transform: rotate(180deg);
+		}		
+	}
+
+	table {
+		border-collapse: collapse;
+		td, th {border: 1px solid #dbdbdb; text-align: left;padding: 4px 4px 4px 8px;}
+		th {background: #f6f6f6;}
+	}
+	>ul,>ol {
+		margin-left: 20px;
+		padding: 0;
+		li {margin-bottom: 5px;
+			&:last-child {margin-bottom: 0;}
+		}
+	}
+	>ul {
+		list-style-type: disc;
+	}
 	@media (min-width: $screen-sm-min) {
 		padding: 35px 40px;
-		>p {margin-bottom: 35px;}
-		.h2 {font-size: 20px; margin: 0 0 15px 0}
+		>p, >blockquote, >table, >ul, >ol {margin-bottom: 35px;}
+		h2 {font-size: 20px; margin: 0 0 15px 0}
+		>ul,>ol {margin-left: 40px;}
 		.bx-footer {margin-bottom: 35px;}
 		.h-section {margin-bottom: 30px;}
 		.bx-image-main {margin: 0 -40px 45px;}
@@ -2205,7 +2252,7 @@ label.checkbox-column {margin-bottom: 20px; display: block;}
 	mark {background: none; color: $red;}
 	.excerpt {max-width: 800px;}
 }
-.tabcontent-text-search {}
+
 
 .menu-social-article {
 	display: flex;
