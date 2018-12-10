@@ -1729,7 +1729,7 @@ body {
 a {
   color: #000; }
   a:hover {
-    color: #ff0000; }
+    color: #ff0000 !important; }
 
 a, svg, path, button {
   transition: all .15s; }
@@ -2025,7 +2025,8 @@ NAVIGATION
       margin: 0;
       display: block !important;
       transform: translateY(-1em);
-      z-index: 10;
+      opacity: 0;
+      z-index: -1;
       transition: all 0.2s ease-in-out;
       padding: 15px 0 20px 30px !important;
       border-top: 2px solid #9a9a9a; }
