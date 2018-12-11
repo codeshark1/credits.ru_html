@@ -149,26 +149,37 @@ jQuery(document).ready(function($){
 
     $(".plan-wrapper").swipe( {
         swipeStatus: function(event, phase, direction, distance, duration, fingerCount) {
-            var swipeWidth = $(this).find('.plan-actions').width();
-            console.log(this);
+            var swipeWidth = $(this).find('.plan-actions').width();            
 
             if (phase == "move") {
-                if (direction == "left") {
-                   
-                        $(this).children('.plan-content').css({
-                            'margin-left' : '-'+swipeWidth+'px'
-                        });
+                if (direction == "left") {                   
+                    $(this).addClass('swiped').children('.plan-content').css({
+                        'margin-left' : '-'+swipeWidth+'px'
+                    });
                                  
-                } else if (direction == "right") {
-                  
-                        $(this).children('.plan-content').css({
-                            'margin-left' : 0+'px'
-                        });
+                } else if (direction == "right") {                  
+                    $(this).removeClass('swiped').children('.plan-content').css({
+                        'margin-left' : 0+'px'
+                    });
                     
                 }
             }
         },
-        allowPageScroll: 'vertical'
+        allowPageScroll: 'vertical',
+        tap:function(event, target) {
+            
+            var swipeWidth = $(this).find('.plan-actions').width();            
+            
+            if( $(this).hasClass('swiped')) {
+                $(this).removeClass('swiped').children('.plan-content').css({
+                    'margin-left' : 0+'px'
+                });
+            } else {
+                $(this).addClass('swiped').children('.plan-content').css({
+                    'margin-left' : '-'+swipeWidth+'px'
+                });
+            }
+        }
     });
 
 
