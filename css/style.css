@@ -2378,7 +2378,11 @@ NAVIGATION
 .city-picker {
   display: inline-block;
   border-bottom: 1px solid #000;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: all .15s; }
+  .city-picker:hover {
+    color: #ff0000;
+    border-color: #ff0000; }
 
 .actions-main {
   padding-top: 2rem;
@@ -2500,9 +2504,6 @@ NAVIGATION
     margin-left: 0;
     margin-right: 0;
     text-align: left; } }
-.h-hero-bank .city-picker {
-  color: #ff0000;
-  border-color: #ff0000; }
 @media (min-width: 768px) {
   .h-hero-bank.icon {
     position: relative; }

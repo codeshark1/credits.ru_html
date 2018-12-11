@@ -701,6 +701,11 @@ NAVIGATION
 	display: inline-block;
 	border-bottom: 1px solid $base-text;
 	cursor: pointer;
+	transition: all .15s;
+	&:hover {
+		color: $red;
+		border-color: $red;
+	}
 }
 
 .actions-main {
@@ -824,7 +829,6 @@ NAVIGATION
 		margin-right: 0;
 		text-align: left;
 	}
-	.city-picker {color: $red; border-color: $red}
 
 	&.icon {
 		@media (min-width: $screen-sm-min) {
