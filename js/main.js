@@ -30,7 +30,6 @@ jQuery(document).ready(function($){
     function show_form_filter(button, block) { // фильтр, страница поиска кредитов
 		$(block).hide();
 		$(button).click(function(e){
-			//e.preventDefault();
 			if ( $(block).is(':visible')) {
 				$(block).slideUp().removeClass('active');
 				$('#js-btn-search-listing').removeClass('active');
@@ -135,7 +134,7 @@ jQuery(document).ready(function($){
     drop_menu('.drop-menu-trigger', '.drop-menu', '.drop-menu a', '.drop-menu-wrapper');
     drop_menu('.ipoteka-types-current', '.row-ipoteka-types', '.ipoteka-type', '.ipoteka-types-wrapper');
 
-    $(".plan-wrapper").swipe( { // глобальная
+/*     $(".plan-wrapper").swipe( {
         swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
             if ((direction == "left") && ! $(this).hasClass('swiped') )  {
                 $(this).addClass('swiped');             
@@ -146,6 +145,29 @@ jQuery(document).ready(function($){
         },
         threshold:0,
         duration: 0
+    }); */
+
+    $(".plan-wrapper").swipe( {
+        swipeStatus: function(event, phase, direction, distance, duration, fingerCount) {
+            var swipeWidth = $(this).find('.plan-actions').width();
+            console.log(event);
+            if (phase == "move") {
+                if (direction == "left") {
+                    if(distance <= swipeWidth){
+                        $(this).children('.plan-content').css({
+                            'margin-left' : (distance*-1)+'px'
+                        });
+                    }                
+                } else if (direction == "right") {
+                    if(distance < 0){
+                        $(this).children('.plan-content').css({
+                            'margin-left' : (distance*+1)+'px'
+                        });
+                    }
+                }
+            }
+        },
+        allowPageScroll: 'vertical'
     });
 
 

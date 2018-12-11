@@ -1245,7 +1245,7 @@ NAVIGATION
 		position: absolute;
 		right: 0;
 		top: 50px;
-		z-index: 2;
+		z-index: 3;
 		box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.14);
 		display: none;
 		
@@ -1348,15 +1348,14 @@ NAVIGATION
 		align-items: flex-start;		
 		position: relative;
 		&_bankname {			
+			justify-content: center;
 			a {
 				display: block;
 				max-width: 130px;
 				padding-right: 10px;
 				height: 23px;
 			}
-			img {
-				object-fit: scale-down;
-			}
+			img {object-fit: scale-down;}
 		}		
 		@media (max-width: $screen-xs-max) {
 			flex-grow: 1;
@@ -1870,6 +1869,9 @@ NAVIGATION
 		top: -2px;
 		bottom: -2px;
 		left: -2px;
+	}
+	@media (max-width: $screen-xs-max) {
+		display: none !important;
 	}
 }
 
