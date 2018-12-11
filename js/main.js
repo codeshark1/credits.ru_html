@@ -150,20 +150,21 @@ jQuery(document).ready(function($){
     $(".plan-wrapper").swipe( {
         swipeStatus: function(event, phase, direction, distance, duration, fingerCount) {
             var swipeWidth = $(this).find('.plan-actions').width();
-            console.log(event);
+            console.log(this);
+
             if (phase == "move") {
                 if (direction == "left") {
-                    if(distance <= swipeWidth){
+                   
                         $(this).children('.plan-content').css({
-                            'margin-left' : (distance*-1)+'px'
+                            'margin-left' : '-'+swipeWidth+'px'
                         });
-                    }                
+                                 
                 } else if (direction == "right") {
-                    if(distance < 0){
+                  
                         $(this).children('.plan-content').css({
-                            'margin-left' : (distance*+1)+'px'
+                            'margin-left' : 0+'px'
                         });
-                    }
+                    
                 }
             }
         },
