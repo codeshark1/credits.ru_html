@@ -140,6 +140,7 @@ fieldset {
 }
 
 /* SEARCH FORM */
+.search-button {outline: none}
 .form-search-header {
   position: relative;
   transition: all .3s;    
@@ -449,7 +450,7 @@ label.radio {
   
   //box-shadow: 0 0 30px 1px rgba($color: #090305, $alpha: 0.16);
   &:hover {
-    background: #f4d165 !important;
+    background: #ffde83 !important;
     color: $base-text !important;
     //box-shadow: 0 0 30px 1px rgba($color: #090305, $alpha: 0.2);
   }
