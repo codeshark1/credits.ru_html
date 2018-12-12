@@ -147,41 +147,47 @@ jQuery(document).ready(function($){
         duration: 0
     }); */
 
-    $(".plan-wrapper").swipe( {
-        swipeStatus: function(event, phase, direction, distance, duration, fingerCount) {
-            var swipeWidth = $(this).find('.plan-actions').width();            
-
-            if (phase == "move") {
-                if (direction == "left") {                   
-                    $(this).addClass('swiped').children('.plan-content').css({
-                        'margin-left' : '-'+swipeWidth+'px'
-                    });
-                                 
-                } else if (direction == "right") {                  
-                    $(this).removeClass('swiped').children('.plan-content').css({
-                        'margin-left' : 0+'px'
-                    });
-                    
+    function enable_swipes() {
+        $(".plan-wrapper").swipe( {
+            swipeStatus: function(event, phase, direction, distance, duration, fingerCount) {
+                var swipeWidth = $(this).find('.plan-actions').width();            
+    
+                if ( $(window).width() < 768 ) {
+                    if (phase == "move") {
+                        if (direction == "left") {                   
+                            $(this).addClass('swiped').children('.plan-content').css({
+                                'margin-left' : '-'+swipeWidth+'px'
+                            });
+                                        
+                        } else if (direction == "right") {                  
+                            $(this).removeClass('swiped').children('.plan-content').css({
+                                'margin-left' : 0+'px'
+                            });
+                            
+                        }
+                    }
+                }
+            },
+            allowPageScroll: 'vertical',
+            tap:function(event, target) {            
+                var swipeWidth = $(this).find('.plan-actions').width();            
+                
+                if ( $(window).width() < 768 ) {
+                    if( $(this).hasClass('swiped')) {
+                        $(this).removeClass('swiped').children('.plan-content').css({
+                            'margin-left' : 0+'px'
+                        });
+                    } else {
+                        $(this).addClass('swiped').children('.plan-content').css({
+                            'margin-left' : '-'+swipeWidth+'px'
+                        });
+                    }
                 }
             }
-        },
-        allowPageScroll: 'vertical',
-        tap:function(event, target) {
-            
-            var swipeWidth = $(this).find('.plan-actions').width();            
-            
-            if( $(this).hasClass('swiped')) {
-                $(this).removeClass('swiped').children('.plan-content').css({
-                    'margin-left' : 0+'px'
-                });
-            } else {
-                $(this).addClass('swiped').children('.plan-content').css({
-                    'margin-left' : '-'+swipeWidth+'px'
-                });
-            }
-        }
-    });
-
+        }); 
+    }    
+    enable_swipes();
+    
 
     /* SEARCH FORM */
     function searchForm(formId) {

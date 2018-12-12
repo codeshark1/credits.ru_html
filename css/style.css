@@ -1892,7 +1892,8 @@ a, svg, path, button {
       width: -webkit-max-content;
       width: max-content;
       border-radius: 10px;
-      border: 1px solid #d8d8d8; } }
+      border: 1px solid #d8d8d8;
+      min-width: 260px; } }
   .location-hint:before {
     content: "";
     position: absolute;
@@ -2999,10 +3000,10 @@ NAVIGATION
     .plan .td_bankname {
       justify-content: center; }
       .plan .td_bankname a {
-        display: block;
+        display: flex;
         max-width: 130px;
         padding-right: 10px;
-        height: 23px; }
+        height: 65px; }
       .plan .td_bankname img {
         object-fit: scale-down; }
     @media (max-width: 767px) {
@@ -3010,6 +3011,8 @@ NAVIGATION
         flex-grow: 1;
         width: 50%;
         margin-bottom: 20px; }
+        .plan .td_bankname a {
+          flex-direction: column; }
         .plan .td_action {
           display: none; } }
   .plan img {
