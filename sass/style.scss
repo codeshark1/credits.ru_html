@@ -1366,7 +1366,7 @@ NAVIGATION
 			flex-grow: 1;
 			width: 50%;
 			margin-bottom: 20px;
-			&_bankname a {flex-direction: column}
+			.licence {display: none;}
 			&_action {display: none;}
 		}
 	}	
@@ -1464,11 +1464,7 @@ NAVIGATION
 	}
 	
 	.td_offer .date {font-size: 1.1rem;}
-	.licence, .link-info {
-		position: absolute;
-		left: 0;
-		width: 100%;	
-	}	
+	
 	@media (max-width: $screen-xs) {
 		.ttl {
 			//white-space: nowrap;
@@ -1479,8 +1475,7 @@ NAVIGATION
 	@media (max-width: $screen-xs-max) {
 		.ttl {height: 20px; display: block}
 		.td_amount .min {display: none}
-		.td_amount, .td_overpay {font-size: 1.5rem}
-		.licence {top: -25px}
+		.td_amount, .td_overpay {font-size: 1.5rem}		
 		.plan-content {padding-top: 40px}
 	}
 	@media (min-width: $screen-sm-min) {
@@ -1501,8 +1496,15 @@ NAVIGATION
 			font-size: 0.9rem;
 			text-decoration: underline;
 			text-align: center;
+			margin: 0;
 		}
 		.ttl {display: none}
+
+		.licence, .link-info {
+			position: absolute;
+			left: 0;
+			width: 100%;	
+		}			
 	}
 }
 .plan_sber {

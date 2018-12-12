@@ -3011,8 +3011,8 @@ NAVIGATION
         flex-grow: 1;
         width: 50%;
         margin-bottom: 20px; }
-        .plan .td_bankname a {
-          flex-direction: column; }
+        .plan .td .licence {
+          display: none; }
         .plan .td_action {
           display: none; } }
   .plan img {
@@ -3113,10 +3113,6 @@ NAVIGATION
     margin-bottom: 10px; }
   .plan_insearch .td_offer .date {
     font-size: 1.1rem; }
-  .plan_insearch .licence, .plan_insearch .link-info {
-    position: absolute;
-    left: 0;
-    width: 100%; }
   @media (max-width: 576px) {
     .plan_insearch .ttl {
       line-height: 1;
@@ -3129,8 +3125,6 @@ NAVIGATION
       display: none; }
     .plan_insearch .td_amount, .plan_insearch .td_overpay {
       font-size: 1.5rem; }
-    .plan_insearch .licence {
-      top: -25px; }
     .plan_insearch .plan-content {
       padding-top: 40px; } }
   @media (min-width: 768px) {
@@ -3156,9 +3150,14 @@ NAVIGATION
     .plan_insearch .link-info {
       font-size: 0.9rem;
       text-decoration: underline;
-      text-align: center; }
+      text-align: center;
+      margin: 0; }
     .plan_insearch .ttl {
-      display: none; } }
+      display: none; }
+    .plan_insearch .licence, .plan_insearch .link-info {
+      position: absolute;
+      left: 0;
+      width: 100%; } }
 
 @media (max-width: 767px) {
   .plan_sber .td_title {
