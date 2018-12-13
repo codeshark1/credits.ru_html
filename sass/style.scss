@@ -1338,7 +1338,7 @@ NAVIGATION
 	}		
 	.plan-content {
 		display: flex;	
-		padding: 20px 0 0 20px;
+		padding: 20px 10px 0 20px;
 		position: relative;
 		width: 100%;		
 		flex-wrap: wrap;
@@ -1412,6 +1412,15 @@ NAVIGATION
 	}
 	.licence {font-size: 0.75rem;}
 	.btn-cta {border-radius: 25px;}
+
+	.link-wrapper {
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		display: block;
+	}
 	@media (max-width: $screen-xs-max) {
 		margin-bottom: 0.5rem;
 	}

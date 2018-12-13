@@ -152,7 +152,7 @@ jQuery(document).ready(function($){
             swipeStatus: function(event, phase, direction, distance, duration, fingerCount) {
                 var swipeWidth = $(this).find('.plan-actions').width();            
     
-                if ( $(window).width() < 768 ) {
+                if ( $(window).width() < 768 && $(this).children('.plan-actions').length ) {
                     if (phase == "move") {
                         if (direction == "left") {                   
                             $(this).addClass('swiped').children('.plan-content').css({
@@ -172,7 +172,7 @@ jQuery(document).ready(function($){
             tap:function(event, target) {            
                 var swipeWidth = $(this).find('.plan-actions').width();            
                 
-                if ( $(window).width() < 768 ) {
+                if ( $(window).width() < 768 && $(this).children('.plan-actions').length ) {
                     if( $(this).hasClass('swiped')) {
                         $(this).removeClass('swiped').children('.plan-content').css({
                             'margin-left' : 0+'px'
