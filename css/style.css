@@ -1875,11 +1875,9 @@ a, svg, path, button {
     font-size: 0.9rem; }
 
 .location-hint {
+  margin-bottom: 1px;
   background: #fff;
   padding: 20px 25px; }
-  @media (max-width: 767px) {
-    .location-hint {
-      margin-bottom: 1px; } }
   @media (min-width: 768px) {
     .location-hint {
       position: absolute;
@@ -1890,6 +1888,7 @@ a, svg, path, button {
       width: 355px;
       width: -ms-max-content;
       width: -webkit-max-content;
+      width: -moz-max-content;
       width: max-content;
       border-radius: 10px;
       border: 1px solid #d8d8d8;
@@ -2205,6 +2204,15 @@ NAVIGATION
 
 .section-top {
   padding-top: 16px; }
+
+table {
+  border-collapse: collapse; }
+  table td, table th {
+    border: 1px solid #dbdbdb;
+    text-align: left;
+    padding: 4px 4px 4px 8px; }
+  table th {
+    background: #f6f6f6; }
 
 @media (max-width: 767px) {
   .no-mg-xs {
@@ -3893,14 +3901,6 @@ label.checkbox-column {
       right: 0px;
       bottom: 0px;
       transform: rotate(180deg); }
-  .section-article table {
-    border-collapse: collapse; }
-    .section-article table td, .section-article table th {
-      border: 1px solid #dbdbdb;
-      text-align: left;
-      padding: 4px 4px 4px 8px; }
-    .section-article table th {
-      background: #f6f6f6; }
   .section-article > ul, .section-article > ol {
     margin-left: 20px;
     padding: 0; }
@@ -4256,13 +4256,14 @@ section + .view-all {
     margin: 0 auto 35px; } }
 @media (min-width: 768px) {
   .bx-bank-logo {
-    transform: translateY(-40%);
     background: #fff;
     display: inline-block;
     position: relative;
-    margin-top: -35px;
+    margin: -60px 0 30px;
     padding: 20px 20px 0 20px;
     border-radius: 5px 5px 0 0; } }
+.bx-bank-logo img {
+  display: block; }
 
 .bank-intro-row .bx-rate .rate {
   font-size: 20px;
@@ -4302,7 +4303,7 @@ section + .view-all {
         left: 0; }
       .bank-intro-row .bx-bank .rate {
         font-size: 35px;
-        margin-bottom: 40px; }
+        margin-bottom: 20px; }
     .bank-intro-row.creditcard-intro .bx-bank {
       order: 1;
       min-width: 220px;

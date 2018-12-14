@@ -172,9 +172,7 @@ $sect-mg-neg: 39px;
 	}
 }
 .location-hint {
-	@media (max-width: $screen-xs-max) {
-		margin-bottom: 1px;
-	}
+	margin-bottom: 1px;
 	@media (min-width: $screen-sm-min) {
 		position: absolute;
 		top: 100%;
@@ -184,7 +182,8 @@ $sect-mg-neg: 39px;
 		width: 355px;
 		width: -ms-max-content;
 		width: -webkit-max-content;
-		width: max-content; 
+		width: -moz-max-content; 
+		width: max-content;
 		border-radius: 10px;
 		//box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.14);
 		border: 1px solid $border;
@@ -526,6 +525,12 @@ NAVIGATION
 }
 .section-top {
 	padding-top: 16px;
+}
+
+table {
+	border-collapse: collapse;
+	td, th {border: 1px solid #dbdbdb; text-align: left;padding: 4px 4px 4px 8px;}
+	th {background: #f6f6f6;}
 }
 
 .no-mg-xs {
@@ -2232,11 +2237,6 @@ label.checkbox-column {margin-bottom: 20px; display: block;}
 		}		
 	}
 
-	table {
-		border-collapse: collapse;
-		td, th {border: 1px solid #dbdbdb; text-align: left;padding: 4px 4px 4px 8px;}
-		th {background: #f6f6f6;}
-	}
 	>ul,>ol {
 		margin-left: 20px;
 		padding: 0;
@@ -2584,15 +2584,15 @@ section+.view-all {
 		max-width: 135px;
 		margin: 0 auto 35px;
 	}
-	@media (min-width: $screen-sm-min) {		
-		transform:translateY(-40%);
+	@media (min-width: $screen-sm-min) {				
 		background: #fff;
 		display: inline-block;
 		position: relative;
-		margin-top: -35px;
+		margin: -60px 0 30px;
 		padding: 20px 20px 0 20px;
 		border-radius: 5px 5px 0 0;
 	}
+	img {display: block;}
 }
 .bank-intro-row {
 	.bx-rate {
@@ -2638,7 +2638,7 @@ section+.view-all {
 			}					
 			.rate {
 				font-size: 35px;
-				margin-bottom: 40px;
+				margin-bottom: 20px;
 			}
 		}
 		&.creditcard-intro {
