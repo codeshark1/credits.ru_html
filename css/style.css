@@ -3915,9 +3915,7 @@ label.checkbox-column {
   .section-article .item-similar-article {
     padding: 10px;
     background: #f2f2f2;
-    border: none;
-    margin-bottom: 0;
-    margin-right: .4em; }
+    border: none; }
     .section-article .item-similar-article:before, .section-article .item-similar-article:after {
       content: "";
       display: table; }
