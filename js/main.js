@@ -69,23 +69,25 @@ jQuery(document).ready(function($){
 
     function tabs() { // глобальная
         $('.js-nav-tabs .menu-item a').click(function(e){
-            e.preventDefault();
-            var tab_id = $(this).attr('href');
-            $('.js-nav-tabs .menu-item').removeClass('active');
-            $(this).parent().addClass('active');
-            $('.tabcontent').css('display','none');
-            $(tab_id).fadeIn(300);
-            if($('select').hasClass('tab-select')){
-                $('select.tab-select option').prop('selected', false);
-                $('select.tab-select option[value="'+tab_id+'"]').prop('selected', true);
-             }   
-            $(this).parents('.nav-tabs-wrapper').find('.tab-selected').text($(this).text());
-            
+			var _href = $(this).attr('href');
+			if(_href.match(/\#/gi)) {
+				e.preventDefault();
+				var tab_id = $(this).attr('href');
+				$('.js-nav-tabs .menu-item').removeClass('active');
+				$(this).parent().addClass('active');
+				$('.tabcontent').css('display','none');
+				$(tab_id).fadeIn(300);
+				if($('select').hasClass('tab-select')){
+					$('select.tab-select option').prop('selected', false);
+					$('select.tab-select option[value="'+tab_id+'"]').prop('selected', true);
+				}
+				$(this).parents('.nav-tabs-wrapper').find('.tab-selected').text($(this).text());
+			}
 
-            if ($(window).width() < 768) {
-                $(this).parents('.nav-tabs').css('display','none');
-            }
-        });
+			if ($(window).width() < 768) {
+				$(this).parents('.nav-tabs').css('display','none');
+			}
+		});
         $('.tab-selected').click(function(e){
             e.preventDefault();
             $(this).parents('.nav-tabs-wrapper').find('.nav-tabs').css('display','block');

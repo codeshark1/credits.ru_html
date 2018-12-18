@@ -2968,7 +2968,8 @@ table {
 
 .plan {
   position: relative;
-  background: #fff; }
+  background: #fff;
+  clear: both; }
   .plan:after {
     content: "";
     display: block;
@@ -3841,7 +3842,7 @@ label.checkbox-column {
 .section-article {
   background: #fff;
   padding: 20px 15px; }
-  .section-article > p, .section-article > blockquote, .section-article > table, .section-article > ul, .section-article > ol {
+  .section-article > p, .section-article > blockquote, .section-article > table, .section-article > ul, .section-article > ol, .section-article .similar-articles-box {
     margin-bottom: 25px; }
   .section-article .bx-footer, .section-article .bx-header {
     font-size: 0.85rem;
@@ -3874,7 +3875,8 @@ label.checkbox-column {
     margin: 0 -15px 20px; }
   .section-article h2, .section-article h3, .section-article h4, .section-article h5, .section-article h6 {
     font-weight: 400;
-    margin: 0 0 10px 0; }
+    margin: 0 0 10px 0;
+    clear: both; }
   .section-article h2 {
     font-size: 16px;
     margin: 0 0 10px 0; }
@@ -3910,10 +3912,33 @@ label.checkbox-column {
         margin-bottom: 0; }
   .section-article > ul {
     list-style-type: disc; }
+  .section-article .item-similar-article {
+    padding: 10px;
+    background: #f2f2f2;
+    border: none;
+    margin-bottom: 0;
+    margin-right: .4em; }
+    .section-article .item-similar-article:before, .section-article .item-similar-article:after {
+      content: "";
+      display: table; }
+    .section-article .item-similar-article:after {
+      clear: both; }
+    .section-article .item-similar-article .photo-block {
+      float: left;
+      margin-right: 15px;
+      width: 15%;
+      min-width: 80px; }
+    .section-article .item-similar-article img {
+      display: block;
+      width: 100%; }
+    .section-article .item-similar-article p {
+      margin: 0; }
+    .section-article .item-similar-article a {
+      display: block; }
   @media (min-width: 768px) {
     .section-article {
       padding: 35px 40px; }
-      .section-article > p, .section-article > blockquote, .section-article > table, .section-article > ul, .section-article > ol {
+      .section-article > p, .section-article > blockquote, .section-article > table, .section-article > ul, .section-article > ol, .section-article .similar-articles-box {
         margin-bottom: 35px; }
       .section-article h2 {
         font-size: 20px;
@@ -3932,7 +3957,9 @@ label.checkbox-column {
           left: -40px;
           margin-top: 35px; }
       .section-article .plan {
-        margin: 0 -40px 40px; } }
+        margin: 0 -40px 40px; }
+      .section-article .item-similar-article {
+        font-size: 1.1rem; } }
 
 .search-incontent.search-page {
   max-width: 770px; }
