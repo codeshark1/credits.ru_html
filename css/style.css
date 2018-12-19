@@ -4157,7 +4157,8 @@ label.checkbox-column {
     width: 22%;
     min-width: 66px;
     flex-shrink: 0;
-    background-position: center center; }
+    background-position: center center;
+    background-repeat: no-repeat; }
     .article-feed .col-img:after {
       content: '';
       display: block;
