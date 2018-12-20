@@ -814,11 +814,17 @@ table {
 	text-align: center;	
 	margin-bottom: 15px;
 	font-weight: 400;
+	h1 {
+		display: inline;
+		font-size: 20px;
+		font-weight: 400;
+	}
 	@media (min-width: $screen-sm-min) {
 		line-height: 2.5rem;
 		font-size: 35px;
 		max-width: 760px;
 		margin: 0 auto 40px;
+		h1 {font-size: 35px;}
 		&+.h-sub {
 			position: relative;
 			top: -30px;

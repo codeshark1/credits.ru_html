@@ -2493,12 +2493,18 @@ table {
   text-align: center;
   margin-bottom: 15px;
   font-weight: 400; }
+  .h-hero h1 {
+    display: inline;
+    font-size: 20px;
+    font-weight: 400; }
   @media (min-width: 768px) {
     .h-hero {
       line-height: 2.5rem;
       font-size: 35px;
       max-width: 760px;
       margin: 0 auto 40px; }
+      .h-hero h1 {
+        font-size: 35px; }
       .h-hero + .h-sub {
         position: relative;
         top: -30px; } }
