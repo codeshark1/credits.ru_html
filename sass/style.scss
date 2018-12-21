@@ -2965,7 +2965,40 @@ section+.view-all {
 .section-sidebar {
 	margin-bottom: 30px;
 }
-
+.menu-sidebar {
+	background-color: #fff;
+	padding: 35px 40px 20px;
+	.menu-item {margin: 0 0 20px;}
+	a {
+		position: relative;
+		display: flex;
+		align-items: center;
+		line-height: 1.2;
+		opacity: .7;		
+		&:before {
+			content: '';
+			position: absolute;
+			left: 2px;
+			width: 5px;
+			height: 5px;
+			background-color: #ff2633;
+			border-radius: 50%;
+			opacity: 0;
+			transform: scale(0.7);
+			-webkit-transition: all .3s ease-in-out;
+			transition: all .3s ease-in-out;			
+		}
+		&.active {
+			opacity: 1;
+			padding: 0 0 0 16px;	
+			&:before {
+				opacity: 1;
+				transform: scale(1);				
+			}		
+		}
+	}
+	
+}
 /* ==========================================================================
    FOOTER
    ========================================================================== */
