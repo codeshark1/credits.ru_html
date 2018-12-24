@@ -700,7 +700,16 @@ table {
 	}
 	.h-form {margin-bottom: 0;}
 }
+.title-combo {
+	text-align: center;
+	margin-bottom: 40px;
+	@media (min-width: $screen-sm-min) {
+		margin-bottom: 90px;
+		text-align: left;
 
+	}
+	.h-hero {margin: 0 0 15px 0;}
+}
 
 
 .city-picker {
@@ -852,7 +861,7 @@ table {
 				position: absolute;
 				background: $red;
 				left: -40px;
-				bottom: 5px;
+				top: 8px;
 				border-radius: 0 60px 60px 0;
 			}		
 
@@ -2291,8 +2300,6 @@ label.checkbox-column {margin-bottom: 20px; display: block;}
 	}
 }
 
-
-
 .search-incontent.search-page {
 	max-width: 770px;
 }
@@ -2381,7 +2388,6 @@ label.checkbox-column {margin-bottom: 20px; display: block;}
 
 .article-img-bg {
 	display: block;
-	//margin: 0 -15px;
 	@media (min-width: $screen-sm-min) {
 		margin: 0 -30px;
 		height: 225px;
@@ -2608,6 +2614,105 @@ section+.view-all {
 	}
 }
 
+
+.categs-box-row {
+	display: flex;
+	flex-wrap: wrap;
+
+	.box {
+		width: 100%;
+		@media (min-width: $screen-xs-min) {width: 50%}
+		@media (min-width: $screen-md-min) {width: 25%}
+	}
+
+	.box-icon {
+		display: flex;
+		align-items: center;
+		height: 50px;
+	}
+
+	.box-title {
+		text-transform: uppercase;
+		line-height: 1;
+		margin: 25px 0;
+		font-weight: normal;
+	}
+
+	.box-info {
+		padding-right: 16px;
+		li {margin-bottom: 18px;}
+		a {
+			display: block;
+			font-size: 14px;
+			line-height: 1.2;
+		}
+	}
+}
+
+.subject-block {
+    position: relative;
+    background-color: #fff;
+	margin: 0 0 30px;
+	.box {position: relative;}
+
+	.box-img {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		top: -10px;
+		left: -10px;
+		width: 350px;
+		height: 220px;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;			
+		}	
+	}
+	.box-title {
+		position: relative;
+		display: flex;
+		align-items: center;
+		height: 22px;
+		font-size: 18px;
+		font-weight: 700;
+		overflow: hidden;
+		padding: 0 30px;
+		margin: 20px 0 25px;	
+		&:before {
+			position: absolute;
+			content: '';
+			bottom: 0;
+			left: 0;
+			width: 11px;
+			height: 22px;
+			background-color: #f54b53;
+			-webkit-border-radius: 0 50px 50px 0;
+			border-radius: 0 50px 50px 0;
+		}		
+	}
+	.box-info {
+		padding: 0 30px 30px;
+	}	
+	.heading {line-height: 1.2; font-weight: 300; font-size: 25px;}
+	.more {
+		position: absolute;
+		display: inline-block;
+		bottom: 30px;
+		right: 30px;
+		transition: all .3s ease-in-out;
+		svg {fill: $red;width: 18px;}
+	}	
+	
+	a {display: block;
+		&:hover {
+			.more {
+				transform: translateX(5px);
+			}
+		}
+	}
+}
 
 /* BANK */
 .bx-bank-logo  {
@@ -2974,7 +3079,7 @@ section+.view-all {
 		display: flex;
 		align-items: center;
 		line-height: 1.2;
-		opacity: .7;		
+		opacity: .7;
 		&:before {
 			content: '';
 			position: absolute;

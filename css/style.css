@@ -2384,6 +2384,16 @@ table {
   .heading-wrapper .h-form {
     margin-bottom: 0; }
 
+.title-combo {
+  text-align: center;
+  margin-bottom: 40px; }
+  @media (min-width: 768px) {
+    .title-combo {
+      margin-bottom: 90px;
+      text-align: left; } }
+  .title-combo .h-hero {
+    margin: 0 0 15px 0; }
+
 .city-picker {
   display: inline-block;
   border-bottom: 1px solid #000;
@@ -2529,7 +2539,7 @@ table {
       position: absolute;
       background: #ff0000;
       left: -40px;
-      bottom: 5px;
+      top: 8px;
       border-radius: 0 60px 60px 0; } }
 
 .lbl-top {
@@ -4280,6 +4290,94 @@ section + .view-all {
       .form-steps-footer .nextstephint {
         margin-left: 20px;
         font-size: 0.9rem; } }
+
+.categs-box-row {
+  display: flex;
+  flex-wrap: wrap; }
+  .categs-box-row .box {
+    width: 100%; }
+    @media (min-width: 576px) {
+      .categs-box-row .box {
+        width: 50%; } }
+    @media (min-width: 992px) {
+      .categs-box-row .box {
+        width: 25%; } }
+  .categs-box-row .box-icon {
+    display: flex;
+    align-items: center;
+    height: 50px; }
+  .categs-box-row .box-title {
+    text-transform: uppercase;
+    line-height: 1;
+    margin: 25px 0;
+    font-weight: normal; }
+  .categs-box-row .box-info {
+    padding-right: 16px; }
+    .categs-box-row .box-info li {
+      margin-bottom: 18px; }
+    .categs-box-row .box-info a {
+      display: block;
+      font-size: 14px;
+      line-height: 1.2; }
+
+.subject-block {
+  position: relative;
+  background-color: #fff;
+  margin: 0 0 30px; }
+  .subject-block .box {
+    position: relative; }
+  .subject-block .box-img {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -10px;
+    left: -10px;
+    width: 350px;
+    height: 220px; }
+    .subject-block .box-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+  .subject-block .box-title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 22px;
+    font-size: 18px;
+    font-weight: 700;
+    overflow: hidden;
+    padding: 0 30px;
+    margin: 20px 0 25px; }
+    .subject-block .box-title:before {
+      position: absolute;
+      content: '';
+      bottom: 0;
+      left: 0;
+      width: 11px;
+      height: 22px;
+      background-color: #f54b53;
+      -webkit-border-radius: 0 50px 50px 0;
+      border-radius: 0 50px 50px 0; }
+  .subject-block .box-info {
+    padding: 0 30px 30px; }
+  .subject-block .heading {
+    line-height: 1.2;
+    font-weight: 300;
+    font-size: 25px; }
+  .subject-block .more {
+    position: absolute;
+    display: inline-block;
+    bottom: 30px;
+    right: 30px;
+    transition: all .3s ease-in-out; }
+    .subject-block .more svg {
+      fill: #ff0000;
+      width: 18px; }
+  .subject-block a {
+    display: block; }
+    .subject-block a:hover .more {
+      transform: translateX(5px); }
 
 /* BANK */
 @media (max-width: 767px) {
