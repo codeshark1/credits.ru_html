@@ -4743,23 +4743,9 @@ section + .view-all {
 
 /* 404 page */
 .error-404 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  background-image: url(../img/figure_404.png);
-  background-repeat: no-repeat;
-  background-position: left top;
   padding: 60px 0; }
   .error-404 .info {
-    position: relative;
-    -webkit-box-flex: 2;
-    -webkit-flex-grow: 2;
-    -ms-flex-positive: 2;
-    flex-grow: 2;
-    padding: 40px 110px 0;
-    z-index: 2; }
+    padding: 40px 110px 0; }
   .error-404 .error span {
     display: block;
     font-size: 300px;
@@ -4798,15 +4784,8 @@ section + .view-all {
       width: 300px;
       height: 65px;
       font-size: 20px;
-      color: #fff;
       background-color: #ff2633;
-      border: none; }
-  .error-404 .figure {
-    position: relative;
-    -webkit-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    transform: rotate(180deg);
-    z-index: 1; }
+      text-transform: uppercase; }
   @media (max-width: 768px) {
     .error-404 {
       padding: 50px 0 100px; }
@@ -4854,6 +4833,15 @@ section + .view-all {
       width: initial;
       height: 60px;
       font-size: 18px; } }
+  @media (min-width: 992px) {
+    .error-404 {
+      background: url("../img/figure.png") right -400px center no-repeat;
+      height: 955px;
+      background-size: 800px auto; } }
+  @media (min-width: 1200px) {
+    .error-404 {
+      background-position: right -480px center;
+      background-size: auto; } }
 
 /* ==========================================================================
    FOOTER

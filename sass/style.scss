@@ -3107,23 +3107,9 @@ section+.view-all {
 
 /* 404 page */
 .error-404 {
-    position: relative;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    background-image: url(../img/figure_404.png);
-    background-repeat: no-repeat;
-    background-position: left top;
-	padding: 60px 0;	
+	padding: 60px 0;
 	.info {
-		position: relative;
-		-webkit-box-flex: 2;
-		-webkit-flex-grow: 2;
-		-ms-flex-positive: 2;
-		flex-grow: 2;
 		padding: 40px 110px 0;
-		z-index: 2;		
 	}	
 	.error {
 		span {
@@ -3169,18 +3155,10 @@ section+.view-all {
 			width: 300px;
 			height: 65px;
 			font-size: 20px;
-			color: #fff;
 			background-color: #ff2633;
-			border: none;
+			text-transform: uppercase;
 		}		
 	}
-	.figure {
-		position: relative;
-		-webkit-transform: rotate(180deg);
-		-ms-transform: rotate(180deg);
-		transform: rotate(180deg);
-		z-index: 1;
-	}	
 
 	@media (max-width: 768px) {
 		padding: 50px 0 100px;
@@ -3218,32 +3196,45 @@ section+.view-all {
 	}	
 
 	@media only screen and (max-width: 430px) {
-		.info .error span {
-			font-size: 100px;
-		  }
-		  .info .error p {
-			font-size: 16px;
-		  }
-		  .info .block {
-			padding: 40px 25px 60px;
-		  }
-		  .info .block p {
-			font-size: 18px;
-		  }
-		  .info .block p br {
-			display: none;
-		  }
-		  .info .block .back-to {
-			margin: 25px 0 0;
-		  }
-		  .info .block .btn {
-			left: 20px;
-			right: 20px;
-			width: initial;
-			height: 60px;
-			font-size: 18px;
-		  }		
+		.info {
+			.error span {
+				font-size: 100px;
+			}
+			.error p {
+				font-size: 16px;
+			}
+			.block {
+				padding: 40px 25px 60px;
+			}
+			.block p {
+				font-size: 18px;
+			}
+			.block p br {
+				display: none;
+			}
+			.block .back-to {
+				margin: 25px 0 0;
+			}
+			.block .btn {
+				left: 20px;
+				right: 20px;
+				width: initial;
+				height: 60px;
+				font-size: 18px;
+			}	
+		}	
 	}	
+
+	@media (min-width: $screen-md-min) {
+		background: url('../img/figure.png') right -400px center  no-repeat;
+		height: 955px;
+		background-size: 800px auto;
+	}
+
+	@media (min-width: $screen-lg-min) {
+		background-position: right -480px center;
+		background-size: auto;
+	}
 }
 
 /* ==========================================================================
