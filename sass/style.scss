@@ -3195,7 +3195,7 @@ section+.view-all {
 		}
 	}	
 
-	@media only screen and (max-width: 430px) {
+	@media (max-width: 430px) {
 		.info {
 			.error span {
 				font-size: 100px;
@@ -3237,6 +3237,796 @@ section+.view-all {
 	}
 }
 
+/* ABOUT */
+.main-about {
+	position: relative;
+	min-height: 360px;
+	text-align: center;
+	overflow: hidden;
+	background-image: url(../img/about_bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	padding: 90px 0;
+	@media (min-width: $screen-md-min) {
+		&:after {
+			content: "";
+			background: url('../img/about-graphic-hero.png') 100% 0 no-repeat;
+			width: 200px;
+			height: 220px;
+			position: absolute;
+			right: 0;
+			bottom: 0;
+		}
+
+	}
+	.title {
+	  position: relative;
+	  color: #fff;
+	  z-index: 2;
+	  .heading {
+		text-transform: uppercase;
+		font-size: 60px;
+		font-weight: 700;
+		line-height: 1;
+		margin: 0 0 20px;
+	  }	  
+	  p {
+		font-size: 20px;
+		line-height: 1.3;
+		padding: 0 270px;
+	  }
+	}
+	
+	@media (max-width: 1200px) {
+		.title p {			
+			padding: 0 150px;
+		  }	
+	}
+	@media (max-width: 991px) {
+		.title .heading {
+			font-size: 45px;
+		  }
+		.title p {
+			font-size: 18px;
+			padding: 0 50px;
+		}	
+	}
+	@media (max-width: 768px) {
+		min-height: auto;
+		padding: 70px 0;		
+		.title .heading {
+			font-size: 40px;
+		}
+		.title p {
+			font-size: 18px;
+			padding: 0;
+		}	
+	}
+	@media (max-width: 430px) {
+		.title .heading {
+			font-size: 30px;
+			background: red;
+		}
+		.title p {
+			font-size: 16px;
+		}	
+	}
+}
+  
+  
+.about {
+	position: relative;
+	padding: 100px 0 50px;
+
+	@media (min-width: $screen-lg-min) {
+		&:before {
+			content: "";
+			background: url('../img/figure_bw.png') 100% center no-repeat;
+			width: 480px;
+			height: 955px;
+			position: absolute;
+			left: -25px;
+			bottom: -100px;
+			opacity: .05;
+		}
+	}	
+  }
+  
+  .about > .figure {
+	position: absolute;
+	top: -120px;
+	left: 0;
+  }
+  
+  .about > .figure:nth-child(2) {
+	top: initial;
+	bottom: 160px;
+	left: -234px;
+	opacity: .05;
+	transform: rotate(-90deg);
+  }
+  
+  .about h2 {
+	text-transform: uppercase;
+	font-size: 40px;
+	font-weight: 700;
+	line-height: 1.2;
+	color: #f41e2a;
+	margin: 0 0 25px;
+  }
+  
+  .about h3 {
+	font-size: 30px;
+	font-weight: 400;
+	line-height: 1.2;
+	margin: 0 0 20px;
+  }
+  
+  .about p {
+	font-size: 18px;
+	line-height: 1.3;
+	margin: 0 0 20px;
+  }
+  
+  .about .about-mission {
+	position: relative;
+	margin: 0 0 145px;
+	z-index: 2;
+
+	@media (min-width: $screen-lg-min) {
+		&:before {
+			content: "";
+			background: url('../img/figure.png') 100% center no-repeat;
+			width: 480px;
+			height: 955px;
+			position: absolute;
+			left: -25px;
+			top: -200px;
+		}
+	}
+  }
+  
+  .about .about-mission .discription {
+	padding: 0 100px 0 570px;
+	margin: 0 0 75px;
+  }
+  
+  .about .about-mission .discription p {
+	font-size: 20px;
+  }
+  
+  .about .about-mission .block {
+	position: relative;
+	display: flex;
+	flex-flow: wrap;
+	height: 310px;
+	background-color: #fff;
+	box-shadow: 0 0 38px 0 rgba(0, 0, 0, 0.2);
+	margin: 0 0 0 100px;
+  }
+  
+  .about .about-mission .block .workers {
+	width: 470px;
+	height: 100%;
+  }
+  
+  .about .about-mission .block .workers .slick-gallery {
+	width: 100%;
+	height: 100%;
+  }
+  
+  .about .about-mission .block .workers .slick-gallery .box {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	width: 100%;
+	height: 310px;
+	font-size: 20px;
+	line-height: 1.2;
+	background-color: #a1a1a1;
+  }
+  
+  .about .about-mission .block .workers .slick-gallery .box img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+  }
+  
+  .about .about-mission .block .workers .slick-gallery .slick-dots {
+	top: initial;
+	bottom: -45px;
+  }
+  
+  .about .about-mission .block .statistics {
+	flex-grow: 2;
+	flex-flow: wrap;
+	display: flex;
+	justify-content: space-between;
+	width: 50%;
+	height: 100%;
+	padding: 45px 50px 55px;
+  }
+  
+  .about .about-mission .block .statistics .box {
+	font-size: 20px;
+	line-height: 1.2;
+  }
+  
+  .about .about-mission .block .statistics .box:first-child {
+	width: 150px;
+  }
+  
+  .about .about-mission .block .statistics .box:nth-child(2) {
+	width: 275px;
+  }
+  
+  .about .about-mission .block .statistics .box span {
+	display: block;
+	font-size: 40px;
+	font-weight: 700;
+	line-height: 1;
+	color: #ffca2c;
+	margin: 0 0 20px;
+  }
+  
+  .about .about-mission .block .statistics .old-year {
+	width: 100%;
+	text-transform: uppercase;
+	font-size: 40px;
+	font-weight: 700;
+	line-height: 1.2;
+	color: #ffca2c;
+	margin: 35px 0 0;
+  }
+  
+  .about .about-advantages {
+	position: relative;
+	padding: 0 200px;
+	z-index: 2;
+  }
+  
+  .about .about-advantages h2 {
+	text-align: center;
+  }
+  
+  .about .about-advantages .block {
+	margin: 60px 0 0;
+  }
+  
+  .about .about-advantages .block .box {
+	display: flex;
+	align-items: center;
+	margin: 0 0 60px;
+  }
+  
+  .about .about-advantages .block .box:nth-child(2n-1) {
+	padding: 0 0 0 170px;
+  }
+  
+  .about .about-advantages .block .box:nth-child(2n-1) .box-img {
+	order: -1;
+	margin: 0 85px 0 0;
+  }
+  
+  .about .about-advantages .block .box .box-info {
+	width: 370px;
+  }
+  
+  .about .about-advantages .block .box .box-info h3 {
+	white-space: nowrap;
+  }
+  
+  .about .about-advantages .block .box .box-img {
+	margin: 0 0 0 85px;
+  }
+  
+  .about .about-clarity {
+	position: relative;
+	padding: 80px 0 0;
+	z-index: 2;
+
+	@media (min-width: $screen-lg-min) {
+		&:before {
+			content: "";
+			background: url('../img/figure.png') 0 center no-repeat;
+			width: 480px;
+			height: 955px;
+			position: absolute;
+			right: -25px;
+			top: -100px;
+		}
+	}	
+  }
+  
+  .about .about-clarity .figure {
+	position: absolute;
+	top: -185px;
+	right: -40px;
+	transform: rotate(180deg);
+  }
+  
+  .about .about-clarity .discription {
+	padding: 0 570px 0 100px;
+  }
+  
+  .about .about-clarity .slogan {
+	text-transform: uppercase;
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 1;
+	color: #313131;
+	background-color: #fff;
+	box-shadow: 0 0 38px 0 rgba(0, 0, 0, 0.2);
+	padding: 75px 70px;
+	margin: 70px 0 135px 100px;
+  }
+  
+  .about .about-clarity .slogan span {
+	display: block;
+	font-size: 50px;
+	color: #f41e2a;
+	margin: 10px 0 0 -25px;
+  }
+  
+  .about .about-clarity .block {
+	padding: 0 100px 0 200px;
+  }
+  
+  .about .about-clarity .block .box {
+	display: flex;
+	align-items: center;
+	margin: 0 0 100px;
+  }
+  
+  .about .about-clarity .block .box:first-child {
+	padding: 0 0 0 155px;
+  }
+  
+  .about .about-clarity .block .box:first-child .box-info {
+	width: 470px;
+  }
+  
+  .about .about-clarity .block .box:first-child .box-img {
+	order: -1;
+	margin: 0 70px 0 0;
+  }
+  
+  .about .about-clarity .block .box .box-info {
+	width: 400px;
+  }
+  
+  .about .about-clarity .block .box .box-img {
+	margin: 0 0 0 70px;
+  }
+  
+  .about .about-story {
+	position: relative;
+	padding: 0 100px;
+	margin: 0 0 50px;
+	z-index: 2;
+  }
+  
+  .about .about-story h2 {
+	text-align: center;
+  }
+  
+  .about .about-story .slick-story {
+	background-color: #fff;
+	box-shadow: 0 0 38px 0 rgba(0, 0, 0, 0.2);
+	padding: 0 70px;
+	margin: 60px 0 0;
+  }
+  
+  .about .about-story .slick-story .box {
+	padding: 50px 230px 60px 0;
+  }
+  
+  .about .about-story .slick-story .box .box-year {
+	font-size: 40px;
+	font-weight: 700;
+	line-height: 1;
+	color: #ffca2c;
+	margin: 0 0 30px;
+  }
+  
+  .about .about-story .slick-story .box .box-info {
+	font-size: 20px;
+	line-height: 1.3;
+  }
+  
+  .about .about-story .slick-story .slick-prev, .about .about-story .slick-story .slick-next {
+	width: 57px;
+	height: 210px;
+	background-color: rgba(49, 49, 49, 0.4);
+	margin: -105px 0 0;
+  }
+  
+  .about .about-story .slick-story .slick-prev:before, .about .about-story .slick-story .slick-next:before {
+	width: 32px;
+	height: 20px;
+	background-image: url(../img/icon/angle__.svg);
+  }
+  
+  .about .about-story .slick-story .slick-prev:hover, .about .about-story .slick-story .slick-next:hover {
+	background-color: #f41e2a;
+  }
+  
+  .about .about-story .slick-story .slick-prev {
+	left: -57px;
+	box-shadow: none;
+  }
+  
+  .about .about-story .slick-story .slick-next {
+	right: -57px;
+	box-shadow: none;
+  }
+  
+  .about .about-press {
+	position: relative;
+	background-color: #fff;
+	padding: 55px 70px 65px;
+	margin: 0 100px;
+	z-index: 2;
+  }
+  
+  .about .about-press h2 {
+	text-align: center;
+  }
+  
+  .about .about-press .block {
+	flex-flow: wrap;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 70px 0 0;
+  }
+  
+  .about .about-press .block .box:last-child {
+	width: 100%;
+	text-align: center;
+	margin: 65px 0 0;
+  }
+
+@media only screen and (max-width: 1200px) {
+	.about > .figure {
+		display: none;
+	  }
+	  .about .about-mission .discription {
+		padding: 0 100px 0 360px;
+	  }
+	  .about .about-mission .discription p {
+		font-size: 18px;
+	  }
+	  .about .about-mission .block {
+		margin: 0;
+	  }
+	  .about .about-mission .block .workers {
+		width: 360px;
+	  }
+	  .about .about-advantages {
+		padding: 0 50px;
+	  }
+	  .about .about-clarity .figure {
+		display: none;
+	  }
+	  .about .about-clarity .discription {
+		padding: 0 400px 0 0;
+	  }
+	  .about .about-clarity .slogan {
+		margin: 70px 0 135px;
+	  }
+	  .about .about-clarity .block {
+		padding: 0 50px;
+	  }
+	  .about .about-story {
+		padding: 0;
+	  }
+	  .about .about-story .slick-story .box {
+		padding: 50px 200px 60px 0;
+	  }
+	  .about .about-press {
+		margin: 0;
+	  }	
+}
+
+@media only screen and (max-width: 991px) {
+	.about {
+		padding: 50px 0;
+	  }
+	  .about h2 {
+		font-size: 35px;
+		margin: 0 0 15px;
+	  }
+	  .about h3 {
+		font-size: 25px;
+		margin: 0 0 10px;
+	  }
+	  .about .about-mission {
+		margin: 0 0 80px;
+	  }
+	  .about .about-mission .discription {
+		padding: 0;
+		margin: 0 0 50px;
+	  }
+	  .about .about-mission .block {
+		height: auto;
+		background-color: transparent;
+		-webkit-box-shadow: none;
+				box-shadow: none;
+	  }
+	  .about .about-mission .block .workers {
+		width: 100%;
+		padding: 0 0 45px;
+	  }
+	  .about .about-mission .block .workers .slick-gallery .slick-dots {
+		left: 0;
+		justify-content: center;
+	  }
+	  .about .about-mission .block .workers .slick-gallery .slick-dots li {
+		margin: 0 8px;
+	  }
+	  .about .about-mission .block .statistics {
+		background-color: #fff;
+		box-shadow: 0 0 38px 0 rgba(0, 0, 0, 0.2);
+		padding: 45px 50px 40px;
+		margin: 50px 0 0;
+	  }
+	  .about .about-mission .block .statistics .box {
+		font-size: 18px;
+	  }
+	  .about .about-mission .block .statistics .box span {
+		font-size: 35px;
+		margin: 0 0 15px;
+	  }
+	  .about .about-mission .block .statistics .old-year {
+		font-size: 35px;
+	  }
+	  .about .about-advantages {
+		padding: 0;
+	  }
+	  .about .about-advantages .block {
+		margin: 50px 0 0;
+	  }
+	  .about .about-advantages .block .box:nth-child(2n-1) {
+		padding: 0 0 0 130px;
+	  }
+	  .about .about-clarity {
+		padding: 0;
+	  }
+	  .about .about-clarity .discription {
+		padding: 0;
+	  }
+	  .about .about-clarity .slogan {
+		font-size: 25px;
+		padding: 50px;
+		margin: 50px 0 80px;
+	  }
+	  .about .about-clarity .slogan span {
+		font-size: 40px;
+	  }
+	  .about .about-clarity .block {
+		padding: 0;
+	  }
+	  .about .about-clarity .block .box:first-child {
+		padding: 0 0 0 130px;
+	  }
+	  .about .about-clarity .block .box .box-info {
+		width: 370px;
+	  }
+	  .about .about-story {
+		margin: 0 0 90px;
+	  }
+	  .about .about-story .slick-story {
+		margin: 50px 0 0;
+	  }
+	  .about .about-story .slick-story .box {
+		padding: 50px 0 60px;
+	  }
+	  .about .about-story .slick-story .box .box-year {
+		font-size: 35px;
+		margin: 0 0 20px;
+	  }
+	  .about .about-story .slick-story .box .box-info {
+		font-size: 18px;
+	  }
+	  .about .about-story .slick-story .slick-dots {
+		top: initial;
+		bottom: -45px;
+		left: 0;
+		-webkit-box-pack: center;
+		-webkit-justify-content: center;
+			-ms-flex-pack: center;
+				justify-content: center;
+	  }
+	  .about .about-story .slick-story .slick-dots li {
+		margin: 0 8px;
+	  }
+	  .about .about-press {
+		padding: 40px 100px 50px;
+	  }
+	  .about .about-press .block {
+		margin: 60px 0 0;
+	  }
+	  .about .about-press .block .box {
+		width: 50%;
+		text-align: center;
+		margin: 0 0 30px;
+	  }
+	  .about .about-press .block .box:last-child {
+		margin: 20px 0 0;
+	  }	
+}
+@media only screen and (max-width: 768px) {
+	.about h2 {
+		font-size: 30px;
+	  }
+	  .about h3 {
+		font-size: 20px;
+	  }
+	  .about p {
+		font-size: 16px;
+	  }
+	  .about .about-mission {
+		margin: 0 0 50px;
+	  }
+	  .about .about-mission .discription p {
+		font-size: 16px;
+	  }
+	  .about .about-mission .block .statistics {
+		padding: 30px;
+	  }
+	  .about .about-mission .block .statistics .box {
+		margin: 0 0 20px;
+	  }
+	  .about .about-mission .block .statistics .box:first-child, 
+	  .about .about-mission .block .statistics .box:nth-child(2) {
+		width: 100%;
+	  }
+	  .about .about-mission .block .statistics .box span {
+		font-size: 30px;
+		margin: 0 0 10px;
+	  }
+	  .about .about-mission .block .statistics .old-year {
+		font-size: 30px;
+		margin: 0;
+	  }
+	  .about .about-advantages .block .box:nth-child(2n-1) {
+		padding: 0;
+	  }
+	  .about .about-advantages .block .box:nth-child(2n-1) .box-img {
+		margin: 0 50px 0 0;
+	  }
+	  .about .about-advantages .block .box .box-info {
+		width: 100%;
+	  }
+	  .about .about-advantages .block .box .box-info h3 {
+		white-space: normal;
+	  }
+	  .about .about-advantages .block .box .box-img {
+		margin: 0 0 0 50px;
+	  }
+	  .about .about-advantages .block .box .box-img img {
+		width: 120px;
+	  }
+	  .about .about-clarity .slogan {
+		font-size: 20px;
+		padding: 30px;
+		margin: 50px 0;
+	  }
+	  .about .about-clarity .slogan span {
+		font-size: 30px;
+		margin: 10px 0 0;
+	  }
+	  .about .about-clarity .block .box {
+		margin: 0 0 60px;
+	  }
+	  .about .about-clarity .block .box:first-child {
+		padding: 0;
+	  }
+	  .about .about-clarity .block .box:first-child .box-info {
+		width: 100%;
+	  }
+	  .about .about-clarity .block .box:first-child .box-img {
+		margin: 0 50px 0 0;
+	  }
+	  .about .about-clarity .block .box .box-info {
+		width: 100%;
+	  }
+	  .about .about-clarity .block .box .box-img {
+		margin: 0 0 0 50px;
+	  }
+	  .about .about-clarity .block .box .box-img img {
+		width: 120px;
+	  }
+	  .about .about-story .slick-story {
+		padding: 0 30px;
+	  }
+	  .about .about-story .slick-story .box {
+		padding: 30px 0 40px;
+	  }
+	  .about .about-story .slick-story .box .box-year {
+		font-size: 30px;
+	  }
+	  .about .about-story .slick-story .box .box-info {
+		font-size: 16px;
+	  }
+	  .about .about-press {
+		padding: 40px 0 50px;
+	  }
+	  .about .about-press .block {
+		margin: 50px 0 0;
+	  }	
+}
+
+@media only screen and (max-width: 430px) {
+	.about h2 {
+		font-size: 25px;
+	  }
+	  .about .about-mission .block .statistics .box {
+		font-size: 16px;
+	  }
+	  .about .about-mission .block .statistics .box span {
+		font-size: 25px;
+	  }
+	  .about .about-mission .block .statistics .old-year {
+		font-size: 25px;
+	  }
+	  .about .about-advantages .block {
+		margin: 30px 0 0;
+	  }
+	  .about .about-advantages .block .box {
+		margin: 0 0 30px;
+	  }
+	  .about .about-advantages .block .box:nth-child(2n-1) .box-img {		
+		order: 0;
+		margin: 0 0 0 30px;
+	  }
+	  .about .about-advantages .block .box .box-img {
+		margin: 0 0 0 30px;
+	  }
+	  .about .about-advantages .block .box .box-img img {
+		width: 80px;
+	  }
+	  .about .about-clarity .slogan span {
+		font-size: 25px;
+	  }
+	  .about .about-clarity .block .box {
+		margin: 0 0 30px;
+	  }
+	  .about .about-clarity .block .box:first-child .box-img {
+		order: 0;
+		margin: 0 0 0 30px;
+	  }
+	  .about .about-clarity .block .box .box-img {
+		margin: 0 0 0 30px;
+	  }
+	  .about .about-clarity .block .box .box-img img {
+		width: 80px;
+	  }
+	  .about .about-story .slick-story {
+		margin: 30px 0 0;
+	  }
+	  .about .about-story .slick-story .box .box-year {
+		font-size: 25px;
+	  }
+	  .about .about-press {
+		padding: 30px 0 50px;
+	  }
+	  .about .about-press .block {
+		margin: 30px 0 0;
+	  }
+	  .about .about-press .block .box {
+		width: 100%;
+	  }
+	  .about .about-press .block .box:last-child {
+		margin: 0;
+	  }
+	  .about .about-press .block .box img {
+		max-width: 90%;
+	  }	
+}
 /* ==========================================================================
    FOOTER
    ========================================================================== */
