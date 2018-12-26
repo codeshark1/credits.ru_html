@@ -2330,10 +2330,13 @@ table {
         height: 37px;
         margin-left: -32px; } }
 
-@media (min-width: 768px) {
-  .h-contacts {
-    margin-bottom: 90px;
-    font-size: 50px; } }
+.h-contacts {
+  font-size: 30px;
+  margin-bottom: 40px; }
+  @media (min-width: 768px) {
+    .h-contacts {
+      margin-bottom: 90px;
+      font-size: 50px; } }
 
 .h-sub {
   text-align: center; }
@@ -5677,14 +5680,15 @@ section + .view-all {
   background-size: cover;
   padding: 70px 0 60px;
   text-align: center; }
-  .contacts .vacancy:after {
-    content: "";
-    right: 0;
-    bottom: 0;
-    position: absolute;
-    background: url("../img/about-graphic-hero.png") 0 0 no-repeat;
-    width: 200px;
-    height: 200px; }
+  @media (min-width: 992px) {
+    .contacts .vacancy:after {
+      content: "";
+      right: 0;
+      bottom: 0;
+      position: absolute;
+      background: url("../img/about-graphic-hero.png") 0 0 no-repeat;
+      width: 200px;
+      height: 200px; } }
 
 .contacts .vacancy .title {
   color: #fff; }
