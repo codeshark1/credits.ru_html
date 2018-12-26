@@ -630,7 +630,7 @@ table {
 	}
 }
 
-.h-searchcredits {
+.h-searchcredits, .h-contacts {
 	text-align: center;
 	color: $red;
 	font-weight: 500;
@@ -654,6 +654,12 @@ table {
 		&:before {
 			width: 64px;height: 37px;margin-left: -32px;
 		}
+	}
+}
+.h-contacts {
+	@media (min-width: $screen-sm-min) {
+		margin-bottom: 90px;
+		font-size: 50px;
 	}
 }
 .h-sub {text-align: center;}
@@ -4054,6 +4060,431 @@ section+.view-all {
 		max-width: 90%;
 	  }	
 }
+
+
+.contacts {
+	position: relative;
+  }
+  
+  .contacts .address {
+	position: relative;
+	-webkit-flex-flow: wrap;
+		-ms-flex-flow: wrap;
+			flex-flow: wrap;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+		-ms-flex-pack: justify;
+			justify-content: space-between;
+	margin: 0 0 35px;
+  }
+  
+  .contacts .address .box {
+	position: relative;
+	width: -webkit-calc((100% / 3) - 15px);
+	width: calc((100% / 3) - 15px);
+	height: 195px;
+	background-color: #fff;
+	padding: 25px 30px;
+  }
+  
+  .contacts .address .box:first-child .box-icon img {
+	width: 20px;
+  }
+  
+  .contacts .address .box .box-icon img {
+	width: 31px;
+  }
+  
+  .contacts .address .box .box-info .label {
+	display: block;
+	font-size: 20px;
+	font-weight: 300;
+	line-height: 1.2;
+	margin: 20px 0 12px;
+  }
+  
+  .contacts .address .box .box-info p {
+	line-height: 1.6;
+  }
+  
+  .contacts .map {
+	position: relative;
+	height: 320px;
+	margin: 0 0 85px;
+  }
+  
+  .contacts .map #map {
+	height: 100%;
+  }
+  
+  .contacts .map #map .gmnoprint {
+	-webkit-box-shadow: 0 7px 13px 0 rgba(0, 0, 0, 0.35);
+			box-shadow: 0 7px 13px 0 rgba(0, 0, 0, 0.35);
+  }
+  
+  .contacts .phones {
+	position: relative;
+	-webkit-flex-flow: wrap;
+		-ms-flex-flow: wrap;
+			flex-flow: wrap;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+		-ms-flex-align: center;
+			align-items: center;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+		-ms-flex-pack: justify;
+			justify-content: space-between;
+	margin: 0 0 20px;
+  }
+  
+  .contacts .phones .box {
+	position: relative;
+	width: -webkit-calc((100% / 2) - 15px);
+	width: calc((100% / 2) - 15px);
+	margin: 0 0 100px;
+  }
+  
+  .contacts .phones .box .box-title {
+	font-size: 30px;
+	font-weight: 300;
+	line-height: 1.2;
+	margin: 0 0 25px;
+  }
+  
+  .contacts .phones .box .box-info {
+	position: relative;
+	font-size: 35px;
+	font-weight: 300;
+	padding: 25px 0 0;
+  }
+  
+  .contacts .phones .box .box-info:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -40px;
+	width: 75px;
+	height: 1px;
+	background-color: #f41e2a;
+  }
+  
+  .contacts .vacancy {
+	position: relative;
+	min-height: 360px;
+	text-align: center;
+	overflow: hidden;
+	background-image: url(../img/about_bg2.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	padding: 70px 0 60px;
+	text-align: center;
+	&:after {
+		content: "";
+		right: 0;
+		bottom: 0;
+		position: absolute;
+		background: url('../img/about-graphic-hero.png') 0 0 no-repeat;
+		width: 200px;
+		height: 200px;
+	}
+  }
+  
+  .contacts .vacancy .title {
+	color: #fff;
+  }
+  
+  .contacts .vacancy .title h2,
+  .contacts .vacancy .title .h2 {
+	font-size: 30px;
+	line-height: 1.2;
+  }
+  
+  .contacts .vacancy .title p {
+	font-size: 35px;
+	font-weight: 300;
+	margin: 20px 0 35px;
+  }
+  
+  .contacts .vacancy .title .btn-ylw {
+	width: 230px;
+	font-size: 18px;
+  }
+  
+  .contacts .call-back {
+	position: relative;
+	display: flex;
+	justify-content: flex-end;
+	padding: 80px 0 60px;
+	@media (min-width: $screen-lg-min) {
+		&:before {
+			content: "";
+			background: url(../img/figure.png) 100% center no-repeat;
+			width: 480px;
+			height: 955px;
+			position: absolute;
+			left: -25px;
+			top: -200px;
+		}
+	}
+  }
+  
+  .contacts .call-back .call-back-form {
+	width: 570px;
+  }
+  
+  .contacts .call-back .call-back-form h2,
+  .contacts .call-back .call-back-form .h2 {
+	line-height: 1.2;
+	margin: 0 0 50px;
+	font-size: 30px;
+  }
+  
+  .contacts .call-back .call-back-form .block {
+	position: relative;
+	width: 100%;
+	background-color: #fff;
+	-webkit-box-shadow: 0 0 38px 0 rgba(0, 0, 0, 0.2);
+			box-shadow: 0 0 38px 0 rgba(0, 0, 0, 0.2);
+	padding: 40px 37px 35px;
+  }
+  
+  .contacts .call-back .call-back-form .block .select {
+	width: 100%;
+	margin: 0 0 35px;
+  }
+  
+  .contacts .call-back .call-back-form .block .select .label {
+	font-size: 20px;
+  }
+  
+  .contacts .call-back .call-back-form .block .select ul {
+	top: 69px;
+  }
+  
+  .contacts .call-back .call-back-form .block .input {
+	height: auto;
+	margin: 0 0 35px;
+  }
+  
+  .contacts .call-back .call-back-form .block .input .label {
+	display: block;
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 1;
+	margin: 0 0 10px;
+  }
+  
+  .contacts .call-back .call-back-form .block .input input {
+	height: 40px;
+	font-size: 14px;
+	color: #000;
+	border: 1px solid #adadad;
+	-webkit-box-shadow: none;
+			box-shadow: none;
+	padding: 0 18px;
+  }
+  
+  .contacts .call-back .call-back-form .block .textarea {
+	margin: 0 0 30px;
+  }
+  
+  .contacts .call-back .call-back-form .block .textarea .label {
+	display: block;
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 1;
+	margin: 0 0 10px;
+  }
+  
+  .contacts .call-back .call-back-form .block .line {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+		-ms-flex-align: center;
+			align-items: center;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+		-ms-flex-pack: justify;
+			justify-content: space-between;
+  }
+  
+  .contacts .call-back .call-back-form .block .line .btn-ylw {
+	width: 230px;
+	font-size: 18px;
+	-webkit-box-shadow: 0 0 38px 0 rgba(0, 0, 0, 0.2);
+			box-shadow: 0 0 38px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .contacts .call-back .call-back-form .block .line .btn-ylw:hover, .contacts .call-back .call-back-form .block .line .btn-ylw:focus {
+	-webkit-box-shadow: none;
+			box-shadow: none;
+  }
+  
+  @media only screen and (max-width: 1200px) {
+	.contacts .address .box {
+		height: auto;
+	  }
+	  .contacts .phones .box .box-title {
+		font-size: 27px;
+	  }
+	  .contacts .phones .box .box-info {
+		font-size: 30px;
+	  }
+	  .contacts .call-back {
+		-webkit-box-pack: center;
+		-webkit-justify-content: center;
+			-ms-flex-pack: center;
+				justify-content: center;
+	  }
+	  .contacts .call-back .figure {
+		display: none;
+	  }	  
+  }
+  @media only screen and (max-width: 991px) {
+	.contacts .address {
+		margin: 0 0 5px;
+	  }
+	  .contacts .address .box {
+		width: 100%;
+		margin: 0 0 30px;
+	  }
+	  .contacts .map {
+		margin: 0 0 60px;
+	  }
+	  .contacts .phones .box {
+		margin: 0 0 50px;
+	  }
+	  .contacts .phones .box .box-title {
+		font-size: 21px;
+		margin: 0 0 20px;
+	  }
+	  .contacts .phones .box .box-info {
+		font-size: 20px;
+		padding: 15px 0 0;
+	  }
+	  .contacts .phones .box .box-info:before {
+		left: -25px;
+		width: 50px;
+	  }
+	  .contacts .vacancy .title h2 {
+		font-size: 27px;
+	  }
+	  .contacts .vacancy .title p {
+		font-size: 30px;
+	  }
+	  .contacts .call-back {
+		padding: 60px 0;
+	  }
+	  .contacts .call-back .call-back-form h2 {
+		font-size: 27px;
+		margin: 0 0 30px;
+	  }	  
+  }
+
+@media only screen and (max-width: 768px) {
+	.contacts .phones .box {
+		width: 100%;
+		text-align: center;
+	  }
+	  .contacts .phones .box .box-info:before {
+		left: 50%;
+		width: 70px;
+		margin: 0 0 0 -35px;
+	  }
+	  .contacts .vacancy {
+		min-height: auto;
+	  }
+	  .contacts .vacancy .title h2 {
+		font-size: 25px;
+	  }
+	  .contacts .vacancy .title p {
+		font-size: 27px;
+	  }
+	  .contacts .vacancy .title .btn-ylw {
+		font-size: 14px;
+	  }
+	  .contacts .vacancy .figure {
+		display: none;
+	  }
+	  .contacts .call-back {
+		padding: 60px 0;
+	  }
+	  .contacts .call-back .call-back-form h2 {
+		font-size: 25px;
+	  }
+	  .contacts .call-back .call-back-form .block {
+		width: 100%;
+		padding: 35px 25px;
+	  }
+	  .contacts .call-back .call-back-form .block .select .label {
+		font-size: 14px;
+	  }
+	  .contacts .call-back .call-back-form .block .select ul {
+		top: 63px;
+	  }
+	  .contacts .call-back .call-back-form .block .line {
+		-webkit-flex-flow: wrap;
+			-ms-flex-flow: wrap;
+				flex-flow: wrap;
+		-webkit-box-pack: center;
+		-webkit-justify-content: center;
+			-ms-flex-pack: center;
+				justify-content: center;
+	  }
+	  .contacts .call-back .call-back-form .block .line .file {
+		width: 100%;
+		margin: 0 0 35px;
+	  }
+	  .contacts .call-back .call-back-form .block .line .btn-ylw {
+		font-size: 14px;
+	  }	
+}  
+@media only screen and (max-width: 430px) {
+	.contacts .vacancy .title p {
+		font-size: 25px;
+	  }	
+}
+
+.select .label {
+    display: block;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1;
+    margin: 0 0 10px;
+}
+.select .placeholder {
+    position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+    font-weight: 300;
+    background-color: #fff;
+    border: 1px solid #adadad;
+    padding: 0 18px;
+    cursor: pointer;
+    z-index: 1;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+  /*---------- END CONTACTS ----------*/
 /* ==========================================================================
    FOOTER
    ========================================================================== */
