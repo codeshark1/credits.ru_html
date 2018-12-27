@@ -32,9 +32,9 @@ jQuery(document).ready(function($){
 		$(button).click(function(e){
 			if ( $(block).is(':visible')) {
 				$(block).slideUp().removeClass('active');
-				$('#js-btn-search-listing').removeClass('active');
+				$('#js-btn-search-listing').removeClass('active').find('.text').text('Больше условий');
 			} else {
-				$('#js-btn-search-listing').addClass('active');
+				$('#js-btn-search-listing').addClass('active').find('.text').text('Меньше условий');
 				$(block).slideDown().addClass('active');
 			}
 			if($(window).width() < 576){
@@ -128,26 +128,10 @@ jQuery(document).ready(function($){
                 .siblings(menu)
                 .hide();			
         });
-
-        
-
 	}
 
     drop_menu('.drop-menu-trigger', '.drop-menu', '.drop-menu a', '.drop-menu-wrapper');
     drop_menu('.ipoteka-types-current', '.row-ipoteka-types', '.ipoteka-type', '.ipoteka-types-wrapper');
-
-/*     $(".plan-wrapper").swipe( {
-        swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
-            if ((direction == "left") && ! $(this).hasClass('swiped') )  {
-                $(this).addClass('swiped');             
-            }
-            if ( (direction == "right") && $(this).hasClass('swiped') ) {
-                $(this).removeClass('swiped');
-            }
-        },
-        threshold:0,
-        duration: 0
-    }); */
 
     function enable_swipes() {
         $(".plan-wrapper").swipe( {
