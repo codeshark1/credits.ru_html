@@ -3717,10 +3717,11 @@ label.checkbox-column {
   border: none; }
 
 .accord-content {
-  padding: 20px 30px 20px 10px; }
-  @media (min-width: 768px) {
-    .accord-content {
-      padding: 20px 50px 20px 40px; } }
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 0;
+  opacity: 0; }
 
 .accord-open .h-accord {
   font-size: 1.6rem; }
@@ -3735,6 +3736,14 @@ label.checkbox-column {
     background: #ff0000;
     position: absolute;
     bottom: 0; }
+.accord-open .accord-content {
+  max-height: 10000px;
+  font-size: 1rem;
+  opacity: 1;
+  padding: 20px 30px 20px 10px; }
+  @media (min-width: 768px) {
+    .accord-open .accord-content {
+      padding: 20px 50px 20px 40px; } }
 
 /* subscription */
 .subscribe-main {
