@@ -3,6 +3,16 @@ paddings on other pages
 4 Решить проблему со свайпами офферов: свайпы должны быть плавными и вызывать появление дополнительных функциональных элементов оффера не только по завершению свайпа, но и в реал-тайме
 
 
+swipe - move from tap to button
+offer whole block link
+search field width
+
+
+$('.plan .plan-content').on('click', function(e){
+		if(e.target.tagName != "IMG")
+			window.location.href = $(this).parent().find('.plan-actions .info').attr('href');
+	});
+
 arrow down:
 background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11 7' width='11'%3E%3Cpolygon points='5.5 7 0 0.7 0.61 0 5.5 5.6 10.39 0 11 0.7 5.5 7'/%3E%3C/svg%3E");
 width: 11px;height: 8px;
