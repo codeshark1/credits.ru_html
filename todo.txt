@@ -1,10 +1,4 @@
 
-paddings on other pages
-4 Решить проблему со свайпами офферов: свайпы должны быть плавными и вызывать появление дополнительных функциональных элементов оффера не только по завершению свайпа, но и в реал-тайме
-
-
-swipe - move from tap to button
-offer whole block link
 search field width
 
 
@@ -16,3 +10,31 @@ $('.plan .plan-content').on('click', function(e){
 arrow down:
 background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11 7' width='11'%3E%3Cpolygon points='5.5 7 0 0.7 0.61 0 5.5 5.6 10.39 0 11 0.7 5.5 7'/%3E%3C/svg%3E");
 width: 11px;height: 8px;
+
+
+/*
+        tap:function(event, target) {            
+            var swipeWidth = $(this).find('.plan-actions').width();            
+            
+            if ( $(window).width() < 768 && $(this).children('.plan-actions').length ) {
+                if( $(this).hasClass('swiped')) {
+                    $(this).removeClass('swiped').children('.plan-content').css({
+                        'margin-left' : 0+'px'
+                    });
+                } else {
+                    $(this).addClass('swiped').children('.plan-content').css({
+                        'margin-left' : '-'+swipeWidth+'px'
+                    });
+                }
+            }
+        } 
+        */
+
+
+/*     $('.plan-content .btn-dots').click(function(){
+        if ($(this).parents('.plan-wrapper').hasClass('swiped')) {
+            $(this).parents('.plan-wrapper').removeClass('swiped');
+        } else {
+            $(this).parents('.plan-wrapper').addClass('swiped');
+        }
+    });     */

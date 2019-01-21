@@ -1375,6 +1375,10 @@ table {
 		@media (min-width: $screen-sm-min) {padding: 20px}
 		@media (min-width: $screen-md-min) {padding: 30px}		
 	}	
+	.btn-dots {position: absolute; right: 10px;top: 15px;border-radius: 100%;
+		&:active {background-color: #dbe2e6; box-shadow: 0 0 0 5px #dbe2e6}
+		@media (min-width: $screen-sm-min) {display: none;}
+	}
 	.td {
 		flex-grow: 1;
 		display: flex;
@@ -1442,14 +1446,6 @@ table {
 	.licence {font-size: 0.75rem;}
 	.btn-cta {border-radius: 25px;}
 
-	.link-wrapper {
-		position: absolute;
-		left: 0;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		display: block;
-	}
 	@media (max-width: $screen-xs-max) {
 		margin-bottom: 0.5rem;
 	}
@@ -1572,6 +1568,7 @@ table {
 .plan_catalog {
 	.ttl {display: block;}
 	.plan-content {padding-top: 20px}
+	.btn-dots {display: none;}
 	@media (max-width: $screen-xs-max) {
 		.td_bankname .ttl {position: relative; top: -5px}
 		.td_addr .ttl {display: none}
@@ -1830,10 +1827,10 @@ table {
 		overflow: hidden;
 		.plan-content, .plan-actions {transition: all .2s ease-out;}
 		.plan-actions {margin-right: -200px;}
-		&.swiped {
+/* 		&.swiped {
 			.plan-content {margin-left: -200px;}
 			.plan-actions {margin-right: 0;}
-		}
+		} */
 	}
 }
 .plan-actions {

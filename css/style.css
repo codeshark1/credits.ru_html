@@ -588,6 +588,13 @@ label.radio:after {
       margin-left: 1300px;
       right: auto; } }
 
+.btn-dots {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  min-width: auto;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M12 18c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3zm0-9c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3zm0-9c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3z'/%3E%3C/svg%3E") no-repeat; }
+
 /* ==========================================================================
    MENUS
    ========================================================================== */
@@ -3024,6 +3031,17 @@ table {
     @media (min-width: 992px) {
       .plan .plan-content {
         padding: 30px; } }
+  .plan .btn-dots {
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    border-radius: 100%; }
+    .plan .btn-dots:active {
+      background-color: #dbe2e6;
+      box-shadow: 0 0 0 5px #dbe2e6; }
+    @media (min-width: 768px) {
+      .plan .btn-dots {
+        display: none; } }
   .plan .td {
     flex-grow: 1;
     display: flex;
@@ -3091,13 +3109,6 @@ table {
     font-size: 0.75rem; }
   .plan .btn-cta {
     border-radius: 25px; }
-  .plan .link-wrapper {
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    display: block; }
   @media (max-width: 767px) {
     .plan {
       margin-bottom: 0.5rem; } }
@@ -3226,6 +3237,8 @@ table {
   display: block; }
 .plan_catalog .plan-content {
   padding-top: 20px; }
+.plan_catalog .btn-dots {
+  display: none; }
 @media (max-width: 767px) {
   .plan_catalog .td_bankname .ttl {
     position: relative;
@@ -3490,15 +3503,15 @@ table {
 @media (max-width: 767px) {
   .plan-wrapper {
     display: flex;
-    overflow: hidden; }
+    overflow: hidden;
+    /* 		&.swiped {
+    			.plan-content {margin-left: -200px;}
+    			.plan-actions {margin-right: 0;}
+    		} */ }
     .plan-wrapper .plan-content, .plan-wrapper .plan-actions {
       transition: all .2s ease-out; }
     .plan-wrapper .plan-actions {
-      margin-right: -200px; }
-    .plan-wrapper.swiped .plan-content {
-      margin-left: -200px; }
-    .plan-wrapper.swiped .plan-actions {
-      margin-right: 0; } }
+      margin-right: -200px; } }
 
 .plan-actions {
   display: flex;

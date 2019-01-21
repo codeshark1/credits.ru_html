@@ -96,8 +96,11 @@ function tabs() {
     });
 }
 
+function createSwipeBtn() {
+    $("<span class='btn btn-narrow btn-dots'></span>").appendTo('.plan-content');
+}
 function enable_swipes() {
-    $(".plan-wrapper").swipe( {
+    $(".plan-wrapper").swipe({
         swipeStatus: function(event, phase, direction, distance, duration, fingerCount) {
             var swipeWidth = $(this).find('.plan-actions').width();            
 
@@ -112,31 +115,47 @@ function enable_swipes() {
                         $(this).removeClass('swiped').children('.plan-content').css({
                             'margin-left' : 0+'px'
                         });
-                        
                     }
                 }
             }
         },
-        allowPageScroll: 'vertical',
-/*         tap:function(event, target) {            
-            var swipeWidth = $(this).find('.plan-actions').width();            
+
+        allowPageScroll: 'vertical'
+    }); 
+
+    $(".plan-wrapper .btn-dots").swipe({
+        tap:function(event, target) {            
+            var planWrapper = $(this).parents('.plan-wrapper');
+            var swipeWidth = planWrapper.find('.plan-actions').width();    
             
-            if ( $(window).width() < 768 && $(this).children('.plan-actions').length ) {
-                if( $(this).hasClass('swiped')) {
-                    $(this).removeClass('swiped').children('.plan-content').css({
-                        'margin-left' : 0+'px'
+            if ( $(window).width() < 768 && $(this).parents('.plan-wrapper').find('.plan-actions').length ) {
+
+                if( $(planWrapper).hasClass('swiped')) {
+                    $(planWrapper).removeClass('swiped').children('.plan-content').css({
+                        'margin-left' : 0
                     });
                 } else {
-                    $(this).addClass('swiped').children('.plan-content').css({
+                    $(planWrapper).addClass('swiped').children('.plan-content').css({
                         'margin-left' : '-'+swipeWidth+'px'
                     });
                 }
             }
-        } */
-    }); 
+        }
+    });
 }
-function createSwipeBtn() {
-    $("<span class='btn btn-narrow btn-dots'>DOTS</span>").appendTo('.plan-content');
+
+function addHrefToPlans() {
+    $('.plan:not(".plan_catalog") .plan-content').on('click', function(e){        
+		if ((e.target.tagName != "IMG") && $(window).width() < 768 ) {
+			window.location.href = $(this).parent().find('.plan-actions .info').attr('href');
+        }
+    });
+
+    $('.plan_catalog .plan-content').on('click', function(e){        
+		if ((e.target.tagName != "IMG") && $(window).width() < 768 ) {
+			window.location.href = $(this).parent().find('.data a').attr('href');
+        }
+	});    
 }
 
 function drop_menu(trigger, menu, link, wrapper) {
@@ -249,7 +268,7 @@ function scrollToSection(){
 jQuery(document).ready(function($){
     new SVGInjector().inject(document.querySelectorAll('svg[data-src]'));
     
-    createSwipeBtn();
+
 
     navigation_show('#js-btn-menu','#js-menu-wrapper','#search-extended','#btn-search-extended');
     navigation_show('#js-btn-cities','#js-cities-wrapper');
@@ -268,7 +287,9 @@ jQuery(document).ready(function($){
     drop_menu('.drop-menu-trigger', '.drop-menu', '.drop-menu a', '.drop-menu-wrapper');
     drop_menu('.ipoteka-types-current', '.row-ipoteka-types', '.ipoteka-type', '.ipoteka-types-wrapper');
 
-    enable_swipes();    
+    createSwipeBtn();
+    enable_swipes();  
+    addHrefToPlans();
 
     searchForm('#search-header');
     searchForm('#searchform_listing');
