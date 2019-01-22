@@ -770,9 +770,14 @@ h1, h2, h3, h4 {line-height: 1.1; font-weight: 500}
   }
   @media (min-width: $screen-sm-min) {
     margin-bottom: 55px;
-    &:last-child {margin-bottom: 0;}
   }
 }
+.section+.breadcrumbs {
+  @media (min-width: $screen-sm-min) {
+    margin-bottom: 35px;
+  }
+}
+
 
 .row-mod {
   @include row-mod();

@@ -776,9 +776,11 @@ h1, h2, h3, h4 {
     margin-bottom: 30px; } }
 @media (min-width: 768px) {
   .breadcrumbs {
-    margin-bottom: 55px; }
-    .breadcrumbs:last-child {
-      margin-bottom: 0; } }
+    margin-bottom: 55px; } }
+
+@media (min-width: 768px) {
+  .section + .breadcrumbs {
+    margin-bottom: 35px; } }
 
 .row-mod {
   display: flex;
@@ -2503,7 +2505,7 @@ table {
     background-color: #f5f5f5; }
 
 .section-hero {
-  padding-top: 30px;
+  padding-top: 10px;
   padding-bottom: 30px; }
   .section-hero .container {
     padding-left: 15px;
@@ -2512,6 +2514,17 @@ table {
     .section-hero {
       padding-top: 16px;
       padding-bottom: 30px; } }
+  .section-hero .link-back {
+    margin: 0; }
+    @media (max-width: 991px) {
+      .section-hero .link-back {
+        padding: 0 10px;
+        margin-bottom: 30px; } }
+    @media (min-width: 768px) {
+      .section-hero .link-back {
+        margin-bottom: 55px; }
+        .section-hero .link-back:last-child {
+          margin-bottom: 0; } }
 
 .h-hero {
   font-size: 20px;
@@ -4505,6 +4518,13 @@ section + .view-all {
       order: 1; }
     .bx-calc-result .rate {
       order: 2; }
+    .bx-calc-result .action {
+      order: 3;
+      margin-top: 20px; }
+    .bx-calc-result .grafik {
+      width: 100%;
+      margin-top: 20px;
+      order: 3; }
     .bx-calc-result .grafik {
       width: 100%;
       margin-top: 20px;

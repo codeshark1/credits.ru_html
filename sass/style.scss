@@ -813,10 +813,11 @@ table {
 	}	
 	&.bg-body {
 		background-color: #f5f5f5;
-	}
+	}	
+
 }
 .section-hero {	
-	padding-top: 30px;
+	padding-top: 10px;
 	padding-bottom: 30px;
 	.container {padding-left: 15px;padding-right: 15px;}
 	@media (min-width: $screen-sm-min) {
@@ -824,6 +825,17 @@ table {
 		padding-bottom: 30px;
 		//.h-hero {margin-top: 50px;}
 	}
+
+	.link-back {margin:0;
+		@media (max-width: $screen-sm-max) {
+			padding: 0 10px;
+			margin-bottom: 30px;
+		}
+		@media (min-width: $screen-sm-min) {
+			margin-bottom: 55px;
+			&:last-child {margin-bottom: 0;}
+		}		
+	}	
 }
 
 .h-hero {
@@ -2832,6 +2844,8 @@ section+.view-all {
 		.wrapper {width: 50%;flex-shrink: 0;}
 		.amount {order: 1;}
 		.rate {order: 2;}
+		.action {order: 3; margin-top: 20px;}
+		.grafik {width: 100%;margin-top: 20px;order: 3}
 		.grafik {width: 100%;margin-top: 20px;order: 3}
 	}
 	@media (min-width: $screen-sm-min) {//768

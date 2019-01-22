@@ -265,7 +265,7 @@ function scrollToSection(){
 }
 
 
-jQuery(document).ready(function($){
+jQuery(document).ready(function($){    
     new SVGInjector().inject(document.querySelectorAll('svg[data-src]'));
     
 
