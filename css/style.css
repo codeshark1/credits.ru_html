@@ -3898,11 +3898,40 @@ label.checkbox-column {
   .h-article a {
     display: block; }
 
+.section-article > p, .section-article > blockquote, .section-article > table, .section-article > ul, .section-article > ol, .section-article .similar-articles-box, .accord-text > p, .accord-text > blockquote, .accord-text > table, .accord-text > ul, .accord-text > ol, .accord-text .similar-articles-box {
+  margin-bottom: 25px; }
+.section-article .h-section, .accord-text .h-section {
+  margin-bottom: 20px; }
+.section-article h2, .section-article h3, .section-article h4, .section-article h5, .section-article h6, .accord-text h2, .accord-text h3, .accord-text h4, .accord-text h5, .accord-text h6 {
+  font-weight: 400;
+  margin: 0 0 10px 0;
+  clear: both; }
+.section-article h2, .accord-text h2 {
+  font-size: 16px;
+  margin: 0 0 10px 0; }
+.section-article > ul, .section-article > ol, .accord-text > ul, .accord-text > ol {
+  margin-left: 20px;
+  padding: 0; }
+  .section-article > ul li, .section-article > ol li, .accord-text > ul li, .accord-text > ol li {
+    margin-bottom: 5px; }
+    .section-article > ul li:last-child, .section-article > ol li:last-child, .accord-text > ul li:last-child, .accord-text > ol li:last-child {
+      margin-bottom: 0; }
+.section-article > ul, .accord-text > ul {
+  list-style-type: disc; }
+@media (min-width: 768px) {
+  .section-article > p, .section-article > blockquote, .section-article > table, .section-article > ul, .section-article > ol, .section-article .similar-articles-box, .accord-text > p, .accord-text > blockquote, .accord-text > table, .accord-text > ul, .accord-text > ol, .accord-text .similar-articles-box {
+    margin-bottom: 35px; }
+  .section-article h2, .accord-text h2 {
+    font-size: 20px;
+    margin: 0 0 15px 0; }
+  .section-article > ul, .section-article > ol, .accord-text > ul, .accord-text > ol {
+    margin-left: 40px; }
+  .section-article .h-section, .accord-text .h-section {
+    margin-bottom: 30px; } }
+
 .section-article {
   background: #fff;
   padding: 20px 15px; }
-  .section-article > p, .section-article > blockquote, .section-article > table, .section-article > ul, .section-article > ol, .section-article .similar-articles-box {
-    margin-bottom: 25px; }
   .section-article .bx-footer, .section-article .bx-header {
     font-size: 0.85rem;
     margin-bottom: 25px; }
@@ -3912,8 +3941,6 @@ label.checkbox-column {
       color: #555555; }
   .section-article .article--date {
     margin-right: 16px; }
-  .section-article .h-section {
-    margin-bottom: 20px; }
   .section-article .bx-image-main {
     margin: 0 -15px 20px; }
   .section-article .rundown {
@@ -3932,13 +3959,6 @@ label.checkbox-column {
       margin-top: 25px; }
   .section-article .plan {
     margin: 0 -15px 20px; }
-  .section-article h2, .section-article h3, .section-article h4, .section-article h5, .section-article h6 {
-    font-weight: 400;
-    margin: 0 0 10px 0;
-    clear: both; }
-  .section-article h2 {
-    font-size: 16px;
-    margin: 0 0 10px 0; }
   .section-article blockquote {
     margin-left: 0;
     margin-right: 0;
@@ -3962,15 +3982,6 @@ label.checkbox-column {
       right: 0px;
       bottom: 0px;
       transform: rotate(180deg); }
-  .section-article > ul, .section-article > ol {
-    margin-left: 20px;
-    padding: 0; }
-    .section-article > ul li, .section-article > ol li {
-      margin-bottom: 5px; }
-      .section-article > ul li:last-child, .section-article > ol li:last-child {
-        margin-bottom: 0; }
-  .section-article > ul {
-    list-style-type: disc; }
   .section-article .item-similar-article {
     padding: 10px;
     background: #f2f2f2;
@@ -3995,17 +4006,8 @@ label.checkbox-column {
   @media (min-width: 768px) {
     .section-article {
       padding: 35px 40px; }
-      .section-article > p, .section-article > blockquote, .section-article > table, .section-article > ul, .section-article > ol, .section-article .similar-articles-box {
-        margin-bottom: 35px; }
-      .section-article h2 {
-        font-size: 20px;
-        margin: 0 0 15px 0; }
-      .section-article > ul, .section-article > ol {
-        margin-left: 40px; }
       .section-article .bx-footer {
         margin-bottom: 35px; }
-      .section-article .h-section {
-        margin-bottom: 30px; }
       .section-article .bx-image-main {
         margin: 0 -40px 45px; }
       .section-article .rundown, .section-article .link-back {
