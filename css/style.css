@@ -250,8 +250,7 @@ fieldset {
 .form-search-listing {
   position: relative;
   transition: all .15s;
-  text-align: right;
-  width: 100%; }
+  text-align: right; }
   .form-search-listing .search-button {
     position: absolute;
     width: 18px;
@@ -294,21 +293,23 @@ fieldset {
     outline-width: 0; }
   .form-search-listing.closed .search-field {
     width: 0; }
-  .form-search-listing.open .search-field {
-    width: 100%;
-    cursor: auto;
-    padding-right: 25px;
-    color: #000;
-    box-shadow: none;
-    border-bottom: 1px solid #969696 !important; }
-    .form-search-listing.open .search-field::-moz-placeholder {
-      opacity: 1; }
-    .form-search-listing.open .search-field::-webkit-input-placeholder {
-      opacity: 1; }
-    .form-search-listing.open .search-field::-ms-input-placeholder {
-      opacity: 1; }
-    .form-search-listing.open .search-field::input-placeholder {
-      opacity: 1; }
+  .form-search-listing.open {
+    width: 100%; }
+    .form-search-listing.open .search-field {
+      width: 100%;
+      cursor: auto;
+      padding-right: 25px;
+      color: #000;
+      box-shadow: none;
+      border-bottom: 1px solid #969696 !important; }
+      .form-search-listing.open .search-field::-moz-placeholder {
+        opacity: 1; }
+      .form-search-listing.open .search-field::-webkit-input-placeholder {
+        opacity: 1; }
+      .form-search-listing.open .search-field::-ms-input-placeholder {
+        opacity: 1; }
+      .form-search-listing.open .search-field::input-placeholder {
+        opacity: 1; }
 
 /*Search-incontent*/
 .search-incontent {

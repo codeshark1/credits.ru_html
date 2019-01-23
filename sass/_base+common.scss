@@ -202,7 +202,7 @@ fieldset {
   position: relative;
   transition: all .15s;  
   text-align: right;
-  width: 100%;
+  
   .search-button {
     position: absolute;
     width: 18px;
@@ -242,6 +242,7 @@ fieldset {
   }
   &.closed .search-field {width: 0;}
   &.open {
+    width: 100%;
     .search-field {
       width: 100%;
       cursor: auto;
