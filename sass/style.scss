@@ -2416,7 +2416,15 @@ label.checkbox-column {margin-bottom: 20px; display: block;}
 	@media (max-width: $screen-xs-max) {
 		margin-bottom: 0.5rem;
 		&:last-child {margin-bottom: 0;}
-	}	
+	}
+}
+
+.row-mod-3.short-left {
+	justify-content: left;
+	@media (min-width: $screen-sm-min) {
+		.article-prev {width: 32%;}
+		.article-prev:first-child {margin-right: 2%;}
+	}
 }
 
 

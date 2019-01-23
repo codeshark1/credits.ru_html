@@ -4110,6 +4110,14 @@ label.checkbox-column {
     .row-mod-3 .article-prev:last-child {
       margin-bottom: 0; } }
 
+.row-mod-3.short-left {
+  justify-content: left; }
+  @media (min-width: 768px) {
+    .row-mod-3.short-left .article-prev {
+      width: 32%; }
+    .row-mod-3.short-left .article-prev:first-child {
+      margin-right: 2%; } }
+
 .article-img-bg {
   display: block;
   background-position: center;
