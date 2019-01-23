@@ -4212,7 +4212,7 @@ label.checkbox-column {
 .article-feed {
   display: flex;
   flex-wrap: wrap;
-  align-items: stretch;
+  align-items: flex-start;
   justify-content: space-between;
   min-height: 100%;
   margin-bottom: 10px;
@@ -4226,7 +4226,6 @@ label.checkbox-column {
   .article-feed .col-img {
     width: 22%;
     min-width: 66px;
-    flex-shrink: 0;
     background-position: center center;
     background-repeat: no-repeat; }
     .article-feed .col-img:after {
@@ -4237,9 +4236,10 @@ label.checkbox-column {
     width: 75%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; }
+    justify-content: space-between;
+    align-self: stretch; }
   .article-feed .h-article {
-    margin: 0;
+    margin: 0 0 10px 0 !important;
     font-size: 14px;
     font-weight: 500; }
     @media (min-width: 768px) {
@@ -4248,7 +4248,7 @@ label.checkbox-column {
   .article-feed .excerpt {
     color: #555555; }
   .article-feed .article-prev--footer {
-    margin: 0; }
+    margin: 10px 0 0 0; }
     .article-feed .article-prev--footer p {
       margin-bottom: 0; }
   .article-feed .article-prev--footer, .article-feed .h-article {

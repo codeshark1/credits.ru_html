@@ -264,6 +264,11 @@ function scrollToSection(){
     }, 500);
 }
 
+function shortenText(paragraph) {
+    $(paragraph).each(function(){
+        $(this).text($(this).text().substring(0,249)+"...");
+    });    
+}
 
 jQuery(document).ready(function($){    
     new SVGInjector().inject(document.querySelectorAll('svg[data-src]'));
@@ -340,4 +345,6 @@ jQuery(document).ready(function($){
     $('#btn-top').click(function(){
         scrollToSection();
     });
+
+    shortenText('.article-feed .excerpt');
 });
