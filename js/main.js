@@ -97,7 +97,7 @@ function tabs() {
 }
 
 function createSwipeBtn() {
-    $("<span class='btn btn-narrow btn-dots'></span>").appendTo('.plan-content');
+    $("<span class='btn btn-narrow btn-dots'></span>").appendTo('.plan-wrapper');
 }
 function enable_swipes() {
     $(".plan-wrapper").swipe({
@@ -176,6 +176,33 @@ function drop_menu(trigger, menu, link, wrapper) {
             .html($(this).html())
             .siblings(menu)
             .hide();			
+    });
+
+    $(document).on('click', function(e){        
+        if ( (e.target.className != menu) && (e.target.className != trigger) )  {
+            //$(menu).hide();
+        }
+    });    
+}
+function drop_menu_plan() {
+    $('.plan .btn-dots').click(function(e) {
+        e.preventDefault();
+        if ( $(this).siblings('.plan-actions').is(':visible') ) {
+            $(this).siblings('.plan-actions').css('display','none');
+        } else {
+            $('.plan-actions').css('display','none');
+            $(this).siblings('.plan-actions').css('display','block');
+        }
+    });
+
+    $('.plan-content').click(function(){
+        $('.plan-actions').css('display','none');
+    });
+    $(document).on('click', function() {
+        //$('.plan-actions').css('display','none');
+    });
+    $('.plan-actions', '.plan .btn-dots').on('click', function(e) {
+        e.stopPropagation();
     });
 }
 
@@ -271,8 +298,7 @@ function shortenText(paragraph) {
 }
 
 jQuery(document).ready(function($){    
-    new SVGInjector().inject(document.querySelectorAll('svg[data-src]'));
-    
+    new SVGInjector().inject(document.querySelectorAll('svg[data-src]'));  
 
 
     navigation_show('#js-btn-menu','#js-menu-wrapper','#search-extended','#btn-search-extended');
@@ -293,8 +319,9 @@ jQuery(document).ready(function($){
     drop_menu('.ipoteka-types-current', '.row-ipoteka-types', '.ipoteka-type', '.ipoteka-types-wrapper');
 
     createSwipeBtn();
-    enable_swipes();  
-    addHrefToPlans();
+    //enable_swipes();  
+    //addHrefToPlans();
+    drop_menu_plan();
 
     searchForm('#search-header');
     searchForm('#searchform_listing');

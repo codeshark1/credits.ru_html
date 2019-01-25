@@ -1358,6 +1358,23 @@ table {
 .tabcontent {display: none;}
 .tabcontent:first-child {display: block;}
 
+.h-plan-best {
+	background: $blue;
+	color: #fff;
+	font-weight: 500;
+	padding: 16px 0;
+	padding-left: 20px;
+	margin: 0;
+	@media (min-width: $screen-sm-min) {padding-left: 40px;}
+	.icon {
+		background: url('../img/i-best.png') no-repeat;
+		width: 23px;height: 19px;
+		display: inline-block;
+		vertical-align: top;
+		margin-right: 16px;
+	}
+}
+
 .plan {	
 	position: relative;
 	background: #fff;
@@ -1439,22 +1456,6 @@ table {
 		font-size: 1.5rem;
 		color: $red;	
 	}	
-	.h-plan-best {
-		background: $blue;
-		color: #fff;
-		font-weight: 500;
-		padding: 16px 0;
-		padding-left: 20px;
-		margin: 0;
-		@media (min-width: $screen-sm-min) {padding-left: 40px;}
-		.icon {
-			background: url('../img/i-best.png') no-repeat;
-			width: 23px;height: 19px;
-			display: inline-block;
-			vertical-align: top;
-			margin-right: 16px;
-		}
-	}
 	.licence {font-size: 0.75rem;}
 	.btn-cta {border-radius: 25px;}
 
@@ -1837,8 +1838,8 @@ table {
 	@media (max-width: $screen-xs-max) {
 		display: flex;
 		overflow: hidden;
-		.plan-content, .plan-actions {transition: all .2s ease-out;}
-		.plan-actions {margin-right: -200px;}
+		//.plan-content, .plan-actions {transition: all .2s ease-out;}
+		//.plan-actions {margin-right: -200px;}
 /* 		&.swiped {
 			.plan-content {margin-left: -200px;}
 			.plan-actions {margin-right: 0;}
@@ -1846,13 +1847,17 @@ table {
 	}
 }
 .plan-actions {
-	display: flex;
-	width: 200px;
+	right: 10px;
+	top: 50px;
 	@media (min-width: $screen-sm-min) {display: none}
-	.svg {height: 25px}
+/* 	display: flex;
+	width: 200px;
+	.svg {height: 25px} */
 }
 .plan-btn {
-	display: flex;
+	&.fav {background: #eaf2f7; display: none}
+	&.compare {background: #e1eaef; display: none}
+/* 	display: flex;
 	flex-grow: 1;
 	flex-basis: 0;
 	align-items: center;
@@ -1861,8 +1866,6 @@ table {
 	flex-direction: column;
 	text-align: center;
 	padding: 0 5px;
-	&.fav {background: #eaf2f7; display: none}
-	&.compare {background: #e1eaef; display: none}
 	&.info {background: #dbe2e6}
 	&.sign {background: #ffca3c}
 	span {
@@ -1871,8 +1874,9 @@ table {
 		font-size: 0.85rem;
 		margin-top: 10px;				
 		hyphens: auto;
-	}
-
+	} */
+	display: block;
+	.svg {display: none;}
 }
 
 .btn-more-vertical {
@@ -2021,6 +2025,29 @@ table {
 
 
 label.checkbox-column {margin-bottom: 20px; display: block;}
+
+
+.plans-article {
+	border: 1px solid $blue;
+	.h-plans {
+		background: $blue;
+		color: #fff;
+		padding: 16px 10px 16px 20px;
+		@media (min-width: $screen-sm-min) {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 16px 30px;
+		}
+		.heading {font-size: 18px; font-weight: normal; margin: 0;}
+		.link-all {color: #fff; display: inline-block;
+			@media (max-width: $screen-xs-max) {margin-top: 10px;}
+			&:hover {color: #fff !important; text-decoration: underline;}
+		}
+	}
+
+	.btn-cta {padding: 0.5rem 1rem;}
+}
 /* -PLANS */
 
 
@@ -2268,7 +2295,7 @@ label.checkbox-column {margin-bottom: 20px; display: block;}
 			margin-top: 25px;
 		}
 	}
-	.plan {margin:0 -15px 20px;}
+	.plans-article {margin:0 -15px 20px;}
 
 
 	blockquote {
@@ -2301,7 +2328,6 @@ label.checkbox-column {margin-bottom: 20px; display: block;}
 	}
 
 
-
 	.item-similar-article {
 		padding: 10px;
 		background: #f2f2f2;
@@ -2327,7 +2353,7 @@ label.checkbox-column {margin-bottom: 20px; display: block;}
 			margin-bottom: 35px;
 			&:after {left: -40px;margin-top: 35px;}
 		}
-		.plan {margin: 0 -40px 40px;}
+		.plans-article {margin: 0 -40px 40px;}
 
 		.item-similar-article {font-size: 1.1rem;}
 		

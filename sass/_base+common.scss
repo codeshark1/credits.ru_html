@@ -346,7 +346,7 @@ label.radio {
 .drop-menu-wrapper {
 	position: relative;
 }
-.drop-menu {
+.drop-menu, .plan-actions {
 	background: #fff;
 	border-radius: 5px;
 	position: absolute;
@@ -354,19 +354,22 @@ label.radio {
 	top: 130%;
 	z-index: 5;
 	box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.14);
-	min-width: 160px;
-	width: fit-content;
+	width: 160px;
+  width: fit-content;
+  white-space: nowrap;
 	overflow: hidden;
 	display: none;
 	.menu-item {
-		cursor: pointer;
-		display: block;
-		a {
-			display: block;
-			padding: 10px 17px;
-			&.active {background: #f8fcff}
-		}
-	}	
+      cursor: pointer;
+      display: block;
+
+    }	
+    .menu-item a, .plan-btn {
+        display: block;
+        padding: 10px 17px;
+        &.active {background: #f8fcff}
+      
+    }
 }
 
 /* IMAGES */
