@@ -3742,6 +3742,15 @@ label.checkbox-column {
       .plans-article .h-plans .link-all:hover {
         color: #fff !important;
         text-decoration: underline; }
+  @media (min-width: 768px) {
+    .plans-article .plan-article .plan-content {
+      padding-bottom: 15px; }
+    .plans-article .plan-article:last-child .plan-content {
+      padding-top: 0; }
+    .plans-article .plan-article:last-child .td {
+      padding-top: 15px; }
+    .plans-article .plan-article:last-child .ttl {
+      display: none; } }
   .plans-article .btn-cta {
     padding: 0.5rem 1rem; }
 

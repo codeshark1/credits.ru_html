@@ -2048,6 +2048,16 @@ label.checkbox-column {margin-bottom: 20px; display: block;}
 		}
 	}
 
+	.plan-article {
+		@media (min-width: $screen-sm-min) {
+			.plan-content {padding-bottom: 15px;}
+			&:last-child {
+				.plan-content {padding-top: 0;}
+				.td {padding-top: 15px;}
+				.ttl {display: none;}
+			}
+		}
+	}
 	.btn-cta {padding: 0.5rem 1rem;}
 }
 /* -PLANS */
