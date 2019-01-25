@@ -82,6 +82,7 @@ textarea {
   font-size: 1rem;
   transition: all .3s ease-in-out;
   border-radius: 5px;
+  font-family: 'Ubuntu', sans-serif;
   padding: 12px 15px; }
   input[type="text"].input-price,
   input[type="email"].input-price,
@@ -570,7 +571,7 @@ label.radio:after {
   opacity: 0;
   position: fixed;
   bottom: 20px;
-  right: 50px;
+  right: 20px;
   z-index: 99;
   border: none;
   outline: none;
@@ -582,9 +583,9 @@ label.radio:after {
   box-shadow: 0.5px 0.866px 16px 0px rgba(9, 3, 5, 0.16); }
   .btn-top svg {
     width: 15px; }
-  @media (max-width: 767px) {
+  @media (min-width: 576px) {
     .btn-top {
-      display: none; } }
+      right: 50px; } }
   @media (min-width: 1450px) {
     .btn-top {
       margin-left: 1300px;
@@ -1811,7 +1812,8 @@ a, svg, path, button {
     width: 101px; } }
 @media (min-width: 768px) {
   .header--lvl-1 {
-    background: #f0f0f0; }
+    background: #f0f0f0;
+    padding-bottom: 10px; }
   .header--row {
     display: flex;
     justify-content: space-between;
@@ -2079,8 +2081,7 @@ NAVIGATION
             opacity: 1;
             transform: scale(1); }
       .menu-main .sub-menu.cols {
-        columns: 2;
-        padding-right: 0; }
+        columns: 2; }
       .menu-main .sub-menu:before {
         content: "";
         position: absolute;
@@ -3282,8 +3283,15 @@ table {
   .plan_catalog .td_action {
     width: 20%; } }
 
+.td_site .data {
+  width: 100%; }
 .td_site a {
-  text-decoration: underline; }
+  text-decoration: underline;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  width: 100%; }
 
 .td_action .wrapper {
   position: relative; }
@@ -4103,6 +4111,9 @@ label.checkbox-column {
       width: 100%; } }
   @media (min-width: 768px) {
     .article-prev {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       padding: 0 30px 24px; }
       .article-prev:hover {
         box-shadow: 0 0 30px 1px rgba(9, 3, 5, 0.1); } }

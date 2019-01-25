@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&subset=cyrillic');
 @import '_variables';
 @import '_base+common';
 @import '_plugins';
@@ -99,7 +98,7 @@ $sect-mg-neg: 39px;
 		}		
 	}
 	@media (min-width: $screen-sm-min) {
-		&--lvl-1 {background: #f0f0f0;}		
+		&--lvl-1 {background: #f0f0f0; padding-bottom: 10px;}		
 		&--row {
 			@include row-mod();
 			align-items: center;
@@ -364,7 +363,7 @@ NAVIGATION
 					}		
 				}		
 			}
-			&.cols {columns: 2; padding-right: 0;}		
+			&.cols {columns: 2;}		
 			
 			&:before {
 				content: "";
@@ -1600,7 +1599,10 @@ table {
 		.td_action {width: 20%}
 	}
 }
-.td_site a {text-decoration: underline;}
+.td_site {	
+	.data {width: 100%;}
+	a {text-decoration: underline;text-overflow: ellipsis;overflow: hidden;white-space: nowrap; display: inline-block;width: 100%;}
+}
 .td_action {
 	.wrapper {position: relative;}
 	.link-info {bottom: -30px}
@@ -2404,6 +2406,9 @@ label.checkbox-column {margin-bottom: 20px; display: block;}
 		width: 100%;
 	}
 	@media (min-width: $screen-sm-min) {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 		padding: 0 30px 24px;		
 		&:hover {
 			box-shadow: 0 0 30px 1px rgba($color: #090305, $alpha: 0.1);
