@@ -1768,7 +1768,9 @@ table {
 
 
 .td_title_simple {
-	.image {min-width: 88px; }
+	.image {min-width: 88px;
+		@media (max-width: $screen-xs-max) {width: 88px;}
+	}
 }
 
 .plan_searchresults {
@@ -2255,7 +2257,7 @@ label.checkbox-column {margin-bottom: 20px; display: block;}
 	a {display: block;}
 }
 
-.section-article, .accord-text {
+.section-article, .accord-text, .accord-content {
 	>p, >blockquote, >table, >ul, >ol, .similar-articles-box {margin-bottom: 25px;}
 	.h-section {margin-bottom: 20px;}
 	h2,h3,h4,h5,h6 {font-weight: 400; margin: 0 0 10px 0; clear: both;}

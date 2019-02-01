@@ -324,8 +324,8 @@ jQuery(document).ready(function($){
     drop_menu('.ipoteka-types-current', '.row-ipoteka-types', '.ipoteka-type', '.ipoteka-types-wrapper');
 
     createSwipeBtn();
-    //enable_swipes();  
-    //addHrefToPlans();
+    //enable_swipes();
+    addHrefToPlans();
     drop_menu_plan();
 
     searchForm('#search-header');
