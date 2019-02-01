@@ -27,7 +27,12 @@ a {
   text-decoration: none; }
 
 table {
-  width: 100%; }
+  width: 100%;
+  max-width: 100%; }
+  @media (max-width: 767px) {
+    table {
+      overflow-x: auto;
+      display: block; } }
 
 p, ul {
   margin: 0; }
