@@ -1763,7 +1763,8 @@ table {
 	}
 }
 .plan_credit-cards, .plan_dedet-cards {
-	.td_bankname a {height: 76px;}
+	//.td_bankname a {height: 76px;}
+	.td_bankname img {width: 100%}
 }
 
 

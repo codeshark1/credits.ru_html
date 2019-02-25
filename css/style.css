@@ -3449,8 +3449,8 @@ table {
     .plan_debet-cards .td_title_simple .licence, .plan_debet-cards .td_title_simple .image {
       display: none; } }
 
-.plan_credit-cards .td_bankname a, .plan_dedet-cards .td_bankname a {
-  height: 76px; }
+.plan_credit-cards .td_bankname img, .plan_dedet-cards .td_bankname img {
+  width: 100%; }
 
 .td_title_simple .image {
   min-width: 88px; }
