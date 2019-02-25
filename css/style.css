@@ -442,7 +442,6 @@ label.radio:after {
 .btn {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-size: .875rem;
   font-weight: 400;
   letter-spacing: .04em;
   text-decoration: none;
@@ -471,7 +470,8 @@ label.radio:after {
   padding: 1rem 2rem;
   color: #000;
   font-family: 'Ubuntu', sans-serif;
-  border-radius: 5px; }
+  border-radius: 5px;
+  font-size: 1rem; }
   .btn:hover {
     cursor: pointer; }
   .btn svg {
@@ -6207,6 +6207,66 @@ section + .view-all {
     .footer-logo.logo-mob {
       display: none; } }
 
+/* ==========================================================================
+   MODALS
+   ========================================================================== */
+.bx-modal {
+  background: #fff;
+  border-radius: 4px;
+  padding: 30px 15px;
+  width: 320px; }
+  @media (min-width: 768px) {
+    .bx-modal {
+      padding: 30px;
+      width: 380px; } }
+  .bx-modal input {
+    height: auto;
+    padding: 16px 20px !important; }
+  .bx-modal .btn-cta {
+    width: 100%; }
+  .bx-modal .note {
+    color: #BCBBBB;
+    font-size: 12px;
+    margin-top: 1.3rem; }
+
+.h-modal {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0 0 20px 0; }
+
+.social-modal {
+  margin: 0 -6px;
+  display: flex;
+  margin-top: 1.3rem; }
+  .social-modal .btn-social {
+    height: 35px;
+    margin: 0 6px;
+    border-radius: 5px;
+    font-size: 0;
+    flex-grow: 1;
+    flex-basis: 0;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center; }
+    .social-modal .btn-social svg {
+      vertical-align: middle; }
+    .social-modal .btn-social svg, .social-modal .btn-social path {
+      fill: #fff; }
+  .social-modal .vk {
+    background: #5B81B3; }
+    .social-modal .vk svg {
+      width: 20px; }
+  .social-modal .gmail {
+    background: #CD5849; }
+  .social-modal .fb {
+    background: #3B5998; }
+  .social-modal .gos {
+    background: linear-gradient(0deg, #EE3F58, #EE3F58), linear-gradient(245.75deg, #EE3F58 0%, rgba(255, 255, 255, 0) 114.4%), #0065B1; }
+
+/* ==========================================================================
+   OTHER
+	 ========================================================================== */
 /* preloader */
 .preloader {
   display: flex;

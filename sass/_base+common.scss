@@ -396,7 +396,6 @@ label.radio {
 .btn {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-size: .875rem;
   font-weight: 400;
   letter-spacing: .04em;
   text-decoration: none;
@@ -426,9 +425,8 @@ label.radio {
   color: #000;
   font-family: 'Ubuntu', sans-serif;
   border-radius: 5px;
-  &:hover {
-    cursor: pointer;
-  }
+  font-size: 1rem;
+  &:hover {cursor: pointer;}
 
   svg {margin-left: 4px;display: inline-block; max-width: 100%; min-height: 100%;}
 }

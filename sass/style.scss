@@ -1231,11 +1231,8 @@ table {
 		.wrapper {padding: 0}
 	}
 }
-.popup-header {}
-.popup-footer {}
 
-.listing-filter-centered {
-	
+.listing-filter-centered {	
 	@media (max-width: $screen-xs-max) {padding: 0 15px;}
 	@media (min-width: $screen-sm-min) {
 		display: flex;
@@ -1247,7 +1244,6 @@ table {
 		}
 	}
 }
-
 /* --- SORTING/LISTING CONTROLS */
 
 
@@ -4737,6 +4733,60 @@ section+.view-all {
 	}	
 }
 
+/* ==========================================================================
+   MODALS
+   ========================================================================== */
+.bx-modal {
+	background: #fff;
+	border-radius: 4px;
+	padding: 30px 15px;
+	width: 320px;
+	@media (min-width: $screen-sm-min) {
+		padding: 30px;
+		width: 380px;
+	}
+	input {height: auto; padding: 16px 20px !important;}
+	.btn-cta {width: 100%;}
+
+	.note {color:#BCBBBB; font-size: 12px; margin-top: 1.3rem;}
+}
+
+.h-modal {
+	font-size: 24px;
+	font-weight: 500;
+	margin: 0 0 20px 0;
+}
+
+.social-modal {
+	margin: 0 -6px;
+	display: flex;
+	margin-top: 1.3rem;
+	.btn-social {
+		//display: inline-block;
+		//width: 70px;
+		height: 35px;
+		margin: 0 6px;
+		border-radius: 5px;
+		font-size: 0;
+		flex-grow: 1;
+		flex-basis: 0;
+		text-align: center;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		svg {vertical-align: middle;}
+		svg, path {fill: #fff}
+	}
+	.vk 	{background: #5B81B3; svg {width: 20px;}}
+	.gmail{background: #CD5849}
+	.fb 	{background: #3B5998}
+	.gos 	{background:  linear-gradient(0deg, #EE3F58, #EE3F58), linear-gradient(245.75deg, #EE3F58 0%, rgba(255, 255, 255, 0) 114.4%), #0065B1;}
+}
+
+/* ==========================================================================
+   OTHER
+	 ========================================================================== */
+	 
 /* preloader */
 .preloader {
 	display: flex;
