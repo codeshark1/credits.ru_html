@@ -6223,11 +6223,15 @@ section + .view-all {
     height: auto;
     padding: 16px 20px !important; }
   .bx-modal .btn-cta {
-    width: 100%; }
+    width: 100%;
+    font-size: 15px; }
   .bx-modal .note {
     color: #BCBBBB;
     font-size: 12px;
     margin-top: 1.3rem; }
+    .bx-modal .note a {
+      color: #BCBBBB;
+      text-decoration: underline; }
 
 .h-modal {
   font-size: 24px;

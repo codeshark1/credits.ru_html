@@ -4746,9 +4746,11 @@ section+.view-all {
 		width: 380px;
 	}
 	input {height: auto; padding: 16px 20px !important;}
-	.btn-cta {width: 100%;}
+	.btn-cta {width: 100%; font-size: 15px;}
 
-	.note {color:#BCBBBB; font-size: 12px; margin-top: 1.3rem;}
+	.note {color:#BCBBBB; font-size: 12px; margin-top: 1.3rem;
+		a {color:#BCBBBB; text-decoration: underline;}
+	}
 }
 
 .h-modal {

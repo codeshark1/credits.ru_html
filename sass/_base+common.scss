@@ -436,9 +436,7 @@ label.radio {
   padding-left: 14px;
   border-width: 2px;
   line-height: 32px;
-  &:hover {
-    background: $gray;
-  }
+  &:hover {background: $gray;}
 }
 .btn--full {
   width: 100%;
