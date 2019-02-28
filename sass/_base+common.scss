@@ -116,11 +116,16 @@ textarea:focus {
   outline: none;
 }
 
+.row-form {
+  margin-bottom: 1.5rem;
+}
 
 .lbl {  
   font-weight: 400;
   font-size: 14px;
 }
+.lbl-links {display: flex;justify-content: space-between;margin: -0.5rem 0 1.5rem}
+
 .lbl--top {
   display: block;
   margin-bottom: 4px;  
