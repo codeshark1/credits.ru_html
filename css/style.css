@@ -354,6 +354,9 @@ fieldset {
       .search-incontent .btn-search {
         width: 170px; } }
 
+.btn-text {
+  color: #000; }
+
 label.checkbox, label.radio {
   position: relative;
   padding-left: 25px; }
@@ -4102,6 +4105,54 @@ label.checkbox-column {
     color: #ff0000; }
   .search-result .excerpt {
     max-width: 800px; }
+
+.bx-comment {
+  margin-bottom: 36px; }
+  .bx-comment .comment-header {
+    position: relative;
+    margin-bottom: 8px; }
+  .bx-comment .user-info {
+    position: relative;
+    padding: 0 60px 0 50px; }
+  .bx-comment .userpic {
+    border-radius: 100%;
+    width: 34px;
+    position: absolute;
+    left: 0;
+    top: 0; }
+  .bx-comment .username {
+    color: #000;
+    line-height: 1;
+    margin-bottom: 3px; }
+  .bx-comment .date {
+    font-size: 0.8rem;
+    color: #555555; }
+  .bx-comment .comment-rating {
+    position: absolute;
+    right: 0;
+    top: 0; }
+  .bx-comment .btn-text {
+    font-size: 12px; }
+  .bx-comment .bx-comment {
+    margin-left: 20px; }
+    @media (min-width: 992px) {
+      .bx-comment .bx-comment {
+        margin-left: 40px; } }
+
+.comment-content + .bx-comment {
+  margin-top: 36px; }
+
+.comment-rating {
+  display: flex;
+  align-items: center;
+  font-size: 12px; }
+  .comment-rating .btn-rating {
+    border: none;
+    background: none;
+    padding: 0 5px;
+    cursor: pointer; }
+  .comment-rating .rating {
+    margin: 0 5px; }
 
 .menu-social-article {
   display: flex; }

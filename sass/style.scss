@@ -2391,6 +2391,31 @@ label.checkbox-column {margin-bottom: 20px; display: block;}
 	.excerpt {max-width: 800px;}
 }
 
+.bx-comment {
+	margin-bottom: 36px;
+	.comment-header {position: relative; margin-bottom: 8px;}
+		.user-info {position: relative;padding: 0 60px 0 50px;}
+			.userpic {border-radius: 100%; width: 34px; position: absolute;left: 0;top: 0;}
+			.username {color: #000; line-height: 1; margin-bottom: 3px;}
+			.date {font-size: 0.8rem; color: $base-text-lighter}
+		.comment-rating {position: absolute; right: 0;top: 0;}
+
+		.btn-text {font-size: 12px;}
+
+		.bx-comment {margin-left: 20px;
+			@media (min-width: $screen-md-min) {
+				margin-left: 40px;
+			}
+		}
+}
+.comment-content + .bx-comment {margin-top: 36px;}
+.comment-rating {
+	display: flex;
+	align-items: center;
+	font-size: 12px;
+	.btn-rating {border: none; background: none;padding: 0 5px; cursor: pointer;}
+	.rating {margin: 0 5px}
+}
 
 .menu-social-article {
 	display: flex;
@@ -2442,7 +2467,6 @@ label.checkbox-column {margin-bottom: 20px; display: block;}
 		margin-bottom: 1.5rem;
 	}
 }
-
 .row-mod-2 .article-prev {		
 	&:last-child {margin-bottom: 0;}
 	@media (min-width: $screen-sm-min) {
@@ -2458,7 +2482,6 @@ label.checkbox-column {margin-bottom: 20px; display: block;}
 		&:last-child {margin-bottom: 0;}
 	}
 }
-
 .row-mod-3.short-left {
 	justify-content: left;
 	@media (min-width: $screen-sm-min) {
