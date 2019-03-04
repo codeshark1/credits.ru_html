@@ -4106,6 +4106,13 @@ label.checkbox-column {
   .search-result .excerpt {
     max-width: 800px; }
 
+.user-message {
+  background: #ffca3c;
+  padding: 20px;
+  border-radius: 5px; }
+  .user-message a {
+    text-decoration: underline; }
+
 .bx-comment {
   margin-bottom: 36px; }
   .bx-comment .comment-header {

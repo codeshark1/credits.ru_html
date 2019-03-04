@@ -2390,7 +2390,11 @@ label.checkbox-column {margin-bottom: 20px; display: block;}
 	mark {background: none; color: $red;}
 	.excerpt {max-width: 800px;}
 }
-
+.user-message {background: $action;
+	padding: 20px;
+	border-radius: 5px;
+	a {text-decoration: underline;}
+}
 .bx-comment {
 	margin-bottom: 36px;
 	.comment-header {position: relative; margin-bottom: 8px;}
