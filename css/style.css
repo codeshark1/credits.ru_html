@@ -120,6 +120,16 @@ textarea {
   select:hover,
   textarea:hover {
     border-color: #989898; }
+  input[type="text"].invalid,
+  input[type="email"].invalid,
+  input[type="password"].invalid,
+  input[type="url"].invalid,
+  input[type="tel"].invalid,
+  input[type="number"].invalid,
+  input[type="search"].invalid,
+  select.invalid,
+  textarea.invalid {
+    border-color: #ff0000; }
 
 textarea {
   resize: vertical;

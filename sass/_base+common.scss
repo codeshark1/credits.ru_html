@@ -56,7 +56,7 @@ input[type="search"],
 textarea {
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;
+  appearance: none;  
 }
 
 input[type="text"], 
@@ -82,9 +82,8 @@ textarea {
       font-size: 1.5rem;
     }
   }  
-  &:hover {
-    border-color: #989898;
-  }
+  &:hover {border-color: #989898;}
+  &.invalid {border-color: $red}
 }
 textarea {
   resize: vertical;
