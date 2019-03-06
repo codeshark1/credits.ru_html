@@ -53,6 +53,7 @@ input[type="url"],
 input[type="tel"], 
 input[type="number"], 
 input[type="search"], 
+input[type="date"], 
 textarea {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -66,6 +67,7 @@ input[type="url"],
 input[type="tel"], 
 input[type="number"], 
 input[type="search"], 
+input[type="date"], 
 select,
 textarea {  
   width: 100%;
@@ -109,6 +111,7 @@ input[type="url"]:focus,
 input[type="tel"]:focus,
 input[type="number"]:focus,
 input[type="search"]:focus,
+input[type="date"]:focus,
 textarea:focus {
   box-shadow: none;
   border-color: #555555;

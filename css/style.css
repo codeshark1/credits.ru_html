@@ -67,6 +67,7 @@ input[type="url"],
 input[type="tel"],
 input[type="number"],
 input[type="search"],
+input[type="date"],
 textarea {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -79,6 +80,7 @@ input[type="url"],
 input[type="tel"],
 input[type="number"],
 input[type="search"],
+input[type="date"],
 select,
 textarea {
   width: 100%;
@@ -96,6 +98,7 @@ textarea {
   input[type="tel"].input-price,
   input[type="number"].input-price,
   input[type="search"].input-price,
+  input[type="date"].input-price,
   select.input-price,
   textarea.input-price {
     font-size: 1.3rem; }
@@ -107,6 +110,7 @@ textarea {
       input[type="tel"].input-price,
       input[type="number"].input-price,
       input[type="search"].input-price,
+      input[type="date"].input-price,
       select.input-price,
       textarea.input-price {
         font-size: 1.5rem; } }
@@ -117,6 +121,7 @@ textarea {
   input[type="tel"]:hover,
   input[type="number"]:hover,
   input[type="search"]:hover,
+  input[type="date"]:hover,
   select:hover,
   textarea:hover {
     border-color: #989898; }
@@ -127,6 +132,7 @@ textarea {
   input[type="tel"].invalid,
   input[type="number"].invalid,
   input[type="search"].invalid,
+  input[type="date"].invalid,
   select.invalid,
   textarea.invalid {
     border-color: #ff0000; }
@@ -168,6 +174,7 @@ input[type="url"]:focus,
 input[type="tel"]:focus,
 input[type="number"]:focus,
 input[type="search"]:focus,
+input[type="date"]:focus,
 textarea:focus {
   box-shadow: none;
   border-color: #555555;
