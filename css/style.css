@@ -6139,6 +6139,12 @@ section + .view-all {
 
 /*---------- END CONTACTS ----------*/
 /* ==========================================================================
+   DASHBOARD
+   ========================================================================== */
+.section-dash {
+  background: #fff; }
+
+/* ==========================================================================
    FOOTER
    ========================================================================== */
 .footer-site {
@@ -6297,7 +6303,8 @@ section + .view-all {
   background: #fff;
   border-radius: 4px;
   padding: 30px 15px;
-  width: 320px; }
+  width: 320px;
+  position: relative; }
   @media (min-width: 768px) {
     .bx-modal {
       padding: 30px;
@@ -6315,6 +6322,9 @@ section + .view-all {
     .bx-modal .note a {
       color: #BCBBBB;
       text-decoration: underline; }
+
+.fancybox-close {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 7 7' width='28' height='28'%3E%3Crect x='46.14' y='19.38' width='0.79' height='9.11' transform='translate(-46.33 19.49) rotate(-45)'/%3E%3Crect class='cls-1' x='41.99' y='23.53' width='9.11' height='0.79' transform='translate(-46.32 19.53) rotate(-45.05)'/%3E%3C/svg%3E") center center no-repeat; }
 
 .h-modal {
   font-size: 24px;
