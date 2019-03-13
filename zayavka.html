@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Профиль</title>
+    <title>Займы</title>
 	<link rel="shortcut icon" href="img/favicon/favicon.ico?v=2" type="image/x-icon" />
 	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png" />
 	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png" />
@@ -26,11 +26,6 @@
 <!--[if lt IE 10]>
     <p class="browserupgrade">Вы используете <b>устаревший</b> браузер. Пожалуйста, <a href="http://browsehappy.com/?locale=ru_ru">обновите свой браузер</a> чтобы улучшить опыт работы с сайтом.</p>
 <![endif]-->
-
-<!-- <div class="preloader">
-    <div class="pulse"></div>
-</div> -->
-
 <div class="wrapper-main">
     <header class="header header-site">
         <div class="header--lvl-1">
@@ -148,96 +143,174 @@
                 <li class="item"><mark>Кре</mark>дитный лемит</li>
             </ul>
 
-
-            <div class="search-extended-footer">                
+            <div class="search-extended-footer row-mod">
+                <label class="checkbox"><input type="checkbox">Искать в текущем разделе</label>
                 <button type="submit" class="btn btn-cta">Найти</button>
             </div>
         </form><!-- /.search-extended -->
-    </div><!-- search-extended wrapper-->
+    </div><!-- search-extended wrapper-->  
 
     <main class="main-content">
-        <div class="section-dash">
-            <div class="container">
-                <div class="row-mod">
-                    <div class="dash-navpanel">
-                        <div class="bx-user-rep">
-                            <img class="userpic" src="img/avatar.jpg" alt="аватар">
-                            <p class="name">Василий Викторович</p>
-                        </div><!-- /.bx-user-rep -->
-
-                        <ul class="menu-dash">
-                            <li class="menu-item docs"><a href="#" class="#">Документы</a></li>
-                            <li class="menu-item compar"><a href="#" class="#">Сравнение</a></li>
-                            <li class="menu-item personal"><a href="#" class="#">Личная информация</a></li>
-                            <li class="menu-item comments"><a href="#" class="#">Комментарии</a></li>
-                            <li class="menu-item fav"><a href="#" class="#">Избранное</a></li>
+        <section class="section">
+            <div class="section-hero-bg">
+                <div class="container">
+                    <nav class="breadcrumbs d-none d-md-block">
+                        <ul>
+                            <li><a href="#"><span>Главная</span></a></li>
+                            <li><span>Потребительские кредиты</span></li>
                         </ul>
+                    </nav>
 
-                        <p class="dashboard-logout"><a href="#">Выход</a></p>
-                    </div><!-- /.dash-navpanel -->
-                    <div class="dash-content">
-                        <h2 class="h-content">Личная информация</h2>                    
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <p class="lbl lbl-top">Фотография</p>
-                                <div class="img-place">
-                                    <div class="icon"><svg data-src="img/userpic-placeholder.svg"></svg></div>
-                                </div>
-                            </div><!-- /.col -->                    
-                            <div class="col-sm-4">
-                                <label class="form-row">
-                                    <span class="lbl lbl-top">Имя</span>
-                                    <input type="text" placeholder="Имя">
-                                </label>
-                                <label class="form-row">
-                                    <span class="lbl lbl-top">Фамилия</span>
-                                    <input type="text" placeholder="Фамилия">
-                                </label>
-                                <label class="form-row">
-                                    <span class="lbl lbl-top">Отчество</span>
-                                    <input type="text" placeholder="Отчество">
-                                </label>                                                        
+                    <p class="h-section h-hero">Онлайн заявка на кредит</p>
+                </div><!-- /.container -->
+
+                <form action="/">
+                    <div class="container">
+                        <div class="row justify-content-sm-center">
+                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                <p class="lbl lbl-top">Сумма кредита (от 10 тыс. до 5 млн.)</p>
+                                <input type="text" class="input-text" placeholder="10 000 Р">
                             </div><!-- /.col -->
-                            <div class="col-sm-4">
-                                <label class="form-row">
-                                    <span class="lbl lbl-top">Пол</span>
-                                    <select>
-                                        <option value="m">Муж.</option>
-                                        <option value="j">Жен.</option>
-                                    </select>
-                                </label>
-                                <label class="form-row">
-                                    <span class="lbl lbl-top">Фамилия</span>
-                                    <input type="text" value="19.08.78">
-                                </label>                                                
-                            </div><!-- /.col -->                        
-                        </div><!-- /.row -->
-                        <h2 class="h-content">Доп информация</h2>                    
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <label class="form-row">
-                                    <span class="lbl lbl-top"></span>
-                                    <input type="text" placeholder="">
-                                </label>                                
+                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                <p class="lbl lbl-top">Цель</p>
+                                <select class="input-text">
+                                    <option>Просто деньги</option>
+                                </select>
                             </div><!-- /.col -->
-                            <div class="col-sm-4">
-                                <label class="form-row">
-                                    <span class="lbl lbl-top"></span>
-                                    <input type="text" placeholder="">
-                                </label>
-                            </div><!-- /.col -->
-                            <div class="col-sm-4">
-                                <label class="form-row">
-                                    <span class="lbl lbl-top"></span>
-                                    <input type="text" placeholder="">
-                                </label>
+                            <div class="col-sm-12 col-md-4 col-lg-3 bx-center">
+                                <span class="lbl lbl-top d-none d-md-block"></span>
+                                <button type="submit" class="btn btn-toggle_more">Заполнить заявку</button>
                             </div><!-- /.col -->
                         </div><!-- /.row -->
-                        <h2 class="h-content">Паспортные данные</h2>
-                    </div><!-- /.dash-content -->
-                </div><!-- /.row -->
-            </div><!-- /.container --> 
-        </div><!-- /.section-dash -->
+                    </div><!-- /.container -->                                      
+                </form>
+            </div><!-- /.section-hero-bg -->
+
+            <div class="container">
+                <section class="section">
+                    <h2 class="h-section h-icon-left">Партнеры сервиса</h2>
+                    <div class="bx-banks-scroll">
+                        <ul class="list">
+                            <li class="list-item"><a href="#"><img src="img/logo-mandiri.png" alt=""></a></li>
+                            <li class="list-item"><a href="#"><img src="img/logo-banki.ru.png" alt=""></a></li>
+                            <li class="list-item"><a href="#"><img src="img/logo-barclays.png" alt=""></a></li>
+                            <li class="list-item"><a href="#"><img src="img/logo-south.indian.png" alt=""></a></li>
+                            <li class="list-item"><a href="#"><img src="img/logo-bank.australia.png" alt=""></a></li>
+                            <li class="list-item"><a href="#"><img src="img/logo-unionbank.png" alt=""></a></li>
+
+                            <li class="list-item"><a href="#"><img src="img/logo-mandiri.png" alt=""></a></li>
+                            <li class="list-item"><a href="#"><img src="img/logo-banki.ru.png" alt=""></a></li>
+                            <li class="list-item"><a href="#"><img src="img/logo-barclays.png" alt=""></a></li>
+                            <li class="list-item"><a href="#"><img src="img/logo-south.indian.png" alt=""></a></li>
+                            <li class="list-item"><a href="#"><img src="img/logo-bank.australia.png" alt=""></a></li>
+                            <li class="list-item"><a href="#"><img src="img/logo-unionbank.png" alt=""></a></li>
+                        </ul>
+                    </div><!-- /.bx-banks-scroll -->
+                </section>
+
+                <section class="section">
+                    <h2 class="h-section h-centered">Как это работает</h2>            
+                    <div class="bx-howitworks row">
+                        <div class="howitworks-item col-sm-4">
+                            <img class="icon icon-1" src="img/howitworks1.png" alt="pic">
+                            <p class="heading">Заполнить заявку</p>
+                            <p>Укажите ваши данные для получения кредита</p>
+                        </div><!-- /.howitworks-item -->
+                        <div class="howitworks-item col-sm-4">
+                            <img class="icon icon-2" src="img/howitworks2.png" alt="pic">
+                            <p class="heading">Предварительное одобрение</p>
+                            <p>Пройдите предварительный скоринг.
+                                    Мы подберем банки, в которых высокая
+                                    вероятность одобрения лично для вас.</p>
+                        </div><!-- /.howitworks-item -->
+                        <div class="howitworks-item col-sm-4">
+                            <img class="icon icon-3" src="img/howitworks3.png" alt="pic">
+                            <p class="heading">Отправить заявку</p>
+                            <p>Выберите наилучшие условия и получите деньги</p>
+                        </div><!-- /.howitworks-item -->                                                
+                    </div><!-- /.bx-howitworks -->
+
+                    <div class="bx-center">
+                        <a href="#" class="btn btn-cta">Заполнить заявку</a>
+                    </div><!-- /.bx-center -->
+                </section>   
+                
+                <section class="section">
+                    <h2 class="h-section h-centered">Единая он-лайн заявка</h2>            
+                    <p class="h-section-centered-subheading">Кредит наличными без залога и поручителей. Одобрение в день обращения. </p>
+
+                    <div class="zayav-steps row">
+                        <div class="step col-sm-4">
+                            <span class="circle active">1</span>
+                            <div>
+                                <p class="text-1">Шаг 1</p>
+                                <p class="text-2">Личная информация</p> 
+                            </div>
+                        </div>
+                        <div class="step col-sm-4">
+                            <span class="circle">2</span>
+                            <div>
+                                <p class="text-1">Шаг 2</p>
+                                <p class="text-2">Паспортные данные</p>
+                            </div>
+                        </div>
+                        <div class="step col-sm-4">
+                            <span class="circle">3</span>
+                            <div>
+                                <p class="text-1">Шаг 3</p>
+                                <p class="text-2">Информация по кредиту</p>
+                            </div>
+                        </div>
+                    </div><!-- /.zayav-steps -->
+
+                    <h3 class="h-form">Личная информация</h3>
+
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label class="input-wrapper">
+                                <span class="label-float">Имя</span>
+                                <input type="text">
+                            </label>                                                   
+                        </div><!-- /.col -->
+                        <div class="col-sm-4">
+                            <label class="input-wrapper">
+                                <span class="label-float">Фамилия</span>
+                                <input type="text">
+                            </label>                                             
+                        </div><!-- /.col -->
+                        <div class="col-sm-4">
+                            <label class="input-wrapper">
+                                <span class="label-float">Отчество</span>
+                                <input type="text">
+                            </label>    
+                        </div><!-- /.col -->   
+
+                        <div class="col-sm-4">
+                            <label class="input-wrapper">
+                                <span class="label-float">Электронная почта</span>
+                                <input type="email">
+                            </label>
+                        </div><!-- /.col -->
+                        <div class="col-sm-4">
+                            <label class="input-wrapper">
+                                <span class="label-float">Номер телефона</span>
+                                <input type="tel">
+                            </label>
+                        </div><!-- /.col -->
+                    </div><!-- /.row -->
+
+                    <label class="checkbox"><input type="checkbox">Согласен с правилами обработки и передачи информации</label>
+
+                    <div class="bx-center">
+                        <div class="bx-sms">
+                            <input type="text" class="input-sms" placeholder="Код SMS">
+                            <p class="sms-hint">Не пришел код? <a href="#">Отправить снова</a></p>
+                        </div><!-- /.bx-sms -->
+                        <button type="submit" class="btn btn-cta">Продолжить</button>
+                    </div><!-- /.bx-center -->
+                </section>
+            </div><!-- /.container -->
+        </section><!-- /.section --> 
     </main><!-- /.main-content -->
 
     <footer class="footer-site footer"> 

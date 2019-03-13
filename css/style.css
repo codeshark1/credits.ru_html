@@ -2349,6 +2349,14 @@ table {
       bottom: 2px;
       border-radius: 100%; } }
 
+.h-centered {
+  text-align: center; }
+
+.h-section-centered-subheading {
+  text-align: center;
+  color: #4F4F4F;
+  margin-top: -20px; }
+
 .h-searchcredits, .h-contacts {
   text-align: center;
   color: #ff0000;
@@ -6138,6 +6146,77 @@ section + .view-all {
   transition: all .5s ease-in-out; }
 
 /*---------- END CONTACTS ----------*/
+.bx-banks-scroll {
+  overflow: auto;
+  padding-bottom: 20px; }
+  .bx-banks-scroll .list {
+    width: 100%;
+    width: fit-content;
+    min-width: fit-content;
+    white-space: nowrap; }
+  .bx-banks-scroll .list-item {
+    margin: 0 20px;
+    display: inline-block;
+    vertical-align: middle; }
+
+.bx-howitworks {
+  justify-content: space-around; }
+
+.howitworks-item {
+  text-align: center;
+  margin-bottom: 40px;
+  max-width: 350px;
+  position: relative; }
+  @media (min-width: 992px) {
+    .howitworks-item:after {
+      content: "";
+      width: 105px;
+      height: 24px;
+      background: url("../img/howitworks-arrow.png") no-repeat;
+      position: absolute;
+      top: 40px;
+      left: 100%;
+      margin-left: -50px; } }
+  .howitworks-item:last-child:after {
+    content: none; }
+  .howitworks-item .icon {
+    position: relative;
+    margin-bottom: 20px; }
+  .howitworks-item .icon-2 {
+    left: -15px; }
+  .howitworks-item .icon-3 {
+    left: -30px; }
+  .howitworks-item .heading {
+    font-weight: bold;
+    font-size: 20px; }
+
+.zayav-steps .step {
+  display: flex;
+  align-items: center; }
+.zayav-steps .circle {
+  width: 54px;
+  height: 54px;
+  background: #f0f0f0;
+  border-radius: 100%;
+  display: block;
+  font-weight: bold;
+  font-size: 22px;
+  text-align: center;
+  line-height: 54px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin-right: 10px; }
+  .zayav-steps .circle.active {
+    background: #ffca3c;
+    color: #fff; }
+.zayav-steps .text-1 {
+  color: #4F4F4F;
+  font-size: 15px; }
+.zayav-steps .text-2 {
+  font-size: 17px;
+  color: #000;
+  font-weight: 400; }
+
 /* ==========================================================================
    DASHBOARD
    ========================================================================== */
