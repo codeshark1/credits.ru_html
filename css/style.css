@@ -156,10 +156,7 @@ label {
 
 input.checkbox {
   margin-right: 8px;
-  vertical-align: middle; }
-
-label.checkbox {
-  margin-bottom: 8px;
+  vertical-align: middle;
   display: inline-block; }
 
 input[type="radio"],
@@ -209,20 +206,28 @@ fieldset {
   padding: 0;
   margin: 0; }
 
-.b-inputs input {
-  margin-bottom: 16px; }
-@media (min-width: 992px) {
-  .b-inputs:before, .b-inputs:after {
-    content: "";
-    display: table; }
-  .b-inputs:after {
-    clear: both; }
-  .b-inputs input {
-    width: 32.3%;
-    float: left;
-    margin-right: 1.5%; }
-  .b-inputs input:last-child {
-    margin-right: 0; } }
+.input-wrapper {
+  position: relative;
+  display: block;
+  font-weight: 400;
+  height: 78px; }
+  .input-wrapper .input-field {
+    padding-top: 22px;
+    padding-bottom: 12px;
+    font-size: 14px; }
+  .input-wrapper .label-float {
+    position: absolute;
+    left: 14px;
+    top: 17px;
+    font-size: 14px;
+    transition: all .15s; }
+  .input-wrapper.active .label-float {
+    font-size: 13px;
+    color: #969696;
+    top: 2px; }
+
+.select-new {
+  height: 50px; }
 
 /* SEARCH FORM */
 .search-button {
@@ -1789,7 +1794,13 @@ a, svg, path, button {
     .container {
       padding: 0; }
       .container .row {
-        margin: 0; } }
+        margin: 0; }
+      .container.v2 {
+        padding-left: 15px;
+        padding-right: 15px; }
+        .container.v2 .row {
+          margin-left: -15px;
+          margin-right: -15px; } }
 
 .wrapper-main {
   background-color: #f5f5f5;
@@ -2250,6 +2261,21 @@ NAVIGATION
 .section-top {
   padding-top: 16px; }
 
+.section-first {
+  padding-top: 30px; }
+  @media (min-width: 768px) {
+    .section-first {
+      padding-top: 40px; } }
+
+.section-bg-main {
+  background: #fff;
+  padding-bottom: 40px; }
+
+@media (min-width: 1200px) {
+  .section-side-pad {
+    padding-left: 100px;
+    padding-right: 100px; } }
+
 table {
   border-collapse: collapse; }
   table td, table th {
@@ -2334,12 +2360,12 @@ table {
       font-size: 30px; } }
 
 @media (min-width: 1200px) {
-  .h-main {
+  .h-main, .h-icon-left {
     position: relative;
     margin-left: -39px;
     padding-left: 39px;
     overflow: hidden; }
-    .h-main:before {
+    .h-main:before, .h-icon-left:before {
       content: "";
       height: 1.6rem;
       width: 1.6rem;
@@ -2417,13 +2443,12 @@ table {
   margin-top: 20px; }
 
 .h-form {
-  margin-bottom: 20px;
+  margin: 40px 0 20px;
   font-size: 20px;
-  font-weight: 400; }
+  font-weight: 600; }
   @media (min-width: 768px) {
     .h-form {
-      font-size: 25px;
-      margin-bottom: 50px; } }
+      font-size: 25px; } }
 
 .centered-mob {
   text-align: center; }
@@ -2547,6 +2572,8 @@ table {
       padding: 0; } }
   .section-hero-bg.bg-body {
     background-color: #f5f5f5; }
+  .section-hero-bg.padding-bottom {
+    padding-bottom: 30px; }
 
 .section-hero {
   padding-top: 10px;
@@ -2639,6 +2666,11 @@ table {
     .input-text, .btn-toggle_more, .input-checkbox {
       height: 64px;
       margin-bottom: 30px !important; } }
+
+@media (min-width: 768px) {
+  .btn-cta-hero {
+    height: 64px;
+    width: 100%; } }
 
 .checkboxes-inline {
   margin-bottom: 30px !important; }
@@ -6181,7 +6213,7 @@ section + .view-all {
     content: none; }
   .howitworks-item .icon {
     position: relative;
-    margin-bottom: 20px; }
+    margin-bottom: 10px; }
   .howitworks-item .icon-2 {
     left: -15px; }
   .howitworks-item .icon-3 {
@@ -6189,6 +6221,10 @@ section + .view-all {
   .howitworks-item .heading {
     font-weight: bold;
     font-size: 20px; }
+
+.h-zayav-steps-mob span {
+  display: block;
+  font-size: 16px; }
 
 .zayav-steps .step {
   display: flex;
@@ -6217,6 +6253,49 @@ section + .view-all {
   color: #000;
   font-weight: 400; }
 
+.sms_submit .bx-sms {
+  text-align: left; }
+.sms_submit .input-sms {
+  width: 85px;
+  padding: 15px 13px;
+  background: none;
+  text-align: center;
+  margin-bottom: 20px; }
+.sms_submit .sms-hint {
+  color: #BCBBBB;
+  font-size: 12px; }
+  .sms_submit .sms-hint a {
+    color: #BCBBBB;
+    text-decoration: underline; }
+@media (max-width: 767px) {
+  .sms_submit .input-sms {
+    margin-right: 10px; }
+  .sms_submit .bx-sms {
+    display: flex;
+    align-items: center; }
+  .sms_submit .sms-hint {
+    margin-top: -20px; }
+  .sms_submit .btn {
+    width: 100%; } }
+@media (min-width: 768px) {
+  .sms_submit {
+    display: inline-block;
+    position: relative;
+    height: 80px; }
+    .sms_submit .bx-sms {
+      position: absolute;
+      left: -110px;
+      top: 0; }
+    .sms_submit .input-sms {
+      width: 100px;
+      margin-bottom: 14px; }
+    .sms_submit .sms-hint {
+      white-space: nowrap; } }
+
+.form-row {
+  margin-bottom: 20px;
+  display: block; }
+
 /* ==========================================================================
    DASHBOARD
    ========================================================================== */
@@ -6228,7 +6307,8 @@ section + .view-all {
    ========================================================================== */
 .footer-site {
   background: #fff;
-  position: relative; }
+  position: relative;
+  border-top: 1px solid #E5E5E5; }
   .footer-site .menu-main {
     margin-bottom: 1.3rem; }
     .footer-site .menu-main li {

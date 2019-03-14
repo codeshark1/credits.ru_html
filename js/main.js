@@ -379,4 +379,14 @@ jQuery(document).ready(function($){
     });
 
     shortenText('.article-feed .excerpt'); 
+
+
+    $('.input-wrapper .input-field').focusin(function(){
+        $(this).parent().addClass('active');
+    });
+    $('.input-wrapper .input-field').focusout(function(){
+        if(!$(this).val()) {
+            $(this).parent().removeClass('active');
+        }
+    });    
 });

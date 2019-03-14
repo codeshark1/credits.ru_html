@@ -96,8 +96,7 @@ select {padding: 6px 4px 6px 4px;}
 textarea {margin-bottom: 8px;}
 input[type="number"] {padding-right: 0;}
 label {cursor: pointer;}
-input.checkbox {margin-right: 8px; vertical-align: middle}
-label.checkbox {margin-bottom: 8px; display: inline-block;}
+input.checkbox {margin-right: 8px; vertical-align: middle;display: inline-block;}
 input[type="radio"],
 input[type="checkbox"] {
   margin: 0 8px 0 0;
@@ -143,14 +142,22 @@ textarea:focus {
 fieldset {
   border: none; padding: 0; margin: 0;
 }
-.b-inputs {
-  input {margin-bottom: 16px;}
-  @media (min-width: $screen-md-min) {
-    @include clearfix();
-    input {width: 32.3%; float: left; margin-right: 1.5%;}
-    input:last-child {margin-right: 0;}
+
+.input-wrapper {
+  position: relative;
+  display: block;
+  font-weight: 400;
+  height:  78px;
+  .input-field {padding-top: 22px; padding-bottom: 12px;font-size: 14px;}
+  .label-float {position: absolute; left: 14px; top: 17px; font-size: 14px; transition: all .15s;}
+
+  &.active {
+    .label-float {font-size: 13px; color: $gray; top: 2px;}
   }
 }
+.select-new {height: 50px}
+
+
 
 /* SEARCH FORM */
 .search-button {outline: none}

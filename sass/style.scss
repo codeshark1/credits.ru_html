@@ -24,6 +24,11 @@ a, svg, path, button {transition: all .15s;}
 	@media (max-width: $screen-xs) {
 		padding: 0;
 		.row {margin: 0;}
+
+		&.v2 {
+			padding-left: 15px;padding-right: 15px;
+			.row {margin-left: -15px; margin-right: -15px;}
+		}
 	}
 }
 $sect-mg: 2rem;
@@ -522,8 +527,15 @@ NAVIGATION
 		&.mg-extra {margin-bottom: 4rem !important;}
 	}
 }
-.section-top {
-	padding-top: 16px;
+.section-top {padding-top: 16px;}
+.section-first {padding-top: 30px;
+	@media (min-width: $screen-sm-min) {padding-top: 40px;}
+}
+.section-bg-main {background: #fff; padding-bottom: 40px;}
+.section-side-pad {
+	@media (min-width: $screen-lg-min) {
+		padding-left: 100px;padding-right: 100px;
+	}
 }
 
 table {
@@ -610,7 +622,7 @@ table {
 	}
 	@media (min-width: $screen-sm-min) {font-size: 30px;}
 }
-.h-main {	
+.h-main, .h-icon-left {	
 	@media (min-width: $screen-lg-min) {
 		position: relative;
 		margin-left: -$sect-mg-neg;
@@ -628,6 +640,9 @@ table {
 		}
 	}
 }
+.h-icon-left {}
+
+
 .h-centered {text-align: center;}
 .h-section-centered-subheading {text-align: center; color: #4F4F4F; margin-top: -20px;}
 
@@ -683,17 +698,16 @@ table {
 }
 .link-back {margin-top: 20px;}
 .h-form {
-	margin-bottom: 20px;
+	margin: 40px 0 20px;
 	font-size: 20px;
-	font-weight: 400;
+	font-weight: 600;
 	@media (min-width: $screen-sm-min) {
 		font-size: 25px;
-		margin-bottom: 50px;
 	}
 }
 .centered-mob {
 	text-align: center;
-	@media (min-width: $screen-sm-min) {text-align: left;}	
+	@media (min-width: $screen-sm-min) {text-align: left;}
 }
 .heading-wrapper {
 	position: relative;
@@ -815,7 +829,7 @@ table {
 	&.bg-body {
 		background-color: #f5f5f5;
 	}	
-
+	&.padding-bottom {padding-bottom: 30px;}
 }
 .section-hero {	
 	padding-top: 10px;
@@ -917,6 +931,10 @@ table {
 		margin-bottom: 30px !important;
 	}
 }
+.btn-cta-hero {	
+	@media (min-width: $screen-sm-min) {height: 64px; width: 100%;}
+}
+
 .checkboxes-inline {
 	margin-bottom: 30px !important;
 	.radio, .checkbox {margin-right: 20px;}
@@ -4627,12 +4645,16 @@ section+.view-all {
 		}
 	}
 	&:last-child:after {content: none}
-	.icon {position: relative; margin-bottom: 20px;}
+	.icon {position: relative; margin-bottom: 10px;}
 	.icon-2 {left: -15px}
 	.icon-3 {left: -30px}
 	.heading {font-weight: bold; font-size: 20px;}
 }
 
+.h-zayav-steps-mob {
+	//margin-top: 36px;
+	span {display: block; font-size: 16px;}
+}
 .zayav-steps {
 	.step {display: flex; align-items: center;}
 	.circle {width: 54px;height: 54px;background: #f0f0f0;border-radius: 100%; display: block; font-weight: bold; font-size: 22px; text-align: center;line-height: 54px; flex-grow: 0; flex-shrink: 0; margin-right: 10px;
@@ -4640,6 +4662,36 @@ section+.view-all {
 	}
 	.text-1 {color: #4F4F4F; font-size: 15px;}
 	.text-2 {font-size: 17px; color: #000;font-weight: 400;}
+}
+
+.sms_submit {
+	.bx-sms {text-align: left;}
+	.input-sms {width: 85px;padding: 15px 13px; background: none; text-align: center; margin-bottom: 20px;}
+	.sms-hint {color: #BCBBBB; font-size: 12px;
+		a {color: #BCBBBB; text-decoration: underline;}
+	}
+	@media (max-width: $screen-xs-max) {
+		.input-sms {margin-right: 10px;}
+		.bx-sms {display: flex; align-items: center}
+		.sms-hint {margin-top: -20px;}
+		.btn {width: 100%;}
+	}
+	@media (min-width: $screen-sm-min) {
+		display: inline-block; position: relative;
+		height: 80px;
+		.bx-sms {
+			position: absolute;
+			left: -110px;
+			top: 0;
+		}
+		.input-sms {width: 100px;margin-bottom: 14px;}
+		.sms-hint {white-space: nowrap;}
+	}
+}
+.form-row {margin-bottom: 20px; display: block;}
+
+.row-addr-reg {
+	
 }
 /* ==========================================================================
    DASHBOARD
@@ -4659,6 +4711,7 @@ section+.view-all {
 .footer-site {
 	background: #fff;
 	position: relative;
+	border-top: 1px solid #E5E5E5;
 	.menu-main {
 		margin-bottom: 1.3rem;
 		li {padding: 0}
