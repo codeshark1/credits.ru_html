@@ -1840,6 +1840,13 @@ a, svg, path, button {
   display: flex;
   align-items: baseline;
   justify-content: flex-end; }
+.header .btn-user {
+  display: inline-block;
+  position: relative;
+  top: 6px;
+  margin-left: 10px; }
+  .header .btn-user svg {
+    width: 20px; }
 @media (max-width: 767px) {
   .header--lvl-1 {
     padding: 5px 10px;
@@ -1855,6 +1862,8 @@ a, svg, path, button {
     top: 9px;
     width: 101px; } }
 @media (min-width: 768px) {
+  .header--actions {
+    align-items: center; }
   .header--lvl-1 {
     background: #f0f0f0;
     padding-bottom: 10px; }
@@ -1881,6 +1890,8 @@ a, svg, path, button {
     padding: 1.5rem 0; }
     .header--logo .logo {
       width: 170px; }
+  .header .btn-user {
+    top: 2px; }
   .header .btn-menu {
     display: none; } }
 .header--rates {

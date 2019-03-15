@@ -79,7 +79,10 @@ $sect-mg-neg: 39px;
 		justify-content: flex-end;
 	}
 
-	
+	.btn-user {display: inline-block; position: relative; top: 6px; margin-left: 10px;
+		svg {width: 20px;}
+	}
+
 	@media (max-width: $screen-xs-max) {
 		&--lvl-1 {
 			padding: 5px 10px;
@@ -103,6 +106,7 @@ $sect-mg-neg: 39px;
 		}		
 	}
 	@media (min-width: $screen-sm-min) {
+		&--actions {align-items: center}		
 		&--lvl-1 {background: #f0f0f0; padding-bottom: 10px;}		
 		&--row {
 			@include row-mod();
@@ -125,6 +129,7 @@ $sect-mg-neg: 39px;
 			padding: 1.5rem 0;
 			.logo {width: 170px;}
 		}
+		.btn-user {top: 2px;}
 		.btn-menu {display: none}
 	}
 	
