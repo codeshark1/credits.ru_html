@@ -218,9 +218,13 @@ fieldset {
   .input-wrapper .label-float {
     position: absolute;
     left: 14px;
-    top: 17px;
+    top: 18px;
     font-size: 14px;
-    transition: all .15s; }
+    transition: all .15s;
+    line-height: 1;
+    white-space: nowrap;
+    overflow: ellipsis;
+    max-width: 100%; }
   .input-wrapper.active .label-float {
     font-size: 13px;
     color: #969696;
@@ -2454,11 +2458,12 @@ table {
   margin-top: 20px; }
 
 .h-form {
-  margin: 40px 0 20px;
+  margin: 0 0 20px 0;
   font-size: 20px;
   font-weight: 600; }
   @media (min-width: 768px) {
     .h-form {
+      margin: 40px 0 20px;
       font-size: 25px; } }
 
 .centered-mob {
@@ -6191,7 +6196,8 @@ section + .view-all {
 /*---------- END CONTACTS ----------*/
 .bx-banks-scroll {
   overflow: auto;
-  padding-bottom: 20px; }
+  padding-bottom: 20px;
+  text-align: center; }
   .bx-banks-scroll .list {
     width: 100%;
     width: fit-content;
@@ -6306,6 +6312,36 @@ section + .view-all {
 .form-row {
   margin-bottom: 20px;
   display: block; }
+
+@media (min-width: 768px) {
+  .row-addr-reg {
+    display: flex; }
+    .row-addr-reg .input-wrapper {
+      flex-grow: 1; }
+    .row-addr-reg .flat {
+      width: 140px;
+      flex-grow: 0;
+      margin-left: 30px; } }
+
+.submit_back .btn-back-text {
+  text-decoration: underline;
+  color: #BCBBBB; }
+@media (max-width: 767px) {
+  .submit_back .btn-cta {
+    width: 100%;
+    margin-bottom: 20px; } }
+@media (min-width: 768px) {
+  .submit_back {
+    display: inline-block;
+    position: relative; }
+    .submit_back .btn-back-text {
+      position: absolute;
+      left: -64px;
+      top: 14px; } }
+
+.zayav-msg {
+  font-weight: bold;
+  margin-top: 24px; }
 
 /* ==========================================================================
    DASHBOARD

@@ -149,7 +149,7 @@ fieldset {
   font-weight: 400;
   height:  78px;
   .input-field {padding-top: 22px; padding-bottom: 12px;font-size: 14px;}
-  .label-float {position: absolute; left: 14px; top: 17px; font-size: 14px; transition: all .15s;}
+  .label-float {position: absolute; left: 14px; top: 18px; font-size: 14px; transition: all .15s; line-height: 1; white-space: nowrap; overflow: ellipsis; max-width: 100%;}
 
   &.active {
     .label-float {font-size: 13px; color: $gray; top: 2px;}

@@ -389,4 +389,14 @@ jQuery(document).ready(function($){
             $(this).parent().removeClass('active');
         }
     });    
+
+
+    $('.inputs-addr-extra').hide().find('input').prop('disabled', true);
+    $('.checkbox-addr-extra input').on('change', function(){
+        if ( $(this).prop('checked') == true ) {
+            $(this).parent('.checkbox-addr-extra').next('.inputs-addr-extra').hide().find('input').prop('disabled', true);
+        } else {
+            $(this).parent('.checkbox-addr-extra').next('.inputs-addr-extra').show().find('input').prop('disabled', false);
+        }
+    });    
 });

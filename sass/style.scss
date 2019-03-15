@@ -703,10 +703,11 @@ table {
 }
 .link-back {margin-top: 20px;}
 .h-form {
-	margin: 40px 0 20px;
+	margin: 0 0 20px 0;
 	font-size: 20px;
 	font-weight: 600;
 	@media (min-width: $screen-sm-min) {
+		margin: 40px 0 20px;
 		font-size: 25px;
 	}
 }
@@ -4621,7 +4622,7 @@ section+.view-all {
 	/*---------- END CONTACTS ----------*/
 	
 
-.bx-banks-scroll {overflow: auto; padding-bottom: 20px;
+.bx-banks-scroll {overflow: auto; padding-bottom: 20px; text-align: center;
 	.list {		
 		width: 100%;
 		width: fit-content;
@@ -4696,8 +4697,26 @@ section+.view-all {
 .form-row {margin-bottom: 20px; display: block;}
 
 .row-addr-reg {
-	
+	@media (min-width: $screen-sm-min) {
+		display: flex;
+		.input-wrapper {flex-grow: 1}
+		.flat {width: 140px; flex-grow: 0; margin-left: 30px}
+	}
 }
+
+.submit_back {
+	.btn-back-text {text-decoration: underline; color: #BCBBBB;}
+
+	@media (max-width: $screen-xs-max) {
+		.btn-cta {width: 100%; margin-bottom: 20px;}
+	}
+	@media (min-width: $screen-sm-min) {
+		display: inline-block;
+		position: relative;
+		.btn-back-text {position: absolute; left: -64px; top: 14px;}
+	}	
+}
+.zayav-msg {font-weight: bold; margin-top: 24px;}
 /* ==========================================================================
    DASHBOARD
    ========================================================================== */
