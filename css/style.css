@@ -2838,7 +2838,8 @@ table {
       padding-bottom: 5px;
       display: flex;
       align-items: center;
-      margin: 0 auto; }
+      margin: 0 auto;
+      min-height: 45px; }
       .listing-controls--wrap.no-results {
         padding-left: 15px;
         padding-right: 15px; }
