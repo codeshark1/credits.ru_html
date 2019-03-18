@@ -5027,6 +5027,11 @@ section+.view-all {
 	.note {color:#BCBBBB; font-size: 12px; margin-top: 1.3rem;
 		a {color:#BCBBBB; text-decoration: underline;}
 	}
+
+	&.centered {
+		text-align: center;
+		.h-modal {margin-bottom: 0;}
+	}
 }
 .fancybox-close {
 	background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 7 7' width='28' height='28'%3E%3Crect x='46.14' y='19.38' width='0.79' height='9.11' transform='translate(-46.33 19.49) rotate(-45)'/%3E%3Crect class='cls-1' x='41.99' y='23.53' width='9.11' height='0.79' transform='translate(-46.32 19.53) rotate(-45.05)'/%3E%3C/svg%3E") center center no-repeat;	
@@ -5038,6 +5043,7 @@ section+.view-all {
 	font-weight: 500;
 	margin: 0 0 20px 0;
 }
+.subh-modal {font-weight: 400;}
 
 .social-modal {
 	margin: 0 -6px;
