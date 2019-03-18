@@ -2582,7 +2582,8 @@ table {
   position: relative; }
   @media (min-width: 768px) {
     .section-hero-bg {
-      background-size: 730px auto; } }
+      background-size: 730px auto;
+      min-height: 260px; } }
   @media (max-width: 991px) {
     .section-hero-bg .col-lg-8, .section-hero-bg .col-lg-4 {
       padding: 0; } }
@@ -3542,25 +3543,44 @@ table {
     .td_title_simple .image {
       width: 88px; } }
 
-.plan_searchresults .td {
-  justify-content: flex-start; }
-.plan_searchresults .td_prob .prob {
+.td_prob .prob {
   font-weight: 400;
   position: relative; }
-  .plan_searchresults .td_prob .prob:after {
+  .td_prob .prob:after {
     content: ""; }
-.plan_searchresults .td_prob .prob-mid {
+.td_prob .prob-mid {
   color: #ee8b33; }
-  .plan_searchresults .td_prob .prob-mid:after {
+  .td_prob .prob-mid:after {
     background: #ee8b33; }
-.plan_searchresults .td_prob .prob-high {
+.td_prob .prob-high {
   color: #66d514; }
-  .plan_searchresults .td_prob .prob-high:after {
+  .td_prob .prob-high:after {
     background: #66d514; }
-.plan_searchresults .td_prob .prob-low {
+.td_prob .prob-low {
   color: #ff0000; }
-  .plan_searchresults .td_prob .prob-low:after {
+  .td_prob .prob-low:after {
     background: #ff0000; }
+@media (max-width: 767px) {
+  .td_prob .prob {
+    padding-left: 10px; }
+    .td_prob .prob:after {
+      width: 2px;
+      height: 100%;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0; } }
+@media (min-width: 768px) {
+  .td_prob {
+    font-size: 14px; }
+    .td_prob .prob:after {
+      width: 50px;
+      height: 2px;
+      display: block;
+      margin-top: 15px; } }
+
+.plan_searchresults .td {
+  justify-content: flex-start; }
 @media (max-width: 767px) {
   .plan_searchresults .td_docs {
     display: none; }
@@ -3568,15 +3588,6 @@ table {
     padding-top: 20px; }
   .plan_searchresults .licence {
     top: -10px; }
-  .plan_searchresults .prob {
-    padding-left: 10px; }
-    .plan_searchresults .prob:after {
-      width: 2px;
-      height: 100%;
-      display: block;
-      position: absolute;
-      left: 0;
-      top: 0; }
   .plan_searchresults .plan-content {
     padding-top: 20px; } }
 @media (min-width: 768px) {
@@ -3595,11 +3606,6 @@ table {
   .plan_searchresults .td_prob {
     width: 17%;
     font-size: 14px; }
-  .plan_searchresults .prob:after {
-    width: 50px;
-    height: 2px;
-    display: block;
-    margin-top: 15px; }
   .plan_searchresults .td_action {
     width: 15%; }
   .plan_searchresults .doc {

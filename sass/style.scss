@@ -826,6 +826,7 @@ table {
 	position: relative;
 	@media (min-width: $screen-sm-min) {
 		background-size: 730px auto;
+		min-height: 260px;
 	}
 	.col-lg-8, .col-lg-4 {
 		@media (max-width: $screen-sm-max) {		
@@ -1796,42 +1797,56 @@ table {
 	}
 }
 
+.td_prob {
+	.prob {font-weight: 400; position: relative;
+		&:after {
+			content:"";
+		}
+	}
+	.prob-mid {
+		color: #ee8b33;
+		&:after {background: #ee8b33}
+	}
+	.prob-high {
+		color: #66d514;
+		&:after {background: #66d514}
+	}
+	.prob-low {
+		color: $red;
+		&:after {background: $red;}
+	}		
+	
+	@media (max-width: $screen-xs-max) {
+		.prob {
+			padding-left: 10px;
+			&:after {
+				width: 2px;
+				height: 100%;
+				display: block;
+				position: absolute;
+				left: 0;
+				top: 0;
+				}
+		}
+	}
+	@media (min-width: $screen-sm-min) {
+		font-size: 14px;
+		.prob:after {
+			width: 50px;height: 2px;
+			display: block;
+			margin-top: 15px;
+		}				
+	}			
+}
+
 .plan_searchresults {
 	.td {justify-content: flex-start;}
-	.td_prob {
-		.prob {font-weight: 400; position: relative;
-			&:after {
-				content:"";
-			}
-		}
-		.prob-mid {
-			color: #ee8b33;
-			&:after {background: #ee8b33}
-		}
-		.prob-high {
-			color: #66d514;
-			&:after {background: #66d514}
-		}
-		.prob-low {
-			color: $red;
-			&:after {background: $red}
-		}				
-	}
+
 	@media (max-width: $screen-xs-max) {
 		.td_docs {display: none;}
 		.td_bankname {padding-top: 20px;}
 		.licence {top: -10px}
-		.prob {
-			padding-left: 10px;
-			&:after {
-			width: 2px;
-			height: 100%;
-			display: block;
-			position: absolute;
-			left: 0;
-			top: 0;
-			}	
-		}	
+	
 		.plan-content {padding-top: 20px;}
 	}
 	@media (min-width: $screen-sm-min) {
@@ -1840,11 +1855,7 @@ table {
 		.td_amount {width: 15%; font-size: 20px;}
 		.td_docs {width: 21%;font-size: 14px;}
 		.td_prob {width: 17%;font-size: 14px;}
-			.prob:after {
-				width: 50px;height: 2px;
-				display: block;
-				margin-top: 15px;
-			}
+
 		.td_action {width: 15%;}
 		.doc {margin-bottom: 5px;
 			&:last-child {margin-bottom: 0;}
