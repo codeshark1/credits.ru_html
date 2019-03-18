@@ -2861,10 +2861,10 @@ table {
   justify-content: center; }
 
 .results-credits-found {
-  font-size: 0.9rem; }
+  font-size: 0.9rem;
+  text-align: center; }
   @media (min-width: 768px) {
     .results-credits-found {
-      text-align: center;
       padding-bottom: 20px; } }
 
 .credit-online-link {
@@ -3710,7 +3710,8 @@ table {
   color: #000; }
   @media (max-width: 767px) {
     .td_title {
-      padding-left: 0 !important; } }
+      padding-left: 0 !important;
+      padding-right: 20px; } }
 
 @media (max-width: 767px) {
   .plan-wrapper {

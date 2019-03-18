@@ -305,7 +305,7 @@
 
     <main class="main-content">        
         <div class="section-hero-bg section-hero">
-            <div class="container">
+            <div class="container v2">
                 <nav class="breadcrumbs d-none d-md-block">
                     <ul>
                         <li><a href="#"><span>Главная</span></a></li>
@@ -313,16 +313,25 @@
                     </ul>
                 </nav>
 
-                <p class="h-searchcredits">Подходящие под ваши условия кредиты</p>
-                <ul class="h-sub h-sub-results">                    
-                    <li class="param">Сумма<span class="hid"> кредита</span>: <b>30 000 Р</b></li>
-                    <li class="param">Срок<span class="hid"> кредита</span>: <b>1 год</b></li>
-                    <li class="param">Город: <b>Москва</b></li>
-                </ul>
+                <p class="h-searchcredits d-none d-sm-block">Подходящие под ваши условия кредиты</p>
+                <p class="h-searchcredits d-sm-none">Подобрали для вас</p>
 
-                <p class="link-back visible-xs">
-                    <a href="#"><svg class="arrow" data-src="img/i-arrow-back.svg"></svg> Изменить условия</a>
-                </p>
+                <form action="/">
+                    
+                        <div class="row justify-content-sm-center">
+                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                <p class="lbl lbl-top">Сумма кредита</p>
+                                <input type="text" class="input-text" value="9 300 000 P">
+                            </div><!-- /.col -->
+                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                <p class="lbl lbl-top">Срок:</p>
+                                <input type="text" class="input-text" value="4 года 7 месяцев">
+                            </div><!-- /.col -->
+                        </div><!-- /.row -->
+                    
+                </form>
+
+                <p class="results-credits-found">Чтобы отправить заявки, кликните по предложениям</p>
             </div><!-- /.container -->
         </div><!-- /.section-hero-bg -->
 
@@ -366,24 +375,6 @@
                             </div>
                         </div>
                     </div><!-- /.plan-content -->
-                    <div class="plan-actions">
-                        <a href="#" class="plan-btn fav">
-                            <img class="svg" src="img/panel-fav.svg" alt="icon">
-                            <span>В избранное</span>
-                        </a>
-                        <a href="#" class="plan-btn compare">
-                            <img class="svg" src="img/panel-compare.svg" alt="icon">
-                            <span>Сравнить</span>
-                        </a>                                                
-                        <a href="#" class="plan-btn info">
-                            <img class="svg" src="img/panel-info.svg" alt="icon">
-                            <span>Подробнее</span>
-                        </a>
-                        <a href="#" class="plan-btn sign">
-                            <img class="svg" src="img/panel-sign.svg" alt="icon">
-                            <span>Оформить</span>
-                        </a>                                                                                                
-                    </div><!-- /.plan-actions -->
                 </div><!-- /.plan-wrapper -->
             </div><!-- /.plan -->
         </div><!-- /.plans-insearch-wrapper -->          

@@ -97,7 +97,9 @@ function tabs() {
 }
 
 function createSwipeBtn() {
-    $("<span class='btn btn-narrow btn-dots'></span>").appendTo('.plan-wrapper');
+    if ($('.plan-wrapper').find('.plan-actions').length) {
+        $("<span class='btn btn-narrow btn-dots'></span>").appendTo('.plan-wrapper');
+    }
 }
 function enable_swipes() {
     $(".plan-wrapper").swipe({

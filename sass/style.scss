@@ -1117,8 +1117,8 @@ table {
 
 .results-credits-found {
 	font-size: 0.9rem;
+	text-align: center;
 	@media (min-width: $screen-sm-min) {
-		text-align: center;
 		padding-bottom: 20px;
 	}
 }
@@ -1970,6 +1970,7 @@ table {
 	color: #000;
 	@media (max-width: $screen-xs-max) {
 		padding-left: 0 !important;
+		padding-right: 20px;
 	}
 }
 .plan-wrapper {
