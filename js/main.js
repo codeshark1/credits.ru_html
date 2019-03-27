@@ -390,7 +390,14 @@ jQuery(document).ready(function($){
         if(!$(this).val()) {
             $(this).parent().removeClass('active');
         }
-    });    
+    });   
+    
+    $('.input-wrapper .input-field').each(function(){
+        if($(this).val()) {
+            $(this).parent().addClass('active');
+        }
+
+    });
 
 
     if ($('.checkbox-addr-extra input').prop('checked') == true) {

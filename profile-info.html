@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Профиль</title>
+    <title>Профиль - Личная информация</title>
 	<link rel="shortcut icon" href="img/favicon/favicon.ico?v=2" type="image/x-icon" />
 	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png" />
 	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png" />
@@ -30,7 +30,6 @@
 <!-- <div class="preloader">
     <div class="pulse"></div>
 </div> -->
-
 <div class="wrapper-main">
     <header class="header header-site">
         <div class="header--lvl-1">
@@ -157,92 +156,133 @@
 
     <main class="main-content">
         <div class="section-dash">            
-            <div class="row-mod">
+            <div class="row-dash">
                 <div class="dash-navpanel">
                     <div class="bx-user-rep">
                         <img class="userpic" src="img/avatar.jpg" alt="аватар">
                         <p class="name">Василий Викторович</p>
                     </div><!-- /.bx-user-rep -->
 
-                    <ul class="menu-dash">
-                        <li class="menu-item docs"><a href="#" class="#">Документы</a></li>
-                        <li class="menu-item compar"><a href="#" class="#">Сравнение</a></li>
-                        <li class="menu-item personal"><a href="#" class="#">Личная информация</a></li>
-                        <li class="menu-item comments"><a href="#" class="#">Комментарии</a></li>
-                        <li class="menu-item fav"><a href="#" class="#">Избранное</a></li>
-                    </ul>
+                    <div class="menu-dash-wrap">
+                        <ul class="menu-dash">
+                            <!-- <li class="menu-item"><a href="#" class="#"><i class="icon icon-docs"></i>Документы</a></li> -->
+                            <!-- <li class="menu-item"><a href="#" class="#"><i class="icon icon-compar"></i>Сравнение</a></li> -->
+                            <li class="menu-item active"><a href="#" class="#"><i class="icon icon-personal"></i>Личная информация</a></li>
+                            <li class="menu-item"><a href="#" class="#"><i class="icon icon-comments"></i>Комментарии</a></li>
+                            <!-- <li class="menu-item"><a href="#" class="#"><i class="icon icon-fav"></i>Избранное</a></li> -->
+                        </ul>
+                    </div><!-- /.menu-dash-wrap -->
 
-                    <p class="dashboard-logout"><a href="#">Выход</a></p>
+                    <p class="dashboard-logout"><a href="#"><i class="icon icon-logout"></i>Выход</a></p>
                 </div><!-- /.dash-navpanel -->
                 <div class="dash-content">
-                    <h2 class="h-dash">Личная информация</h2>                    
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <p class="lbl lbl-top">Фотография</p>
-                            <div class="img-place">
-                                <div class="icon"><svg data-src="img/userpic-placeholder.svg"></svg></div>
+                    <div class="container">
+                        <h2 class="h-dash">Личная информация</h2>                    
+                        <div class="row row-userphoto">
+                            <div class="col-sm-4">
+                                <div class="dash-user-photo-wrap form-row">
+                                    <p class="lbl">Фотография</p>
+                                    <div class="dash-user-photo" style="background-image: url(img/userpic-placeholder.svg);"></div><!-- /.dash-user-photo -->                                    
+                                </div><!-- /.dash-user-photo-wrap -->
+                            </div><!-- /.col -->
+                            <div class="col-sm-4">
+                                <label class="form-row input-wrapper">
+                                    <input type="text" class="input-field">
+                                    <span class="label-float">Имя</span>
+                                </label>
+                                <label class="form-row input-wrapper">
+                                    <input type="text" class="input-field">
+                                    <span class="label-float">Фамилия</span>
+                                </label>
+                                <label class="form-row input-wrapper">
+                                    <input type="text" class="input-field">
+                                    <span class="label-float">Отчество</span>
+                                </label>
+                            </div><!-- /.col -->
+                            <div class="col-sm-4">
+                                <label class="form-row input-wrapper">                                
+                                    <select>
+                                        <option>Пол</option>
+                                    </select>
+                                </label>
+                                <label class="form-row input-wrapper">                                
+                                    <input type="text" class="input-field">
+                                    <span class="label-float">Дата рождения</span>
+                                </label>
+                            </div><!-- /.col -->                        
+                        </div><!-- /.row -->
+                        <h2 class="h-dash">Доп информация</h2>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label class="form-row input-wrapper">                                
+                                    <input type="tel"  class="input-field">
+                                    <span class="label-float">Номер телефона</span>
+                                </label>                                
+                            </div><!-- /.col -->
+                            <div class="col-sm-4">
+                                <label class="form-row input-wrapper">                                
+                                    <input type="text"  class="input-field">
+                                    <span class="label-float">Город</span>
+                                </label>
+                            </div><!-- /.col -->
+                            <div class="col-sm-4">
+                                <label class="form-row input-wrapper">                                
+                                    <input type="email"  class="input-field">
+                                    <span class="label-float">Электронная почта</span>
+                                </label>
+                            </div><!-- /.col -->
+                        </div><!-- /.row -->
+                        <h2 class="h-dash">Паспортные данные</h2>
+                        <div class="row"> 
+                            <div class="col-sm-4">
+                                <label class="form-row input-wrapper">                                
+                                    <input type="text"  class="input-field">
+                                    <span class="label-float">Серия и номер</span>
+                                </label>                                
+                            </div><!-- /.col -->
+                            <div class="col-sm-4">
+                                <label class="form-row input-wrapper">                                
+                                    <input type="text"  class="input-field">
+                                    <span class="label-float">Код подразделения</span>
+                                </label>
+                            </div><!-- /.col -->
+                            <div class="col-sm-4">
+                                <label class="form-row input-wrapper">                                
+                                    <input type="text"  class="input-field">
+                                    <span class="label-float">Дата выдачи</span>
+                                </label>
+                            </div><!-- /.col -->
+                        </div><!-- /.row -->   
+                        <div class="row">
+                            <div class="col-12">
+                                <label class="form-row input-wrapper">
+                                    <input type="text"  class="input-field">
+                                    <span class="label-float">Серия и номер</span>
+                                </label>
+                            </div><!-- /.col -->
+                        </div><!-- /.row -->               
+                        <div class="row">
+                            <div class="col col-addr">
+                                <label class="form-row input-wrapper">
+                                    <input type="text"  class="input-field">
+                                    <span class="label-float">Адрес регистрации</span>
+                                </label>
+                            </div><!-- /.col -->
+                            <div class="col col-flat">
+                                <label class="form-row input-wrapper">
+                                    <input type="text" class="input-field">
+                                    <span class="label-float">Номер квартиры</span>
+                                </label>
+                            </div><!-- /.col -->                            
+                        </div><!-- /.row -->                                         
+
+                        <div class="form-buttons-bottom row">
+                            <div class="col">
+                                <button type="submit" class="btn btn-cta">Сохранить</button>
+                                <a href="#" class="btn-link-back">Отменить</a>
                             </div>
-                        </div><!-- /.col -->                    
-                        <div class="col-sm-4">
-                            <label class="form-row">
-                                <input type="text" placeholder="Имя">
-                            </label>
-                            <label class="form-row">
-                                <input type="text" placeholder="Фамилия">
-                            </label>
-                            <label class="form-row">
-                                <input type="text" placeholder="Отчество">
-                            </label>                                                        
-                        </div><!-- /.col -->
-                        <div class="col-sm-4">
-                            <label class="form-row">                                
-                                <select>
-                                    <option selected disabled hidden>Пол</option>
-                                    <option value="m">Муж.</option>
-                                    <option value="j">Жен.</option>
-                                </select>
-                            </label>
-                            <label class="form-row">                                
-                                <input type="text" value="19.08.78">
-                            </label>
-                        </div><!-- /.col -->                        
-                    </div><!-- /.row -->
-                    <h2 class="h-dash">Доп информация</h2>
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <label class="form-row">                                
-                                <input type="tel" placeholder="Номер телефона">
-                            </label>                                
-                        </div><!-- /.col -->
-                        <div class="col-sm-4">
-                            <label class="form-row">                                
-                                <input type="text" placeholder="Город">
-                            </label>
-                        </div><!-- /.col -->
-                        <div class="col-sm-4">
-                            <label class="form-row">                                
-                                <input type="email" placeholder="Электронная почта">
-                            </label>
-                        </div><!-- /.col -->
-                    </div><!-- /.row -->
-                    <h2 class="h-dash">Паспортные данные</h2>
-                    <div class="row"> 
-                        <div class="col-sm-4">
-                            <label class="form-row">                                
-                                <input type="text" placeholder="">
-                            </label>                                
-                        </div><!-- /.col -->
-                        <div class="col-sm-4">
-                            <label class="form-row">                                
-                                <input type="text" placeholder="">
-                            </label>
-                        </div><!-- /.col -->
-                        <div class="col-sm-4">
-                            <label class="form-row">                                
-                                <input type="text" placeholder="">
-                            </label>
-                        </div><!-- /.col -->
-                    </div><!-- /.row -->                    
+                        </div><!-- /.form-buttons-bottom -->
+                    </div><!-- /.container -->                 
                 </div><!-- /.dash-content -->
             </div><!-- /.row -->            
         </div><!-- /.section-dash -->

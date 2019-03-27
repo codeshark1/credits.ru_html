@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Профиль - комменты</title>
+	<link rel="shortcut icon" href="img/favicon/favicon.ico?v=2" type="image/x-icon" />
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png" />
+    
+    <!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#f41e2a" />
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#f41e2a" />
+	<!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#f41e2a" />
+            
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+<!--[if lt IE 10]>
+    <p class="browserupgrade">Вы используете <b>устаревший</b> браузер. Пожалуйста, <a href="http://browsehappy.com/?locale=ru_ru">обновите свой браузер</a> чтобы улучшить опыт работы с сайтом.</p>
+<![endif]-->
+
+<!-- <div class="preloader">
+    <div class="pulse"></div>
+</div> -->
+
+<div class="wrapper-main">
+    <header class="header header-site">
+        <div class="header--lvl-1">
+            <div class="container">
+                <div class="header--row">
+                    <div class="header--location header--col-1">
+                        <div class="location-selector">
+                            <a class="selected" href="javascript:void(0)" id="js-btn-cities">
+                                <span>Новоросcийск</span>
+                            </a>
+                            <div class="location-hint">
+                                <p class="title">Ваш город <span>Санкт-Петербург?</span></p>
+                                <div class="row-mod">
+                                    <a href="#" class="btn btn-cta btn-pill">Да</a>
+                                    <a href="#" class="link">Выбрать другой</a>
+                                </div><!-- /.row-mod -->
+                            </div><!-- /.location-hint -->
+                        </div><!-- /.location-selector -->
+                    </div><!-- /.header--location -->                    
+                    <div class="header--col-2 header--col-2_mod">
+                        <div class="header--actions">
+                            <form role="search" method="get" class="form-search-header closed d-none d-md-block" id="search-header" action="#">
+                                <input  type="text" class="search-field" autocomplete="off" placeholder="Поиск" title="Поиск" role="combobox">
+                                <button type="button" class="search-button">
+                                    <svg data-src="img/i-search.svg"></svg>
+                                </button>
+                            </form>
+                            <button type="button" class="btn-search btn-search-for-extended d-md-none" id="btn-search-extended"><svg data-src="img/i-search.svg"></svg></button>
+                            <div class="header--user">
+                                <p class="btn-user"><svg data-src="img/i-user.svg"></svg></p>
+                                <ul class="menu-user">
+                                    <li><a href="#">Личный кабинет</a></li>
+                                    <li><a href="#">Выход</a></li>
+                                </ul>
+                            </div>
+                            <button class="btn-menu" id="js-btn-menu"><span></span><span></span><span></span></button>
+                        </div><!-- /.header--actions -->
+                    </div><!-- /.header--col-2 -->
+                </div><!-- /.header--row -->
+            </div><!-- /.container -->
+        </div><!-- /.header--lvl-1 -->
+
+        <div class="container">
+            <div class="header--row">
+                <div class="header--logo header--col-1">
+                    <img class="logo" src="img/logotype@2x.png" alt="credits.ru">
+                </div><!-- /.header--logo -->
+                <nav class="header--navigation header--col-2" id="js-menu-wrapper">
+                    <p class="h-popup">Меню</p>
+                    <ul class="menu-main" id="menu-main">
+                        <li class="menu-main__item has-sub">
+                            <a href="javascript:void(0)">Кредиты</a>                            
+                            <ul class="sub-menu cols">
+                                <li class="menu-main__item"><a href="/">Потребительские кредиты</a></li>
+                                <li class="menu-main__item"><a href="/">Автокредит</a></li>
+                                <li class="menu-main__item"><a href="/">Ипотека</a></li>
+                                <li class="menu-main__item"><a href="/">Кредит наличными</a></li>
+                                <li class="menu-main__item"><a href="/">Кредит под залог</a></li>
+                                <li class="menu-main__item"><a href="/">Кредит для бизнеса</a></li>
+                                <li class="menu-main__item"><a href="/">Кредитные брокеры</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-main__item has-sub">
+                            <a href="#">Карты</a>                            
+                            <ul class="sub-menu">
+                                <li class="menu-main__item"><a href="/">Кредитные карты</a></li>
+                                <li class="menu-main__item"><a href="/">Карты рассрочки</a></li>
+                                <li class="menu-main__item"><a href="/">Дебетовые карты</a></li>
+                            </ul>                            
+                        </li>
+                        <li class="menu-main__item">
+                            <a href="#">Ипотека</a>
+                        </li>
+                        <li class="menu-main__item has-sub">
+                            <a href="#">Для бизнеса</a>                            
+                            <ul class="sub-menu">
+                                <li class="menu-main__item"><a href="/">Лизинг</a></li>
+                                <li class="menu-main__item"><a href="/">Кредиты для бизнеса</a></li>
+                                <li class="menu-main__item"><a href="/">Депозиты юр. лицам</a></li>
+                            </ul>                            
+                        </li>
+                        <li class="menu-main__item has-sub">
+                            <a href="#">Инвестиции</a>                            
+                            <ul class="sub-menu">
+                                <li class="menu-main__item"><a href="/">Займы</a></li>
+                                <li class="menu-main__item"><a href="/">Вклады</a></li>
+                            </ul>                            
+                        </li>
+                    </ul>
+
+                    <div class="bx-center">
+                        <div class="location-selector">
+                            Регион:
+                            <a class="selected" href="javascript:void(0)">
+                                <span>Новоросcийск</span>
+                            </a>
+                        </div><!-- /.location-selector -->
+                    </div><!-- /.bx-center -->
+                </nav><!-- /.header--navigation -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </header>
+
+    <div id="search-extended" class="search-extended-wrapper">
+        <form class="search-extended d-block d-md-none">
+            <input type="search" class="search-field" placeholder="Начать поиск" value="Кре">
+            <ul class="search-suggests">
+                <li class="item"><mark>Кре</mark>диты</li>
+                <li class="item"><mark>Кре</mark>дитование</li>
+                <li class="item"><mark>Кре</mark>дитный лемит</li>
+                <li class="item"><mark>Кре</mark>диты</li>
+                <li class="item"><mark>Кре</mark>дитование</li>
+                <li class="item"><mark>Кре</mark>дитный лемит</li>
+            </ul>
+
+
+            <div class="search-extended-footer">                
+                <button type="submit" class="btn btn-cta">Найти</button>
+            </div>
+        </form><!-- /.search-extended -->
+    </div><!-- search-extended wrapper-->
+
+    <main class="main-content">
+        <div class="section-dash">            
+            <div class="row-dash">
+                <div class="dash-navpanel">
+                    <div class="bx-user-rep">
+                        <img class="userpic" src="img/avatar.jpg" alt="аватар">
+                        <p class="name">Василий Викторович</p>
+                    </div><!-- /.bx-user-rep -->
+
+                    <div class="menu-dash-wrap">
+                        <ul class="menu-dash">
+                            <!-- <li class="menu-item"><a href="#" class="#"><i class="icon icon-docs"></i>Документы</a></li> -->
+                            <!-- <li class="menu-item"><a href="#" class="#"><i class="icon icon-compar"></i>Сравнение</a></li> -->
+                            <li class="menu-item"><a href="#" class="#"><i class="icon icon-personal"></i>Личная информация</a></li>
+                            <li class="menu-item active"><a href="#" class="#"><i class="icon icon-comments"></i>Комментарии</a></li>
+                            <!-- <li class="menu-item"><a href="#" class="#"><i class="icon icon-fav"></i>Избранное</a></li> -->
+                        </ul>
+                    </div><!-- /.menu-dash-wrap -->
+
+                    <p class="dashboard-logout"><a href="#"><i class="icon icon-logout"></i>Выход</a></p>
+                </div><!-- /.dash-navpanel -->
+                <div class="dash-content">
+                    <div class="container">
+                        <div class="dash-content-header">
+                            <h2 class="h-dash">Комментарии</h2>                                            
+                            <ul class="nav-view js-nav-view">
+                                <li class="menu-item active"><button class="btn-reset list" type="button"><svg data-src="img/i-sort-list.svg"></svg></button></li>
+                                <li class="menu-item"><button class="btn-reset tiles" type="button"><svg data-src="img/i-sort-tiles.svg"></svg></button></li>
+                            </ul>
+                        </div><!-- /.dash-content-header -->
+
+                        <div class="bx-dash-comment-row js-card-row-switcher">
+                            <div class="card bx-dash-comment">
+                                <div class="header">
+                                    <div class="avatar"><img src="img/userpic.jpg" alt="pic"></div>                            
+                                    <p class="name">Василий Викторович</p>
+                                    <p class="date">22.08.2017</p>
+                                </div><!-- /.header -->
+    
+                                <p class="postlink"><a href="#">Киберпреступность — основной риск современных покупок</a></p>
+                                <p class="excerpt">Что заказчик, что исполнитель олени. Приведу аналогию: в ресторане клиент (заказчик) заказывает блюдо, которое просит подать с приправой, так и говорит: "Хочу суп с говном". Почему он так сказал, нам знать не нужно. Он мог оговориться, мог нелепо пошутить...</p>
+    
+                                <div class="bx-rating">
+                                    <p class="value">45</p>
+                                    <button class="btn-reset" type="button"><svg data-src="img/i-arrow-rate-down.svg"></svg></button>
+                                    <button class="btn-reset" type="button"><svg data-src="img/i-arrow-rate-up.svg"></svg></button>
+                                </div><!-- /.bx-rating -->
+                            </div><!-- /.card -->
+                            <div class="card bx-dash-comment">
+                                <div class="header">
+                                    <div class="avatar"><img src="img/userpic.jpg" alt="pic"></div>                            
+                                    <p class="name">Василий Викторович</p>
+                                    <p class="date">22.08.2017</p>
+                                </div><!-- /.header -->
+    
+                                <p class="postlink"><a href="#">Киберпреступность — основной риск современных покупок</a></p>
+                                <p class="excerpt">Что заказчик, что исполнитель олени. </p>
+    
+                                <div class="bx-rating">
+                                    <p class="value">45</p>
+                                    <button class="btn-reset" type="button"><svg data-src="img/i-arrow-rate-down.svg"></svg></button>
+                                    <button class="btn-reset" type="button"><svg data-src="img/i-arrow-rate-up.svg"></svg></button>
+                                </div><!-- /.bx-rating -->
+                            </div><!-- /.card -->
+                            <div class="card bx-dash-comment">
+                                <div class="header">
+                                    <div class="avatar"><img src="img/userpic.jpg" alt="pic"></div>                            
+                                    <p class="name">Василий Викторович</p>
+                                    <p class="date">22.08.2017</p>
+                                </div><!-- /.header -->
+    
+                                <p class="postlink"><a href="#">Киберпреступность — основной риск современных покупок</a></p>
+                                <p class="excerpt">Что заказчик, что исполнитель олени. Приведу аналогию: в ресторане клиент (заказчик) заказывает блюдо, которое просит подать с приправой, так и говорит: "Хочу суп с говном". Почему он так сказал, нам знать не нужно. Он мог оговориться, мог нелепо пошутить...</p>
+    
+                                <div class="bx-rating">
+                                    <p class="value">45</p>
+                                    <button class="btn-reset" type="button"><svg data-src="img/i-arrow-rate-down.svg"></svg></button>
+                                    <button class="btn-reset" type="button"><svg data-src="img/i-arrow-rate-up.svg"></svg></button>
+                                </div><!-- /.bx-rating -->
+                            </div><!-- /.card -->
+                        </div><!-- /.bx-dash-comment-row -->
+                    </div><!-- /.container -->                 
+                </div><!-- /.dash-content -->
+            </div><!-- /.row -->            
+        </div><!-- /.section-dash -->
+    </main><!-- /.main-content -->
+    <script>
+        $('.js-nav-view .btn-reset').click(function(e){
+            e.preventDefault();
+            if ($(this).hasClass('tiles')) {
+                $(this).parent().addClass('active').siblings().removeClass('active');
+                $('.js-card-row-switcher').addClass('tiles');
+            } else if ($(this).hasClass('list')) {
+                $(this).parent().addClass('active').siblings().removeClass('active');
+                $('.js-card-row-switcher').removeClass('tiles');
+            }
+        });
+    </script>
+    <footer class="footer-site footer"> 
+        <div class="footer--lvl-1">
+            <div class="container">
+                <div class="row-mod mg-lg">
+                    <div class="footer--col-1">
+                        <ul class="menu-main">
+                            <li class="menu-main__item"><a href="#">Кредиты</a></li>
+                            <li class="menu-main__item"><a href="#">Карты</a></li>
+                            <li class="menu-main__item"><a href="#">Ипотека</a></li>
+                            <li class="menu-main__item"><a href="#">Вклады</a></li>
+                            <li class="menu-main__item"><a href="#">Новости</a></li>
+                            <li class="menu-main__item"><a href="#">Каталог организаций</a></li>
+                        </ul>                    
+                        <ul class="menu-footer">
+                            <li class="menu-footer__item"><a href="#">О проекте</a></li>
+                            <li class="menu-footer__item"><a href="#">Реклама</a></li>
+                            <li class="menu-footer__item"><a href="#">Контакты</a></li>
+                        </ul><!-- /.menu-footer -->
+                    </div><!-- /.footer--col-1 -->
+                    <div class="footer-logo logo-mob"><img class="logo" src="img/logotype@2x.png" alt="credits.ru"></div>                    
+                    <div class="footer--col-2">
+
+                    </div><!-- /.footer--col-2 -->
+                </div><!-- /.row -->
+
+                <div class="row-mod">
+                    <div class="footer--col-1 legal-wrapper">
+                        <div class="footer-logo logo-desktop"><img class="logo" src="img/logotype@2x.png" alt="credits.ru"></div>
+                        <ul class="menu-footer--legal menu">
+                            <li class="menu-footer--legal__item"><a href="#">Политика обработки персональных данных</a></li>
+                            <li class="menu-footer--legal__item"><a href="#">Пользовательское соглашение</a></li>
+                        </ul><!-- /.menu-footer -->
+                    </div><!-- /.footer--col-1 -->
+                    <div class="footer--col-2">
+                        <ul class="menu-social">
+                            <li class="menu-item vk"><a href="#"><svg data-src="img/i-s-vk.svg"></svg></a></li>
+                            <li class="menu-item fb"><a href="#"><svg data-src="img/i-s-facebook.svg"></svg></a></li>
+                            <li class="menu-item in"><a href="#"><svg data-src="img/i-s-instagram.svg"></svg></a></li>
+                            <li class="menu-item tw"><a href="#"><svg data-src="img/i-s-twitter.svg"></svg></a></li>
+                            <li class="menu-item yt"><a href="#"><svg data-src="img/i-s-youtube.svg"></svg></a></li>                        
+                        </ul><!-- /.menu-footer -->                    
+                    </div><!-- /.footer--col-2 -->
+                </div><!-- /.row -->           
+            </div><!-- /.container -->
+        </div><!-- /.footer--lvl-1 -->   
+
+        <div class="footer--lvl-2">
+            <div class="container">
+                <div class="row-mod">
+                    <div class="footer--col-1">
+                        <p><small class="legal">При использовании материалов гиперссылка на Credits.ru обязательна</small></p>
+                        
+                        <p class="tel-footer legal">
+                            По вопросам работы портала: <a href="tel:+">8 (800) 551 20 17</a>
+                        </p>
+                    </div><!-- /.footer--col-1 -->
+                    <div class="footer--col-2">
+                        <p class="legal"><small>&#169; 2002—2018 ООО «ВЕБИНВЕСТ»</small></p>
+                    </div><!-- /.footer--col-2 -->
+                </div><!-- /.row -->             
+            </div><!-- /.container -->
+        </div><!-- /.footer--lvl-2 -->
+    </footer>
+
+    <button class="btn-top" id="btn-top" title="Наверх"><svg data-src="img/arrow-up.svg"></svg></button>
+</div><!-- /.wrapper-main -->
+
+</body>
+</html>
