@@ -411,4 +411,16 @@ jQuery(document).ready(function($){
             $(this).parent('.checkbox-addr-extra').next('.inputs-addr-extra').show().find('input').prop('disabled', false);
         }
     });    
+
+
+    $('.js-nav-view .btn-reset').click(function(e){
+        e.preventDefault();
+        if ($(this).hasClass('tiles')) {
+            $(this).parent().addClass('active').siblings().removeClass('active');
+            $('.js-card-row-switcher').addClass('tiles');
+        } else if ($(this).hasClass('list')) {
+            $(this).parent().addClass('active').siblings().removeClass('active');
+            $('.js-card-row-switcher').removeClass('tiles');
+        }
+    });    
 });
