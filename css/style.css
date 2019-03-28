@@ -4186,9 +4186,7 @@ label.checkbox-column {
     font-size: 20px;
     margin: 0 0 15px 0; }
   .section-article > ul, .section-article > ol, .accord-text > ul, .accord-text > ol, .accord-content > ul, .accord-content > ol {
-    margin-left: 40px; }
-  .section-article .h-section, .accord-text .h-section, .accord-content .h-section {
-    margin-bottom: 30px; } }
+    margin-left: 40px; } }
 
 .section-article {
   background: #fff;
@@ -4282,6 +4280,12 @@ label.checkbox-column {
         margin: 0 -40px 40px; }
       .section-article .item-similar-article {
         font-size: 1.1rem; } }
+
+.row-article .section-article {
+  border-bottom: 1px solid #d8d8d8; }
+
+.row-article:last-child .section-article {
+  border: none; }
 
 @media (min-width: 992px) {
   .row-article .sidebar-main {
