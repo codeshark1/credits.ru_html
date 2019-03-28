@@ -56,6 +56,9 @@ small {
 .bx-center {
   text-align: center; }
 
+.bx-right {
+  text-align: right; }
+
 /* ==========================================================================
   COMMON
   ========================================================================== */
@@ -801,6 +804,10 @@ h1, h2, h3, h4 {
 
 .h-card-list {
   font-size: 1.5rem; }
+
+.h-content {
+  margin-bottom: 30px !important;
+  font-size: 24px; }
 
 .breadcrumbs li {
   display: inline-block;
@@ -4324,18 +4331,6 @@ label.checkbox-column {
 
 .comment-content + .bx-comment {
   margin-top: 36px; }
-
-.comment-rating {
-  display: flex;
-  align-items: center;
-  font-size: 12px; }
-  .comment-rating .btn-rating {
-    border: none;
-    background: none;
-    padding: 0 5px;
-    cursor: pointer; }
-  .comment-rating .rating {
-    margin: 0 5px; }
 
 .menu-social-article {
   display: flex; }
