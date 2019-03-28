@@ -489,6 +489,7 @@ label.radio {
   border-radius: 30px;
   border: 1px solid $border;
   padding: .5rem 1rem;
+  font-size: 14px;
 }
 .btn-pill {
   @include btn-pill();

@@ -555,7 +555,8 @@ label.radio:after {
   background: #ffffff;
   border-radius: 30px;
   border: 1px solid #d8d8d8;
-  padding: .5rem 1rem; }
+  padding: .5rem 1rem;
+  font-size: 14px; }
 
 .btn-cta-pill {
   border-radius: 30px; }
@@ -2815,7 +2816,8 @@ table {
     background: #ffffff;
     border-radius: 30px;
     border: 1px solid #d8d8d8;
-    padding: .5rem 1rem; }
+    padding: .5rem 1rem;
+    font-size: 14px; }
     .btn-toggle_more .indicator {
       border: 1px solid #d8d8d8;
       font-size: 16px;
@@ -4330,7 +4332,7 @@ label.checkbox-column {
     position: absolute;
     right: 0;
     top: 0; }
-  .bx-comment .btn-text {
+  .bx-comment .btn-text, .bx-comment .btn-pill {
     font-size: 12px; }
   .bx-comment .bx-comment {
     margin-left: 20px; }

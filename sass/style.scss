@@ -2557,13 +2557,15 @@ label.checkbox-column {margin-bottom: 20px; display: block;}
 			.date {font-size: 0.8rem; color: $base-text-lighter}
 		.comment-rating {position: absolute; right: 0;top: 0;}
 
-		.btn-text {font-size: 12px;}
+		.btn-text, .btn-pill {font-size: 12px;}
 
 		.bx-comment {margin-left: 20px;
 			@media (min-width: $screen-md-min) {
 				margin-left: 40px;
 			}
 		}
+
+		
 }
 .comment-content + .bx-comment {margin-top: 36px;}
 
