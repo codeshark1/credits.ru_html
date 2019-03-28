@@ -4192,6 +4192,8 @@ label.checkbox-column {
 .section-article {
   background: #fff;
   padding: 20px 15px; }
+  .section-article .breadcrumbs {
+    margin-bottom: 20px; }
   .section-article .bx-footer, .section-article .bx-header {
     font-size: 0.85rem;
     margin-bottom: 25px; }
