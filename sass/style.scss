@@ -2523,6 +2523,12 @@ label.checkbox-column {margin-bottom: 20px; display: block;}
 		
 	}
 }
+.row-article {
+	@media (min-width: $screen-md-min) {
+		.sidebar-main {padding-top: 30px;}
+	}
+}
+
 
 .search-incontent.search-page {
 	max-width: 770px;

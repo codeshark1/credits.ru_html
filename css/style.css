@@ -4282,6 +4282,10 @@ label.checkbox-column {
       .section-article .item-similar-article {
         font-size: 1.1rem; } }
 
+@media (min-width: 992px) {
+  .row-article .sidebar-main {
+    padding-top: 30px; } }
+
 .search-incontent.search-page {
   max-width: 770px; }
 
