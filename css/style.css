@@ -2458,10 +2458,11 @@ table {
 
 .h-section {
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 500;
   margin-top: 0;
   margin-bottom: 2rem;
-  line-height: 1.9rem; }
+  line-height: 1.9rem;
+  color: #000 !important; }
   @media (max-width: 767px) {
     .h-section {
       text-align: center; } }
