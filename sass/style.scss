@@ -2264,24 +2264,23 @@ label.checkbox-column {margin-bottom: 20px; display: block;}
 }
 
 /* subscription */
-.subscribe-main {
+.subscribe-sidebar {
+	text-align: center;
+	.email {text-align: center;}	
+	.title {margin-bottom: 1rem;}
+}
+
+.subscribe-main, .subscribe-sidebar {
 	padding: 20px 20px 15px;
 	background-image: url('../img/mishen@2x.png');
 	background-repeat: no-repeat;
 	background-size: 245px auto;
 	background-position: center 0;
-	.title {
-		margin: 0;
+	.title {		
 		font-weight: 400;
 		font-size: 19px;
 		line-height: 1.7;
-		@media (max-width: $screen-md-max) {
-			margin-bottom: 1rem;
-		}
-		@media (min-width: $screen-md-min) {
-			position: relative;
-			top: -7px;
-		}
+		margin-top: 0;
 	}
 	.form {
 		&__i {margin-bottom: 15px;}		
@@ -2299,7 +2298,21 @@ label.checkbox-column {margin-bottom: 20px; display: block;}
 	label.checkbox {		
 		margin-bottom: 15px; 
 		font-size: 0.9rem;
+		display: block;
+		text-align: left;
 		&.checked {font-weight: 300;}
+	}
+
+}
+.subscribe-main {
+	.title {
+		@media (max-width: $screen-md-max) {
+			margin-bottom: 1rem;
+		}
+		@media (min-width: $screen-md-min) {
+			position: relative;
+			top: -7px;
+		}		
 	}
 	@media (max-width: $screen-xs-max) {
 		text-align: center;
@@ -2326,6 +2339,7 @@ label.checkbox-column {margin-bottom: 20px; display: block;}
 		.form {flex-grow: 1}
 	}
 }
+
 
 .hr-page {
 	margin: 0;border: none;
