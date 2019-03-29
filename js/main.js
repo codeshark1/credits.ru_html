@@ -423,4 +423,25 @@ jQuery(document).ready(function($){
             $('.js-card-row-switcher').removeClass('tiles');
         }
     });    
+
+
+    /*sticky header menu*/
+    var sticky = $('.header-site');
+    var headerHeight = sticky.outerHeight();
+    
+    $(window).scroll(function() {
+        scroll = $(window).scrollTop();
+        
+
+        if (scroll >= headerHeight) {
+            sticky.addClass('fixed-top');
+            
+        } else {
+            sticky.removeClass('fixed-top');
+            
+        }
+        
+
+        
+    });    
 });
