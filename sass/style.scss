@@ -5040,6 +5040,7 @@ section+.view-all {
 		border-radius: 100%;
 		position: absolute;
 		left: 16px;top: 16px;
+		background-size: cover; background-color: rgb(241, 241, 241); text-align: center; font-weight: 400; line-height: 47px; font-size: 20px;
 		img {border-radius: 100%;}
 	}
 	.name {font-size: 13px;color: #000000;}

@@ -6685,7 +6685,13 @@ section + .view-all {
     border-radius: 100%;
     position: absolute;
     left: 16px;
-    top: 16px; }
+    top: 16px;
+    background-size: cover;
+    background-color: #f1f1f1;
+    text-align: center;
+    font-weight: 400;
+    line-height: 47px;
+    font-size: 20px; }
     .bx-dash-comment .avatar img {
       border-radius: 100%; }
   .bx-dash-comment .name {
