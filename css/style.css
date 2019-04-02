@@ -806,7 +806,8 @@ h1, h2, h3, h4 {
 
 .h-content {
   margin-bottom: 30px !important;
-  font-size: 24px; }
+  font-size: 24px;
+  font-weight: 400; }
 
 .breadcrumbs li {
   display: inline-block;
@@ -4400,30 +4401,32 @@ label.checkbox-column {
 .comment-content + .bx-comment {
   margin-top: 36px; }
 
-.menu-social-article {
-  display: flex; }
-  .menu-social-article .menu-item {
-    display: inline-flex;
-    margin-right: 19px; }
-  .menu-social-article .cls-1, .menu-social-article .cls-3 {
-    fill: #fff !important; }
-  .menu-social-article a {
-    border-radius: 100%;
-    width: 28px;
-    height: 28px;
-    display: flex;
-    align-items: center;
-    justify-content: center; }
-  .menu-social-article .vk a {
-    background: #57719a; }
-  .menu-social-article .fb a {
-    background: #465994; }
-  .menu-social-article .in a {
-    background: #518bde; }
-  .menu-social-article .tw a {
-    background: #60aaea; }
-  .menu-social-article .yt a {
-    background: #c92109; }
+.menu-social-article .h-menu-social {
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin-bottom: 20px; }
+.menu-social-article .menu-item {
+  display: inline-flex;
+  margin-right: 19px; }
+.menu-social-article .cls-1, .menu-social-article .cls-3 {
+  fill: #fff !important; }
+.menu-social-article a {
+  border-radius: 100%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+.menu-social-article .vk a {
+  background: #57719a; }
+.menu-social-article .fb a {
+  background: #465994; }
+.menu-social-article .in a {
+  background: #518bde; }
+.menu-social-article .tw a {
+  background: #60aaea; }
+.menu-social-article .yt a {
+  background: #c92109; }
 
 .article-prev {
   padding: 0 15px 15px;
