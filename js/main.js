@@ -294,7 +294,7 @@ function scrollFunction() {
 }
 function scrollToSection(){
     $('html, body').animate({
-            scrollTop: $('.header-site').offset().top
+            scrollTop: $('.wrapper-main').offset().top
     }, 500);
 }
 

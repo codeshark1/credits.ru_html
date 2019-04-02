@@ -2119,7 +2119,13 @@ a, svg, path, button {
 .search-extended {
   padding: 15px; }
   .search-extended-wrapper {
-    display: none; }
+    display: none;
+    position: fixed;
+    top: 45px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    z-index: 10; }
   .search-extended .search-field {
     margin-bottom: 20px; }
   .search-extended-footer {

@@ -351,8 +351,13 @@ $sect-mg-neg: 39px;
 
 .search-extended {
 	padding: 15px;
-	
-	&-wrapper {display: none;}
+	&-wrapper {
+		display: none;
+		position: fixed; 
+		top: 45px; left: 0;right: 0;
+		background: #fff;
+		z-index: 10;
+	}
 	.search-field {margin-bottom: 20px;}
 	&-footer {
 		align-items: center;
