@@ -391,7 +391,8 @@ label.checkbox, label.radio {
   padding-left: 25px; }
   label.checkbox:before, label.checkbox:after, label.radio:before, label.radio:after {
     content: "";
-    position: absolute; }
+    position: absolute;
+    top: 0; }
   label.checkbox:before, label.radio:before {
     width: 18px;
     height: 18px;
@@ -414,7 +415,7 @@ label.checkbox:after {
   width: 10px;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11.63 12.22'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;stroke:%23f41e2a;stroke-miterlimit:10;stroke-width:2px;%7D%3C/style%3E%3C/defs%3E%3Cpolyline class='cls-1' points='0.75 5.14 5.42 10.47 10.75 0.47'/%3E%3C/svg%3E") no-repeat;
   left: 4px;
-  margin-top: -15px; }
+  margin-top: 4px; }
 label.checkbox a {
   text-decoration: underline; }
 
@@ -1959,8 +1960,8 @@ a, svg, path, button {
     z-index: -1;
     transition: all 0.2s ease-in-out;
     text-align: left;
-    padding: 15px 30px 20px;
-    border-top: 2px solid #9a9a9a; }
+    border-top: 2px solid #9a9a9a;
+    padding: 15px 30px 20px; }
     .header--user .menu-user li {
       display: block;
       cursor: pointer;
@@ -2009,21 +2010,13 @@ a, svg, path, button {
       border-right: 4px solid transparent;
       border-bottom: 7px solid #9a9a9a;
       transition: all 0.2s ease-in-out; }
-  .header--user:focus-within .menu-user {
+  .header--user.active .menu-user {
     visibility: visible;
     opacity: 1;
     z-index: 10;
     transform: translateY(0%);
     transition-delay: 0s, 0s, 0.3s; }
-    .header--user:focus-within .menu-user:before {
-      opacity: 1; }
-  .header--user:focus .menu-user, .header--user:hover .menu-user {
-    visibility: visible;
-    opacity: 1;
-    z-index: 10;
-    transform: translateY(0%);
-    transition-delay: 0s, 0s, 0.3s; }
-    .header--user:focus .menu-user:before, .header--user:hover .menu-user:before {
+    .header--user.active .menu-user:before {
       opacity: 1; }
   .header--user:focus-within svg, .header--user:focus svg, .header--user:hover svg {
     fill: #ff0000; }
@@ -2073,9 +2066,11 @@ a, svg, path, button {
     font-size: 0.9rem; }
 
 .location-hint {
-  margin-bottom: 1px;
   background: #fff;
   padding: 20px 25px; }
+  @media (max-width: 767px) {
+    .location-hint {
+      margin-top: 46px; } }
   @media (min-width: 768px) {
     .location-hint {
       position: absolute;
@@ -2284,23 +2279,13 @@ NAVIGATION
         border-right: 4px solid transparent;
         border-bottom: 7px solid #9a9a9a;
         transition: all 0.2s ease-in-out; }
-    .menu-main li:focus-within .sub-menu {
+    .menu-main li.active .sub-menu {
       visibility: visible;
       opacity: 1;
       z-index: 10;
       transform: translateY(0%);
       transition-delay: 0s, 0s, 0.3s; }
-      .menu-main li:focus-within .sub-menu:before {
-        opacity: 1; }
-    .menu-main li:focus .sub-menu,
-    .menu-main li:hover .sub-menu {
-      visibility: visible;
-      opacity: 1;
-      z-index: 10;
-      transform: translateY(0%);
-      transition-delay: 0s, 0s, 0.3s; }
-      .menu-main li:focus .sub-menu:before,
-      .menu-main li:hover .sub-menu:before {
+      .menu-main li.active .sub-menu:before {
         opacity: 1; } }
 @media (min-width: 768px) and (max-width: 1200px) {
   .menu-main li:last-child .sub-menu {
@@ -2313,9 +2298,12 @@ NAVIGATION
   transition: max-height .8s ease-in-out;
   padding: 25px 15px;
   box-shadow: 0 10px 30px 1px rgba(9, 3, 5, 0.1);
-  position: relative;
+  position: fixed;
   z-index: 11;
-  display: none; }
+  display: none;
+  top: 47px;
+  left: 0;
+  right: 0; }
   .cities .close {
     position: absolute;
     top: 40px;
@@ -2374,10 +2362,7 @@ NAVIGATION
       overflow: auto; } }
   @media (min-width: 768px) {
     .cities {
-      position: absolute;
-      top: 65px;
-      left: 0;
-      width: 100%; }
+      top: 60px; }
       .cities .list-cities {
         column-count: 3; } }
   @media (max-width: 1199px) {
@@ -2385,7 +2370,11 @@ NAVIGATION
       padding-right: 30px; } }
   @media (min-width: 992px) {
     .cities {
-      top: 70px; }
+      top: 62px;
+      left: auto;
+      right: auto;
+      width: auto;
+      max-width: 1250px; }
       .cities .list-cities {
         column-count: 4; } }
   @media (min-width: 1200px) {
@@ -2402,7 +2391,7 @@ NAVIGATION
 .main-content {
   position: relative;
   margin-top: 48px; }
-  @media (min-width: 992px) {
+  @media (min-width: 768px) {
     .main-content {
       margin-top: 155px; } }
 

@@ -431,17 +431,36 @@ jQuery(document).ready(function($){
     
     $(window).scroll(function() {
         scroll = $(window).scrollTop();
-        
-
         if (scroll >= headerHeight) {
-            sticky.addClass('fixed-top');
-            
+            sticky.addClass('fixed-top');            
         } else {
-            sticky.removeClass('fixed-top');
-            
-        }
-        
-
-        
+            sticky.removeClass('fixed-top');            
+        }        
     });    
+
+
+    /* TOP MENU */
+    $(".menu-main > .menu-main__item.has-sub").each(function() {
+        var _this = $(this);
+        _this.find(">a").on('mouseenter focus',function() {
+            _this.addClass("active");
+        });
+        _this.on('mouseleave focusout', function(e) {
+            if (!_this.is(e.target)) {
+                _this.removeClass("active");
+            }
+        });
+    });   
+
+    $(".header--user").each(function() {
+        var _this = $(this);
+        _this.find(".btn-user").on('mouseenter focus',function() {
+            _this.addClass("active");
+        });
+        _this.on('mouseleave focusout', function(e) {
+            if (!_this.is(e.target)) {
+                _this.removeClass("active");
+            }
+        });
+    });   
 });

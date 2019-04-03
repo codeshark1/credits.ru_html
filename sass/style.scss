@@ -180,8 +180,8 @@ $sect-mg-neg: 39px;
 			z-index: -1;
 			transition: all 0.2s ease-in-out;
 			text-align: left;
-			padding: 15px 30px 20px;
 			border-top: 2px solid #9a9a9a;
+			padding: 15px 30px 20px;
 			li {
 				display: block;
 				cursor: pointer;
@@ -239,17 +239,9 @@ $sect-mg-neg: 39px;
 				border-bottom: 7px solid #9a9a9a;
 				transition: all 0.2s ease-in-out;
 			}			
-		}
-		&:focus-within .menu-user {						
-			visibility: visible;
-			opacity: 1;
-			z-index: 10;
-			transform: translateY(0%);
-			transition-delay: 0s, 0s, 0.3s;
-			&:before {opacity: 1;}
 		}		
-		&:focus .menu-user,
-		&:hover .menu-user {
+		
+		&.active .menu-user {
 			visibility: visible;
 			opacity: 1;
 			z-index: 10;
@@ -305,7 +297,10 @@ $sect-mg-neg: 39px;
 	}
 }
 .location-hint {
-	margin-bottom: 1px;
+	//margin-bottom: 1px;
+	background: #fff;
+	padding: 20px 25px;	
+	@media (max-width: $screen-xs-max) {margin-top: 46px;}
 	@media (min-width: $screen-sm-min) {
 		position: absolute;
 		top: 100%;
@@ -322,8 +317,6 @@ $sect-mg-neg: 39px;
 		border: 1px solid $border;
 		min-width: 260px;
 	}
-	background: #fff;
-	padding: 20px 25px;
 
 	&:before {
 		content: "";
@@ -517,16 +510,8 @@ NAVIGATION
 				transition: all 0.2s ease-in-out;
 			}			
 		}
-		li:focus-within .sub-menu {						
-			visibility: visible;
-			opacity: 1;
-			z-index: 10;
-			transform: translateY(0%);
-			transition-delay: 0s, 0s, 0.3s;
-			&:before {opacity: 1;}
-		}		
-		li:focus .sub-menu,
-		li:hover .sub-menu {
+			
+		li.active .sub-menu {
 			visibility: visible;
 			opacity: 1;
 			z-index: 10;
@@ -554,9 +539,12 @@ NAVIGATION
 	transition: max-height .8s ease-in-out;
 	padding: 25px 15px;
 	box-shadow: 0 10px 30px 1px rgba($color: #090305, $alpha: 0.10);	
-	position: relative;
+	position: fixed;
 	z-index: 11;
 	display: none;
+	top: 47px;
+	left: 0;
+	right: 0;	
 	.close {
 		position: absolute;
 		top: 40px;
@@ -568,8 +556,6 @@ NAVIGATION
 	&.active {max-height: 470px;
 		.close {right: 15px !important;}
 	}
-
-
 	.search-cities {
 		margin-bottom: 1.5rem;		
 		input {
@@ -581,7 +567,6 @@ NAVIGATION
 		  border-radius: 0;
 		}
 	}
-
 	.menu-item {
 		display: block;
 		margin-bottom: 10px;
@@ -629,10 +614,7 @@ NAVIGATION
 	}	
 
 	@media (min-width: $screen-sm-min) {
-		position: absolute;
-		top: 65px;
-		left: 0;
-		width: 100%;			
+		top: 60px;
 		.list-cities {column-count: 3;}
 	}
 
@@ -640,7 +622,11 @@ NAVIGATION
 		.search-cities {padding-right: 30px;}
 	}
 	@media (min-width: $screen-md-min) {
-		top: 70px;
+		top: 62px;
+		left: auto;
+		right: auto;
+		width: auto;		
+		max-width: 1250px;
 		.list-cities {column-count: 4;}
 	}
 
@@ -657,7 +643,7 @@ NAVIGATION
 	 ========================================================================== */
 .main-content {position: relative;
 	margin-top: 48px;
-	@media (min-width: $screen-md-min) {margin-top: 155px;}
+	@media (min-width: $screen-sm-min) {margin-top: 155px;}
 }
 	 
 .section {
