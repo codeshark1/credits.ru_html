@@ -530,8 +530,6 @@ NAVIGATION
 	}
 }
 
-
-
 .cities {
 	//max-height: 0;
 	background: #fff;
@@ -639,7 +637,7 @@ NAVIGATION
 }
 .header-site.fixed-top {
 	@media (min-width: $screen-md-min) {
-		.cities {top: 72px;}
+		.cities {top: 72px}
 	}
 }
 /* ==========================================================================
