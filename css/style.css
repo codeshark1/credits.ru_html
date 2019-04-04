@@ -6648,7 +6648,8 @@ section + .view-all {
   border-radius: 3px;
   background-repeat: no-repeat;
   background-position: center center;
-  height: 100%; }
+  height: 100%;
+  cursor: pointer; }
   .dash-user-photo.chosen {
     background-size: cover;
     background-position: center top; }

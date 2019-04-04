@@ -4997,6 +4997,7 @@ section+.view-all {
 	background-repeat: no-repeat;
 	background-position: center center;	
 	height: 100%;
+	cursor: pointer;
 
 	&.chosen {
 		background-size: cover;
