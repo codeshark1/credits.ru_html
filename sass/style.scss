@@ -174,7 +174,7 @@ $sect-mg-neg: 39px;
 			box-shadow: 7px 7px 24px 0 rgba(3, 0, 1, 0.16);
 			list-style: none;
 			margin: 0;
-			display: block !important; 
+			display: block;
 			transform: translateY(-1em);
 			opacity: 0;
 			z-index: -1;
@@ -182,6 +182,7 @@ $sect-mg-neg: 39px;
 			text-align: left;
 			border-top: 2px solid #9a9a9a;
 			padding: 15px 30px 20px;
+			@media (max-width: $screen-xs-max) {display: none;}
 			li {
 				display: block;
 				cursor: pointer;
@@ -237,7 +238,7 @@ $sect-mg-neg: 39px;
 				border-left: 4px solid transparent;
 				border-right: 4px solid transparent;
 				border-bottom: 7px solid #9a9a9a;
-				transition: all 0.2s ease-in-out;
+				transition: all 0.2s ease-in-out;				
 			}			
 		}		
 		
@@ -247,6 +248,7 @@ $sect-mg-neg: 39px;
 			z-index: 10;
 			transform: translateY(0%);
 			transition-delay: 0s, 0s, 0.3s;
+			display: block;
 			&:before {opacity: 1;}
 		}		
 		&:focus-within svg, &:focus svg, &:hover svg {
