@@ -220,18 +220,24 @@ fieldset {
     font-size: 14px; }
   .input-wrapper .label-float {
     position: absolute;
-    left: 14px;
-    top: 18px;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    padding-left: 14px;
     font-size: 14px;
     transition: all .15s;
     line-height: 1;
     white-space: nowrap;
     overflow: ellipsis;
-    max-width: 100%; }
+    width: 100%;
+    max-width: 100%;
+    padding-top: 18px; }
   .input-wrapper.active .label-float {
     font-size: 13px;
     color: #969696;
-    top: 2px; }
+    padding-top: 2px; }
+  .input-wrapper select {
+    height: 52px; }
 
 .select-new {
   height: 50px; }
