@@ -1954,8 +1954,8 @@ a, svg, path, button {
   position: relative; }
   .header--user .menu-user {
     position: absolute;
-    top: 40px;
-    right: -8px;
+    top: 34px;
+    right: -10px;
     width: auto;
     background-color: #fff;
     box-shadow: 7px 7px 24px 0 rgba(3, 0, 1, 0.16);
