@@ -2434,7 +2434,10 @@ label.checkbox-column {margin-bottom: 20px; display: block;}
 }
 
 .section-article, .accord-text, .accord-content {
-	>p, >blockquote, >table, >ul, >ol, .similar-articles-box {margin-bottom: 25px;}
+	>p, >blockquote, >table, >ul, >ol, .similar-articles-box {
+		margin-bottom: 25px;
+		font-size: 16px;
+	}
 	.h-section {margin-bottom: 20px;}
 	h2,h3,h4,h5,h6 {font-weight: 400; margin: 0 0 10px 0; clear: both;}
 	h2 {font-size: 16px; margin: 0 0 10px 0}	

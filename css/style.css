@@ -4205,7 +4205,8 @@ label.checkbox-column {
     display: block; }
 
 .section-article > p, .section-article > blockquote, .section-article > table, .section-article > ul, .section-article > ol, .section-article .similar-articles-box, .accord-text > p, .accord-text > blockquote, .accord-text > table, .accord-text > ul, .accord-text > ol, .accord-text .similar-articles-box, .accord-content > p, .accord-content > blockquote, .accord-content > table, .accord-content > ul, .accord-content > ol, .accord-content .similar-articles-box {
-  margin-bottom: 25px; }
+  margin-bottom: 25px;
+  font-size: 16px; }
 .section-article .h-section, .accord-text .h-section, .accord-content .h-section {
   margin-bottom: 20px; }
 .section-article h2, .section-article h3, .section-article h4, .section-article h5, .section-article h6, .accord-text h2, .accord-text h3, .accord-text h4, .accord-text h5, .accord-text h6, .accord-content h2, .accord-content h3, .accord-content h4, .accord-content h5, .accord-content h6 {
