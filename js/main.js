@@ -378,11 +378,11 @@ jQuery(document).ready(function($){
         scrollFunction();
     };
     
-        $('#btn-top').click(function(){
-            if(document.querySelector('[data-element-id]') == null){
-                scrollToSection();
-            }
-        });
+    $('#btn-top').click(function(){
+        if(document.querySelector('[data-element-id]') == null){
+            scrollToSection();
+        }
+    });
     
 
     shortenText('.article-feed .excerpt'); 
