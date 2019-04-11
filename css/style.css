@@ -6522,6 +6522,9 @@ section + .view-all {
 @media (min-width: 768px) {
   .row-dash {
     display: flex; } }
+@media (min-height: 500px) {
+  .row-dash {
+    min-height: 530px; } }
 
 .section-dash {
   background: #fff; }

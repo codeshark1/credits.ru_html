@@ -4881,6 +4881,9 @@ section+.view-all {
 	@media (min-width: $screen-sm-min) {
 		display: flex;
 	}
+	@media (min-height: 500px) {
+		min-height: 530px;
+	}	
 }
 .section-dash {background: #fff;}
 .dash-navpanel {
