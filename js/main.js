@@ -287,14 +287,15 @@ function customCheckbox() {
 /* SCROLL TO TOP */
 function scrollFunction() {
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        document.getElementById("btn-top").style.opacity = 1;
+        document.querySelector(".btn-top").style.opacity = 1;
     } else {
-        document.getElementById("btn-top").style.opacity = 0;
+        document.querySelector(".btn-top").style.opacity = 0;
     }
 }
-function scrollToSection(){
-    $('html, body').animate({
-            scrollTop: $('.wrapper-main').offset().top
+function scrollToSection(arg){
+    arg = arg || 0;
+    $('html, body').stop(true, true).animate({
+            scrollTop: arg > 0 ? arg : $('.wrapper-main').offset().top
     }, 500);
 }
 
@@ -381,7 +382,6 @@ jQuery(document).ready(function($){
     });
 
     shortenText('.article-feed .excerpt'); 
-
 
     $('.input-wrapper .input-field').focusin(function(){
         $(this).parent().addClass('active');
