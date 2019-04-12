@@ -165,6 +165,7 @@ $sect-mg-neg: 39px;
 
 	&--user {
 		position: relative;
+		padding-bottom: 5px;
 		.menu-user {
 			position: absolute;
 			top: 34px;
@@ -435,12 +436,12 @@ NAVIGATION
 	@media (min-width: $screen-sm-min) {		
 		display: flex;
 		justify-content: space-between;		
-		li {padding: 10px 0;position: relative;}
+		li {padding: 0 0 10px 0;position: relative; margin-top: 10px;}
 
 
 		.sub-menu {
 			position: absolute;
-			top: 40px;
+			top: 30px;
 			left: -8px;
 			width: auto;
 			background-color: #fff;

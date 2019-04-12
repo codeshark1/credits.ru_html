@@ -1951,7 +1951,8 @@ a, svg, path, button {
   padding: 1rem 0;
   width: 270px; }
 .header--user {
-  position: relative; }
+  position: relative;
+  padding-bottom: 5px; }
   .header--user .menu-user {
     position: absolute;
     top: 34px;
@@ -2225,11 +2226,12 @@ NAVIGATION
     display: flex;
     justify-content: space-between; }
     .menu-main li {
-      padding: 10px 0;
-      position: relative; }
+      padding: 0 0 10px 0;
+      position: relative;
+      margin-top: 10px; }
     .menu-main .sub-menu {
       position: absolute;
-      top: 40px;
+      top: 30px;
       left: -8px;
       width: auto;
       background-color: #fff;
