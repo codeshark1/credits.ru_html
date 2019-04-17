@@ -995,7 +995,7 @@ hr {background: #dcdcdc; height: 1px; border: none;}
   margin-bottom: 16px;
   @include clearfix();
 }
-.comment-text {margin-bottom: 8px;}
+.comment-text {margin-bottom: 8px; word-break: break-all}
 .comment-reply-link {
   float: right; 
   cursor: pointer; 
