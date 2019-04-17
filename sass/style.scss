@@ -436,8 +436,10 @@ NAVIGATION
 	@media (min-width: $screen-sm-min) {		
 		display: flex;
 		justify-content: space-between;		
-		li {padding: 0 0 10px 0;position: relative; margin-top: 10px;}
-
+		li {
+			padding: 0 0 10px 0;
+			position: relative; margin-top: 10px;
+		}
 
 		.sub-menu {
 			position: absolute;
@@ -462,6 +464,8 @@ NAVIGATION
 				visibility: hidden;
 				transition: all .25s ease-in-out;
 				opacity: 0;
+				margin: 0;
+				padding: 10px 0;
 				a {
 					position: relative;
 					display: block;

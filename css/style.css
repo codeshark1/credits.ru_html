@@ -2252,7 +2252,9 @@ NAVIGATION
         break-inside: avoid-column;
         visibility: hidden;
         transition: all .25s ease-in-out;
-        opacity: 0; }
+        opacity: 0;
+        margin: 0;
+        padding: 10px 0; }
         .menu-main .sub-menu li a {
           position: relative;
           display: block;
