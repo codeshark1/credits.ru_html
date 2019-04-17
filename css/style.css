@@ -2239,7 +2239,7 @@ NAVIGATION
       background-color: #fff;
       box-shadow: 7px 7px 24px 0 rgba(3, 0, 1, 0.16);
       margin: 0;
-      display: block !important;
+      display: none !important;
       transform: translateY(-1em);
       transition: all .25s ease-in-out;
       padding: 15px 30px 20px;
@@ -2305,7 +2305,8 @@ NAVIGATION
       z-index: 10;
       height: auto;
       width: auto;
-      transform: translateY(0%); }
+      transform: translateY(0%);
+      display: block !important; }
       .menu-main li.active .sub-menu:before {
         opacity: 1; }
       .menu-main li.active .sub-menu li {
