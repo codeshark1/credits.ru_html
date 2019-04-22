@@ -465,4 +465,11 @@ jQuery(document).ready(function($){
             }
         });
     });   
+
+
+    $(".bx-banks-scroll").mCustomScrollbar({
+        axis:"x",
+        theme:"dark",
+        setWidth: '100%'
+    });    
 });
