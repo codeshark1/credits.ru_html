@@ -41,6 +41,10 @@ small {font-size: 100%;display: inline-block;}
 }
 .bx-center {text-align: center;}
 .bx-right {text-align: right;}
+
+::-webkit-scrollbar {
+  width: 0;
+}
 /* ==========================================================================
   COMMON
   ========================================================================== */

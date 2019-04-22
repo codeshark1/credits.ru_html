@@ -188,7 +188,8 @@
         <div class="container v2">
             <section class="section section-first">
                 <h2 class="h-section h-icon-left">Партнеры сервиса</h2>
-                <div class="bx-banks-scroll">
+                
+                <div class="bx-banks-scroll scroll-custom">
                     <ul class="list">
                         <li class="list-item"><a href="#"><img src="img/logo-mandiri.png" alt=""></a></li>
                         <li class="list-item"><a href="#"><img src="img/logo-banki.ru.png" alt=""></a></li>
@@ -204,7 +205,9 @@
                         <li class="list-item"><a href="#"><img src="img/logo-bank.australia.png" alt=""></a></li>
                         <li class="list-item"><a href="#"><img src="img/logo-unionbank.png" alt=""></a></li>
                     </ul>
-                </div><!-- /.bx-banks-scroll -->
+                </div>
+                    
+                
             </section> <br>
 
             <section class="section">
@@ -386,6 +389,20 @@
 
     <button class="btn-top" id="btn-top" title="Наверх"><svg data-src="img/arrow-up.svg"></svg></button>
 </div><!-- /.wrapper-main -->
+
+<script>
+    
+        (function($){
+            $(window).on("load",function(){
+                $(".bx-banks-scroll").mCustomScrollbar({
+                    axis:"x",
+                    theme:"dark",
+                    setWidth: '100%'
+                });
+            });
+        })(jQuery);
+    
+</script>
 
 </body>
 </html>

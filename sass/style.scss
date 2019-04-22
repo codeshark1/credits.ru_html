@@ -4801,7 +4801,10 @@ section+.view-all {
 	/*---------- END CONTACTS ----------*/
 	
 
-.bx-banks-scroll {overflow: auto; padding-bottom: 20px; text-align: center;
+.bx-banks-scroll {
+	//overflow: auto; 
+	//padding-bottom: 20px; 
+	//text-align: center;
 	.list {		
 		width: 100%;
 		width: fit-content;
