@@ -821,7 +821,7 @@ h1, h2, h3, h4 {
   font-weight: 400; }
 
 .breadcrumbs li {
-  display: inline-block;
+  display: inline;
   position: relative;
   font-size: 14px;
   font-weight: 500; }
@@ -1056,7 +1056,9 @@ hr {
 
 .comment-text {
   margin-bottom: 8px;
-  word-break: break-all; }
+  word-break: break-word;
+  overflow-wrap: break-word;
+  word-wrap: break-word; }
 
 .comment-reply-link {
   float: right;

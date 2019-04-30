@@ -795,7 +795,7 @@ h1, h2, h3, h4 {line-height: 1.1; font-weight: 500}
 
 .breadcrumbs {
   li {
-    display: inline-block;
+    display: inline;
     position: relative;
     font-size: 14px;
     font-weight: 500;
@@ -999,7 +999,12 @@ hr {background: #dcdcdc; height: 1px; border: none;}
   margin-bottom: 16px;
   @include clearfix();
 }
-.comment-text {margin-bottom: 8px; word-break: break-all}
+.comment-text {
+  margin-bottom: 8px; 
+  word-break: break-word;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
 .comment-reply-link {
   float: right; 
   cursor: pointer; 
