@@ -693,6 +693,10 @@ NAVIGATION
 .sect-innerpad {
 	padding-top: 40px;
 	padding-bottom: 40px;
+	@media (min-width: $screen-sm-min) {
+		padding-top: 60px;
+		padding-bottom: 60px;		
+	}
 }
 
 
@@ -817,6 +821,15 @@ table {
 
 .h-centered {text-align: center;}
 .h-section-centered-subheading {text-align: center; color: #4F4F4F; margin-top: -20px;}
+
+.h-calc-subhead {
+	text-align: center;
+	margin-bottom: 30px;
+	color: #555;
+	@media (min-width: $screen-sm-min) {
+		margin: -20px 0 50px 0;
+	}
+}
 
 .h-searchcredits, .h-contacts {
 	text-align: center;
@@ -1479,47 +1492,84 @@ table {
 
 
 .table-data-calc {
-	table {table-layout: fixed;}
+	table-layout: fixed;
 	thead, tbody {
 		td, th {
 			background: #FFF; 
 			text-align: center; 
 			border-color: #C4C4C4;
 			font-weight: 300;
-			padding-left: 20px;
-			padding-right: 20px;
+			padding-left: 15px;
+			padding-right: 15px;			
+			@media (min-width: $screen-md-min) {
+				padding-left: 20px;
+				padding-right: 20px;
+			}
 		}
 	}
-	thead {
-		th:first-child {border-left: none;}
-		th:last-child {border-right: none;}
 
-	}
-	tbody:before {
-		content: "-";
-		display: block;
-		line-height: 1em;
-		color: transparent;
-	}
 	tbody {}
 	th {
 		padding-top: 16px; padding-bottom: 16px; font-weight: 400; font-size: 14px;
-
-	}
-	
+	}	
 	td {
-		border-right: none;
-		border-left: none; 
 		padding-top: 16px; padding-bottom: 16px; 
 		@media (max-width: $screen-xs-max) {
 			font-size: 13px;
 		}
 	}
 
-	.date {max-width: 70px;}
-	.number {text-align: right; padding-right: 30px; padding-left: 0; font-weight: 400; max-width: 25px;}
+	.number {
+		text-align: right; 
+		font-weight: 400; 
+		width: 25px;
+		margin-left: 10px;
+		display: inline-block;
+	}
+}
+.table-payments-header {
+	margin-bottom: 20px;
+	/* position: absolute;	
+	left: 0;top: 0;right: 0; */
+	//._month {border-left: none;}
+	//td:last-child {border-right: none;}
+}
+.table-payments-body {
+	td {
+		border-right: none;
+		border-left: none;
+	}
+}
+.table-payments {
+	//min-width: 600px;
+	._month {}
+
+	._date {width: 16.94915254237288%;
+		.flex {display: flex; justify-content: space-around;}
+	}
+	._payment-percent,
+	._payment-credit,
+	._credit-paid,
+	._credit-left {width: 20.76271186440678%}
 }
 
+.table-data-calc_wrapper-all {
+	//overflow-x: auto;
+	//position: relative;
+	@media (max-width: $screen-sm-max) {
+		min-width: 600px;
+	}
+}
+.table-data-calc_wrapper-all-top {
+	overflow-x: auto;
+}
+
+.table-data-calc_wrapper-body {
+	max-height: 500px;
+	overflow: hidden;
+	overflow-y: auto;
+	//width: 100% !important;
+}
 
 /*  */
 /* --- SORTING/LISTING CONTROLS */
@@ -5575,7 +5625,3 @@ section+.view-all {
 	filter: alpha(opacity=100);
 }
 }
-
-
-//@import 'css/plugins';
-//@import 'css/other';

@@ -338,19 +338,19 @@
                     </div><!-- /.row -->
 
                     <div class="row">
-                        <div class="col-sm-6 col-md-6 col-lg-3 calc-price-main-wrap">
+                        <div class="col-md-6 col-lg-3 calc-price-main-wrap">
                             <p class="lbl lbl-top">Сумма ежемесячного платежа</p>
                             <p class="calc-price-main"><span>25 000</span> руб.</p>
                         </div><!-- /.col -->
-                        <div class="col-sm-6 col-md-6 col-lg-3 calc-price-main-wrap">
+                        <div class="col-md-6 col-lg-3 calc-price-main-wrap">
                             <p class="lbl lbl-top">Сумма к возврату</p>
                             <p class="calc-price-main"><span>10 000</span> руб.</p>
                         </div><!-- /.col -->
-                        <div class="col-sm-12 col-md-6 col-lg-3">
+                        <div class="col-md-6 col-lg-3">
                             <span class="lbl lbl-top d-none d-md-block"></span>
                             <button type="button" class="btn input-button btn-cta-secondary">График платежей</button>
                         </div><!-- /.col -->
-                        <div class="col-sm-12 col-md-6 col-lg-3">
+                        <div class="col-md-6 col-lg-3">
                             <span class="lbl lbl-top d-none d-md-block"></span>
                             <p class="bx-filter-link"><a href="#">Скрыть график платежей</a></p>
                         </div><!-- /.col -->                        
@@ -364,105 +364,299 @@
             <div class="container">
                 <p class="h-hero">График платежей</p>
 
-                <table class="table-data-calc fixed_header">
-                    <thead>
-                        <tr>
-                            <th rowspan="2" colspan="2" class="month">Месяц</th>
-                            <th colspan="2" class="accent">Ежемесячный платеж</th>
-                            <th colspan="2" class="accent">Кредит</th>
-                        </tr>
-                        <tr>
-                            <th>На проценты</th>
-                            <th>По кредиту</th>
-                            <th>Погашено</th>
-                            <th>Остаток</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="date">15.03.2019</td>
-                            <td class="number">1</td>
-                            <td>7 000 руб.</td>
-                            <td>7 000 руб.</td>
-                            <td>7 000 руб.</td>
-                            <td>347 000 руб.</td>
-                        </tr>
-                        <tr>
-                            <td class="date">15.03.2019</td>
-                            <td class="number">2</td>
-                            <td>7 000 руб.</td>
-                            <td>7 000 руб.</td>
-                            <td>7 000 руб.</td>
-                            <td>347 000 руб.</td>
-                        </tr>
-                        <tr>
-                            <td class="date">15.03.2019</td>
-                            <td class="number">3</td>
-                            <td>7 000 руб.</td>
-                            <td>7 000 руб.</td>
-                            <td>7 000 руб.</td>
-                            <td>347 000 руб.</td>
-                        </tr>
-                        <tr>
-                            <td class="date">15.03.2019</td>
-                            <td class="number">4</td>
-                            <td>7 000 руб.</td>
-                            <td>7 000 руб.</td>
-                            <td>7 000 руб.</td>
-                            <td>347 000 руб.</td>
-                        </tr>
-                        <tr>
-                            <td class="date">15.03.2019</td>
-                            <td class="number">5</td>
-                            <td>7 000 руб.</td>
-                            <td>7 000 руб.</td>
-                            <td>7 000 руб.</td>
-                            <td>347 000 руб.</td>
-                        </tr>
-                        <tr>
-                            <td class="date">15.03.2019</td>
-                            <td class="number">6</td>
-                            <td>7 000 руб.</td>
-                            <td>7 000 руб.</td>
-                            <td>7 000 руб.</td>
-                            <td>347 000 руб.</td>
-                        </tr>
-                        <tr>
-                            <td class="date">15.03.2019</td>
-                            <td class="number">7</td>
-                            <td>7 000 руб.</td>
-                            <td>7 000 руб.</td>
-                            <td>7 000 руб.</td>
-                            <td>347 000 руб.</td>
-                        </tr>
-                        <tr>
-                            <td class="date">15.03.2019</td>
-                            <td class="number">8</td>
-                            <td>7 000 руб.</td>
-                            <td>7 000 руб.</td>
-                            <td>7 000 руб.</td>
-                            <td>347 000 руб.</td>
-                        </tr>                    
-                        <tr>
-                            <td class="date">15.03.2019</td>
-                            <td class="number">9</td>
-                            <td>7 000 руб.</td>
-                            <td>7 000 руб.</td>
-                            <td>7 000 руб.</td>
-                            <td>347 000 руб.</td>
-                        </tr>
-                        <tr>
-                            <td class="date">15.03.2019</td>
-                            <td class="number">10</td>
-                            <td>7 000 руб.</td>
-                            <td>7 000 руб.</td>
-                            <td>7 000 руб.</td>
-                            <td>347 000 руб.</td>
-                        </tr>                                                                                                                                                                            
-                    </tbody>
-                </table>
+                <div class="table-data-calc_wrapper-all-top">
+                    <div class="table-data-calc_wrapper-all">
+                        <table class="table-data-calc table-payments table-payments-header">
+                            <tbody>
+                                <tr>
+                                    <td rowspan="2" class="_date">Месяц</td>
+                                    <td colspan="2" class="accent">Ежемесячный платеж</td>
+                                    <td colspan="2" class="accent">Кредит</td>
+                                </tr>
+                                <tr>
+                                    <td class="_payment-percent">На проценты</td>
+                                    <td class="_payment-credit">По кредиту</td>
+                                    <td class="_credit-paid">Погашено</td>
+                                    <td class="_credit-left">Остаток</td>
+                                </tr>
+                            </tbody>
+                        </table><!-- /.table-payments-header -->
+
+                        <div class="table-data-calc_wrapper-body">
+                            <table class="table-data-calc table-payments table-payments-body">
+                                <tbody>
+                                    <tr>
+                                        <td class="_date"><div class="flex"><span class="date">15.03.2019</span> <span class="number">1</span></div></td>
+                                        <td class="_payment-percent">7 000 руб.</td>
+                                        <td class="_payment-credit">7 000 руб.</td>
+                                        <td class="_credit-paid">7 000 руб.</td>
+                                        <td class="_credit-left">347 000 руб.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="_date"><div class="flex"><span class="date">15.03.2019</span> <span class="number">1</span></div></td>
+                                        <td class="_payment-percent">7 000 руб.</td>
+                                        <td class="_payment-credit">7 000 руб.</td>
+                                        <td class="_credit-paid">7 000 руб.</td>
+                                        <td class="_credit-left">347 000 руб.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="_date"><div class="flex"><span class="date">15.03.2019</span> <span class="number">1</span></div></td>
+                                        <td class="_payment-percent">7 000 руб.</td>
+                                        <td class="_payment-credit">7 000 руб.</td>
+                                        <td class="_credit-paid">7 000 руб.</td>
+                                        <td class="_credit-left">347 000 руб.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="_date"><div class="flex"><span class="date">15.03.2019</span> <span class="number">1</span></div></td>
+                                        <td class="_payment-percent">7 000 руб.</td>
+                                        <td class="_payment-credit">7 000 руб.</td>
+                                        <td class="_credit-paid">7 000 руб.</td>
+                                        <td class="_credit-left">347 000 руб.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="_date"><div class="flex"><span class="date">15.03.2019</span> <span class="number">1</span></div></td>
+                                        <td class="_payment-percent">7 000 руб.</td>
+                                        <td class="_payment-credit">7 000 руб.</td>
+                                        <td class="_credit-paid">7 000 руб.</td>
+                                        <td class="_credit-left">347 000 руб.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="_date"><div class="flex"><span class="date">15.03.2019</span> <span class="number">1</span></div></td>
+                                        <td class="_payment-percent">7 000 руб.</td>
+                                        <td class="_payment-credit">7 000 руб.</td>
+                                        <td class="_credit-paid">7 000 руб.</td>
+                                        <td class="_credit-left">347 000 руб.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="_date"><div class="flex"><span class="date">15.03.2019</span> <span class="number">1</span></div></td>
+                                        <td class="_payment-percent">7 000 руб.</td>
+                                        <td class="_payment-credit">7 000 руб.</td>
+                                        <td class="_credit-paid">7 000 руб.</td>
+                                        <td class="_credit-left">347 000 руб.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="_date"><div class="flex"><span class="date">15.03.2019</span> <span class="number">1</span></div></td>
+                                        <td class="_payment-percent">7 000 руб.</td>
+                                        <td class="_payment-credit">7 000 руб.</td>
+                                        <td class="_credit-paid">7 000 руб.</td>
+                                        <td class="_credit-left">347 000 руб.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="_date"><div class="flex"><span class="date">15.03.2019</span> <span class="number">1</span></div></td>
+                                        <td class="_payment-percent">7 000 руб.</td>
+                                        <td class="_payment-credit">7 000 руб.</td>
+                                        <td class="_credit-paid">7 000 руб.</td>
+                                        <td class="_credit-left">347 000 руб.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="_date"><div class="flex"><span class="date">15.03.2019</span> <span class="number">10</span></div></td>
+                                        <td class="_payment-percent">7 000 руб.</td>
+                                        <td class="_payment-credit">7 000 руб.</td>
+                                        <td class="_credit-paid">7 000 руб.</td>
+                                        <td class="_credit-left">347 000 руб.</td>
+                                    </tr>                                                                                                                                                                                                                                                                                                
+                                </tbody>
+                            </table>
+                        </div><!-- /.table-data-calc_wrapper-body -->
+                    </div><!-- /.table-data-calc_wrapper-all -->
+                </div><!-- /.table-data-calc_wrapper-all-top -->
             </div><!-- /.container -->
         </section>
+
+
+        <p class="h-hero">Подходящие кредиты</p>
+        <p class="h-calc-subhead">Найдено 3 кредита</p>
+
+        <div class="row-search-bottom-mob">
+            <p class="results-credits-found"></p>
+            <div class="drop-menu-wrapper js-drop-menu-wrapper sorting-mob-switcher">
+                <button type="button" class="btn-sorting drop-menu-trigger js-drop-menu-trigger btn btn-narrow">По ставке</button>
+                <div class="drop-menu js-drop-menu">
+                    <p class="menu-item"><a href="/" class="active">По ставке</a></p>
+                    <p class="menu-item"><a href="/">По сумме</a></p>
+                    <p class="menu-item"><a href="/">По популярности</a></p>
+                </div><!-- /. drop-menu-->
+            </div><!-- /.mob-sorting-wrapper -->
+        </div><!-- /.row-search-bottom-mob -->
+
+        <div class="listing-controls">                
+            <div class="listing-controls--wrap">
+                <form action="/" class="listing-controls_sorting">
+                    <div class="listing_sort sort-bank">Банк</div>
+                    <div class="listing_sort sort-rate">Ставка в год <span class="arrow"></span></div>
+                    <div class="listing_sort sort-amount">Платёж в месяц <span class="arrow"></span></div>
+                    <div class="listing_sort sort-overpay">Переплата <span class="arrow"></span></div>
+                </form>
+                <div class="listing-controls_search">
+                    <form role="search" class="form-search-listing closed" id="searchform_listing" action="#">
+                        <input  type="search" class="search-field" autocomplete="off" placeholder="Поиск" title="Поиск" role="combobox">
+                        <button type="submit" class="search-button">
+                            <svg data-src="img/i-search.svg"></svg>
+                        </button>
+                    </form>                    
+                </div>                
+            </div><!-- /.listing-controls--wrap -->
+        </div><!-- /.listing-controls -->
+
+        <div class="plans-insearch-wrapper">
+            <div class="plan plan_insearch plan_wide-title">
+                <div class="plan-wrapper">
+                    <div class="plan-content">
+                        <div class="td td_title">
+                            Кредит наличными
+                        </div>
+                        <div class="td td_bankname">
+                            <a href="#"><img src="img/logo-rufinans-bank.png" alt="Русфинанс банк"></a>                            
+                        </div>
+                        <div class="td td_rate">
+                            <p class="ttl">Ставка</p>
+                            <p class="data data-important">от 17,00%</p>
+                        </div>                                                                                    
+                        <div class="td td_amount">
+                            <p class="ttl">Платёж в месяц</p>
+                            <p class="data">30 000 Р</p>
+                        </div>
+                        <div class="td td_overpay">  
+                            <p class="ttl">Переплата</p>                                                  
+                            <p class="data">-100 000 Р</p>
+                        </div>                                                
+                        <div class="td td_action">
+                            <div class="wrapper">
+                                <a href="#" class="btn btn-cta">Оформить</a>
+                                <p class="link-info"><a href="#">Подробнее</a></p>
+                            </div>
+                        </div>
+                    </div><!-- /.plan-content -->
+                    <div class="plan-actions">
+                        <a href="#" class="plan-btn fav">
+                            <img class="svg" src="img/panel-fav.svg" alt="icon">
+                            <span>В избранное</span>
+                        </a>
+                        <a href="#" class="plan-btn compare">
+                            <img class="svg" src="img/panel-compare.svg" alt="icon">
+                            <span>Сравнить</span>
+                        </a>                                                
+                        <a href="#" class="plan-btn info">
+                            <img class="svg" src="img/panel-info.svg" alt="icon">
+                            <span>Подробнее</span>
+                        </a>
+                        <a href="#" class="plan-btn sign">
+                            <img class="svg" src="img/panel-sign.svg" alt="icon">
+                            <span>Оформить</span>
+                        </a>                                                                                                
+                    </div><!-- /.plan-actions -->
+                </div><!-- /.plan-wrapper -->
+            </div><!-- /.plan -->
+            <div class="plan plan_insearch plan_wide-title">
+                <div class="plan-wrapper">
+                    <div class="plan-content">
+                        <div class="td td_title">
+                            Потребительский кредит УБРиР
+                        </div>
+                        <div class="td td_bankname">
+                            <a href="#"><img src="img/logo-moskcredit-bank.png" alt="Русфинанс банк"></a>                            
+                        </div>
+                        <div class="td td_rate">
+                            <p class="ttl">Ставка</p>
+                            <p class="data data-important">от 17,00%</p>
+                        </div>                                                                                    
+                        <div class="td td_amount">
+                            <p class="ttl">Платёж в месяц</p>
+                            <p class="data">30 000 Р</p>
+                        </div>
+                        <div class="td td_overpay">  
+                            <p class="ttl">Переплата</p>                                                  
+                            <p class="data">-100 000 Р</p>
+                        </div>                                                
+                        <div class="td td_action">
+                            <div class="wrapper">
+                                <a href="#" class="btn btn-cta">Оформить</a>
+                                <p class="link-info"><a href="#">Подробнее</a></p>
+                            </div>
+                        </div>
+                    </div><!-- /.plan-content -->
+                    <div class="plan-actions">
+                        <a href="#" class="plan-btn fav">
+                            <img class="svg" src="img/panel-fav.svg" alt="icon">
+                            <span>В избранное</span>
+                        </a>
+                        <a href="#" class="plan-btn compare">
+                            <img class="svg" src="img/panel-compare.svg" alt="icon">
+                            <span>Сравнить</span>
+                        </a>                                                
+                        <a href="#" class="plan-btn info">
+                            <img class="svg" src="img/panel-info.svg" alt="icon">
+                            <span>Подробнее</span>
+                        </a>
+                        <a href="#" class="plan-btn sign">
+                            <img class="svg" src="img/panel-sign.svg" alt="icon">
+                            <span>Оформить</span>
+                        </a>                                                                                                
+                    </div><!-- /.plan-actions -->
+                </div><!-- /.plan-wrapper -->
+            </div><!-- /.plan -->
+            <div class="plan plan_insearch plan_wide-title">
+                <div class="plan-wrapper">
+                    <div class="plan-content">
+                        <div class="td td_title">
+                            Кредит наличными
+                        </div>
+                        <div class="td td_bankname">
+                            <a href="#"><img src="img/logo-sovkom-bank.png" alt="Русфинанс банк"></a>                            
+                        </div>
+                        <div class="td td_rate">
+                            <p class="ttl">Ставка</p>
+                            <p class="data data-important">от 17,00%</p>
+                        </div>                                                                                    
+                        <div class="td td_amount">
+                            <p class="ttl">Платёж в месяц</p>
+                            <p class="data">30 000 Р</p>
+                        </div>
+                        <div class="td td_overpay">  
+                            <p class="ttl">Переплата</p>                                                  
+                            <p class="data">-100 000 Р</p>
+                        </div>                                                
+                        <div class="td td_action">
+                            <div class="wrapper">
+                                <a href="#" class="btn btn-cta">Оформить</a>
+                                <p class="link-info"><a href="#">Подробнее</a></p>
+                            </div>
+                        </div>
+                    </div><!-- /.plan-content -->
+                    <div class="plan-actions">
+                        <a href="#" class="plan-btn fav">
+                            <img class="svg" src="img/panel-fav.svg" alt="icon">
+                            <span>В избранное</span>
+                        </a>
+                        <a href="#" class="plan-btn compare">
+                            <img class="svg" src="img/panel-compare.svg" alt="icon">
+                            <span>Сравнить</span>
+                        </a>                                                
+                        <a href="#" class="plan-btn info">
+                            <img class="svg" src="img/panel-info.svg" alt="icon">
+                            <span>Подробнее</span>
+                        </a>
+                        <a href="#" class="plan-btn sign">
+                            <img class="svg" src="img/panel-sign.svg" alt="icon">
+                            <span>Оформить</span>
+                        </a>                                                                                                
+                    </div><!-- /.plan-actions -->
+                </div><!-- /.plan-wrapper -->
+            </div><!-- /.plan -->                                
+        </div><!-- /.plans-insearch-wrapper -->    
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         <div class="container">
             <div class="breadcrumbs d-md-none breadcrumbs-bottom">
@@ -486,6 +680,7 @@
             <p>Credits.ru поможет получить нужную сумму в любом банке России!            </p>
         </div><!-- /.container -->
     </div><!-- /.bx-prefooter-info -->
+
     <footer class="footer-site footer"> 
         <div class="footer--lvl-1">
             <div class="container">

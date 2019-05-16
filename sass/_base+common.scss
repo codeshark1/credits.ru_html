@@ -21,11 +21,9 @@ a {
   text-decoration: none;
   &:hover,&:active,&:focus {}
 }
-table {width: 100%;max-width: 100%;
-  @media (max-width: $screen-xs-max) {
-    overflow-x: auto;    
-    display: block;    
-  }
+table {
+  width: 100%;
+  max-width: 100%;
 }
 p, ul {margin: 0;}
 ul {padding: 0; list-style: none;}
