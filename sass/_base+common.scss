@@ -83,7 +83,7 @@ textarea {
   border-radius: 5px;
   font-family: 'Ubuntu', sans-serif;
   padding: 12px 15px;
-  &.input-price {
+  &.input-price, &.input-bigtext {
     font-size: 1.3rem;
     @media (min-width: $screen-sm-min) {
       font-size: 1.5rem;
@@ -357,10 +357,12 @@ label.checkbox, label.radio {
   }
   input {visibility: hidden; position: absolute;}  
 }
+
 label.checkbox {
   &:before {
-    border-radius: 3px;
+    border-radius: 5px;
     background: #fff;
+    border: 2px solid $action;
   }
   &:after {
     height: 10px;
@@ -371,6 +373,13 @@ label.checkbox {
   }  
   a {text-decoration: underline;}
 }
+.input-checkbox {
+  label.checkbox {
+    &:before {top:2px;}
+    &:after {margin-top:6px;}
+  }
+}
+
 label.radio {
   &:before {
     border-radius: 100%;
@@ -493,6 +502,8 @@ label.radio {
   border: none !important;
   min-width: 72px;
   white-space: nowrap;
+  font-size: 16px;
+  font-weight: 500;
   //box-shadow: 0 0 30px 1px rgba($color: #090305, $alpha: 0.16);
   &:hover {
     background: #ffde83 !important;
@@ -519,6 +530,10 @@ label.radio {
   @include btn-pill();
 }
 .btn-cta-pill {border-radius: 30px;}
+.btn-cta-wide {width: 285px;
+  @media (min-width: $screen-sm-min) {width: 270px;}
+}
+.btn-cta-full {width: 100%;}
 
 .btn-search {
   background: #d64d54;
@@ -794,6 +809,7 @@ h1, h2, h3, h4 {line-height: 1.1; font-weight: 500}
 .h-content {margin-bottom: 30px !important; font-size: 24px; font-weight: 400;}
 
 .breadcrumbs {
+  margin-bottom: 30px;
   li {
     display: inline;
     position: relative;
@@ -814,13 +830,10 @@ h1, h2, h3, h4 {line-height: 1.1; font-weight: 500}
   }
 
   @media (max-width: $screen-sm-max) {
-    padding: 0 10px;
-    margin-bottom: 30px;
-  }
-  @media (min-width: $screen-sm-min) {
-    margin-bottom: 55px;
+    padding: 0 10px;    
   }
 }
+.breadcrumbs-bottom {margin-top: 25px;}
 .section+.breadcrumbs {
   @media (min-width: $screen-sm-min) {
     margin-bottom: 35px;
