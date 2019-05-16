@@ -1493,6 +1493,7 @@ table {
 	thead {
 		th:first-child {border-left: none;}
 		th:last-child {border-right: none;}
+
 	}
 	tbody:before {
 		content: "-";
@@ -1501,7 +1502,11 @@ table {
 		color: transparent;
 	}
 	tbody {}
-	th {padding-top: 16px; padding-bottom: 16px; font-weight: 400; font-size: 14px;}
+	th {
+		padding-top: 16px; padding-bottom: 16px; font-weight: 400; font-size: 14px;
+
+	}
+	
 	td {
 		border-right: none;
 		border-left: none; 
@@ -1512,7 +1517,7 @@ table {
 	}
 
 	.date {max-width: 70px;}
-	.number {text-align: right; padding-right: 30px; font-weight: 400; max-width: 17px;}
+	.number {text-align: right; padding-right: 30px; padding-left: 0; font-weight: 400; max-width: 25px;}
 }
 
 

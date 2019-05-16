@@ -4306,8 +4306,9 @@ table {
 .table-data-calc .number {
   text-align: right;
   padding-right: 30px;
+  padding-left: 0;
   font-weight: 400;
-  max-width: 17px; }
+  max-width: 25px; }
 
 /*  */
 /* --- SORTING/LISTING CONTROLS */
