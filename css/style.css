@@ -3632,7 +3632,7 @@ table {
   color: #555; }
   @media (min-width: 768px) {
     .h-calc-subhead {
-      margin: -20px 0 50px 0; } }
+      margin: -20px 0 40px 0; } }
 
 .h-searchcredits, .h-contacts {
   text-align: center;
