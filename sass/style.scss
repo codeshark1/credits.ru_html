@@ -2636,6 +2636,7 @@ label.checkbox-column {margin-bottom: 20px; display: block;}
 .section-article {
 	background: #fff;
 	padding: 20px 15px;
+	a {text-decoration: underline;}
 	.breadcrumbs {margin-bottom: 20px;}
 	.bx-footer,.bx-header {
 		font-size: 0.85rem;
@@ -2774,9 +2775,7 @@ label.checkbox-column {margin-bottom: 20px; display: block;}
 			@media (min-width: $screen-md-min) {
 				margin-left: 40px;
 			}
-		}
-
-		
+		}		
 }
 .comment-content + .bx-comment {margin-top: 36px;}
 

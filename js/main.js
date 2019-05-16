@@ -36,7 +36,21 @@ function show_form_filter(button, block) { // фильтр, страница п�
             }
         }
     });
-}  
+}
+function show_payments_table(button, block) { // фильтр, страница поиска кредитов
+    $(block).hide();
+    $(button).click(function(e){
+        e.preventDefault();
+        if ( $(block).is(':visible')) {
+            $(block).slideUp().removeClass('active');
+            $(button).removeClass('active').text('Показать график платежей');
+        } else {
+            $(button).addClass('active').text('Скрыть график платежей');
+            $(block).slideDown().addClass('active');
+        }
+    });
+}
+
 
 function menu_nested(menu_id) {
     //$(menu_id).find('ul').hide();        
@@ -472,4 +486,6 @@ jQuery(document).ready(function($){
         theme:"dark",
         setWidth: '100%'
     });    
+
+    show_payments_table('#js-toggle-payments-table','#js-payments-table');
 });

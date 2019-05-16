@@ -352,7 +352,7 @@
                         </div><!-- /.col -->
                         <div class="col-md-6 col-lg-3">
                             <span class="lbl lbl-top d-none d-md-block"></span>
-                            <p class="bx-filter-link"><a href="#">Скрыть график платежей</a></p>
+                            <p class="bx-filter-link"><a href="#" id="js-toggle-payments-table">Показать график платежей</a></p>
                         </div><!-- /.col -->                        
                     </div><!-- /.row -->
                 </div><!-- /.container -->
@@ -360,7 +360,7 @@
         </div><!-- /.section-hero-bg -->
 
 
-        <section class="sect-innerpad">
+        <section class="sect-innerpad" id="js-payments-table">
             <div class="container">
                 <p class="h-hero">График платежей</p>
 
@@ -464,187 +464,188 @@
         </section>
 
 
-        <p class="h-hero">Подходящие кредиты</p>
-        <p class="h-calc-subhead">Найдено 3 кредита</p>
+        <div class="sect-innerpad">
+            <p class="h-hero">Подходящие кредиты</p>
+            <p class="h-calc-subhead">Найдено 3 кредита</p>
 
-        <div class="row-search-bottom-mob">
-            <p class="results-credits-found"></p>
-            <div class="drop-menu-wrapper js-drop-menu-wrapper sorting-mob-switcher">
-                <button type="button" class="btn-sorting drop-menu-trigger js-drop-menu-trigger btn btn-narrow">По ставке</button>
-                <div class="drop-menu js-drop-menu">
-                    <p class="menu-item"><a href="/" class="active">По ставке</a></p>
-                    <p class="menu-item"><a href="/">По сумме</a></p>
-                    <p class="menu-item"><a href="/">По популярности</a></p>
-                </div><!-- /. drop-menu-->
-            </div><!-- /.mob-sorting-wrapper -->
-        </div><!-- /.row-search-bottom-mob -->
+            <div class="row-search-bottom-mob">
+                <p class="results-credits-found"></p>
+                <div class="drop-menu-wrapper js-drop-menu-wrapper sorting-mob-switcher">
+                    <button type="button" class="btn-sorting drop-menu-trigger js-drop-menu-trigger btn btn-narrow">По ставке</button>
+                    <div class="drop-menu js-drop-menu">
+                        <p class="menu-item"><a href="/" class="active">По ставке</a></p>
+                        <p class="menu-item"><a href="/">По сумме</a></p>
+                        <p class="menu-item"><a href="/">По популярности</a></p>
+                    </div><!-- /. drop-menu-->
+                </div><!-- /.mob-sorting-wrapper -->
+            </div><!-- /.row-search-bottom-mob -->
 
-        <div class="listing-controls">                
-            <div class="listing-controls--wrap">
-                <form action="/" class="listing-controls_sorting">
-                    <div class="listing_sort sort-bank">Банк</div>
-                    <div class="listing_sort sort-rate">Ставка в год <span class="arrow"></span></div>
-                    <div class="listing_sort sort-amount">Платёж в месяц <span class="arrow"></span></div>
-                    <div class="listing_sort sort-overpay">Переплата <span class="arrow"></span></div>
-                </form>
-                <div class="listing-controls_search">
-                    <form role="search" class="form-search-listing closed" id="searchform_listing" action="#">
-                        <input  type="search" class="search-field" autocomplete="off" placeholder="Поиск" title="Поиск" role="combobox">
-                        <button type="submit" class="search-button">
-                            <svg data-src="img/i-search.svg"></svg>
-                        </button>
-                    </form>                    
-                </div>                
-            </div><!-- /.listing-controls--wrap -->
-        </div><!-- /.listing-controls -->
+            <div class="listing-controls">                
+                <div class="listing-controls--wrap">
+                    <form action="/" class="listing-controls_sorting">
+                        <div class="listing_sort sort-bank">Банк</div>
+                        <div class="listing_sort sort-rate">Ставка в год <span class="arrow"></span></div>
+                        <div class="listing_sort sort-amount">Платёж в месяц <span class="arrow"></span></div>
+                        <div class="listing_sort sort-overpay">Переплата <span class="arrow"></span></div>
+                    </form>
+                    <div class="listing-controls_search">
+                        <form role="search" class="form-search-listing closed" id="searchform_listing" action="#">
+                            <input  type="search" class="search-field" autocomplete="off" placeholder="Поиск" title="Поиск" role="combobox">
+                            <button type="submit" class="search-button">
+                                <svg data-src="img/i-search.svg"></svg>
+                            </button>
+                        </form>                    
+                    </div>                
+                </div><!-- /.listing-controls--wrap -->
+            </div><!-- /.listing-controls -->
 
-        <div class="plans-insearch-wrapper">
-            <div class="plan plan_insearch plan_wide-title">
-                <div class="plan-wrapper">
-                    <div class="plan-content">
-                        <div class="td td_title">
-                            Кредит наличными
-                        </div>
-                        <div class="td td_bankname">
-                            <a href="#"><img src="img/logo-rufinans-bank.png" alt="Русфинанс банк"></a>                            
-                        </div>
-                        <div class="td td_rate">
-                            <p class="ttl">Ставка</p>
-                            <p class="data data-important">от 17,00%</p>
-                        </div>                                                                                    
-                        <div class="td td_amount">
-                            <p class="ttl">Платёж в месяц</p>
-                            <p class="data">30 000 Р</p>
-                        </div>
-                        <div class="td td_overpay">  
-                            <p class="ttl">Переплата</p>                                                  
-                            <p class="data">-100 000 Р</p>
-                        </div>                                                
-                        <div class="td td_action">
-                            <div class="wrapper">
-                                <a href="#" class="btn btn-cta">Оформить</a>
-                                <p class="link-info"><a href="#">Подробнее</a></p>
+            <div class="plans-insearch-wrapper">
+                <div class="plan plan_insearch plan_wide-title">
+                    <div class="plan-wrapper">
+                        <div class="plan-content">
+                            <div class="td td_title">
+                                Кредит наличными
                             </div>
-                        </div>
-                    </div><!-- /.plan-content -->
-                    <div class="plan-actions">
-                        <a href="#" class="plan-btn fav">
-                            <img class="svg" src="img/panel-fav.svg" alt="icon">
-                            <span>В избранное</span>
-                        </a>
-                        <a href="#" class="plan-btn compare">
-                            <img class="svg" src="img/panel-compare.svg" alt="icon">
-                            <span>Сравнить</span>
-                        </a>                                                
-                        <a href="#" class="plan-btn info">
-                            <img class="svg" src="img/panel-info.svg" alt="icon">
-                            <span>Подробнее</span>
-                        </a>
-                        <a href="#" class="plan-btn sign">
-                            <img class="svg" src="img/panel-sign.svg" alt="icon">
-                            <span>Оформить</span>
-                        </a>                                                                                                
-                    </div><!-- /.plan-actions -->
-                </div><!-- /.plan-wrapper -->
-            </div><!-- /.plan -->
-            <div class="plan plan_insearch plan_wide-title">
-                <div class="plan-wrapper">
-                    <div class="plan-content">
-                        <div class="td td_title">
-                            Потребительский кредит УБРиР
-                        </div>
-                        <div class="td td_bankname">
-                            <a href="#"><img src="img/logo-moskcredit-bank.png" alt="Русфинанс банк"></a>                            
-                        </div>
-                        <div class="td td_rate">
-                            <p class="ttl">Ставка</p>
-                            <p class="data data-important">от 17,00%</p>
-                        </div>                                                                                    
-                        <div class="td td_amount">
-                            <p class="ttl">Платёж в месяц</p>
-                            <p class="data">30 000 Р</p>
-                        </div>
-                        <div class="td td_overpay">  
-                            <p class="ttl">Переплата</p>                                                  
-                            <p class="data">-100 000 Р</p>
-                        </div>                                                
-                        <div class="td td_action">
-                            <div class="wrapper">
-                                <a href="#" class="btn btn-cta">Оформить</a>
-                                <p class="link-info"><a href="#">Подробнее</a></p>
+                            <div class="td td_bankname">
+                                <a href="#"><img src="img/logo-rufinans-bank.png" alt="Русфинанс банк"></a>                            
                             </div>
-                        </div>
-                    </div><!-- /.plan-content -->
-                    <div class="plan-actions">
-                        <a href="#" class="plan-btn fav">
-                            <img class="svg" src="img/panel-fav.svg" alt="icon">
-                            <span>В избранное</span>
-                        </a>
-                        <a href="#" class="plan-btn compare">
-                            <img class="svg" src="img/panel-compare.svg" alt="icon">
-                            <span>Сравнить</span>
-                        </a>                                                
-                        <a href="#" class="plan-btn info">
-                            <img class="svg" src="img/panel-info.svg" alt="icon">
-                            <span>Подробнее</span>
-                        </a>
-                        <a href="#" class="plan-btn sign">
-                            <img class="svg" src="img/panel-sign.svg" alt="icon">
-                            <span>Оформить</span>
-                        </a>                                                                                                
-                    </div><!-- /.plan-actions -->
-                </div><!-- /.plan-wrapper -->
-            </div><!-- /.plan -->
-            <div class="plan plan_insearch plan_wide-title">
-                <div class="plan-wrapper">
-                    <div class="plan-content">
-                        <div class="td td_title">
-                            Кредит наличными
-                        </div>
-                        <div class="td td_bankname">
-                            <a href="#"><img src="img/logo-sovkom-bank.png" alt="Русфинанс банк"></a>                            
-                        </div>
-                        <div class="td td_rate">
-                            <p class="ttl">Ставка</p>
-                            <p class="data data-important">от 17,00%</p>
-                        </div>                                                                                    
-                        <div class="td td_amount">
-                            <p class="ttl">Платёж в месяц</p>
-                            <p class="data">30 000 Р</p>
-                        </div>
-                        <div class="td td_overpay">  
-                            <p class="ttl">Переплата</p>                                                  
-                            <p class="data">-100 000 Р</p>
-                        </div>                                                
-                        <div class="td td_action">
-                            <div class="wrapper">
-                                <a href="#" class="btn btn-cta">Оформить</a>
-                                <p class="link-info"><a href="#">Подробнее</a></p>
+                            <div class="td td_rate">
+                                <p class="ttl">Ставка</p>
+                                <p class="data data-important">от 17,00%</p>
+                            </div>                                                                                    
+                            <div class="td td_amount">
+                                <p class="ttl">Платёж в месяц</p>
+                                <p class="data">30 000 Р</p>
                             </div>
-                        </div>
-                    </div><!-- /.plan-content -->
-                    <div class="plan-actions">
-                        <a href="#" class="plan-btn fav">
-                            <img class="svg" src="img/panel-fav.svg" alt="icon">
-                            <span>В избранное</span>
-                        </a>
-                        <a href="#" class="plan-btn compare">
-                            <img class="svg" src="img/panel-compare.svg" alt="icon">
-                            <span>Сравнить</span>
-                        </a>                                                
-                        <a href="#" class="plan-btn info">
-                            <img class="svg" src="img/panel-info.svg" alt="icon">
-                            <span>Подробнее</span>
-                        </a>
-                        <a href="#" class="plan-btn sign">
-                            <img class="svg" src="img/panel-sign.svg" alt="icon">
-                            <span>Оформить</span>
-                        </a>                                                                                                
-                    </div><!-- /.plan-actions -->
-                </div><!-- /.plan-wrapper -->
-            </div><!-- /.plan -->                                
-        </div><!-- /.plans-insearch-wrapper -->    
-
+                            <div class="td td_overpay">  
+                                <p class="ttl">Переплата</p>                                                  
+                                <p class="data">-100 000 Р</p>
+                            </div>                                                
+                            <div class="td td_action">
+                                <div class="wrapper">
+                                    <a href="#" class="btn btn-cta">Оформить</a>
+                                    <p class="link-info"><a href="#">Подробнее</a></p>
+                                </div>
+                            </div>
+                        </div><!-- /.plan-content -->
+                        <div class="plan-actions">
+                            <a href="#" class="plan-btn fav">
+                                <img class="svg" src="img/panel-fav.svg" alt="icon">
+                                <span>В избранное</span>
+                            </a>
+                            <a href="#" class="plan-btn compare">
+                                <img class="svg" src="img/panel-compare.svg" alt="icon">
+                                <span>Сравнить</span>
+                            </a>                                                
+                            <a href="#" class="plan-btn info">
+                                <img class="svg" src="img/panel-info.svg" alt="icon">
+                                <span>Подробнее</span>
+                            </a>
+                            <a href="#" class="plan-btn sign">
+                                <img class="svg" src="img/panel-sign.svg" alt="icon">
+                                <span>Оформить</span>
+                            </a>                                                                                                
+                        </div><!-- /.plan-actions -->
+                    </div><!-- /.plan-wrapper -->
+                </div><!-- /.plan -->
+                <div class="plan plan_insearch plan_wide-title">
+                    <div class="plan-wrapper">
+                        <div class="plan-content">
+                            <div class="td td_title">
+                                Потребительский кредит УБРиР
+                            </div>
+                            <div class="td td_bankname">
+                                <a href="#"><img src="img/logo-moskcredit-bank.png" alt="Русфинанс банк"></a>                            
+                            </div>
+                            <div class="td td_rate">
+                                <p class="ttl">Ставка</p>
+                                <p class="data data-important">от 17,00%</p>
+                            </div>                                                                                    
+                            <div class="td td_amount">
+                                <p class="ttl">Платёж в месяц</p>
+                                <p class="data">30 000 Р</p>
+                            </div>
+                            <div class="td td_overpay">  
+                                <p class="ttl">Переплата</p>                                                  
+                                <p class="data">-100 000 Р</p>
+                            </div>                                                
+                            <div class="td td_action">
+                                <div class="wrapper">
+                                    <a href="#" class="btn btn-cta">Оформить</a>
+                                    <p class="link-info"><a href="#">Подробнее</a></p>
+                                </div>
+                            </div>
+                        </div><!-- /.plan-content -->
+                        <div class="plan-actions">
+                            <a href="#" class="plan-btn fav">
+                                <img class="svg" src="img/panel-fav.svg" alt="icon">
+                                <span>В избранное</span>
+                            </a>
+                            <a href="#" class="plan-btn compare">
+                                <img class="svg" src="img/panel-compare.svg" alt="icon">
+                                <span>Сравнить</span>
+                            </a>                                                
+                            <a href="#" class="plan-btn info">
+                                <img class="svg" src="img/panel-info.svg" alt="icon">
+                                <span>Подробнее</span>
+                            </a>
+                            <a href="#" class="plan-btn sign">
+                                <img class="svg" src="img/panel-sign.svg" alt="icon">
+                                <span>Оформить</span>
+                            </a>                                                                                                
+                        </div><!-- /.plan-actions -->
+                    </div><!-- /.plan-wrapper -->
+                </div><!-- /.plan -->
+                <div class="plan plan_insearch plan_wide-title">
+                    <div class="plan-wrapper">
+                        <div class="plan-content">
+                            <div class="td td_title">
+                                Кредит наличными
+                            </div>
+                            <div class="td td_bankname">
+                                <a href="#"><img src="img/logo-sovkom-bank.png" alt="Русфинанс банк"></a>                            
+                            </div>
+                            <div class="td td_rate">
+                                <p class="ttl">Ставка</p>
+                                <p class="data data-important">от 17,00%</p>
+                            </div>                                                                                    
+                            <div class="td td_amount">
+                                <p class="ttl">Платёж в месяц</p>
+                                <p class="data">30 000 Р</p>
+                            </div>
+                            <div class="td td_overpay">  
+                                <p class="ttl">Переплата</p>                                                  
+                                <p class="data">-100 000 Р</p>
+                            </div>                                                
+                            <div class="td td_action">
+                                <div class="wrapper">
+                                    <a href="#" class="btn btn-cta">Оформить</a>
+                                    <p class="link-info"><a href="#">Подробнее</a></p>
+                                </div>
+                            </div>
+                        </div><!-- /.plan-content -->
+                        <div class="plan-actions">
+                            <a href="#" class="plan-btn fav">
+                                <img class="svg" src="img/panel-fav.svg" alt="icon">
+                                <span>В избранное</span>
+                            </a>
+                            <a href="#" class="plan-btn compare">
+                                <img class="svg" src="img/panel-compare.svg" alt="icon">
+                                <span>Сравнить</span>
+                            </a>                                                
+                            <a href="#" class="plan-btn info">
+                                <img class="svg" src="img/panel-info.svg" alt="icon">
+                                <span>Подробнее</span>
+                            </a>
+                            <a href="#" class="plan-btn sign">
+                                <img class="svg" src="img/panel-sign.svg" alt="icon">
+                                <span>Оформить</span>
+                            </a>                                                                                                
+                        </div><!-- /.plan-actions -->
+                    </div><!-- /.plan-wrapper -->
+                </div><!-- /.plan -->                                
+            </div><!-- /.plans-insearch-wrapper -->    
+        </div><!-- sect-innerpad -->
 
 
 
