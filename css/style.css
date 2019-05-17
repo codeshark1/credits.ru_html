@@ -4705,11 +4705,6 @@ table {
       .table-data-calc thead td, .table-data-calc thead th, .table-data-calc tbody td, .table-data-calc tbody th {
         padding-left: 20px;
         padding-right: 20px; } }
-  .table-data-calc th {
-    padding-top: 16px;
-    padding-bottom: 16px;
-    font-weight: 400;
-    font-size: 14px; }
   .table-data-calc td {
     padding-top: 16px;
     padding-bottom: 16px; }
@@ -4724,9 +4719,14 @@ table {
     display: inline-block; }
 
 .table-payments-header {
-  margin-bottom: 20px;
-  /* position: absolute;	
-  left: 0;top: 0;right: 0; */ }
+  margin-bottom: 20px; }
+  .table-payments-header td {
+    font-weight: 400;
+    font-size: 14px; }
+  .table-payments-header td:first-child {
+    border-left: none; }
+  .table-payments-header td:last-child {
+    border-right: none; }
 
 .table-payments-body td {
   border-right: none;
