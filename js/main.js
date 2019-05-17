@@ -43,9 +43,9 @@ function show_payments_table(button, block) { // фильтр, страница 
         e.preventDefault();
         if ( $(block).is(':visible')) {
             $(block).slideUp().removeClass('active');
-            $(button).removeClass('active').text('Показать график платежей');
+            $(button).removeClass('active');
         } else {
-            $(button).addClass('active').text('Скрыть график платежей');
+            $(button).addClass('active');
             $(block).slideDown().addClass('active');
         }
     });
