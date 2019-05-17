@@ -4751,9 +4751,12 @@ table {
   overflow-x: auto; }
 
 .table-data-calc_wrapper-body {
-  max-height: 500px;
+  max-height: 295px;
   overflow: hidden;
   overflow-y: auto; }
+  @media (min-width: 768px) {
+    .table-data-calc_wrapper-body {
+      max-height: 555px; } }
 
 /*  */
 /* --- SORTING/LISTING CONTROLS */

@@ -1557,9 +1557,10 @@ table {
 }
 
 .table-data-calc_wrapper-body {
-	max-height: 500px;
+	max-height: 295px;
 	overflow: hidden;
 	overflow-y: auto;
+	@media (min-width: $screen-sm-min) {max-height: 555px;}
 }
 
 /*  */
