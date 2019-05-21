@@ -487,5 +487,11 @@ jQuery(document).ready(function($){
         setWidth: '100%'
     });    
 
+    $(".scroll-horizontal").mCustomScrollbar({
+        axis:"x",
+        theme:"dark",
+        setWidth: '100%'
+    });    
+
     show_payments_table('#js-toggle-payments-table','#js-payments-table');
 });

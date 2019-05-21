@@ -824,10 +824,10 @@ table {
 
 .h-calc-subhead {
 	text-align: center;
-	margin-bottom: 30px;
+	margin-bottom: 10px;
 	color: #555;
 	@media (min-width: $screen-sm-min) {
-		margin: -20px 0 40px 0;
+		margin: -20px 0 20px 0;
 	}
 }
 
@@ -1544,6 +1544,12 @@ table {
 	._payment-credit,
 	._credit-paid,
 	._credit-left {width: 20.76271186440678%}
+	._important {color: $red;
+		font-size: 14px;
+		@media (min-width: $screen-sm-min) {
+			font-size: 25px;
+		}
+	}
 }
 
 .table-data-calc_wrapper-all {
@@ -4948,9 +4954,7 @@ section+.view-all {
 	
 
 .bx-banks-scroll {
-	//overflow: auto; 
-	//padding-bottom: 20px; 
-	//text-align: center;
+	.mCustomScrollBox {padding-bottom: 30px;}
 	.list {		
 		width: 100%;
 		width: fit-content;
