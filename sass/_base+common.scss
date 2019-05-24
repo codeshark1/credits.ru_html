@@ -330,7 +330,11 @@ fieldset {
     }
   }
 }
-.btn-text {color: #000;}
+
+.btn-text {
+  color: $gray;
+  text-decoration: underline;
+}
 
 label.checkbox, label.radio {
   position: relative;
@@ -805,6 +809,14 @@ h1, h2, h3, h4 {line-height: 1.1; font-weight: 500}
 .h-page {margin: 0 0 20px 0;font-size: 1.7rem;}
 .h-card-list {font-size: 1.5rem;}
 .h-content {margin-bottom: 30px !important; font-size: 24px; font-weight: 400;}
+.h-small {
+  font-size: 14px;
+  font-weight: 500;
+  @media (min-width: $screen-sm-min) {
+    font-size: 18px;
+    
+  } 
+}
 
 .breadcrumbs {
   margin-bottom: 30px;

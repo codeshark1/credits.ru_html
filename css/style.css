@@ -408,7 +408,8 @@ fieldset {
         width: 170px; } }
 
 .btn-text {
-  color: #000; }
+  color: #969696;
+  text-decoration: underline; }
 
 label.checkbox, label.radio {
   position: relative;
@@ -850,6 +851,13 @@ h1, h2, h3, h4 {
   margin-bottom: 30px !important;
   font-size: 24px;
   font-weight: 400; }
+
+.h-small {
+  font-size: 14px;
+  font-weight: 500; }
+  @media (min-width: 768px) {
+    .h-small {
+      font-size: 18px; } }
 
 .breadcrumbs {
   margin-bottom: 30px; }
@@ -3987,7 +3995,7 @@ table {
 
 .h-section {
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 400;
   margin-top: 0;
   margin-bottom: 2rem;
   line-height: 1.9rem;
@@ -5716,7 +5724,13 @@ label.checkbox-column {
 @media (min-width: 992px) {
   .subscribe-main .title {
     position: relative;
-    top: -7px; } }
+    top: -7px;
+    width: 180px;
+    flex-shrink: 0;
+    margin-right: 20px; } }
+@media (min-width: 1200px) {
+  .subscribe-main .title {
+    width: 235px; } }
 @media (max-width: 767px) {
   .subscribe-main {
     text-align: center; }
@@ -5739,10 +5753,6 @@ label.checkbox-column {
     display: flex;
     padding: 35px 30px 15px;
     background-position: 20% 0; }
-    .subscribe-main .title {
-      width: 235px;
-      flex-shrink: 0;
-      margin-right: 20px; }
     .subscribe-main .form {
       flex-grow: 1; } }
 
@@ -6010,6 +6020,13 @@ label.checkbox-column {
     @media (min-width: 992px) {
       .bx-comment .bx-comment {
         margin-left: 40px; } }
+  @media (max-width: 767px) {
+    .bx-comment .comment-actions {
+      display: flex;
+      justify-content: space-between; } }
+  @media (min-width: 768px) {
+    .bx-comment .comment-actions .btn-text:first-child {
+      margin-right: 25px; } }
 
 .comment-content + .bx-comment {
   margin-top: 36px; }
@@ -6730,6 +6747,156 @@ section + .view-all {
   @media (min-width: 1200px) {
     .nav-tabs-news {
       padding-right: 20px; } }
+
+/* ==========================================================================
+   REVIEWS
+========================================================================== */
+.section-review-main {
+  padding: 20px; }
+  @media (min-width: 768px) {
+    .section-review-main {
+      padding: 25px;
+      padding-left: 125px; } }
+  @media (min-width: 1200px) {
+    .section-review-main {
+      padding-left: 155px; } }
+  .section-review-main .wrapper-name-logo {
+    display: flex;
+    justify-content: space-between;
+    position: relative; }
+    @media (max-width: 767px) {
+      .section-review-main .wrapper-name-logo {
+        padding-left: 60px; } }
+  .section-review-main .bx-logo {
+    width: 60px; }
+    @media (min-width: 768px) {
+      .section-review-main .bx-logo {
+        width: 80px; } }
+  .section-review-main .avatar {
+    width: 50px;
+    height: 50px;
+    background-size: cover !important;
+    border-radius: 100%;
+    position: absolute;
+    top: 0;
+    left: 0; }
+    @media (min-width: 768px) {
+      .section-review-main .avatar {
+        width: 90px;
+        height: 90px;
+        left: -110px; } }
+  .section-review-main .name {
+    font-size: 14px;
+    color: #000;
+    font-weight: 500;
+    margin-bottom: 5px;
+    line-height: 1.1; }
+    @media (min-width: 768px) {
+      .section-review-main .name {
+        font-size: 18px;
+        display: inline-block;
+        margin-right: 10px;
+        font-weight: 400; } }
+  .section-review-main .city {
+    font-size: 11px;
+    color: #555555; }
+    @media (min-width: 768px) {
+      .section-review-main .city {
+        font-size: 18px;
+        display: inline-block; } }
+  .section-review-main .date {
+    font-size: 11px;
+    color: #C4C4C4; }
+    @media (min-width: 768px) {
+      .section-review-main .date {
+        font-size: 14px; } }
+  .section-review-main .wrapper-title-topic {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px; }
+    @media (max-width: 400px) {
+      .section-review-main .wrapper-title-topic {
+        flex-wrap: wrap; } }
+  .section-review-main .title {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.1;
+    margin-bottom: 10px; }
+    @media (min-width: 768px) {
+      .section-review-main .title {
+        font-size: 24px;
+        font-weight: 400; } }
+  .section-review-main .bx-rating-full {
+    margin-bottom: 10px; }
+  .section-review-main .topic {
+    font-size: 12px;
+    background: #F0F3F5;
+    border-radius: 5px 0 0 5px;
+    padding: 8px 25px 8px 20px;
+    margin-right: -25px;
+    display: inline-block; }
+    @media (min-width: 768px) {
+      .section-review-main .topic {
+        font-size: 16px;
+        padding: 10px 25px 10px 24px; } }
+  .section-review-main .comment-body {
+    clear: both;
+    margin-bottom: 30px; }
+    @media (min-width: 768px) {
+      .section-review-main .comment-body {
+        margin-bottom: 40px; } }
+  .section-review-main .wrapper-commentcount-social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; }
+    @media (min-width: 768px) {
+      .section-review-main .wrapper-commentcount-social {
+        margin-bottom: 25px; } }
+  .section-review-main .commentcount, .section-review-main .social {
+    margin-bottom: 14px; }
+  .section-review-main .commentcount {
+    font-size: 11px;
+    color: #555555; }
+    .section-review-main .commentcount .icon {
+      width: 18px;
+      vertical-align: middle;
+      fill: #555555;
+      margin-right: 5px; }
+    @media (min-width: 768px) {
+      .section-review-main .commentcount {
+        font-size: 13px; } }
+  .section-review-main .h-small {
+    margin-bottom: 20px; }
+
+.ya-share2__item {
+  width: 28px;
+  height: 28px;
+  background: #ff0000;
+  border-radius: 2px;
+  margin: 5px 4px 5px 0;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 0;
+  margin-bottom: 0; }
+  .ya-share2__item:last-child {
+    margin-right: 0; }
+
+@media (max-width: 450px) {
+  .ya-share2__item_service_lj,
+  .ya-share2__item_service_moimir {
+    display: none; } }
+.bx-rating-full .number {
+  display: inline-block;
+  color: #ffca3c;
+  vertical-align: middle;
+  font-size: 18px;
+  margin-right: 10px; }
+.bx-rating-full .icon-star {
+  width: 20px;
+  fill: #ffca3c;
+  vertical-align: middle; }
 
 /* ==========================================================================
    SIDEBAR

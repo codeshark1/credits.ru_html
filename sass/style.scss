@@ -687,6 +687,7 @@ NAVIGATION
 		padding-left: 100px;padding-right: 100px;
 	}
 }
+ 
 .section-lightest {background: #ffffff;
 	.heading {margin-top: 0;}
 }
@@ -771,7 +772,7 @@ table {
 }
 .h-section {
 	font-size: 20px;
-	font-weight: 500;
+	font-weight: 400;
 	margin-top: 0;
 	margin-bottom: 2rem;
 	line-height: 1.9rem;
@@ -2512,16 +2513,21 @@ label.checkbox-column {margin-bottom: 20px; display: block;}
 		@media (min-width: $screen-md-min) {
 			position: relative;
 			top: -7px;
-		}		
+			width: 180px; 
+			flex-shrink: 0;
+			margin-right: 20px;
+		}
+		@media (min-width: $screen-lg-min) {
+			width: 235px;
+		}
 	}
 	@media (max-width: $screen-xs-max) {
 		text-align: center;
 		.email {text-align: center;}
-		//.btn {width: 100%;}
 	}
 	@media (min-width: $screen-sm-min) {
 		.form {
-			position: relative;		
+			position: relative;
 			&__i {padding-right: 170px;}		
 		}		
 		.checkbox {margin-bottom: 0;}
@@ -2535,7 +2541,6 @@ label.checkbox-column {margin-bottom: 20px; display: block;}
 		display: flex;
 		padding: 35px 30px 15px;
 		background-position: 20% 0;
-		.title {width: 235px; flex-shrink: 0;margin-right: 20px;}
 		.form {flex-grow: 1}
 	}
 }
@@ -2774,6 +2779,16 @@ label.checkbox-column {margin-bottom: 20px; display: block;}
 				margin-left: 40px;
 			}
 		}		
+
+		.comment-actions {
+			@media (max-width: $screen-xs-max) {
+				display: flex;
+				justify-content: space-between;
+			}
+			@media (min-width: $screen-sm-min) {
+				.btn-text:first-child {margin-right: 25px;}
+			}
+		}
 }
 .comment-content + .bx-comment {margin-top: 36px;}
 
@@ -3521,6 +3536,176 @@ section+.view-all {
   @media (min-width: $screen-lg-min) {
     padding-right: 20px;
   }
+}
+
+/* ==========================================================================
+   REVIEWS
+========================================================================== */
+
+.section-review-main {
+	padding: 20px;
+	@media (min-width: $screen-sm-min) {
+		padding: 25px;
+		padding-left: 125px;
+	}
+	@media (min-width: $screen-lg-min) {
+		padding-left: 155px;
+	}
+
+	.wrapper-name-logo {
+		display: flex;
+		justify-content: space-between;
+		position: relative;
+		@media (max-width: $screen-xs-max) {
+			padding-left: 60px;
+		}
+	}
+		.bx-logo {
+			width: 60px;
+			@media (min-width: $screen-sm-min) {width: 80px;}
+		}
+	.avatar {
+		width: 50px;height: 50px;
+		background-size: cover !important;
+		border-radius: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		@media (min-width: $screen-sm-min) {
+			width: 90px;height: 90px;
+			left: -110px;
+		}
+	}
+	.name {
+		font-size: 14px;
+		color: #000;
+		font-weight: 500;
+		margin-bottom: 5px;
+		line-height: 1.1;
+		@media (min-width: $screen-sm-min) {
+			font-size: 18px;
+			display: inline-block;
+			margin-right: 10px;
+			font-weight: 400;
+		}
+	}
+	.city {
+		font-size: 11px;
+		color: #555555;
+		@media (min-width: $screen-sm-min) {
+			font-size: 18px;
+			display: inline-block;
+		}		
+	}
+	.date {
+		font-size: 11px;
+		color: #C4C4C4;
+		@media (min-width: $screen-sm-min) {
+			font-size: 14px;
+		}		
+	}	
+
+	.wrapper-title-topic {		
+		display: flex;
+		justify-content: space-between;
+		align-items: center;		
+		margin-bottom: 10px;
+		@media (max-width: 400px) {
+			flex-wrap: wrap;
+		}
+	}
+	.title {
+		font-size: 18px;
+		font-weight: 500;
+		line-height: 1.1;
+		margin-bottom: 10px;
+		@media (min-width: $screen-sm-min) {
+			font-size: 24px;
+			font-weight: 400;
+		}	
+	}
+	.bx-rating-full {margin-bottom: 10px;}
+
+	.topic {
+		font-size: 12px;
+		background: #F0F3F5;
+		border-radius: 5px 0 0 5px;
+		padding: 8px 25px 8px 20px;
+		margin-right: -25px;
+		display: inline-block;
+		
+		@media (max-width: $screen-xs-max) {
+			//float: right;
+		}
+		@media (min-width: $screen-sm-min) {
+
+		}
+		@media (min-width: $screen-sm-min) {
+			font-size: 16px;
+			padding: 10px 25px 10px 24px;
+		}
+	}
+	.comment-body {
+		clear: both;
+		margin-bottom: 30px;
+		@media (min-width: $screen-sm-min) {
+			margin-bottom: 40px;
+		}
+	}
+
+	.wrapper-commentcount-social {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;		
+		@media (min-width: $screen-sm-min) {
+			margin-bottom: 25px;
+		}		
+	}
+
+	.commentcount, .social {margin-bottom: 14px;}
+	.commentcount {
+		.icon {width: 18px; vertical-align: middle; fill: #555555; margin-right: 5px;}
+		font-size: 11px;
+		color: #555555;
+		@media (min-width: $screen-sm-min) {font-size: 13px;}	
+	}
+	
+
+	.h-small {margin-bottom: 20px;}
+}
+
+.ya-share2__item {
+	width: 28px;
+	height: 28px;
+	background: $red;
+	border-radius: 2px;
+
+	margin: 5px 4px 5px 0;
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 0;
+	margin-bottom: 0;	
+	&:last-child {margin-right: 0;}
+}
+@media (max-width: 450px) {
+	.ya-share2__item_service_lj,
+	.ya-share2__item_service_moimir {display: none;}
+}
+
+.bx-rating-full {
+	.number {
+		display: inline-block;
+		color: $action;
+		vertical-align: middle;
+		font-size: 18px;
+		margin-right: 10px;
+	}
+	.icon-star {
+		width: 20px;
+		fill: $action;
+		vertical-align: middle;
+	}	
 }
 /* ==========================================================================
    SIDEBAR
