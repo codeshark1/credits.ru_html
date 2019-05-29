@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Отзыв</title>
+    <title>Отзывы</title>
 	<link rel="shortcut icon" href="img/favicon/favicon.ico?v=2" type="image/x-icon" />
 	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png" />
 	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png" />
@@ -305,7 +305,7 @@
     <!-- End Сities -->    
 
     <main class="main-content">
-        <div class="section-hero">
+        <div class="section-hero section-hero-bg no-btm-pad">
             <div class="container">
                 <nav class="breadcrumbs d-none d-md-block">
                     <ul>
@@ -314,146 +314,205 @@
                         <li><span>МОСКОВСКИЙ КРЕДИТНЫЙ БАНК</span></li>
                     </ul>
                 </nav>
+
+                <h1 class="h-hero h-hero-bank">МОСКОВСКИЙ КРЕДИТНЫЙ БАНК</h1>
+
+                <div class="bx-heading-inputs-medium-wrapper">
+                    <h2 class="h-section h-main">Отзывы</h2>
+
+                    <div class="bx-inputs-medium">
+                        <div class="bx-input-medium-wrapper">
+                            <label for="123" class="label-select-medium">Категория продукта</label>
+                            <select class="select-medium" id="123"><option value="">кредит наличными</option></select>
+                        </div><!-- /.bx-input-medium-wrap -->
+
+                        <div class="bx-input-medium-wrapper mg">
+                            <label for="456" class="label-select-medium">Город</label>
+                            <select class="select-medium" id="456"><option value="">Санкт-Петербург</option></select>
+                        </div><!-- /.bx-input-medium-wrap -->
+
+                        <div class="drop-menu-wrapper js-drop-menu-wrapper">
+                            <button type="button" class="btn-sorting drop-menu-trigger js-drop-menu-trigger btn btn-narrow" href="/">По дате</button>
+                            <div class="drop-menu js-drop-menu" style="display: none;">
+                                <p class="menu-item"><a href="/" class="active">По дате</a></p>
+                                <p class="menu-item"><a href="/">По сумме</a></p>
+                                <p class="menu-item"><a href="/">По популярности</a></p>
+                            </div><!-- /.drop-menu-->
+                        </div><!-- /.drop-menu-wrapper -->
+                    </div><!-- /.bx-inputs-medium -->
+                </div><!-- /.bx-heading-inputs-medium-wrapper -->
             </div><!-- /.container -->
         </div><!-- /.section-hero -->
 
         <div class="container">
-            <div class="row">
-                <div class="col-lg-8 no-mg-xs">
-                    <div class="section card section-shift section-review-main">
-                        <div class="wrapper-name-logo">
-                            <div class="bx-wrapper">
-                                <div class="avatar" style="background: url('img/userpic.jpg') no-repeat 50% 50%;"></div>
-                                <p class="name">Евграфий Константинович</p>
-                                <p class="city">Санкт-Петербург</p>
-                                <p class="date">22.08.2017</p>
+            <div class="section card section-review-main">
+                <div class="wrapper-name-logo">
+                    <div class="bx-wrapper">
+                        <div class="avatar" style="background: url('img/userpic.jpg') no-repeat 50% 50%;"></div>
+                        <p class="name">Евграфий Константинович</p>
+                        <p class="city">Санкт-Петербург</p>
+                        <p class="date">22.08.2017</p>
+                    </div>
+
+                    <div class="bx-logo"><img src="img/logo-moskcredit-bank.png" alt="pic"></div>
+                </div><!-- /.wrapper-name-logo -->
+                
+                <div class="wrapper-title-topic">
+                    <div>
+                        <p class="title">Удобные платежи и приложение</p>
+                        <div class="bx-rating-full">
+                            <p class="number">4.8</p>
+                            <svg class="icon-star" data-src="img/star-1.svg"></svg>
+                            <svg class="icon-star" data-src="img/star-1.svg"></svg>
+                            <svg class="icon-star" data-src="img/star-1.svg"></svg>
+                            <svg class="icon-star" data-src="img/star-0.svg"></svg>
+                            <svg class="icon-star" data-src="img/star-0.svg"></svg>
+                        </div>
+                    </div>
+
+                    <p class="topic">Кредит наличными</p>
+                </div><!-- /.wrapper-rating-topic -->
+
+                <div class="comment-body">
+                    <p>Вчера позвонили и предложили кредит под 9% сумма 1000000 руб я отказалась, так не устроил ежемесячный платеж , не потянуть. Но у меня в этом банке уже есть кредит под 14% и платеж в месяц 8554 руб сумма 367000 руб. Предложили сумму 345000 руб под 9% но сумма ежемесячного платежа оказалась больше чем в предыдущем кредите. Как так не понимаю ,объяснили что страховка большая.</p>
+                </div><!-- /.comment-body -->
+                
+                <div class="wrapper-commentcount-social">
+                    <p class="commentcount"><svg class="icon" data-src="img/speech.svg"></svg> 1 комментарий</p>
+                    
+                    <div class="social">                                
+                        <div class="ya-share2 ya-share2_inited" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,lj" data-counter="">
+                            <div class="ya-share2__container ya-share2__container_size_m">
+                                <ul class="ya-share2__list ya-share2__list_direction_horizontal">
+                                    <li class="ya-share2__item ya-share2__item_service_collections"></li>
+                                    <li class="ya-share2__item ya-share2__item_service_vkontakte"></li>
+                                    <li class="ya-share2__item ya-share2__item_service_facebook"></li>
+                                    <li class="ya-share2__item ya-share2__item_service_odnoklassniki"></li>
+                                    <li class="ya-share2__item ya-share2__item_service_moimir"></li>
+                                    <li class="ya-share2__item ya-share2__item_service_twitter"></li>
+                                    <li class="ya-share2__item ya-share2__item_service_lj"></li>
+                                </ul>
                             </div>
+                        </div>
+                    </div>
+                </div><!-- /.bx-actions -->
 
-                            <div class="bx-logo"><img src="img/logo-moskcredit-bank.png" alt="pic"></div>
-                        </div><!-- /.wrapper-name-logo -->
-                        
-                        <div class="wrapper-title-topic">
-                            <div>
-                                <p class="title">Удобные платежи и приложение</p>
-                                <div class="bx-rating-full">
-                                    <p class="number">4.8</p>
-                                    <svg class="icon-star" data-src="img/star-1.svg"></svg>
-                                    <svg class="icon-star" data-src="img/star-1.svg"></svg>
-                                    <svg class="icon-star" data-src="img/star-1.svg"></svg>
-                                    <svg class="icon-star" data-src="img/star-0.svg"></svg>
-                                    <svg class="icon-star" data-src="img/star-0.svg"></svg>
-                                </div>
+                <p class="h-small">Оставить комментарий</p>
+
+                <form action="#" class="section">
+                    <textarea name="" id=""></textarea>
+                    <button type="submit" class="btn btn-cta">Отправить</button>
+                </form>
+            </div><!-- /.section -->
+
+            <div class="section card section-review-main">
+                <div class="wrapper-name-logo">
+                    <div class="bx-wrapper">
+                        <div class="avatar" style="background: url('img/userpic.jpg') no-repeat 50% 50%;"></div>
+                        <p class="name">Евграфий Константинович</p>
+                        <p class="city">Санкт-Петербург</p>
+                        <p class="date">22.08.2017</p>
+                    </div>
+
+                    <div class="bx-logo"><img src="img/logo-moskcredit-bank.png" alt="pic"></div>
+                </div><!-- /.wrapper-name-logo -->
+                
+                <div class="wrapper-title-topic">
+                    <div>
+                        <p class="title">Удобные платежи и приложение</p>
+                        <div class="bx-rating-full">
+                            <p class="number">4.8</p>
+                            <svg class="icon-star" data-src="img/star-1.svg"></svg>
+                            <svg class="icon-star" data-src="img/star-1.svg"></svg>
+                            <svg class="icon-star" data-src="img/star-1.svg"></svg>
+                            <svg class="icon-star" data-src="img/star-0.svg"></svg>
+                            <svg class="icon-star" data-src="img/star-0.svg"></svg>
+                        </div>
+                    </div>
+
+                    <p class="topic">Кредит наличными</p>
+                </div><!-- /.wrapper-rating-topic -->
+
+                <div class="comment-body">
+                    <p>Вчера позвонили и предложили кредит под 9% сумма 1000000 руб я отказалась, так не устроил ежемесячный платеж , не потянуть. Но у меня в этом банке уже есть кредит под 14% и платеж в месяц 8554 руб сумма 367000 руб. Предложили сумму 345000 руб под 9% но сумма ежемесячного платежа оказалась больше чем в предыдущем кредите. Как так не понимаю ,объяснили что страховка большая.</p>
+                </div><!-- /.comment-body -->
+                
+                <div class="wrapper-commentcount-social">
+                    <p class="commentcount"><svg class="icon" data-src="img/speech.svg"></svg> 1 комментарий</p>
+                    
+                    <div class="social">                                
+                        <div class="ya-share2 ya-share2_inited" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,lj" data-counter="">
+                            <div class="ya-share2__container ya-share2__container_size_m">
+                                <ul class="ya-share2__list ya-share2__list_direction_horizontal">
+                                    <li class="ya-share2__item ya-share2__item_service_collections"></li>
+                                    <li class="ya-share2__item ya-share2__item_service_vkontakte"></li>
+                                    <li class="ya-share2__item ya-share2__item_service_facebook"></li>
+                                    <li class="ya-share2__item ya-share2__item_service_odnoklassniki"></li>
+                                    <li class="ya-share2__item ya-share2__item_service_moimir"></li>
+                                    <li class="ya-share2__item ya-share2__item_service_twitter"></li>
+                                    <li class="ya-share2__item ya-share2__item_service_lj"></li>
+                                </ul>
                             </div>
+                        </div>
+                    </div>
+                </div><!-- /.bx-actions -->
 
-                            <p class="topic">Кредит наличными</p>
-                        </div><!-- /.wrapper-rating-topic -->
+                <p class="h-small">Оставить комментарий</p>
 
-                        <div class="comment-body">
-                            <p>Вчера позвонили и предложили кредит под 9% сумма 1000000 руб я отказалась, так не устроил ежемесячный платеж , не потянуть. Но у меня в этом банке уже есть кредит под 14% и платеж в месяц 8554 руб сумма 367000 руб. Предложили сумму 345000 руб под 9% но сумма ежемесячного платежа оказалась больше чем в предыдущем кредите. Как так не понимаю ,объяснили что страховка большая.</p>
-                        </div><!-- /.comment-body -->
-                        
-                        <div class="wrapper-commentcount-social">
-                            <p class="commentcount"><svg class="icon" data-src="img/speech.svg"></svg> 1 комментарий</p>
+                <form action="#" class="section">
+                    <textarea name="" id=""></textarea>
+                    <button type="submit" class="btn btn-cta">Отправить</button>
+                </form>
+
+                <p class="h-small">Комментарии: 2</p>
+
+                <div class="bx-comments-listing">
+                    <div class="bx-comment">
+                        <div class="comment-content">
+                            <div class="comment-header">
+                                <div class="user-info">
+                                    <div class="userpic" style="background: url('img/avatar.jpg') no-repeat 50% 50%;"></div>
+                                    <p class="username">Василий Петечькин</p>
+                                    <p class="date">22.08.2017</p>
+                                </div><!-- /.user-info -->
+                            </div><!-- /.comment-header -->
+
+                            <p class="comment-text">
+                                Что заказчик, что исполнитель олени. Приведу аналогию: в ресторане клиент (заказчик) заказывает блюдо, которое просит подать с приправой, так и говорит: "Хочу суп с говном". Почему он так сказал, нам знать не нужно. Он мог оговориться, мог нелепо пошутить, мог не знать значение этого слова и искренне считать, что говно это другое название, например, базилика. Официант и повар (исполнители) исполняют заказ, варят суп с говном и подают на стол.
+                            </p><!-- /.comment-header -->
                             
-                            <div class="social">                                
-                                <div class="ya-share2 ya-share2_inited" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,lj" data-counter="">
-                                    <div class="ya-share2__container ya-share2__container_size_m">
-                                        <ul class="ya-share2__list ya-share2__list_direction_horizontal">
-                                            <li class="ya-share2__item ya-share2__item_service_collections"></li>
-                                            <li class="ya-share2__item ya-share2__item_service_vkontakte"></li>
-                                            <li class="ya-share2__item ya-share2__item_service_facebook"></li>
-                                            <li class="ya-share2__item ya-share2__item_service_odnoklassniki"></li>
-                                            <li class="ya-share2__item ya-share2__item_service_moimir"></li>
-                                            <li class="ya-share2__item ya-share2__item_service_twitter"></li>
-                                            <li class="ya-share2__item ya-share2__item_service_lj"></li>
-                                        </ul>
-                                    </div>
-                                </div>
+                            <div class="comment-actions">
+                                <a href="#" class="btn-text js-comment-edit">Ответить</a>
+                                <a href="#" class="btn-text js-comment-del">Удалить</a>
                             </div>
-                        </div><!-- /.bx-actions -->
+                        </div><!-- /.comment-content -->                             
+                    </div><!-- /.bx-comment -->
+                    <div class="bx-comment">
+                        <div class="comment-content">
+                            <div class="comment-header">
+                                <div class="user-info">
+                                    <div class="userpic" style="background: url('img/avatar.jpg') no-repeat 50% 50%;"></div>
+                                    <p class="username">Василий Петечькин</p>
+                                    <p class="date">22.08.2017</p>
+                                </div><!-- /.user-info -->
+                            </div><!-- /.comment-header -->
 
-                        <p class="h-small">Оставить комментарий</p>
-
-                        <form action="#" class="section">
-                            <textarea name="" id=""></textarea>
-                            <button type="submit" class="btn btn-cta">Отправить</button>
-                        </form>
-
-                        <p class="h-small">Комментарии: 2</p>
-
-                        <div class="bx-comments-listing">
-                            <div class="bx-comment">
-                                <div class="comment-content">
-                                    <div class="comment-header">
-                                        <div class="user-info">
-                                            <div class="userpic" style="background: url('img/avatar.jpg') no-repeat 50% 50%;"></div>
-                                            <p class="username">Василий Петечькин</p>
-                                            <p class="date">22.08.2017</p>
-                                        </div><!-- /.user-info -->
-                                    </div><!-- /.comment-header -->
-
-                                    <p class="comment-text">
-                                        Что заказчик, что исполнитель олени. Приведу аналогию: в ресторане клиент (заказчик) заказывает блюдо, которое просит подать с приправой, так и говорит: "Хочу суп с говном". Почему он так сказал, нам знать не нужно. Он мог оговориться, мог нелепо пошутить, мог не знать значение этого слова и искренне считать, что говно это другое название, например, базилика. Официант и повар (исполнители) исполняют заказ, варят суп с говном и подают на стол.
-                                    </p><!-- /.comment-header -->
-                                    
-                                    <div class="comment-actions">
-                                        <a href="#" class="btn-text js-comment-edit">Редактировать</a>
-                                        <a href="#" class="btn-text js-comment-del">Удалить</a>
-                                    </div>
-                                </div><!-- /.comment-content -->                             
-                            </div><!-- /.bx-comment -->
-                            <div class="bx-comment">
-                                <div class="comment-content">
-                                    <div class="comment-header">
-                                        <div class="user-info">
-                                            <div class="userpic" style="background: url('img/avatar.jpg') no-repeat 50% 50%;"></div>
-                                            <p class="username">Василий Петечькин</p>
-                                            <p class="date">22.08.2017</p>
-                                        </div><!-- /.user-info -->
-                                    </div><!-- /.comment-header -->
-
-                                    <p class="comment-text">
-                                        Что заказчик, что исполнитель олени. Приведу аналогию: в ресторане клиент (заказчик) заказывает блюдо, которое просит подать с приправой, так и говорит: "Хочу суп с говном". Почему он так сказал, нам знать не нужно. Он мог оговориться, мог нелепо пошутить, мог не знать значение этого слова и искренне считать, что говно это другое название, например, базилика. Официант и повар (исполнители) исполняют заказ, варят суп с говном и подают на стол.
-                                    </p><!-- /.comment-header -->
-                                    
-                                    <div class="comment-actions">
-                                        <a href="#" class="btn-text js-comment-edit">Редактировать</a>
-                                        <a href="#" class="btn-text js-comment-del">Удалить</a>
-                                    </div>
-                                </div><!-- /.comment-content -->                             
-                            </div><!-- /.bx-comment -->                            
-                        </div><!-- /.bx-comments-listing -->
-                    </div><!-- /.section -->
-
-                    <section class="subscribe-main card section">
-                        <h3 class="title">Подпишись, будь в курсе финансовых событий!</h3>
-                        <form action="/" class="form">
-                            <div class="form__i">
-                                <input class="email" type="email" placeholder="Введите вашу почту">
+                            <p class="comment-text">
+                                Что заказчик, что исполнитель олени. Приведу аналогию: в ресторане клиент (заказчик) заказывает блюдо, которое просит подать с приправой, так и говорит: "Хочу суп с говном". Почему он так сказал, нам знать не нужно. Он мог оговориться, мог нелепо пошутить, мог не знать значение этого слова и искренне считать, что говно это другое название, например, базилика. Официант и повар (исполнители) исполняют заказ, варят суп с говном и подают на стол.
+                            </p><!-- /.comment-header -->
+                            
+                            <div class="comment-actions">
+                                <a href="#" class="btn-text js-comment-edit">Ответить</a>
+                                <a href="#" class="btn-text js-comment-del">Удалить</a>
                             </div>
-                            <label class="checkbox"><input type="checkbox" class="checkbox"> Подтверждаю согласие с <a href="#">условиями передачи данных</a></label>
-                            <button type="submit" class="btn btn-cta">Подписаться</button>
-                        </form>
-                    </section>
-                </div><!-- /.col -->
+                        </div><!-- /.comment-content -->                             
+                    </div><!-- /.bx-comment -->                            
+                </div><!-- /.bx-comments-listing -->
+            </div><!-- /.section -->            
 
-                <!-- sbar: -->
-                <div class="col-lg-4 sidebar-main no-mg-xs">
-                    <article class="card article-prev">
-                        <div class="article-prev--header">
-                            <a href="#" class="article-img-bg" style="background-image:url(img/photo-prev2.jpg)"></a>
-                            <h2 class="h-article"><a href="#">Шойгу предложил открыть гуманитарные коридоры из Восточной Гуты</a></h2>
-                        </div><!-- /.article-prev--header -->
-                        <footer class="article-prev--footer row-mod">                            
-                            <div><a href="#">Новости рынка</a></div>
-                            <div>
-                                <p class="article--date">14.02.2018</p>
-                                <p class="article--views">150</p>
-                            </div>
-                        </footer>
-                    </article><!-- /.card -->
-                </div><!-- /.col -->
-            </div><!-- /.row -->
+            <div class="section bx-center">
+                <a href="#" class="btn-text">Показать все</a>
+            </div>
         </div><!-- /.container --> 
     </main><!-- /.main-content -->
 

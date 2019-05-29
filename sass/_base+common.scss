@@ -400,7 +400,8 @@ label.radio {
 
 /* DROP (MINI)MENU */
 .drop-menu-wrapper {
-	position: relative;
+  position: relative;
+  display: inline-block;
 }
 .drop-menu, .plan-actions {
 	background: #fff;

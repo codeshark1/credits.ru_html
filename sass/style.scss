@@ -19,6 +19,7 @@ a {
 	&:hover {color: $red !important}
 }
 a, svg, path, button {transition: all .15s;}
+
 .container {
 	max-width: 1200px;
 	@media (max-width: $screen-xs) {
@@ -1025,6 +1026,7 @@ table {
 .section-hero {	
 	padding-top: 10px;
 	padding-bottom: 30px;
+	background-color: transparent;
 	.container {padding-left: 15px;padding-right: 15px;}
 	@media (min-width: $screen-sm-min) {
 		padding-top: 16px;
@@ -1032,6 +1034,8 @@ table {
 	@media (min-width: $screen-md-min) {
 		padding-top: 40px;
 	}	
+
+	&.no-btm-pad {padding-bottom: 0;}
 
 	.link-back {margin:0;
 		@media (max-width: $screen-sm-max) {
@@ -1178,11 +1182,15 @@ table {
 
 .btn-sorting {
 	position: relative;
+	font-weight: 500;
+	vertical-align: middle;
+	letter-spacing: 0;
 	&:after {
 		content: "";
 		width: 6px;height: 8px;
 		margin-left: 4px;
 		display: inline-block;
+		vertical-align: middle;
 		background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='6px' height='8px'%3E%3Cpath d='M3.000,-0.001 L6.000,3.000 L-0.001,3.000 L3.000,-0.001 ZM3.000,8.001 L-0.000,4.999 L6.001,4.999 L3.000,8.001 Z'/%3E%3C/svg%3E");
 	}
 }
@@ -3707,6 +3715,61 @@ section+.view-all {
 		vertical-align: middle;
 	}	
 }
+
+.h-hero-bank+.bx-heading-inputs-medium-wrapper {
+	@media (max-width: $screen-xs-max) {
+		margin-top: 10px;
+	}
+}
+.bx-heading-inputs-medium-wrapper {	
+	@media (min-width: $screen-sm-min) {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+}
+.bx-inputs-medium {
+	@include clearfix();
+	@media (min-width: $screen-sm-min) {
+		text-align: right;
+	}
+	.drop-menu-wrapper {
+		margin-bottom: 20px; 
+		
+		@media (max-width: $screen-xs-max) {
+			float: right;
+		}
+	}
+}
+.bx-input-medium-wrapper {	
+	margin-bottom: 20px;
+	@media (max-width: $screen-xs-max) {
+		display: flex;
+		align-items: center;
+		.select-medium {flex-grow: 1}
+	}
+	@media (min-width: $screen-sm-min) {
+		display: inline-block;
+		&.mg {margin: 0 40px;}
+	}
+}
+.label-select-medium {
+	font-size: 12px;
+	color: #555555;
+	margin-right: 10px;
+	@media (min-width: $screen-sm-min) {font-size: 14px;}
+}
+.select-medium {
+	width: auto; 
+	border: none; 
+	padding: 10px 10px;
+	font-size: 13px;
+	@media (min-width: $screen-sm-min) {font-size: 16px;}
+}
+
+.drop-menu-wrapper {}
+
 /* ==========================================================================
    SIDEBAR
    ========================================================================== */
