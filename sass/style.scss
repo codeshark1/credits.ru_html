@@ -2773,6 +2773,10 @@ label.checkbox-column {margin-bottom: 20px; display: block;}
 }
 .bx-comment {
 	margin-bottom: 36px;
+	&.border {
+		border-top: 1px solid $border;
+		padding-top: 25px;
+	}
 	.comment-header {position: relative; margin-bottom: 8px;}
 		.user-info {position: relative;padding: 0 60px 0 50px;}
 			.userpic {border-radius: 100%; width: 34px; height: 34px; position: absolute;left: 0;top: 0; background-size: cover; background-color: rgb(241, 241, 241); text-align: center; font-weight: 400; line-height: 34px;}

@@ -6370,6 +6370,9 @@ label.checkbox-column {
 
 .bx-comment {
   margin-bottom: 36px; }
+  .bx-comment.border {
+    border-top: 1px solid #d8d8d8;
+    padding-top: 25px; }
   .bx-comment .comment-header {
     position: relative;
     margin-bottom: 8px; }
