@@ -9152,7 +9152,7 @@ section + .view-all {
       margin-right: 15px; } }
 
 .dash-content {
-  background: #f5f5f5 url("../img/mishen.png") 50% 0 no-repeat;
+  background: #f5f5f5;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -9166,12 +9166,14 @@ section + .view-all {
   .dash-content .input-wrapper {
     height: auto; }
   @media (min-width: 768px) {
-    .dash-content .col-flat {
-      -webkit-box-flex: 0;
-          -ms-flex: 0 0 170px;
-              flex: 0 0 170px; }
-    .dash-content .form-row {
-      margin-bottom: 30px; } }
+    .dash-content {
+      background: #f5f5f5 url("../img/mishen.png") 50% 0 no-repeat; }
+      .dash-content .col-flat {
+        -webkit-box-flex: 0;
+            -ms-flex: 0 0 170px;
+                flex: 0 0 170px; }
+      .dash-content .form-row {
+        margin-bottom: 30px; } }
   @media (min-width: 1200px) {
     .dash-content {
       padding-left: 50px;

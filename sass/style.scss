@@ -5431,20 +5431,20 @@ section+.view-all {
 	}	
 }
 .dash-content {
-	background: #f5f5f5 url('../img/mishen.png') 50% 0 no-repeat;
+	background: #f5f5f5;
 	flex-grow: 1;
 	padding: 25px 0;
 	.form-row {margin-bottom: 20px;}
 	.col-flat {flex: 0 0 100%}
 	.input-wrapper {height: auto;}
 	@media (min-width: $screen-sm-min) {
+		background: #f5f5f5 url('../img/mishen.png') 50% 0 no-repeat;
 		.col-flat {flex: 0 0 170px;}
 		.form-row {margin-bottom: 30px;}
 	}
 	@media (min-width: $screen-lg-min) {
 		padding-left: 50px;
 		padding-right: 50px;
-
 	}
 }
 
