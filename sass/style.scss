@@ -3631,6 +3631,7 @@ section+.view-all {
 		font-weight: 500;
 		line-height: 1.1;
 		margin-bottom: 10px;
+		a {text-decoration: underline;}
 		@media (min-width: $screen-sm-min) {
 			font-size: 24px;
 			font-weight: 400;
