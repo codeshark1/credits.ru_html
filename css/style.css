@@ -7361,7 +7361,8 @@ section + .view-all {
         font-size: 24px;
         font-weight: 400; } }
   .section-review-main .bx-rating-full {
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    min-width: 155px; }
   .section-review-main .topic {
     font-size: 12px;
     background: #F0F3F5;
@@ -7369,6 +7370,15 @@ section + .view-all {
     padding: 8px 25px 8px 20px;
     margin-right: -20px;
     display: inline-block; }
+    @media (max-width: 400px) {
+      .section-review-main .topic {
+        display: block;
+        -webkit-box-flex: 1;
+            -ms-flex-positive: 1;
+                flex-grow: 1; } }
+    @media (min-width: 401px) {
+      .section-review-main .topic {
+        width: 250px; } }
     @media (min-width: 768px) {
       .section-review-main .topic {
         font-size: 16px;

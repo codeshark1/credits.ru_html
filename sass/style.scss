@@ -3640,7 +3640,7 @@ section+.view-all {
 			font-weight: 400;
 		}	
 	}
-	.bx-rating-full {margin-bottom: 10px;}
+	.bx-rating-full {margin-bottom: 10px; min-width: 155px}
 
 	.topic {
 		font-size: 12px;
@@ -3648,12 +3648,22 @@ section+.view-all {
 		border-radius: 5px 0 0 5px;
 		padding: 8px 25px 8px 20px;
 		margin-right: -20px;
-		display: inline-block;
-		
+		display: inline-block;		
+
+		@media (max-width: 400px) {
+			display: block;
+			flex-grow: 1;
+			//margin-right: -50px;
+		}
+		@media (min-width: 401px) {
+			width: 250px;
+		}
 		@media (min-width: $screen-sm-min) {
 			font-size: 16px;
 			padding: 10px 25px 10px 24px;
 			margin-right: -25px;
+		}
+		@media (min-width: $screen-md-min) {
 		}
 		&-vklad {background: #FFD7D8;}
 		&-sber {background: #FFEBB6;}
