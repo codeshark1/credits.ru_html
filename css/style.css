@@ -7517,6 +7517,22 @@ section + .view-all {
     .select-medium {
       font-size: 16px; } }
 
+.dash-content .section-review-main {
+  padding-top: 40px; }
+  .dash-content .section-review-main .title {
+    font-size: 16px;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    margin: 5px 0 0 0; }
+  .dash-content .section-review-main .date {
+    display: inline-block; }
+  .dash-content .section-review-main .bx-logo {
+    position: relative;
+    top: -10px; }
+  .dash-content .section-review-main .comment-body {
+    font-size: 13px; }
+
 /* ==========================================================================
    SIDEBAR
    ========================================================================== */
@@ -9053,8 +9069,10 @@ section + .view-all {
     text-align: center;
     line-height: 50px; }
   .bx-user-rep .name {
-    font-size: 14px;
-    color: #000; }
+    font-size: 18px;
+    color: #000;
+    font-weight: 400;
+    line-height: 1.2; }
 
 .menu-dash a, .dashboard-logout a {
   display: block;
@@ -9111,7 +9129,7 @@ section + .view-all {
         border-radius: 7px; } }
 /* FORM, ETC */
 .h-dash {
-  font-size: 18px;
+  font-size: 16px;
   margin: 0 0 20px 0; }
   @media (max-width: 576px) {
     .h-dash {
@@ -9119,7 +9137,7 @@ section + .view-all {
       margin-right: 15px; } }
 
 .dash-content {
-  background: #F6F7FB;
+  background: #f5f5f5 url("../img/mishen.png") 50% 0 no-repeat;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
