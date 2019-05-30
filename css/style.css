@@ -7559,6 +7559,24 @@ section + .view-all {
     .dash-content .section-review-main .wrapper-title-topic .title {
       display: none; } }
 
+.ava-main {
+  border-radius: 100%;
+  background-color: #f1f1f1;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  @media (min-width: 768px) {
+    .ava-main {
+      font-size: 28px;
+      font-weight: 400; } }
+
 /* ==========================================================================
    SIDEBAR
    ========================================================================== */
