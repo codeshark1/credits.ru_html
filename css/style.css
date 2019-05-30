@@ -7289,7 +7289,9 @@ section + .view-all {
         padding-left: 60px;
         min-height: 60px; } }
   .section-review-main .bx-logo {
-    width: 60px; }
+    width: 60px;
+    -ms-flex-negative: 0;
+        flex-shrink: 0; }
     @media (min-width: 768px) {
       .section-review-main .bx-logo {
         width: 80px; } }
@@ -7365,12 +7367,13 @@ section + .view-all {
     background: #F0F3F5;
     border-radius: 5px 0 0 5px;
     padding: 8px 25px 8px 20px;
-    margin-right: -25px;
+    margin-right: -20px;
     display: inline-block; }
     @media (min-width: 768px) {
       .section-review-main .topic {
         font-size: 16px;
-        padding: 10px 25px 10px 24px; } }
+        padding: 10px 25px 10px 24px;
+        margin-right: -25px; } }
     .section-review-main .topic-vklad {
       background: #FFD7D8; }
     .section-review-main .topic-sber {
@@ -7532,6 +7535,18 @@ section + .view-all {
     top: -10px; }
   .dash-content .section-review-main .comment-body {
     font-size: 13px; }
+  @media (max-width: 767px) {
+    .dash-content .section-review-main .wrapper-name-logo .title {
+      display: none; }
+    .dash-content .section-review-main .wrapper-title-topic .title {
+      margin-bottom: 20px; }
+    .dash-content .section-review-main .wrapper-name-logo {
+      min-height: 50px; } }
+  @media (min-width: 768px) {
+    .dash-content .section-review-main .wrapper-name-logo {
+      margin-bottom: 10px; }
+    .dash-content .section-review-main .wrapper-title-topic .title {
+      display: none; } }
 
 /* ==========================================================================
    SIDEBAR

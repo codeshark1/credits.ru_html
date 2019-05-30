@@ -3575,6 +3575,7 @@ section+.view-all {
 	}
 		.bx-logo {
 			width: 60px;
+			flex-shrink: 0;
 			@media (min-width: $screen-sm-min) {width: 80px;}
 		}
 	.avatar {
@@ -3646,18 +3647,13 @@ section+.view-all {
 		background: #F0F3F5;
 		border-radius: 5px 0 0 5px;
 		padding: 8px 25px 8px 20px;
-		margin-right: -25px;
+		margin-right: -20px;
 		display: inline-block;
 		
-		@media (max-width: $screen-xs-max) {
-			//float: right;
-		}
-		@media (min-width: $screen-sm-min) {
-
-		}
 		@media (min-width: $screen-sm-min) {
 			font-size: 16px;
 			padding: 10px 25px 10px 24px;
+			margin-right: -25px;
 		}
 		&-vklad {background: #FFD7D8;}
 		&-sber {background: #FFEBB6;}
@@ -3790,6 +3786,17 @@ section+.view-all {
 		.date {display: inline-block;}
 		.bx-logo {position: relative; top: -10px;}
 		.comment-body {font-size: 13px;}
+		
+		@media (max-width: $screen-xs-max) {
+			.wrapper-name-logo .title {display: none;}
+			.wrapper-title-topic .title {margin-bottom: 20px;}
+			.wrapper-name-logo {min-height: 50px}
+			
+		}
+		@media (min-width: $screen-sm-min) {
+			.wrapper-name-logo {margin-bottom: 10px;}
+			.wrapper-title-topic .title {display: none;}
+		}
 	}
 }
 
