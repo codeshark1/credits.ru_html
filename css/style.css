@@ -7286,7 +7286,8 @@ section + .view-all {
     position: relative; }
     @media (max-width: 767px) {
       .section-review-main .wrapper-name-logo {
-        padding-left: 60px; } }
+        padding-left: 60px;
+        min-height: 60px; } }
   .section-review-main .bx-logo {
     width: 60px; }
     @media (min-width: 768px) {
@@ -7298,12 +7299,13 @@ section + .view-all {
     background-size: cover !important;
     border-radius: 100%;
     position: absolute;
-    top: 0;
+    top: -5px;
     left: 0; }
     @media (min-width: 768px) {
       .section-review-main .avatar {
         width: 90px;
         height: 90px;
+        top: 0;
         left: -110px; } }
   .section-review-main .name {
     font-size: 14px;
@@ -7369,6 +7371,10 @@ section + .view-all {
       .section-review-main .topic {
         font-size: 16px;
         padding: 10px 25px 10px 24px; } }
+    .section-review-main .topic-vklad {
+      background: #FFD7D8; }
+    .section-review-main .topic-sber {
+      background: #FFEBB6; }
   .section-review-main .comment-body {
     clear: both;
     margin-bottom: 30px; }
@@ -7390,6 +7396,8 @@ section + .view-all {
     @media (min-width: 768px) {
       .section-review-main .wrapper-commentcount-social {
         margin-bottom: 25px; } }
+    .section-review-main .wrapper-commentcount-social:last-child {
+      margin-bottom: 0; }
   .section-review-main .commentcount, .section-review-main .social {
     margin-bottom: 14px; }
   .section-review-main .commentcount {
@@ -7405,6 +7413,12 @@ section + .view-all {
         font-size: 13px; } }
   .section-review-main .h-small {
     margin-bottom: 20px; }
+
+.section-review-listing .title {
+  font-size: 13px; }
+  @media (min-width: 768px) {
+    .section-review-listing .title {
+      font-size: 18px; } }
 
 .ya-share2__item {
   width: 28px;

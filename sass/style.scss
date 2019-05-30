@@ -3570,6 +3570,7 @@ section+.view-all {
 		position: relative;
 		@media (max-width: $screen-xs-max) {
 			padding-left: 60px;
+			min-height: 60px;
 		}
 	}
 		.bx-logo {
@@ -3581,10 +3582,11 @@ section+.view-all {
 		background-size: cover !important;
 		border-radius: 100%;
 		position: absolute;
-		top: 0;
+		top: -5px;
 		left: 0;
 		@media (min-width: $screen-sm-min) {
-			width: 90px;height: 90px;
+			width: 90px; height: 90px;
+			top: 0;
 			left: -110px;
 		}
 	}
@@ -3657,6 +3659,8 @@ section+.view-all {
 			font-size: 16px;
 			padding: 10px 25px 10px 24px;
 		}
+		&-vklad {background: #FFD7D8;}
+		&-sber {background: #FFEBB6;}
 	}
 	.comment-body {
 		clear: both;
@@ -3674,6 +3678,7 @@ section+.view-all {
 		@media (min-width: $screen-sm-min) {
 			margin-bottom: 25px;
 		}		
+		&:last-child {margin-bottom: 0;}
 	}
 
 	.commentcount, .social {margin-bottom: 14px;}
@@ -3686,6 +3691,11 @@ section+.view-all {
 	
 
 	.h-small {margin-bottom: 20px;}
+}
+.section-review-listing {
+	.title {font-size: 13px;
+		@media (min-width: $screen-sm-min) {font-size: 18px;}
+	}
 }
 
 .ya-share2__item {

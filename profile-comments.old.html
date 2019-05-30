@@ -160,7 +160,7 @@
                             <!-- <li class="menu-item"><a href="#" class="#"><i class="icon icon-docs"></i>Документы</a></li> -->
                             <!-- <li class="menu-item"><a href="#" class="#"><i class="icon icon-compar"></i>Сравнение</a></li> -->
                             <li class="menu-item"><a href="#" class="#"><i class="icon icon-personal"></i>Личная информация</a></li>
-                            <li class="menu-item active"><a href="#" class="#"><i class="icon icon-comments"></i>Отзывы</a></li>
+                            <li class="menu-item active"><a href="#" class="#"><i class="icon icon-comments"></i>Комментарии</a></li>
                             <!-- <li class="menu-item"><a href="#" class="#"><i class="icon icon-fav"></i>Избранное</a></li> -->
                         </ul>
                     </div><!-- /.menu-dash-wrap -->
@@ -170,162 +170,63 @@
                 <div class="dash-content">
                     <div class="container">
                         <div class="dash-content-header">
-                            <h2 class="h-dash">Отзывы</h2>
+                            <h2 class="h-dash">Отзывы</h2>                                            
+                            <ul class="nav-view js-nav-view">
+                                <li class="menu-item active"><button class="btn-reset list" type="button"><svg data-src="img/i-sort-list.svg"></svg></button></li>
+                                <li class="menu-item"><button class="btn-reset tiles" type="button"><svg data-src="img/i-sort-tiles.svg"></svg></button></li>
+                            </ul>
                         </div><!-- /.dash-content-header -->
 
-                        <div class="section card section-review-main section-review-listing">
-                            <div class="wrapper-name-logo">
-                                <div class="bx-wrapper">
-                                    <div class="avatar" style="background: url('img/userpic.jpg') no-repeat 50% 50%;"></div>
-                                    <p class="name">Евграфий Константинович</p>
+                        <div class="bx-dash-comment-row js-card-row-switcher">
+                            <div class="card bx-dash-comment">
+                                <div class="header">
+                                    <div class="avatar" style="background: url('img/avatar.jpg') no-repeat 50% 50%;"></div>
+                                    <p class="name">Василий Викторович</p>
                                     <p class="date">22.08.2017</p>
-                                </div>
-
-                                <div class="bx-logo"><img src="img/logo-moskcredit-bank.png" alt="pic"></div>
-                            </div><!-- /.wrapper-name-logo -->
-                            
-                            <div class="wrapper-title-topic">
-                                <div>
-                                    <p class="title"><a href="#">Удобные платежи или очень длинное название коммента</a></p>
-                                    <div class="bx-rating-full">
-                                        <p class="number">4.8</p>
-                                        <svg class="icon-star" data-src="img/star-1.svg"></svg>
-                                        <svg class="icon-star" data-src="img/star-1.svg"></svg>
-                                        <svg class="icon-star" data-src="img/star-1.svg"></svg>
-                                        <svg class="icon-star" data-src="img/star-0.svg"></svg>
-                                        <svg class="icon-star" data-src="img/star-0.svg"></svg>
-                                    </div>
-                                </div>
-
-                                <p class="topic">Кредит наличными</p>
-                            </div><!-- /.wrapper-rating-topic -->
-
-                            <div class="comment-body">
-                                <p>Вчера позвонили и предложили кредит под 9% сумма 1000000 руб я отказалась, так не устроил ежемесячный платеж , не потянуть. Но у меня в этом банке уже есть кредит под 14% и платеж в месяц 8554 руб сумма 367000 руб. Предложили сумму 345000 руб под 9% но сумма ежемесячного платежа оказалась больше чем в предыдущем кредите. Как так не понимаю ,объяснили что страховка большая.</p>
-                            </div><!-- /.comment-body -->
-                            
-                            <div class="wrapper-commentcount-social">
-                                <p class="commentcount"><svg class="icon" data-src="img/speech.svg"></svg> 1 комментарий</p>
-                                
-                                <div class="social">                                
-                                    <div class="ya-share2 ya-share2_inited" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,lj" data-counter="">
-                                        <div class="ya-share2__container ya-share2__container_size_m">
-                                            <ul class="ya-share2__list ya-share2__list_direction_horizontal">
-                                                <li class="ya-share2__item ya-share2__item_service_collections"></li>
-                                                <li class="ya-share2__item ya-share2__item_service_vkontakte"></li>
-                                                <li class="ya-share2__item ya-share2__item_service_facebook"></li>
-                                                <li class="ya-share2__item ya-share2__item_service_odnoklassniki"></li>
-                                                <li class="ya-share2__item ya-share2__item_service_moimir"></li>
-                                                <li class="ya-share2__item ya-share2__item_service_twitter"></li>
-                                                <li class="ya-share2__item ya-share2__item_service_lj"></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div><!-- /.bx-actions -->
-                        </div><!-- /.section -->
-                        <div class="section card section-review-main section-review-listing">
-                            <div class="wrapper-name-logo">
-                                <div class="bx-wrapper">
-                                    <div class="avatar" style="background: url('img/userpic.jpg') no-repeat 50% 50%;"></div>
-                                    <p class="name">Евграфий Константинович</p>
+                                </div><!-- /.header -->
+    
+                                <p class="postlink"><a href="#">Киберпреступность — основной риск современных покупок</a></p>
+                                <p class="excerpt">Что заказчик, что исполнитель олени. Приведу аналогию: в ресторане клиент (заказчик) заказывает блюдо, которое просит подать с приправой, так и говорит: "Хочу суп с говном". Почему он так сказал, нам знать не нужно. Он мог оговориться, мог нелепо пошутить...</p>
+    
+                                <div class="bx-rating">
+                                    <p class="value">45</p>
+                                    <button class="btn-reset" type="button"><svg data-src="img/i-arrow-rate-down.svg"></svg></button>
+                                    <button class="btn-reset" type="button"><svg data-src="img/i-arrow-rate-up.svg"></svg></button>
+                                </div><!-- /.bx-rating -->
+                            </div><!-- /.card -->
+                            <div class="card bx-dash-comment">
+                                <div class="header">
+                                    <div class="avatar" style="">В</div>    
+                                    <p class="name">Василий Викторович</p>
                                     <p class="date">22.08.2017</p>
-                                </div>
-
-                                <div class="bx-logo"><img src="img/logo-moskcredit-bank.png" alt="pic"></div>
-                            </div><!-- /.wrapper-name-logo -->
-                            
-                            <div class="wrapper-title-topic">
-                                <div>
-                                    <p class="title"><a href="#">Удобные платежи или очень длинное название коммента</a></p>
-                                    <div class="bx-rating-full">
-                                        <p class="number">4.8</p>
-                                        <svg class="icon-star" data-src="img/star-1.svg"></svg>
-                                        <svg class="icon-star" data-src="img/star-1.svg"></svg>
-                                        <svg class="icon-star" data-src="img/star-1.svg"></svg>
-                                        <svg class="icon-star" data-src="img/star-1.svg"></svg>
-                                        <svg class="icon-star" data-src="img/star-0.svg"></svg>
-                                    </div>
-                                </div>
-
-                                <p class="topic topic-vklad">Вклад</p>
-                            </div><!-- /.wrapper-rating-topic -->
-
-                            <div class="comment-body">
-                                <p>Вчера позвонили и предложили кредит под 9% сумма 1000000 руб я отказалась, так не устроил ежемесячный платеж , не потянуть. Но у меня в этом банке уже есть кредит под 14% и платеж в месяц 8554 руб сумма 367000 руб. Предложили сумму 345000 руб под 9% но сумма ежемесячного платежа оказалась больше чем в предыдущем кредите. Как так не понимаю ,объяснили что страховка большая.</p>
-                            </div><!-- /.comment-body -->
-                            
-                            <div class="wrapper-commentcount-social">
-                                <p class="commentcount"><svg class="icon" data-src="img/speech.svg"></svg> 1 комментарий</p>
-                                
-                                <div class="social">                                
-                                    <div class="ya-share2 ya-share2_inited" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,lj" data-counter="">
-                                        <div class="ya-share2__container ya-share2__container_size_m">
-                                            <ul class="ya-share2__list ya-share2__list_direction_horizontal">
-                                                <li class="ya-share2__item ya-share2__item_service_collections"></li>
-                                                <li class="ya-share2__item ya-share2__item_service_vkontakte"></li>
-                                                <li class="ya-share2__item ya-share2__item_service_facebook"></li>
-                                                <li class="ya-share2__item ya-share2__item_service_odnoklassniki"></li>
-                                                <li class="ya-share2__item ya-share2__item_service_moimir"></li>
-                                                <li class="ya-share2__item ya-share2__item_service_twitter"></li>
-                                                <li class="ya-share2__item ya-share2__item_service_lj"></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div><!-- /.bx-actions -->
-                        </div><!-- /.section -->
-                        <div class="section card section-review-main section-review-listing">
-                            <div class="wrapper-name-logo">
-                                <div class="bx-wrapper">
-                                    <div class="avatar" style="background: url('img/userpic.jpg') no-repeat 50% 50%;"></div>
-                                    <p class="name">Евграфий Константинович</p>
+                                </div><!-- /.header -->
+    
+                                <p class="postlink"><a href="#">Киберпреступность — основной риск современных покупок</a></p>
+                                <p class="excerpt">Что заказчик, что исполнитель олени. </p>
+    
+                                <div class="bx-rating">
+                                    <p class="value">45</p>
+                                    <button class="btn-reset" type="button"><svg data-src="img/i-arrow-rate-down.svg"></svg></button>
+                                    <button class="btn-reset" type="button"><svg data-src="img/i-arrow-rate-up.svg"></svg></button>
+                                </div><!-- /.bx-rating -->
+                            </div><!-- /.card -->
+                            <div class="card bx-dash-comment">
+                                <div class="header">
+                                    <div class="avatar" style="background: url('img/avatar.jpg') no-repeat 50% 50%;"></div>
+                                    <p class="name">Василий Викторович</p>
                                     <p class="date">22.08.2017</p>
-                                </div>
-
-                                <div class="bx-logo"><img src="img/logo-moskcredit-bank.png" alt="pic"></div>
-                            </div><!-- /.wrapper-name-logo -->
-                            
-                            <div class="wrapper-title-topic">
-                                <div>
-                                    <p class="title"><a href="#">Удобные платежи или очень длинное название коммента</a></p>
-                                    <div class="bx-rating-full">
-                                        <p class="number">4.8</p>
-                                        <svg class="icon-star" data-src="img/star-1.svg"></svg>
-                                        <svg class="icon-star" data-src="img/star-1.svg"></svg>
-                                        <svg class="icon-star" data-src="img/star-1.svg"></svg>
-                                        <svg class="icon-star" data-src="img/star-1.svg"></svg>
-                                        <svg class="icon-star" data-src="img/star-1.svg"></svg>
-                                    </div>
-                                </div>
-
-                                <p class="topic topic-sber">Сберегательный счет</p>
-                            </div><!-- /.wrapper-rating-topic -->
-
-                            <div class="comment-body">
-                                <p>Вчера позвонили и предложили кредит под 9% сумма 1000000 руб я отказалась, так не устроил ежемесячный платеж , не потянуть. Но у меня в этом банке уже есть кредит под 14% и платеж в месяц 8554 руб сумма 367000 руб. Предложили сумму 345000 руб под 9% но сумма ежемесячного платежа оказалась больше чем в предыдущем кредите. Как так не понимаю ,объяснили что страховка большая.</p>
-                            </div><!-- /.comment-body -->
-                            
-                            <div class="wrapper-commentcount-social">
-                                <p class="commentcount"><svg class="icon" data-src="img/speech.svg"></svg> 1 комментарий</p>
-                                
-                                <div class="social">                                
-                                    <div class="ya-share2 ya-share2_inited" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,lj" data-counter="">
-                                        <div class="ya-share2__container ya-share2__container_size_m">
-                                            <ul class="ya-share2__list ya-share2__list_direction_horizontal">
-                                                <li class="ya-share2__item ya-share2__item_service_collections"></li>
-                                                <li class="ya-share2__item ya-share2__item_service_vkontakte"></li>
-                                                <li class="ya-share2__item ya-share2__item_service_facebook"></li>
-                                                <li class="ya-share2__item ya-share2__item_service_odnoklassniki"></li>
-                                                <li class="ya-share2__item ya-share2__item_service_moimir"></li>
-                                                <li class="ya-share2__item ya-share2__item_service_twitter"></li>
-                                                <li class="ya-share2__item ya-share2__item_service_lj"></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div><!-- /.bx-actions -->
-                        </div><!-- /.section -->                                                
+                                </div><!-- /.header -->
+    
+                                <p class="postlink"><a href="#">Киберпреступность — основной риск современных покупок</a></p>
+                                <p class="excerpt">Что заказчик, что исполнитель олени. Приведу аналогию: в ресторане клиент (заказчик) заказывает блюдо, которое просит подать с приправой, так и говорит: "Хочу суп с говном". Почему он так сказал, нам знать не нужно. Он мог оговориться, мог нелепо пошутить...</p>
+    
+                                <div class="bx-rating">
+                                    <p class="value">45</p>
+                                    <button class="btn-reset" type="button"><svg data-src="img/i-arrow-rate-down.svg"></svg></button>
+                                    <button class="btn-reset" type="button"><svg data-src="img/i-arrow-rate-up.svg"></svg></button>
+                                </div><!-- /.bx-rating -->
+                            </div><!-- /.card -->
+                        </div><!-- /.bx-dash-comment-row -->
                     </div><!-- /.container -->                 
                 </div><!-- /.dash-content -->
             </div><!-- /.row -->            
