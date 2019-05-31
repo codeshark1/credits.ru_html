@@ -4425,7 +4425,8 @@ table {
     .section-hero {
       padding-top: 40px; } }
   .section-hero.no-btm-pad {
-    padding-bottom: 0; }
+    padding-bottom: 0;
+    min-height: auto; }
   .section-hero .link-back {
     margin: 0; }
     @media (max-width: 991px) {

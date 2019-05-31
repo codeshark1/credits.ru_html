@@ -1035,7 +1035,7 @@ table {
 		padding-top: 40px;
 	}	
 
-	&.no-btm-pad {padding-bottom: 0;}
+	&.no-btm-pad {padding-bottom: 0;min-height: auto}
 
 	.link-back {margin:0;
 		@media (max-width: $screen-sm-max) {
