@@ -614,10 +614,10 @@
         var currentMark = $('#js-ratingResult').text(); //текущая общая оценка
 
         if (numOfSelected>=1){
-            $('#js-ratingResult').text( (currentMark + $(this).children().val()) / numOfSelected ); // срабатывает два раза
+            $('#js-ratingResult').text( ((eval(currentMark) + eval($(this).children().val())) / eval(numOfSelected)).toFixed(2) ); // срабатывает два раза
             console.log(1);
         } else if (numOfSelected===0) {
-            $('#js-ratingResult').text($(this).children().val()); // срабатывает два раза
+            $('#js-ratingResult').text(eval($(this).children().val())); // срабатывает два раза
             console.log(0);
         }
     });
