@@ -319,6 +319,18 @@ function shortenText(paragraph) {
     });    
 }
 
+function bank_client_truefalse() {
+    $('#js-client-fields').hide();
+    $('#js-client-toggle').find('.label-client').click(function(){
+        $(this).addClass('checked').siblings().removeClass('checked');
+        if($(this).hasClass('label-client-true')) {
+            $('#js-client-fields').slideDown();
+        } else {
+            $('#js-client-fields').slideUp();
+        }
+    });
+}
+
 jQuery(document).ready(function($){    
     new SVGInjector().inject(document.querySelectorAll('svg[data-src]'));  
 
@@ -499,4 +511,7 @@ jQuery(document).ready(function($){
     });     
 
     show_payments_table('#js-toggle-payments-table','#js-payments-table');
+
+
+    bank_client_truefalse();
 });

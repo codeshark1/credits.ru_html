@@ -1,6 +1,3 @@
-credit-search-results.html
-https://credits.ru/kredit/
-вместо! переплаты сделай вероятность
 
 
 $('.plan .plan-content').on('click', function(e){

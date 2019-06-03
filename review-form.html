@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Отзывы</title>
+	<link rel="shortcut icon" href="img/favicon/favicon.ico?v=2" type="image/x-icon" />
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png" />
+    
+    <!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#f41e2a" />
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#f41e2a" />
+	<!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#f41e2a" />
+            
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+<!--[if lt IE 10]>
+    <p class="browserupgrade">Вы используете <b>устаревший</b> браузер. Пожалуйста, <a href="http://browsehappy.com/?locale=ru_ru">обновите свой браузер</a> чтобы улучшить опыт работы с сайтом.</p>
+<![endif]-->
+
+<div class="wrapper-main">
+    <header class="header header-site">
+        <div class="header--lvl-1">
+            <div class="container">
+                <div class="header--row">
+                    <div class="header--location header--col-1">
+                        <div class="location-selector">
+                            <a class="selected" href="javascript:void(0)" id="js-btn-cities">
+                                <span>Новоросcийск</span>
+                            </a>
+                        </div><!-- /.location-selector -->
+                    </div><!-- /.header--location -->                    
+                    <div class="header--col-2 header--col-2_mod">
+                        <div class="header--rates">
+                            <p class="list-rates--date">06.10</p>
+                            <ul class="list-rates">
+                                <li class="list-rates__item">
+                                    <p class="list-rates__cur">USD</p>
+                                    <p class="list-rates__val">66,63</p>
+                                    <p class="list-rates__chg">+ 0,87</p>
+                                </li>
+                                <li class="list-rates__item">
+                                    <p class="list-rates__cur">EUR</p>
+                                    <p class="list-rates__val">75,85</p>
+                                    <p class="list-rates__chg list-rates__chg-neg">- 0,34</p>
+                                </li>                                                                                                                                                                                                        
+                            </ul>
+                        </div><!-- /.header--rates -->
+
+                        <div class="header--actions">
+                            <form role="search" method="get" class="form-search-header closed d-none d-md-block" id="search-header" action="#">
+                                <input  type="text" class="search-field" autocomplete="off" placeholder="Поиск" title="Поиск" role="combobox">
+                                <button type="button" class="search-button">
+                                    <svg data-src="img/i-search.svg"></svg>
+                                </button>
+                            </form>
+                            <button type="button" class="btn-search btn-search-for-extended d-md-none" id="btn-search-extended"><svg data-src="img/i-search.svg"></svg></button>
+                            <button class="btn-menu" id="js-btn-menu"><span></span><span></span><span></span></button>
+                        </div><!-- /.header--actions -->
+                    </div><!-- /.header--col-2 -->
+                </div><!-- /.header--row -->
+            </div><!-- /.container -->
+        </div><!-- /.header--lvl-1 -->
+
+        <div class="container">
+            <div class="header--row">
+                <div class="header--logo header--col-1">
+                    <img class="logo" src="img/logotype@2x.png" alt="credits.ru">
+                </div><!-- /.header--logo -->
+                <nav class="header--navigation header--col-2" id="js-menu-wrapper">
+                    <p class="h-popup">Меню</p>
+                    <ul class="menu-main" id="menu-main">
+                        <li class="menu-main__item has-sub">
+                            <a href="javascript:void(0)">Кредиты</a>                            
+                            <ul class="sub-menu cols">
+                                <li class="menu-main__item"><a href="/">Потребительские кредиты</a></li>
+                                <li class="menu-main__item"><a href="/">Автокредит</a></li>
+                                <li class="menu-main__item"><a href="/">Ипотека</a></li>
+                                <li class="menu-main__item"><a href="/">Кредит наличными</a></li>
+                                <li class="menu-main__item"><a href="/">Кредит под залог</a></li>
+                                <li class="menu-main__item"><a href="/">Кредит для бизнеса</a></li>
+                                <li class="menu-main__item"><a href="/">Кредитные брокеры</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-main__item has-sub">
+                            <a href="#">Карты</a>                            
+                            <ul class="sub-menu">
+                                <li class="menu-main__item"><a href="/">Кредитные карты</a></li>
+                                <li class="menu-main__item"><a href="/">Карты рассрочки</a></li>
+                                <li class="menu-main__item"><a href="/">Дебетовые карты</a></li>
+                            </ul>                            
+                        </li>
+                        <li class="menu-main__item">
+                            <a href="#">Ипотека</a>
+                        </li>
+                        <li class="menu-main__item has-sub">
+                            <a href="#">Для бизнеса</a>                            
+                            <ul class="sub-menu">
+                                <li class="menu-main__item"><a href="/">Лизинг</a></li>
+                                <li class="menu-main__item"><a href="/">Кредиты для бизнеса</a></li>
+                                <li class="menu-main__item"><a href="/">Депозиты юр. лицам</a></li>
+                            </ul>                            
+                        </li>
+                        <li class="menu-main__item has-sub">
+                            <a href="#">Инвестиции</a>                            
+                            <ul class="sub-menu">
+                                <li class="menu-main__item"><a href="/">Займы</a></li>
+                                <li class="menu-main__item"><a href="/">Вклады</a></li>
+                            </ul>                            
+                        </li>
+                    </ul>
+
+                    <div class="bx-center">
+                        <div class="location-selector">
+                            Регион:
+                            <a class="selected" href="javascript:void(0)">
+                                <span>Новоросcийск</span>
+                            </a>
+                        </div><!-- /.location-selector -->
+                    </div><!-- /.bx-center -->
+                </nav><!-- /.header--navigation -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </header>
+
+    <div id="search-extended" class="search-extended-wrapper">
+        <form class="search-extended d-block d-md-none">
+            <input type="search" class="search-field" placeholder="Начать поиск" value="Кре">
+            <ul class="search-suggests">
+                <li class="item"><mark>Кре</mark>диты</li>
+                <li class="item"><mark>Кре</mark>дитование</li>
+                <li class="item"><mark>Кре</mark>дитный лемит</li>
+                <li class="item"><mark>Кре</mark>диты</li>
+                <li class="item"><mark>Кре</mark>дитование</li>
+                <li class="item"><mark>Кре</mark>дитный лемит</li>
+            </ul>
+
+
+            <div class="search-extended-footer">                
+                <button type="submit" class="btn btn-cta">Найти</button>
+            </div>
+        </form><!-- /.search-extended -->
+    </div><!-- search-extended wrapper-->
+
+    <!-- Сities -->
+    <div class="cities" id="js-cities-wrapper">
+        <div class="search-cities">
+            <input type="text" placeholder="Введите свой город">
+        </div>
+        <div class="list-cities--wrapper">
+            <ul class="list-cities">
+                <li class="menu-item menu-item--important">
+                    <a href="/">Москва</a>
+                </li>
+                <li class="menu-item menu-item--important">
+                    <a href="/">Санкт-Петербург</a>
+                </li>
+                <li class="menu-item">
+                    <p class="label">A</p>
+                    <span><a href="/">Адыгея</a></span>
+                    <span><a href="/">Алтай</a></span>
+                    <span><a href="/">Алтайский край</a></span>
+                    <span><a href="/">Амурская область</a></span>
+                    <span><a href="/">Архангельская область</a></span>
+                    <span><a href="/">Астраханская область</a></span>
+                </li>
+                <li class="menu-item">
+                    <p class="label">Б</p>
+                    <span><a href="/">Башкортостан </a></span>
+                    <span><a href="/">Белгородская область </a></span>
+                    <span><a href="/">Брянская область Бурятия</a></span>
+                </li>
+                <li class="menu-item">
+                    <p class="label">Д</p>
+                    <span><a href="/">Дагестан</a></span>
+                </li>
+                <li class="menu-item">
+                    <p class="label">Е</p>
+                    <span><a href="/">Еврейская АО</a></span>
+                </li>
+                <li class="menu-item">
+                    <p class="label">З</p>
+                    <span><a href="/">Забайкальский край</a></span>
+                </li>
+                <li class="menu-item">
+                    <p class="label">И</p>
+                    <span><a href="/">Bвановская область</a></span>
+                    <span><a href="/">Ингушетия</a></span>
+                    <span><a href="/">Иркутская область</a></span>
+                </li>
+                <li class="menu-item">
+                    <p class="label">К</p>
+                    <span><a href="/">Кабардино-Балкария</a></span>
+                    <span><a href="/">Калининградская область</a></span>
+                    <span><a href="/">Калмыкия</a></span>
+                    <span><a href="/">Калужская область</a></span>
+                    <span><a href="/">Камчатский край</a></span>
+                    <span><a href="/">Карачаево-Черкесия</a></span>
+                    <span><a href="/">Карелия</a></span>
+                    <span><a href="/">Кемеровская область</a></span>
+                    <span><a href="/">Кировская область</a></span>
+                    <span><a href="/">Коми</a></span>
+                    <span><a href="/">Костромская область</a></span>
+                    <span><a href="/">Краснодарский край</a></span>
+                    <span><a href="/">Красноярский край</a></span>
+                    <span><a href="/">Крым </a></span>
+                    <span><a href="/">Курганская область</a></span>
+                    <span><a href="/">Курская область</a></span>
+                </li> 
+                <li class="menu-item">
+                    <p class="label">Л</p>
+                    <span><a href="/">Ленинградская область</a></span>
+                    <span><a href="/">Липецкая область</a></span>
+                </li>
+                <li class="menu-item">
+                    <p class="label">М</p>
+                    <span><a href="/">Магаданская област</a></span>
+                    <span><a href="/">Марий Эл Мордовия</a></span>
+                    <span><a href="/">Москва Московская область</a></span>
+                    <span><a href="/">Мурманская</a></span>
+                    <span><a href="/">Кировская область</a></span>
+                </li>
+                <li class="menu-item">
+                    <p class="label">Н</p>
+                    <span><a href="/">Ненецкий Авт. Окр</a></span>
+                    <span><a href="/">Нижегородская область</a></span>
+                    <span><a href="/">Новгородская область</a></span>
+                    <span><a href="/">Новосибирская область</a></span>
+                </li>
+                <li class="menu-item">
+                    <p class="label">О</p>
+                    <span><a href="/">Омская область </a></span>
+                    <span><a href="/">Оренбургская область</a></span>
+                    <span><a href="/">Орловская область</a></span>
+                </li>
+                <li class="menu-item">
+                    <p class="label">П</p>
+                    <span><a href="/">Пензенская область</a></span>
+                    <span><a href="/">Пермский край</a></span>
+                    <span><a href="/">Приморский край</a></span>
+                    <span><a href="/">Псковская область</a></span>
+                </li>
+                <li class="menu-item">
+                    <p class="label">Р</p>
+                    <span><a href="/">Ростовская область</a></span>
+                    <span><a href="/">Рязанская область</a></span>
+                <li class="menu-item">
+                    <p class="label">С</p>
+                    <span><a href="/">Самарская область</a></span>
+                    <span><a href="/">Санкт-Петербург</a></span>
+                    <span><a href="/">Саратовская область</a></span>
+                    <span><a href="/">Сахалинская область</a></span>
+                    <span><a href="/">Свердловская область</a></span>
+                    <span><a href="/">Севастополь</a></span>
+                    <span><a href="/">Северная Осетия - Алания </a></span>
+                    <span><a href="/">Смоленская область</a></span>
+                    <span><a href="/">Ставропольский край</a></span>
+                </li>
+                <li class="menu-item">
+                    <p class="label">Т</p>
+                    <span><a href="/">Тамбовская область</a></span>
+                    <span><a href="/">Татарстан</a></span>
+                    <span><a href="/">Тверская область</a></span>
+                    <span><a href="/">Томская область</a></span>
+                    <span><a href="/">Тульская область</a></span>
+                    <span><a href="/">Тыва</a></span>
+                    <span><a href="/">Тюменская область</a></span>
+                </li>
+                <li class="menu-item">
+                    <p class="label">У</p>
+                    <span><a href="/">Удмуртия</a></span>
+                    <span><a href="/">Ульяновская область</a></span>
+                </li>
+                <li class="menu-item">
+                    <p class="label">Х</p>
+                    <span><a href="/">Хабаровский край</a></span>
+                    <span><a href="/">Хакасия</a></span>
+                    <span><a href="/">Ханты-Мансийский авт. окр</a></span>
+                </li>
+                <li class="menu-item">
+                    <p class="label">Ч</p>
+                    <span><a href="/">Челябинская область</a></span>
+                    <span><a href="/">Чечня</a></span>
+                    <span><a href="/">Чувашия</a></span>
+                    <span><a href="/">Чукотский авт. окр</a></span>
+                </li>
+                <li class="menu-item">
+                    <p class="label">Я</p>
+                    <span><a href="/">Якутия Ямало-Ненецкий авт. окр</a></span>
+                    <span><a href="/">Ярославская область</a></span>
+                </li>
+            </ul>
+        </div>
+        <button class="close btn-close"><svg data-src="img/i-x.svg"></svg></button>
+    </div>
+    <!-- End Сities -->    
+
+    <main class="main-content">
+        <div class="section-hero-bg no-btm-pad">
+            <div class="container">
+                <nav class="breadcrumbs d-none d-md-block">
+                    <ul>
+                        <li><a href="#"><span>Главная</span></a></li>
+                        <li><span>ОТЗЫВЫ</span></li>
+                    </ul>
+                </nav>
+                <h2 class="h-section">Оставить отзыв о банке</h2>                
+
+                <form action="#" class="form-review">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-4">
+                            <p class="lbl lbl-top">Имя</p>
+                            <input type="text" class="input-text">
+                        </div><!-- /.col -->
+                        <div class="col-sm-6 col-md-4">
+                            <p class="lbl lbl-top">Фамилия</p>
+                            <input type="text" class="input-text">
+                        </div><!-- /.col -->                                                
+                    </div><!-- row -->
+                    <div class="row">
+                        <div class="col-sm-6 col-md-4">
+                            <p class="lbl lbl-top">Наименование банка</p>
+                            <input type="text" class="input-text">
+                        </div><!-- /.col -->                        
+                        <div class="col-sm-6 col-md-4">
+                            <p class="lbl lbl-top">Услуга банка</p>
+                            <select class="input-text"><option value="1">Кредит наличными</option></select>
+                        </div><!-- /.col -->
+                        <div class="col-sm-6 col-md-4">
+                            <p class="lbl lbl-top">Город</p>
+                            <input type="text" class="input-text">
+                        </div><!-- /.col -->
+                    </div><!-- row -->                    
+
+                    <div class="row">
+                        <div class="col col-md-6">
+                            <div class="label-client-wrapper" id="js-client-toggle">
+                                <label class="label-client label-client-false checked">
+                                    Я не клиент банка
+                                    <input type="radio" class="radio" name="bank-client" value="0" checked>
+                                </label>                                                                
+                                <label class="label-client label-client-true">
+                                    Я клиент банка
+                                    <input type="radio" class="radio" name="bank-client" value="1">
+                                </label>
+                            </div><!-- /.label-client-wrapper -->
+                        </div><!-- /.col -->  
+                    </div><!-- /.row -->
+
+                    <div class="row" id="js-client-fields">
+                        <div class="col-sm-6 col-md-4">
+                            <p class="lbl lbl-top">Отчество</p>
+                            <input type="text" class="input-text">
+                        </div><!-- /.col -->
+                        <div class="col-sm-6 col-md-4">
+                            <p class="lbl lbl-top">Дата рождения</p>
+                            <input type="date" class="input-text" placeholder="ДД / ММ / ГГГГ">
+                        </div><!-- /.col -->                                                
+                        <div class="col-sm-6 col-md-4">
+                            <p class="lbl lbl-top">Номер договора</p>
+                            <input type="text" class="input-text">
+                        </div><!-- /.col -->                                                                        
+                    </div><!-- row -->
+                    
+                    <div class="row">
+                        <div class="col">
+                            <div class="bx-ratinginput">
+                                <p class="heading">Ваша оценка банка <span class="mark" id="js-ratingResult">0.0</span></p>
+                                <p class="subheading">Для того, что бы поставить рейтинг банку, оцените от трех до пяти параметров:</p>
+                                <div class="logo-ratings-wrapper">
+                                    <div class="bx-logo">
+                                        <img src="img/logo-moskcredit-bank lg.png" alt="pic">
+                                    </div><!-- /.logo -->
+                                    <div class="bx-ratings">
+                                        <div class="rating-label-wrapper">
+                                            <div class="stars label-rating-wrapper">
+                                                <label class="label-rating">                                            
+                                                    <input class="radio" type="radio" name="rating-1" value="1">
+                                                </label><!-- label-rating -->
+                                                <label class="label-rating">                                            
+                                                    <input class="radio" type="radio" name="rating-1" value="2">
+                                                </label><!-- label-rating -->
+                                                <label class="label-rating">                                            
+                                                    <input class="radio" type="radio" name="rating-1" value="3">
+                                                </label><!-- label-rating -->
+                                                <label class="label-rating">                                            
+                                                    <input class="radio" type="radio" name="rating-1" value="4">
+                                                </label><!-- label-rating -->
+                                                <label class="label-rating">                                            
+                                                    <input class="radio" type="radio" name="rating-1" value="5">
+                                                </label><!-- label-rating -->                                                                                                                                                                
+                                            </div><!-- /.stars label-rating-wrapper -->
+
+                                            <div class="label">Все проблемы и вопросы были решены?</div><!-- /.label -->
+                                        </div><!-- /.rating-label-wrapper -->
+
+                                        <div class="rating-label-wrapper">
+                                            <div class="stars label-rating-wrapper">
+                                                <label class="label-rating">                                            
+                                                    <input class="radio" type="radio" name="rating-2" value="1">
+                                                </label><!-- label-rating -->
+                                                <label class="label-rating">                                            
+                                                    <input class="radio" type="radio" name="rating-2" value="2">
+                                                </label><!-- label-rating -->
+                                                <label class="label-rating">                                            
+                                                    <input class="radio" type="radio" name="rating-2" value="3">
+                                                </label><!-- label-rating -->
+                                                <label class="label-rating">                                            
+                                                    <input class="radio" type="radio" name="rating-2" value="4">
+                                                </label><!-- label-rating -->
+                                                <label class="label-rating">                                            
+                                                    <input class="radio" type="radio" name="rating-2" value="5">
+                                                </label><!-- label-rating -->                                                                                                                                                                
+                                            </div><!-- /.stars label-rating-wrapper -->
+                                            
+                                            <div class="label">Удобен ли для вас сайт и/или приложение банка?</div><!-- /.label -->
+                                        </div><!-- /.rating-label-wrapper -->
+                                        
+                                        <div class="rating-label-wrapper">
+                                            <div class="stars label-rating-wrapper">
+                                                <label class="label-rating">                                            
+                                                    <input class="radio" type="radio" name="rating-3" value="1">
+                                                </label><!-- label-rating -->
+                                                <label class="label-rating">                                            
+                                                    <input class="radio" type="radio" name="rating-3" value="2">
+                                                </label><!-- label-rating -->
+                                                <label class="label-rating">                                            
+                                                    <input class="radio" type="radio" name="rating-3" value="3">
+                                                </label><!-- label-rating -->
+                                                <label class="label-rating">                                            
+                                                    <input class="radio" type="radio" name="rating-3" value="4">
+                                                </label><!-- label-rating -->
+                                                <label class="label-rating">                                            
+                                                    <input class="radio" type="radio" name="rating-3" value="5">
+                                                </label><!-- label-rating -->                                                                                                                                                                
+                                            </div><!-- /.stars label-rating-wrapper -->
+                                            
+                                            <div class="label">Все проблемы и вопросы были решены?</div><!-- /.label -->
+                                        </div><!-- /.rating-label-wrapper -->
+                                        
+                                        <div class="rating-label-wrapper">
+                                            <div class="stars label-rating-wrapper">
+                                                <label class="label-rating">                                            
+                                                    <input class="radio" type="radio" name="rating-4" value="1">
+                                                </label><!-- label-rating -->
+                                                <label class="label-rating">                                            
+                                                    <input class="radio" type="radio" name="rating-4" value="2">
+                                                </label><!-- label-rating -->
+                                                <label class="label-rating">                                            
+                                                    <input class="radio" type="radio" name="rating-4" value="3">
+                                                </label><!-- label-rating -->
+                                                <label class="label-rating">                                            
+                                                    <input class="radio" type="radio" name="rating-4" value="4">
+                                                </label><!-- label-rating -->
+                                                <label class="label-rating">                                            
+                                                    <input class="radio" type="radio" name="rating-4" value="5">
+                                                </label><!-- label-rating -->                                                                                                                                                                
+                                            </div><!-- /.stars label-rating-wrapper -->
+                                            
+                                            <div class="label">Все проблемы и вопросы были решены?</div><!-- /.label -->
+                                        </div><!-- /.rating-label-wrapper -->
+                                        
+                                        <div class="rating-label-wrapper">
+                                            <div class="stars label-rating-wrapper">
+                                                <label class="label-rating">                                            
+                                                    <input class="radio" type="radio" name="rating-5" value="1">
+                                                </label><!-- label-rating -->
+                                                <label class="label-rating">                                            
+                                                    <input class="radio" type="radio" name="rating-5" value="2">
+                                                </label><!-- label-rating -->
+                                                <label class="label-rating">                                            
+                                                    <input class="radio" type="radio" name="rating-5" value="3">
+                                                </label><!-- label-rating -->
+                                                <label class="label-rating">                                            
+                                                    <input class="radio" type="radio" name="rating-5" value="4">
+                                                </label><!-- label-rating -->
+                                                <label class="label-rating">                                            
+                                                    <input class="radio" type="radio" name="rating-5" value="5">
+                                                </label><!-- label-rating -->                                                                                                                                                                
+                                            </div><!-- /.stars label-rating-wrapper -->
+                                            
+                                            <div class="label">Все проблемы и вопросы были решены?</div><!-- /.label -->
+                                        </div><!-- /.rating-label-wrapper -->                                
+                                    </div><!-- /.bx-ratings -->
+                                </div><!-- /.logo-ratings-wrapper -->
+                            </div><!-- /.bx-ratinginput -->
+                        </div><!-- /.col -->
+                    </div><!-- /.row -->
+
+                    <div class="row row-form">
+                        <div class="col input-hint-wrapper">
+                            <label class="lbl lbl-top">Заголовок</label>
+                            <input type="text" class="input-text">
+                            <p class="lbl-hint">Минимум 10 символов</p>                            
+                        </div><!-- /.col -->
+                    </div><!-- /.row -->                               
+
+                    <div class="row row-form">
+                        <div class="col input-hint-wrapper">
+                            <p class="lbl lbl-top">Подробное описание</p>
+                            <textarea class=""></textarea>
+                            <p class="lbl-hint">Минимум 10 символов</p>                    
+                        </div><!-- /.col -->
+                    </div><!-- /.row --> 
+
+                    <div class="row row-form">
+                        <div class="col">
+                            <label class="checkbox">
+                                Согласен с <a href="#">правилами публикации</a>
+                                <input type="checkbox" name="" id="" checked>
+                            </label>    
+                        </div><!-- /.col -->
+                    </div><!-- /.row --> 
+
+                    <div class="row row-form">
+                        <div class="col">
+                            <button class="btn btn-cta btn-cta-pill btn-cta-fullwidthmob" type="submit">Опубликовать</button>
+                        </div><!-- /.col -->
+                    </div><!-- /.row -->                     
+                </form>
+            </div><!-- /.container -->
+        </div><!-- /.section-hero -->
+    </main><!-- /.main-content -->
+
+    <footer class="footer-site footer"> 
+        <div class="footer--lvl-1">
+            <div class="container">
+                <div class="row-mod mg-lg">
+                    <div class="footer--col-1">
+                        <ul class="menu-main">
+                            <li class="menu-main__item"><a href="#">Кредиты</a></li>
+                            <li class="menu-main__item"><a href="#">Карты</a></li>
+                            <li class="menu-main__item"><a href="#">Ипотека</a></li>
+                            <li class="menu-main__item"><a href="#">Вклады</a></li>
+                            <li class="menu-main__item"><a href="#">Новости</a></li>
+                            <li class="menu-main__item"><a href="#">Каталог организаций</a></li>
+                        </ul>                    
+                        <ul class="menu-footer">
+                            <li class="menu-footer__item"><a href="#">О проекте</a></li>
+                            <li class="menu-footer__item"><a href="#">Реклама</a></li>
+                            <li class="menu-footer__item"><a href="#">Контакты</a></li>
+                        </ul><!-- /.menu-footer -->
+                    </div><!-- /.footer--col-1 -->
+                    <div class="footer-logo logo-mob"><img class="logo" src="img/logotype@2x.png" alt="credits.ru"></div>                    
+                    <div class="footer--col-2">
+
+                    </div><!-- /.footer--col-2 -->
+                </div><!-- /.row -->
+
+                <div class="row-mod">
+                    <div class="footer--col-1 legal-wrapper">
+                        <div class="footer-logo logo-desktop"><img class="logo" src="img/logotype@2x.png" alt="credits.ru"></div>
+                        <ul class="menu-footer--legal menu">
+                            <li class="menu-footer--legal__item"><a href="#">Политика обработки персональных данных</a></li>
+                            <li class="menu-footer--legal__item"><a href="#">Пользовательское соглашение</a></li>
+                        </ul><!-- /.menu-footer -->
+                    </div><!-- /.footer--col-1 -->
+                    <div class="footer--col-2">
+                        <ul class="menu-social">
+                            <li class="menu-item vk"><a href="#"><svg data-src="img/i-s-vk.svg"></svg></a></li>
+                            <li class="menu-item fb"><a href="#"><svg data-src="img/i-s-facebook.svg"></svg></a></li>
+                            <li class="menu-item in"><a href="#"><svg data-src="img/i-s-instagram.svg"></svg></a></li>
+                            <li class="menu-item tw"><a href="#"><svg data-src="img/i-s-twitter.svg"></svg></a></li>
+                            <li class="menu-item yt"><a href="#"><svg data-src="img/i-s-youtube.svg"></svg></a></li>                        
+                        </ul><!-- /.menu-footer -->                    
+                    </div><!-- /.footer--col-2 -->
+                </div><!-- /.row -->           
+            </div><!-- /.container -->
+        </div><!-- /.footer--lvl-1 -->   
+
+        <div class="footer--lvl-2">
+            <div class="container">
+                <div class="row-mod">
+                    <div class="footer--col-1">
+                        <p><small class="legal">При использовании материалов гиперссылка на Credits.ru обязательна</small></p>
+                        
+                        <p class="tel-footer legal">
+                            По вопросам работы портала: <a href="tel:+">8 (800) 551 20 17</a>
+                        </p>
+                    </div><!-- /.footer--col-1 -->
+                    <div class="footer--col-2">
+                        <p class="legal"><small>&#169; 2002—2018 ООО «ВЕБИНВЕСТ»</small></p>
+                    </div><!-- /.footer--col-2 -->
+                </div><!-- /.row -->             
+            </div><!-- /.container -->
+        </div><!-- /.footer--lvl-2 -->
+    </footer>
+    
+    <button class="btn-top" id="btn-top" title="Наверх"><svg data-src="img/arrow-up.svg"></svg></button>   
+</div><!-- /.wrapper-main -->
+
+<script>
+    $('.label-rating').click(function(){ //при нажатии на звезду
+        $(this).parents('.rating-label-wrapper').addClass('selected'); //помечание ряда как выбранного
+
+        $(this).parent().find('.label-rating').removeClass('checked'); //снятие всех имеющихся звёзд у этого ряда (визуально)
+
+        if ($(this).hasClass('checked') ) { //если эта звезда уже выбрана
+            //$(this).removeClass('checked').prevAll('.label-rating').removeClass('checked'); //снимаем рейтинг с ряда (не работает)
+        } else {
+            $(this).addClass('checked').prevAll('.label-rating').addClass('checked'); //выделяем эту звезву и предыдущие
+        }
+
+        var numOfSelected = $('.bx-ratings').find('.selected').length; //кол-во выбранных оценок (рядов)
+        var currentMark = $('#js-ratingResult').text(); //текущая общая оценка
+
+        if (numOfSelected>=1){
+            $('#js-ratingResult').text( (currentMark + $(this).children().val()) / numOfSelected ); // срабатывает два раза
+            console.log(1);
+        } else if (numOfSelected===0) {
+            $('#js-ratingResult').text($(this).children().val()); // срабатывает два раза
+            console.log(0);
+        }
+    });
+
+</script>
+
+</body>
+</html>
