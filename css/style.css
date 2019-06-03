@@ -7116,7 +7116,13 @@ section + .view-all {
     height: 160px; }
     @media (min-width: 768px) {
       .bank-intro-rating .bank-logo {
-        height: 290px; } }
+        height: 290px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; } }
   .bank-intro-rating .bank-rating {
     text-align: center;
     display: -webkit-box;

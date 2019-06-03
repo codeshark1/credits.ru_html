@@ -3385,7 +3385,11 @@ section+.view-all {
 		padding: 20px 0;
 	}	
 	.bank-logo {height: 160px;
-		@media (min-width: $screen-sm-min) {height: 290px;}
+		@media (min-width: $screen-sm-min) {
+			height: 290px;
+			display: flex;
+			align-items: center;
+		}
 	}
 
 	.bank-rating {
